@@ -8,9 +8,20 @@ Inside an occurence can be a single instance or a group of the same pattern's in
 
 `_` announces the beginning of a specific [kami](#kami) domain.
 
-### Kamis' word(s)
-Exactly after the `_` is shown a [kami's word](#kami-word).
+### Invoking kamis
+Exactly after the `_` is shown a [kami](#kami)'s [invokation](#invokation).
+
+Invokation are used to instanciate a kami of used word's kami reference at the occurence location.
 
 Most notable examples :
 
-* The [`_shrine/`](#shrine) folders *(`shrine` is the root domain of [kami invokation](#invocation))*
+* The `_shrine/` instances folder *([`shrine`](#shrine) are root folder of [kami](#kami) [instances](#instances)).*
+
+### Kamis' instances
+Kamis' instances have both unique (for their [namespace](#namespace)) id and name.
+
+Their occurence path usually looks like the following : `_<kami.WORD>/<kami.id>/<kami.id>.kami.js`. It exports the [kami](#kami) definition.
+
+Most notable examples :
+
+* The `.kami.js` instances file *([`kami`](#kami) are described, instanciated, tested, ... made alive by these files content)*.
