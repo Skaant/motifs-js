@@ -14,17 +14,24 @@ export default () =>
         if (err) reject(err)
       
         /** 2. Create new dynamic content is removed */
-        const newData = data.slice(
-          0,
-          data.search('## `kami`')
-        )
-          + kamiKami.readme(kamiKami)
+        kamiKami.get()
+          .then(kamis => {
+            
+            const newData = data.slice(
+              0,
+              data.search('## `kami`'))
 
-        /** 3. Write new content in README file */
-        fs.writeFile(
-          './README.md',
-          newData,
-          err => err ? reject(err) : resolve()
-        )
+              + kamis.map(kami =>
+                  
+                '\n\n' + kamiKami.readme(kami))
+                
+                .join('')
+
+              /** 3. Write new content in README file */
+              fs.writeFile(
+                './README.md',
+                newData,
+                err => err ? reject(err) : resolve())
+          })
       })
   })
