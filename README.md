@@ -1,6 +1,6 @@
 # kami.js
 
-![The kami pictogram](/kami.picto.svg)
+![The kami.js project pictogram](/logo.svg)
 
 `kami.js` aims to explore the concept of naming and patterns. It creates virtual entities, the [kamis](#kami), to embody project's classes, components and logic.
 
