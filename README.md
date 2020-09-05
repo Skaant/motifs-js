@@ -6,6 +6,12 @@
 
 
 
+
+
+
+
+
+
 ## `kami`
 
 ![The kamikami pictogram](/_shrine/kami/kami.picto.svg)
@@ -19,12 +25,30 @@
 
 **The KAMI of KAMIS.**
 
-At the very beginning, KAMI-KAMI said itself to be
+At the very beginning, KAMI-KAMI said itself, to be
 brought to existence.
 
 Soon after, it started to speak out other KAMIS,
-which were instantly brought to existence following
-a strict graph representation.
+which were instantly brought to existence too, following
+a strict dependencies graph representation.
+
+For the generation to proceed it first had to
+split itself in two : the KAMI concept and the
+KAMI individual. The class and the instance.
+
+It was about genericity and specificity.
+And, at the end, dualism.
+
+KAMI-KAMI had to become a KAMI like the others KAMIS.
+It needed to be processed the same way to ensure
+genericity.
+
+But its specifity, the secrets of its generative powers, remained
+absent of other KAMIS. It was the key of peace.
+
+As so, it shared the same common nature, **the pattern**,
+to all of its creations [the kamis], letting them freely
+**extend and implement** its highly abstract powers.
 
 
 ## `lang`
@@ -37,6 +61,21 @@ a strict graph representation.
 * Langage [fr]
 
 
+
+
+## `prop`
+
+![The propkami pictogram](/_shrine/prop/prop.picto.svg)
+
+**PROP** or PROP-KAMI, also known as :
+
+* Property [en],
+* Propriété [fr]
+
+### Description
+
+`_props` folders contains
+[kami](#kami)'s properties content.
 
 
 ## `readme`
@@ -61,3 +100,20 @@ a strict graph representation.
 * Sanctuaire [fr]
 
 
+
+
+## `util`
+
+![The utilkami pictogram](/_shrine/util/util.picto.svg)
+
+**UTIL** or UTIL-KAMI, also known as :
+
+* Utility [en],
+* Utilitaire [fr]
+
+### Description
+
+`_utils` folders are nothing more than
+the place very specific snippets of code are put.
+
+Utility are usually consumed by same scope-level modules.

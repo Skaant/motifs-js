@@ -30,6 +30,17 @@ export default () =>
       },
       []
     ))
-      .then(kamis => resolve(kamis))
+      .then(kamis => {
+        
+        const kamiKamiIndex = kamis.findIndex(kami =>
+          
+          kami.id === 'kami')
+        
+        resolve([
+          kamis[kamiKamiIndex],
+          ...kamis.slice(0, kamiKamiIndex),
+          ...kamis.slice(kamiKamiIndex + 1)
+        ])
+      })
       .catch(err => reject(err))
   })

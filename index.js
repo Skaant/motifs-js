@@ -1,15 +1,12 @@
 import README from "./_shrine/readme/readme.kami.js";
 
 /** 1. global.PATH */
-
-import getPath from './_helpers/getPath/getPath.util.js'
-
+import getPath from './_utils/getPath/getPath.util.js'
 global.PATH = getPath(import.meta.url)
 
 /** 2. global.FILES */
-
-import getFiles from './_helpers/getFiles/getFiles.util.js'
-
+import getFiles from './_utils/getFiles/getFiles.util.js'
 global.FILES = getFiles('')
 
+/** 3. Actions */
 README.build()
