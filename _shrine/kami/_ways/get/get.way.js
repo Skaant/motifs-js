@@ -1,3 +1,8 @@
+/** `kami get way`
+ * 
+ * Retrieve all project kamis,
+ *  and order them by dependency ranks.
+ */
 export default () =>
 
   new Promise((resolve, reject) => {
