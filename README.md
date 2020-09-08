@@ -20,6 +20,8 @@
 
 
 
+
+
 ## `kami`
 
 ![The kamikami pictogram](/_shrine/kami/kami.picto.svg)
@@ -182,4 +184,12 @@ Utility are usually consumed by same scope-level modules.
 * Method [en],
 * Méthode [fr]
 
+### Description
 
+**KAMI POWERS**
+
+Ways are KAMI's methods
+(... actions, functions, operations).
+
+It differs with [prop](#prop) in its type,
+which is necessarely `function`.
