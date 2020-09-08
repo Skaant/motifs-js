@@ -18,6 +18,8 @@
 
 
 
+
+
 ## `kami`
 
 ![The kamikami pictogram](/_shrine/kami/kami.picto.svg)
@@ -169,3 +171,15 @@ Folder is represented by :
 the place very specific snippets of code are put.
 
 Utility are usually consumed by same scope-level modules.
+
+
+## `way`
+
+![The waykami pictogram](/_shrine/way/way.picto.svg)
+
+**WAY** or WAY-KAMI, also known as :
+
+* Method [en],
+* Méthode [fr]
+
+

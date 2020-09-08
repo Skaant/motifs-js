@@ -18,10 +18,12 @@ export default (scope, id) =>
               id + '.kami.js',
               () =>
 `import namesProp from './_props/names/names.prop.js'
+import descriptionProp from './_props/description/description.prop.js'
 
 export default {
   id: '${ id }',
-  names: namesProp
+  names: namesProp,
+  description: descriptionProp
 }`
             ),
             FOLDER.create(
@@ -46,6 +48,18 @@ export default {
   [langEnum.EN]: 'Unknown',
   [langEnum.FR]: 'Inconnu'
 }`
+                    )
+                  ])
+                ),
+                FOLDER.create(
+                  scope,
+                  'description',
+                  scope => ([
+                    FILE.create(
+                      scope,
+                      'description.prop.js',
+                      scope =>
+`export default \`New KAMI !\``
                     )
                   ])
                 )

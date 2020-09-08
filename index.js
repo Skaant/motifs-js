@@ -11,5 +11,5 @@ global.FILES = getFiles('')
 /** 3. Actions */
 import KAMI from "./_shrine/kami/kami.kami.js";
 
-KAMI.create('', 'way')
-// README.build()
+// KAMI.create('', 'way')
+README.build()
