@@ -9,4 +9,7 @@ import getFiles from './_utils/getFiles/getFiles.util.js'
 global.FILES = getFiles('')
 
 /** 3. Actions */
-README.build()
+import KAMI from "./_shrine/kami/kami.kami.js";
+
+KAMI.create('', 'way')
+// README.build()

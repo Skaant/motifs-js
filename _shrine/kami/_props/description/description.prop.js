@@ -1,11 +1,17 @@
 export default `**The KAMI of KAMIS.**
 
+Kami are "enlived" patterns, making them
+not only **generative** but also **evolutive**
+in a similar way classes and objectsare.
+
+### Flavour
+
 At the very beginning, KAMI-KAMI said itself, to be
 brought to existence.
 
 Soon after, it started to speak out other KAMIS,
 which were instantly brought to existence too, following
-a strict dependencies graph representation.
+a pure nodal self-organization.
 
 For the generation to proceed it first had to
 split itself in two : the KAMI concept and the

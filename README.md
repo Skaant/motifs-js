@@ -14,6 +14,10 @@
 
 
 
+
+
+
+
 ## `kami`
 
 ![The kamikami pictogram](/_shrine/kami/kami.picto.svg)
@@ -27,12 +31,18 @@
 
 **The KAMI of KAMIS.**
 
+Kami are "enlived" patterns, making them
+not only **generative** but also **evolutive**
+in a similar way classes and objectsare.
+
+### Flavour
+
 At the very beginning, KAMI-KAMI said itself, to be
 brought to existence.
 
 Soon after, it started to speak out other KAMIS,
 which were instantly brought to existence too, following
-a strict dependencies graph representation.
+a pure nodal self-organization.
 
 For the generation to proceed it first had to
 split itself in two : the KAMI concept and the
@@ -51,6 +61,46 @@ absent of other KAMIS. It was the key of peace.
 As so, it shared the same common nature, **the pattern**,
 to all of its creations [the kamis], letting them freely
 **extend and implement** its highly abstract powers.
+
+
+## `file`
+
+![The filekami pictogram](/_shrine/file/file.picto.svg)
+
+**FILE** or FILE-KAMI, also known as :
+
+* File [en],
+* Fichier [fr]
+
+### Description
+
+**File meta-data**
+
+*Pattern should later be extended depending on
+the file extension.*
+
+
+## `folder`
+
+![The folderkami pictogram](/_shrine/folder/folder.picto.svg)
+
+**FOLDER** or FOLDER-KAMI, also known as :
+
+* Folder [en],
+* Dossier [fr]
+
+### Description
+
+**Folder meta-data**
+
+Folder is represented by :
+* Its `scope`, the path between project root
+  and desired folder location,
+* Its `name`, an unique identifier in its scope,
+* Its `tree`, an object representing folders and
+  files hierarchy inside top-level folder
+  (a complex concept to define).
+
 
 
 ## `lang`
