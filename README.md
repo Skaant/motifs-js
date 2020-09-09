@@ -22,6 +22,10 @@
 
 
 
+
+
+
+
 ## `kami`
 
 ![The kamikami pictogram](/_shrine/kami/kami.picto.svg)
@@ -65,6 +69,23 @@ absent of other KAMIS. It was the key of peace.
 As so, it shared the same common nature, **the pattern**,
 to all of its creations [the kamis], letting them freely
 **extend and implement** its highly abstract powers.
+
+
+## `command`
+
+![The commandkami pictogram](/_shrine/command/command.picto.svg)
+
+**COMMAND** or COMMAND-KAMI, also known as :
+
+* Command [en],
+* Commande [fr]
+
+### Description
+
+**KAMI WAYS CLI INTERFACE**
+
+Basically, a command bind a [`way`](#way) method
+to match [`KAMI`](#kami) CLI entrypoint syntax.
 
 
 ## `file`

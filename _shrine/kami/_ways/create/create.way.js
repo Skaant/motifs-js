@@ -32,11 +32,11 @@ export default {
               scope => ([
                 FOLDER.create(
                   scope,
-                  'name',
+                  'names',
                   scope => ([
                     FILE.create(
                       scope,
-                      'name.prop.js',
+                      'names.prop.js',
                       scope =>
 `import langEnum from '${
   scope.split('/')

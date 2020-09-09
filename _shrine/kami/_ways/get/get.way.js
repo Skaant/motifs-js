@@ -1,3 +1,8 @@
+let cache = {
+  globalFiles: false,
+  kamis: false
+};
+
 /** `kami get way`
  * 
  * Retrieve all project kamis,
@@ -6,6 +11,12 @@
 export default () =>
 
   new Promise((resolve, reject) => {
+
+    if (cache.globalFiles === global.FILES
+        && cache.kamis)
+      resolve(cache.kamis)
+
+    cache.globalFiles = global.FILES
 
     Promise.all(global.FILES.reduce(
       (kamiPromises, file) => {
@@ -41,11 +52,14 @@ export default () =>
           
           kami.id === 'kami')
         
-        resolve([
+
+        cache.kamis = [
           kamis[kamiKamiIndex],
           ...kamis.slice(0, kamiKamiIndex),
           ...kamis.slice(kamiKamiIndex + 1)
-        ])
+        ]
+
+        resolve(cache.kamis)
       })
       .catch(err => reject(err))
   })
