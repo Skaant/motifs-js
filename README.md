@@ -50,16 +50,16 @@ to all of its creations [the kamis], letting them freely
         
 ### Instances
 
-* [`kami`](#kami) [`/_shrinekami/kami.kami.js`](/_shrinekami/kami.kami.js)
-* [`command`](#command) [`/_shrinecommand/command.kami.js`](/_shrinecommand/command.kami.js)
-* [`file`](#file) [`/_shrinefile/file.kami.js`](/_shrinefile/file.kami.js)
-* [`folder`](#folder) [`/_shrinefolder/folder.kami.js`](/_shrinefolder/folder.kami.js)
-* [`lang`](#lang) [`/_shrinelang/lang.kami.js`](/_shrinelang/lang.kami.js)
-* [`prop`](#prop) [`/_shrineprop/prop.kami.js`](/_shrineprop/prop.kami.js)
-* [`readme`](#readme) [`/_shrinereadme/readme.kami.js`](/_shrinereadme/readme.kami.js)
-* [`shrine`](#shrine) [`/_shrineshrine/shrine.kami.js`](/_shrineshrine/shrine.kami.js)
-* [`util`](#util) [`/_shrineutil/util.kami.js`](/_shrineutil/util.kami.js)
-* [`way`](#way) [`/_shrineway/way.kami.js`](/_shrineway/way.kami.js)
+* [`kami`](#kami) ([`/_shrine/kami/kami.kami.js`](/_shrine/kami/kami.kami.js))
+* [`command`](#command) ([`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js))
+* [`file`](#file) ([`/_shrine/file/file.kami.js`](/_shrine/file/file.kami.js))
+* [`folder`](#folder) ([`/_shrine/folder/folder.kami.js`](/_shrine/folder/folder.kami.js))
+* [`lang`](#lang) ([`/_shrine/lang/lang.kami.js`](/_shrine/lang/lang.kami.js))
+* [`prop`](#prop) ([`/_shrine/prop/prop.kami.js`](/_shrine/prop/prop.kami.js))
+* [`readme`](#readme) ([`/_shrine/readme/readme.kami.js`](/_shrine/readme/readme.kami.js))
+* [`shrine`](#shrine) ([`/_shrine/shrine/shrine.kami.js`](/_shrine/shrine/shrine.kami.js))
+* [`util`](#util) ([`/_shrine/util/util.kami.js`](/_shrine/util/util.kami.js))
+* [`way`](#way) ([`/_shrine/way/way.kami.js`](/_shrine/way/way.kami.js))
 
 ### Flavour
 
