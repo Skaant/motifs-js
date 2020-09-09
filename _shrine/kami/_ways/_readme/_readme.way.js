@@ -13,11 +13,11 @@ export default () =>
 
 ${ kamis.map(kami => {
 
-  const kamiPath = '.' + kami.scope
-    + '/_shrine/' + kami.folder + '/' + kami.file
+  const kamiPath = '/' + (kami.path || '_shrine')
+    + kami.folder + '/' + kami.file
 
   return `* [\`${ kami.id }\`](#${ kami.id }) [\`${
-    kamiPath }\`](${ kamiPath }`
+    kamiPath }\`](${ kamiPath })`
   })
   .join('\n')
 }`

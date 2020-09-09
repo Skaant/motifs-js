@@ -10,8 +10,10 @@
 
 **KAMI** or KAMI-KAMI, also known as :
 
-* [en] Spirit,
-* [fr] Esprit### Description
+* [en] Pattern, Spirit, God.,
+* [fr] Motif, Esprit, Dieu.
+
+### Description
 
 **The KAMI of KAMIS.**
 
@@ -44,7 +46,22 @@ absent of other KAMIS. It was the key of peace.
 
 As so, it shared the same common nature, **the pattern**,
 to all of its creations [the kamis], letting them freely
-**extend and implement** its highly abstract powers.### Flavour
+**extend and implement** its highly abstract powers.
+        
+### Instances
+
+* [`kami`](#kami) [`/_shrinekami/kami.kami.js`](/_shrinekami/kami.kami.js)
+* [`command`](#command) [`/_shrinecommand/command.kami.js`](/_shrinecommand/command.kami.js)
+* [`file`](#file) [`/_shrinefile/file.kami.js`](/_shrinefile/file.kami.js)
+* [`folder`](#folder) [`/_shrinefolder/folder.kami.js`](/_shrinefolder/folder.kami.js)
+* [`lang`](#lang) [`/_shrinelang/lang.kami.js`](/_shrinelang/lang.kami.js)
+* [`prop`](#prop) [`/_shrineprop/prop.kami.js`](/_shrineprop/prop.kami.js)
+* [`readme`](#readme) [`/_shrinereadme/readme.kami.js`](/_shrinereadme/readme.kami.js)
+* [`shrine`](#shrine) [`/_shrineshrine/shrine.kami.js`](/_shrineshrine/shrine.kami.js)
+* [`util`](#util) [`/_shrineutil/util.kami.js`](/_shrineutil/util.kami.js)
+* [`way`](#way) [`/_shrineway/way.kami.js`](/_shrineway/way.kami.js)
+
+### Flavour
 
 At the very beginning,
 KAMI-KAMI **said itself**, to be
@@ -72,19 +89,6 @@ By doing so, KAMI-KAMI shared the same common nature,
 **the pattern**, to all of its creations [the kamis],
 letting them freely **extend and implement** its
 highly abstract powers.
-        
-### Instances
-
-* [`kami`](#kami) [`./_shrine/kami/kami.kami.js`](./_shrine/kami/kami.kami.js
-* [`command`](#command) [`./_shrine/command/command.kami.js`](./_shrine/command/command.kami.js
-* [`file`](#file) [`./_shrine/file/file.kami.js`](./_shrine/file/file.kami.js
-* [`folder`](#folder) [`./_shrine/folder/folder.kami.js`](./_shrine/folder/folder.kami.js
-* [`lang`](#lang) [`./_shrine/lang/lang.kami.js`](./_shrine/lang/lang.kami.js
-* [`prop`](#prop) [`./_shrine/prop/prop.kami.js`](./_shrine/prop/prop.kami.js
-* [`readme`](#readme) [`./_shrine/readme/readme.kami.js`](./_shrine/readme/readme.kami.js
-* [`shrine`](#shrine) [`./_shrine/shrine/shrine.kami.js`](./_shrine/shrine/shrine.kami.js
-* [`util`](#util) [`./_shrine/util/util.kami.js`](./_shrine/util/util.kami.js
-* [`way`](#way) [`./_shrine/way/way.kami.js`](./_shrine/way/way.kami.js
 
 
 ## `command`
@@ -93,8 +97,10 @@ highly abstract powers.
 
 **COMMAND** or COMMAND-KAMI, also known as :
 
-* [en] Command,
-* [fr] Commande### Description
+* [en] Command.,
+* [fr] Commande.
+
+### Description
 
 **KAMI WAYS CLI INTERFACE**
 
@@ -108,8 +114,10 @@ to match [`KAMI`](#kami) CLI entrypoint syntax.
 
 **FILE** or FILE-KAMI, also known as :
 
-* [en] File,
-* [fr] Fichier### Description
+* [en] File.,
+* [fr] Fichier.
+
+### Description
 
 **File meta-data**
 
@@ -123,8 +131,10 @@ the file extension.*
 
 **FOLDER** or FOLDER-KAMI, also known as :
 
-* [en] Folder,
-* [fr] Dossier### Description
+* [en] Folder.,
+* [fr] Dossier.
+
+### Description
 
 **Folder meta-data**
 
@@ -144,8 +154,8 @@ Folder is represented by :
 
 **LANG** or LANG-KAMI, also known as :
 
-* [en] Language,
-* [fr] Langage
+* [en] Language.,
+* [fr] Langage.
 
 
 ## `prop`
@@ -154,8 +164,10 @@ Folder is represented by :
 
 **PROP** or PROP-KAMI, also known as :
 
-* [en] Property,
-* [fr] Propriété### Description
+* [en] Property.,
+* [fr] Propriété.
+
+### Description
 
 `_props` folders contains
 [kami](#kami)'s properties content.
@@ -167,8 +179,8 @@ Folder is represented by :
 
 **README** or README-KAMI, also known as :
 
-* [en] README,
-* [fr] README
+* [en] README.,
+* [fr] README.
 
 
 ## `shrine`
@@ -177,8 +189,8 @@ Folder is represented by :
 
 **ШRIGHN** or ШRIGHN-KAMI, also known as :
 
-* [en] Shrine,
-* [fr] Sanctuaire
+* [en] Shrine.,
+* [fr] Sanctuaire.
 
 
 ## `util`
@@ -187,8 +199,10 @@ Folder is represented by :
 
 **UTIL** or UTIL-KAMI, also known as :
 
-* [en] Utility,
-* [fr] Utilitaire### Description
+* [en] Utility.,
+* [fr] Utilitaire.
+
+### Description
 
 `_utils` folders are nothing more than
 the place very specific snippets of code are put.
@@ -202,8 +216,10 @@ Utility are usually consumed by same scope-level modules.
 
 **WAY** or WAY-KAMI, also known as :
 
-* [en] Method,
-* [fr] Méthode### Description
+* [en] Method.,
+* [fr] Méthode.
+
+### Description
 
 **KAMI POWERS**
 

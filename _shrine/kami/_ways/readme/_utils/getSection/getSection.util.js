@@ -19,22 +19,28 @@ ${
 * [${ lang }] ${
   typeof kami.names[lang] === 'string'
     ? kami.names[lang]
-    : kami.names[lang].join(', ') }`)
+    : kami.names[lang].join(', ') }.`)
 }${
   kami.description
     ? 
-`### Description
+`
+
+### Description
 
 ${ kami.description }`
 
     : ''
 }${
+  specificKamiReadme || ''
+}${
   kami.flavour
     ? 
-`### Flavour
+`
+
+### Flavour
 
 ${ kami.flavour }`
 
     : ''
-}${ specificKamiReadme || '' }
+}
 `
