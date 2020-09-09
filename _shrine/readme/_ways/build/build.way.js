@@ -15,23 +15,27 @@ export default () =>
       
         /** 2. Create new dynamic content is removed */
         kamiKami.get()
-          .then(kamis => {
-            
-            const newData = data.slice(
-              0,
-              data.search('## `kami`'))
+          .then(kamis =>
 
-              + kamis.map(kami =>
-                  
-                '\n\n' + kamiKami.readme(kami))
-                
-                .join('')
+            Promise.all(kamis.map(kami =>
+              
+              kamiKami.readme(kami)))
+              
+              .then(kamisReadme => {
 
-              /** 3. Write new content in README file */
-              fs.writeFile(
-                './README.md',
-                newData,
-                err => err ? reject(err) : resolve())
-          })
+                const newData = data.slice(
+                  0,
+                  /** We keep old data up to `## kami` section,
+                   * the first automatically generated. */
+                  data.search('## `kami`'))
+
+                  + kamisReadme.join('\n\n')
+
+                  /** 3. Write new content in README file */
+                  fs.writeFile(
+                    './README.md',
+                    newData,
+                    err => err ? reject(err) : resolve())
+              }))
       })
   })

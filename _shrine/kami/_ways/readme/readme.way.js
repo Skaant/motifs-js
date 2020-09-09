@@ -1,34 +1,22 @@
-import langEnum from "../../../lang/_enums/lang.enum.js";
+import getSectionUtil from "./_utils/getSection/getSection.util.js"
 
-export default (kami, log = true) => {
+export default (kami, log = true) => 
 
-  log && console.log(kami.id)
+  new Promise(resolve => {
 
-  return `## \`${ kami.id }\`
+    log && console.log(kami.id)
 
-![The ${ kami.id }kami pictogram](/${
-    (kami.path || '_shrine') }/${ kami.id }/${ kami.id
-}.picto.svg)
+    if (kami._readme) {
 
-**${ kami.names[langEnum.ABS] }** or ${
-  kami.names[langEnum.ABS] }-KAMI, also known as :
-${
-  [ langEnum.EN,
-    langEnum.FR
-  ].map(lang =>
-    
-`
-* ${ kami.names[lang] } [${ lang }]`)
-}
+      kami._readme()
+        .then(specificKamiReadme =>
+        
+          resolve(getSectionUtil(
+            kami,
+            specificKamiReadme
+          )))
+    } else {
 
-${
-  kami.description
-    ? 
-`### Description
-
-${ kami.description }`
-
-    : ''
-}
-`
-}
+      resolve(getSectionUtil(kami))
+    }
+  })
