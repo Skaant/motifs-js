@@ -67,7 +67,8 @@ export default args => {
 
       kami._commands[options.command](
         {
-          log: options.log
+          log: options.log,
+          doc: options.doc
         },
         ...options.params)
     })

@@ -1,4 +1,6 @@
 import KAMI from "../../kami.kami.js"
+import FOLDER from "../../../folder/folder.kami.js"
+import FILE from "../../../file/file.kami.js"
 
 /** **KAMI(S) TEST**
  * 
@@ -72,6 +74,22 @@ export default (
                       `* ${ result } => ${ label }`)
                     .join('\n'))
               .join('\n'))
+
+            if (doc) FOLDER.create(
+              '/kami.js.wiki',
+              'tests',
+              folderScope =>
+                kamisAssertions.map(({ id, assertions }) =>
+                  FILE.create(
+                    folderScope,
+                    id + '-kami.test.md',
+                    () => assertions
+                      .map(([ result, label ]) =>
+                        `## ${ id}
+                        
+* ${ result } => ${ label }`)
+                      .join('\n')
+                  )))
           })
       }
     })
