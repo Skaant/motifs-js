@@ -1,6 +1,6 @@
 import KAMI from "../../../kami.kami.js"
 
-export default (scope, id) =>
+export default (options, scope, id) =>
 
   new Promise(resolve => {
 

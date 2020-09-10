@@ -7,6 +7,8 @@ import cliWay from "./_ways/cli/cli.way.js";
 import _commands from "./_props/_commands/index.js";
 import flavourProp from "./_props/flavour/flavour.prop.js";
 import _readmeWay from "./_ways/_readme/_readme.way.js";
+import testWay from "./_ways/test/test.way.js";
+import _specs from "./_props/_specs/index.js";
 
 export default {
   id: 'kami',
@@ -18,5 +20,7 @@ export default {
   readme: readmeWay,
   _readme: _readmeWay,
   get: getWay,
-  cli: cliWay
+  cli: cliWay,
+  test: testWay,
+  _specs
 }

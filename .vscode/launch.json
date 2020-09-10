@@ -14,9 +14,8 @@
       "program": "${workspaceFolder}\\index.js",
       "args": [
         "_temp",
-        "-k",
-        "readme",
-        "build"
+        "-log",
+        "test"
       ]
     }
   ]

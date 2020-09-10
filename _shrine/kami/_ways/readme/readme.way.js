@@ -15,6 +15,7 @@ export default (kami, log = true) =>
             kami,
             specificKamiReadme
           )))
+          
     } else {
 
       resolve(getSectionUtil(kami))

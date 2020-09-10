@@ -5,6 +5,7 @@ export default args => {
   const options = {
     kami: KAMI.id,
     command: false,
+    log: false,
     params: []
   }
   let _args = [ ...args ]
@@ -20,6 +21,16 @@ export default args => {
         case 'k':
 
           options.kami = _args.shift()
+          break
+
+        case 'log':
+
+          options.log = true
+          break
+
+        case 'doc':
+
+          options.doc = true
           break
       }
     } else {
@@ -55,6 +66,9 @@ export default args => {
           + options.kami + '"')
 
       kami._commands[options.command](
+        {
+          log: options.log
+        },
         ...options.params)
     })
 }

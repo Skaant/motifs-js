@@ -1,6 +1,6 @@
 import README from '../../../readme.kami.js'
 
-export default () =>
+export default options =>
 
   new Promise(resolve =>
     
