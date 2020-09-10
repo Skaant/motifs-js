@@ -19,8 +19,8 @@ ${
 * [${ lang }] ${
   typeof kami.names[lang] === 'string'
     ? kami.names[lang]
-    : kami.names[lang].join(', ') }.`)
-}${
+    : kami.names[lang].join(', ') }`)
+}.${
   kami.description
     ? 
 `
