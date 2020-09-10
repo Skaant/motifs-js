@@ -83,12 +83,11 @@ export default (
                   FILE.create(
                     folderScope,
                     id + '-kami.test.md',
-                    () => assertions
-                      .map(([ result, label ]) =>
-                        `## ${ id}
-                        
-* ${ result } => ${ label }`)
-                      .join('\n')
+                    () => '## ' + id + '\n\n'
+                      + assertions
+                        .map(([ result, label ]) =>
+                          `* ${ result } => ${ label }`)
+                        .join('\n')
                   )))
           })
       }
