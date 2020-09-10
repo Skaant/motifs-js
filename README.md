@@ -10,7 +10,7 @@
 
 **KAMI** or KAMI-KAMI, also known as :
 
-* [en] Idea, Word, Pattern, Spirit, God.,
+* [en] Idea, Word, Pattern, Spirit, God,
 * [fr] Idée, Mot, Motif, Esprit, Dieu.
 
 ### Description
@@ -27,10 +27,12 @@ in a similar way classes and objects are.
 * [`command`](#command) ([`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js))
 * [`file`](#file) ([`/_shrine/file/file.kami.js`](/_shrine/file/file.kami.js))
 * [`folder`](#folder) ([`/_shrine/folder/folder.kami.js`](/_shrine/folder/folder.kami.js))
+* [`instance`](#instance) ([`/_shrine/instance/instance.kami.js`](/_shrine/instance/instance.kami.js))
 * [`lang`](#lang) ([`/_shrine/lang/lang.kami.js`](/_shrine/lang/lang.kami.js))
 * [`prop`](#prop) ([`/_shrine/prop/prop.kami.js`](/_shrine/prop/prop.kami.js))
 * [`readme`](#readme) ([`/_shrine/readme/readme.kami.js`](/_shrine/readme/readme.kami.js))
 * [`shrine`](#shrine) ([`/_shrine/shrine/shrine.kami.js`](/_shrine/shrine/shrine.kami.js))
+* [`spec`](#spec) ([`/_shrine/spec/spec.kami.js`](/_shrine/spec/spec.kami.js))
 * [`util`](#util) ([`/_shrine/util/util.kami.js`](/_shrine/util/util.kami.js))
 * [`way`](#way) ([`/_shrine/way/way.kami.js`](/_shrine/way/way.kami.js))
 
@@ -70,7 +72,7 @@ highly abstract powers.
 
 **COMMAND** or COMMAND-KAMI, also known as :
 
-* [en] Command.,
+* [en] Command,
 * [fr] Commande.
 
 ### Description
@@ -87,7 +89,7 @@ to match [`KAMI`](#kami) CLI entrypoint syntax.
 
 **FILE** or FILE-KAMI, also known as :
 
-* [en] File.,
+* [en] File,
 * [fr] Fichier.
 
 ### Description
@@ -104,7 +106,7 @@ the file extension.*
 
 **FOLDER** or FOLDER-KAMI, also known as :
 
-* [en] Folder.,
+* [en] Folder,
 * [fr] Dossier.
 
 ### Description
@@ -121,13 +123,39 @@ Folder is represented by :
 
 
 
+## `instance`
+
+![INSTANCE pictogram](/_shrine/instance/instance.picto.svg)
+
+**INSTANCE** or INSTANCE-KAMI, also known as :
+
+* [en] Instance,
+* [fr] Instance.
+
+### Description
+
+**INDIVIDUAL OF ONE OR MULTIPLE KAMIS**
+
+Instances are occurence of a [KAMI](#kami) (pattern).
+
+They usually :
+* Can get retrieved through [`<kami>.get`] way,
+* Can get created through [`<kami>.create`] way,
+* Can get tested through [`<kami>.test`] way,
+* *(Not implemented) Can get updated and deleted*.
+
+[KAMIS](#kami) (`.kamis.js`) are instances of KAMI-KAMI.
+
+**KAMI-KAMI is an instance of itself !**
+
+
 ## `lang`
 
 ![LANG pictogram](/_shrine/lang/lang.picto.svg)
 
 **LANG** or LANG-KAMI, also known as :
 
-* [en] Language.,
+* [en] Language,
 * [fr] Langage.
 
 
@@ -137,7 +165,7 @@ Folder is represented by :
 
 **PROP** or PROP-KAMI, also known as :
 
-* [en] Property.,
+* [en] Property,
 * [fr] Propriété.
 
 ### Description
@@ -152,7 +180,7 @@ Folder is represented by :
 
 **README** or README-KAMI, also known as :
 
-* [en] README.,
+* [en] README,
 * [fr] README.
 
 
@@ -162,8 +190,22 @@ Folder is represented by :
 
 **ШRIGHN** or ШRIGHN-KAMI, also known as :
 
-* [en] Shrine.,
+* [en] Shrine,
 * [fr] Sanctuaire.
+
+
+## `spec`
+
+![SPEC pictogram](/_shrine/spec/spec.picto.svg)
+
+**SPEC** or SPEC-KAMI, also known as :
+
+* [en] Specification,
+* [fr] Spécification.
+
+### Description
+
+**KAMIS' INSTANCES TESTS**
 
 
 ## `util`
@@ -172,7 +214,7 @@ Folder is represented by :
 
 **UTIL** or UTIL-KAMI, also known as :
 
-* [en] Utility.,
+* [en] Utility,
 * [fr] Utilitaire.
 
 ### Description
@@ -189,7 +231,7 @@ Utility are usually consumed by same scope-level modules.
 
 **WAY** or WAY-KAMI, also known as :
 
-* [en] Method.,
+* [en] Method,
 * [fr] Méthode.
 
 ### Description
