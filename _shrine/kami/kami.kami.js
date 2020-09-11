@@ -9,6 +9,7 @@ import flavourProp from "./_props/flavour/flavour.prop.js";
 import _readmeWay from "./_ways/_readme/_readme.way.js";
 import testWay from "./_ways/test/test.way.js";
 import _specs from "./_props/_specs/index.js";
+import aveWay from "./_ways/ave/ave.way.js";
 
 export default {
   id: 'kami',
@@ -22,5 +23,6 @@ export default {
   get: getWay,
   cli: cliWay,
   test: testWay,
-  _specs
+  _specs,
+  ave: aveWay
 }

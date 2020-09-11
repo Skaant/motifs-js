@@ -8,7 +8,7 @@ let cache = {
  * Retrieve all project kamis,
  *  and order them by dependency ranks.
  */
-export default () =>
+export default (id = false) =>
 
   new Promise((resolve, reject) => {
 

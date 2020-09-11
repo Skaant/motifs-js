@@ -1,6 +1,8 @@
 import KAMI from "../../kami.kami.js"
 
-export default args => {
+export default (args, { log = false }) => {
+
+  log && console.log('\nYou did send a command to me :')
 
   const options = {
     kami: KAMI.id,
@@ -64,6 +66,8 @@ export default args => {
         throw new Error('No command "'
           + options.command + '" for kami "'
           + options.kami + '"')
+
+      log && console.log('"' + options.command + '"\n')
 
       kami._commands[options.command](
         {

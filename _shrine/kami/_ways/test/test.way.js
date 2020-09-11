@@ -14,6 +14,10 @@ export default (
 
   new Promise((resolve, reject) => {
 
+    log && console.log(`YOU, mortal, decided to challenge me.
+    
+I'll show you how well I'm performing !`)
+
     KAMI.get().then(kamis => {
 
       if (id) {
@@ -82,8 +86,8 @@ export default (
                 kamisAssertions.map(({ id, assertions }) =>
                   FILE.create(
                     folderScope,
-                    id + '-kami.test.md',
-                    () => '## ' + id + '\n\n'
+                    id + '-KAMI.test.md',
+                    () => '## ' + id + 'TESTS\n\n'
                       + assertions
                         .map(([ result, label ]) =>
                           `* ${ result } => ${ label }`)
