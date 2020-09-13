@@ -6,6 +6,62 @@
 
 `kami.js` aims to explore the concept of naming and patterns. It creates virtual entities, the [kamis](#kami), to embody project's classes, components and logic.
 
+## Quick start
+
+For this very moment, `kami.js` doesn't hold dependencies to
+external packages. No `npm install` is required after cloning.
+
+The `dev-start.js` script is used to :
+* register project's root path,
+* list all project's files,
+* and expose the CLI.
+
+### Global
+
+With `KAMI.AVE(url, options)`, two GLOBALS are exposed :
+* `global.PATH`
+* `global.FILES`
+
+### CLI COMMANDS
+
+COMMAND is a KAMI describing single-line commands that
+can be passed through CLI.
+
+#### Test the framework
+
+`npm start -- [-log] test`
+
+*`[-doc]` has been disabled the time for [DOC](#doc) to
+be implemented.*
+
+#### Build the README
+
+`npm start -- -k readme build`
+
+* `-k` targets a specific [KAMI](#kami), in this case [REAMDE](#readme),
+* `build` is targeting the README "build" [COMMAND](#way).
+
+#### Create a new KAMI
+
+`npm start -- create <scope : '' | ...> <kamiId: string>`
+
+Creates a new [KAMI](#kami) structure at given scope :
+
+```
+<scope>/_shrine/
+|-<kamiId>
+  |-_props
+  | |-names
+  | | |-names.prop.js
+  | |-description
+  | | |-description.prop.js
+  |-<kamiId>.kami.js
+```
+
+`names.prop.js` and `description.prop.js` are
+pre-filled with temporary values. You'll have to
+edit them.
+
 ## `kami`
 
 ![KAMI pictogram](/_shrine/kami/kami.picto.svg)
@@ -27,6 +83,7 @@ in a similar way classes and objects are.
 
 * [`kami`](#kami) ([`/_shrine/kami/kami.kami.js`](/_shrine/kami/kami.kami.js))
 * [`command`](#command) ([`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js))
+* [`doc`](#doc) ([`/_shrine/doc/doc.kami.js`](/_shrine/doc/doc.kami.js))
 * [`file`](#file) ([`/_shrine/file/file.kami.js`](/_shrine/file/file.kami.js))
 * [`folder`](#folder) ([`/_shrine/folder/folder.kami.js`](/_shrine/folder/folder.kami.js))
 * [`instance`](#instance) ([`/_shrine/instance/instance.kami.js`](/_shrine/instance/instance.kami.js))
@@ -37,6 +94,8 @@ in a similar way classes and objects are.
 * [`spec`](#spec) ([`/_shrine/spec/spec.kami.js`](/_shrine/spec/spec.kami.js))
 * [`util`](#util) ([`/_shrine/util/util.kami.js`](/_shrine/util/util.kami.js))
 * [`way`](#way) ([`/_shrine/way/way.kami.js`](/_shrine/way/way.kami.js))
+* [`website`](#website) ([`/_shrine/website/website.kami.js`](/_shrine/website/website.kami.js))
+* [`wiki`](#wiki) ([`/_shrine/wiki/wiki.kami.js`](/_shrine/wiki/wiki.kami.js))
 
 ### Flavour
 
@@ -83,6 +142,25 @@ highly abstract powers.
 
 Basically, a command bind a [`way`](#way) method
 to match [`KAMI`](#kami) CLI entrypoint syntax.
+
+
+## `doc`
+
+![DOC pictogram](/_shrine/doc/doc.picto.svg)
+
+**DOC** or DOC-KAMI, also known as :
+
+* [en] Documentation,
+* [fr] Documentation.
+
+### Description
+
+**TOP-LEVEL DOCUMENTATION KAMI**
+
+DOC is composed of few sub-KAMIS :
+* [README](#readme),
+* [WIKI](#wiki),
+* [WEBSITE](#website).
 
 
 ## `file`
@@ -185,6 +263,12 @@ They usually :
 * [en] README,
 * [fr] README.
 
+### Description
+
+**KAMI.JS' GITHUB README**
+
+README is a component of [DOC](#doc).
+
 
 ## `shrine`
 
@@ -245,3 +329,35 @@ Ways are KAMI's methods
 
 It differs with [prop](#prop) in its type,
 which is necessarely `function`.
+
+
+## `website`
+
+![WEBSITE pictogram](/_shrine/website/website.picto.svg)
+
+**WEBSITE** or WEBSITE-KAMI, also known as :
+
+* [en] Website,
+* [fr] Site internet.
+
+### Description
+
+**KAMI.JS DOCUMENTATION WEBSITE**
+
+WEBSITE is a [DOC](#doc) component.
+
+
+## `wiki`
+
+![WIKI pictogram](/_shrine/wiki/wiki.picto.svg)
+
+**WIKI** or WIKI-KAMI, also known as :
+
+* [en] Wiki,
+* [fr] Wiki.
+
+### Description
+
+**KAMI.JS' GITHUB WIKI**
+
+WIKI is a component of [DOC](#doc).

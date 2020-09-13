@@ -5,7 +5,7 @@
   "description": "kami.js aims to explore the concept of naming and patterns. It creates virtual entities, the kamis, to embody project's classes, components and logic.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js --experimental-modules",
+    "start": "node dev-start.js --experimental-modules",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
