@@ -31,7 +31,9 @@ export default (
   new Promise((resolve, reject) => {
 
     const folderScope = scope + '/' + name
-    const folderPath = global.PATH + '/' + folderScope
+    const folderPath = global.PATH
+      + ( folderScope[0] === '/' ? '' : '/' )
+      + folderScope
 
     fs.exists(
       folderPath,

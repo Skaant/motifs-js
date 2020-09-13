@@ -11,11 +11,12 @@
       "skipFiles": [
         "<node_internals>/**"
       ],
-      "program": "${workspaceFolder}\\index.js",
+      "program": "${workspaceFolder}\\dev-start.js",
       "args": [
         "_temp",
-        "-doc",
-        "test"
+        "create",
+        "/_shrine/readme",
+        "readme-section"
       ]
     }
   ]
