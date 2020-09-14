@@ -20,6 +20,6 @@ you can use to communicate with your collaborators.
 
 ### Table of content
 
-* [What is \`kami.js\` ?](#what-is-kami-js)
-* [How to use \`kami.js\` ?](#how-to-use-kami-js)
+* [What is \`kami.js\` ?](#what-is-kamijs-)
+* [How to use \`kami.js\` ?](#how-to-use-kamijs-)
 * [KAMIS glossary](#kamis-glossary)`

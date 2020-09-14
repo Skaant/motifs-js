@@ -15,6 +15,9 @@ Everything in \`kami.js\` is based on **words**.
 **Words and their relations.**
 
 [KAMIS](#kami) are words, in a context.
+\`kami.js\` is a language made of KAMIS that
+you can extend by adding KAMIS
+and relations between them.
 
 By connecting them, you create powerful
 softwares, databases and knowledges.

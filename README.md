@@ -1,5 +1,5 @@
 *[16 KAMIS](#kamis-glossary)
-on 9/14/2020, 12:18:12 PM*
+on 9/14/2020, 2:16:22 PM*
 
 # kami.js
 
@@ -18,8 +18,8 @@ you can use to communicate with your collaborators.
 
 ### Table of content
 
-* [What is `kami.js` ?](#what-is-kami-js)
-* [How to use `kami.js` ?](#how-to-use-kami-js)
+* [What is `kami.js` ?](#what-is-kamijs-)
+* [How to use `kami.js` ?](#how-to-use-kamijs-)
 * [KAMIS glossary](#kamis-glossary)
 
 ## What is `kami.js` ?
@@ -151,22 +151,22 @@ README "build" [COMMAND](#command).
 
 ## KAMIS' glossary
     
-* [`kami`](#kami), *(ABS) KAMI*, Concept, Idea, Word, Pattern, Spirit, God
-* [`command`](#kami), *(ABS) COMMAND*, Command
-* [`doc`](#kami), *(ABS) DOC*, Documentation
-* [`file`](#kami), *(ABS) FILE*, File
-* [`folder`](#kami), *(ABS) FOLDER*, Folder
-* [`instance`](#kami), *(ABS) INSTANCE*, Instance
-* [`lang`](#kami), *(ABS) LANG*, Language
-* [`prop`](#kami), *(ABS) PROP*, Property
-* [`readme`](#kami), *(ABS) README*, README
-* [`section`](#kami), *(ABS) SECTION*, Section
-* [`shrine`](#kami), *(ABS) ШRᛏGHN*, Shrine
-* [`spec`](#kami), *(ABS) SPEC*, Specification
-* [`util`](#kami), *(ABS) UTIL*, Utility
-* [`way`](#kami), *(ABS) WAY*, Method
-* [`website`](#kami), *(ABS) WEBSITE*, Website
-* [`wiki`](#kami), *(ABS) WIKI*, Wiki
+* [KAMI](#kami), `kami` : Concept, Idea, Word, Pattern, Spirit, God
+* [COMMAND](#command), `command` : Command
+* [DOC](#doc), `doc` : Documentation
+* [FILE](#file), `file` : File
+* [FOLDER](#folder), `folder` : Folder
+* [INSTANCE](#instance), `instance` : Instance
+* [LANG](#lang), `lang` : Language
+* [PROP](#prop), `prop` : Property, Characteristics, Attribute
+* [README](#readme), `readme` : README
+* [README-](#section), `readme/` : Section
+* [ШRᛏGHN](#shrine), `shrine` : Shrine
+* [SPEC](#spec), `spec` : Specification
+* [UTIL](#util), `util` : Utility
+* [WAY](#way), `way` : Method, Action, Operation, Function
+* [WEBSITE](#website), `website` : Website
+* [WIKI](#wiki), `wiki` : Wiki
 
 ## `kami`
 
@@ -317,8 +317,8 @@ They usually :
 
 **PROP** or PROP-KAMI, also known as :
 
-* [en] Property,
-* [fr] Propriété.
+* [en] Property, Characteristics, Attribute,
+* [fr] Propriété, Caractéristque, Attribut.
 
 ### Description
 
@@ -397,8 +397,8 @@ Utility are usually consumed by same scope-level modules.
 
 **WAY** or WAY-KAMI, also known as :
 
-* [en] Method,
-* [fr] Méthode.
+* [en] Method, Action, Operation, Function,
+* [fr] Méthode, Action, Opération, Fonction.
 
 ### Description
 
