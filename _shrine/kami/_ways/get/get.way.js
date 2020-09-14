@@ -32,11 +32,17 @@ export default (id = false) =>
               + (global.PATH + file).replace(/\//g,'\\'))
 
               .then(({ default: kami }) => ({
-                ...kami,
-                scope: protoKami[1],
-                folder: protoKami[2],
-                file: protoKami[3] + '.kami.js'
-              }))
+                  ...kami,
+                  parents: protoKami[1]
+                    ? protoKami[1]
+                      .replace(/_shrine\//g, '')
+                      .split('/')
+                      .slice(1)
+                    : false,
+                  scope: protoKami[1],
+                  folder: protoKami[2],
+                  file: protoKami[3] + '.kami.js'
+                }))
           ]
   
         } else {

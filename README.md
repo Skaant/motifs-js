@@ -1,5 +1,5 @@
 *[16 KAMIS](#kamis-glossary)
-on 9/14/2020, 2:16:22 PM*
+on 9/14/2020, 2:45:26 PM*
 
 # kami.js
 
@@ -39,6 +39,9 @@ Everything in `kami.js` is based on **words**.
 **Words and their relations.**
 
 [KAMIS](#kami) are words, in a context.
+`kami.js` is a language made of KAMIS that
+you can extend by adding KAMIS
+and relations between them.
 
 By connecting them, you create powerful
 softwares, databases and knowledges.
@@ -160,7 +163,7 @@ README "build" [COMMAND](#command).
 * [LANG](#lang), `lang` : Language
 * [PROP](#prop), `prop` : Property, Characteristics, Attribute
 * [README](#readme), `readme` : README
-* [README-](#section), `readme/` : Section
+  * [README-SECTION](#readme-section), `readme-section` : Section
 * [ШRᛏGHN](#shrine), `shrine` : Shrine
 * [SPEC](#spec), `spec` : Specification
 * [UTIL](#util), `util` : Utility
