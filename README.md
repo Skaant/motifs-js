@@ -1,363 +1,169 @@
+*[16 KAMIS](#kamis-glossary)
+on 9/14/2020, 12:10:23 PM*
+
 # kami.js
 
 > Work on ideas.
 
-![The kami.js project pictogram](/logo.svg)
+![kami.js project pictogram](/logo.svg)
 
-`kami.js` aims to explore the concept of naming and patterns. It creates virtual entities, the [kamis](#kami), to embody project's classes, components and logic.
+`kami.js` aims to explore the concepts of
+**patterns and naming**.
 
-## Quick start
+You create virtual entities, [KAMIS](#kami),
+to embody projects' classes, components and logic.
 
-For this very moment, `kami.js` doesn't hold dependencies to
-external packages. No `npm install` is required after cloning.
+Quickly, it starts to **form a language** that
+you can use to communicate with your collaborators.
 
-The `dev-start.js` script is used to :
-* register project's root path,
-* list all project's files,
-* and expose the CLI.
+### Table of content
 
-### Global
+* [What is `kami.js` ?](#what-is-kami-js)
+* [How to use `kami.js` ?](#how-to-use-kami-js)
+* [KAMIS glossary](#kamis-glossary)
 
-With `KAMI.AVE(url, options)`, two GLOBALS are exposed :
-* `global.PATH`
-* `global.FILES`
+## What is `kami.js` ?
 
-### CLI COMMANDS
+`kami.js` exposes a set of features which
+help managing complexity in projects.
 
-COMMAND is a KAMI describing single-line commands that
-can be passed through CLI.
+By finding multiple and relevant purposes to code,
+as well as potent ways to interact with it,
+it helps organization to exponentially increase the
+value of conception and development works.
 
-#### Test the framework
+### Project's keystone
 
-`npm start -- [-log] test`
+Everything in `kami.js` is based on **words**.
 
-*`[-doc]` has been disabled the time for [DOC](#doc) to
-be implemented.*
+**Words and their relations.**
 
-#### Build the README
+[KAMIS](#kami) are words, in a context.
 
-`npm start -- -k readme build`
+By connecting them, you create powerful
+softwares, databases and knowledges.
 
-* `-k` targets a specific [KAMI](#kami), in this case [REAMDE](#readme),
-* `build` is targeting the README "build" [COMMAND](#way).
+Strongly implementing the DRY principle,
+when you want to describes a property,
+there is a high chance that the words you
+use are already defined in the glossary and
+implemented by the framework's and/or you
+codebase.
 
-#### Create a new KAMI
+### Different ways of connecting KAMIS
 
-`npm start -- create <scope : '' | ...> <kamiId: string>`
+1. Import a KAMI as an ESM module and
+consumes its features.
 
-Creates a new [KAMI](#kami) structure at given scope :
+```javascript
+/** ./dev-start.js */
+import KAMI from './index.js'
 
+KAMI.ave(
+  import.meta.url,
+  {
+    log: true
+  })
 ```
-<scope>/_shrine/
-|-<kamiId>
-  |-_props
-  | |-names
-  | | |-names.prop.js
-  | |-description
-  | | |-description.prop.js
-  |-<kamiId>.kami.js
+
+2. *(not implemented yet)* Describe
+it with a relation property.
+
+### List of features
+
+1. Glossary
+
+By retrieving the formalized concepts
+of your projects, ie. built-in and
+customized [KAMIS](#kamis),
+you are able to create glossaries on
+all your documentation platforms :
+README, wiki, website.
+
+*[Jump to README KAMIS' glossary section](#kamis-glossary).*
+
+2. Documentation
+
+After retrieving, you can conditionaly shape
+and render concepts that your project manipulate
+in order to create relevant views for different
+users and uses.
+
+3. Test
+
+Check KAMIS instances and logics against
+their specifications.
+
+4. Continuous deployment
+
+Plug framework's features to CI/CD pipelines
+through CLI commands.
+
+## How to use `kami.js` ?
+
+### Create a new KAMI
+
+```bash
+npm start -- create <scope : '' | ...> <kamiId: string>
 ```
 
-`names.prop.js` and `description.prop.js` are
-pre-filled with temporary values. You'll have to
-edit them.
-
-## `kami`
-
-![KAMI pictogram](/_shrine/kami/kami.picto.svg)
-
-**KAMI** or KAMI-KAMI, also known as :
-
-* [en] Idea, Word, Pattern, Spirit, God,
-* [fr] Idée, Mot, Motif, Esprit, Dieu.
-
-### Description
-
-**The KAMI of KAMIS.**
-
-Kami are "enlived" patterns, making them
-not only **generative** but also **evolutive**
-in a similar way classes and objects are.
-        
-### Instances
-
-* [`kami`](#kami) ([`/_shrine/kami/kami.kami.js`](/_shrine/kami/kami.kami.js))
-* [`command`](#command) ([`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js))
-* [`doc`](#doc) ([`/_shrine/doc/doc.kami.js`](/_shrine/doc/doc.kami.js))
-* [`file`](#file) ([`/_shrine/file/file.kami.js`](/_shrine/file/file.kami.js))
-* [`folder`](#folder) ([`/_shrine/folder/folder.kami.js`](/_shrine/folder/folder.kami.js))
-* [`instance`](#instance) ([`/_shrine/instance/instance.kami.js`](/_shrine/instance/instance.kami.js))
-* [`lang`](#lang) ([`/_shrine/lang/lang.kami.js`](/_shrine/lang/lang.kami.js))
-* [`prop`](#prop) ([`/_shrine/prop/prop.kami.js`](/_shrine/prop/prop.kami.js))
-* [`readme`](#readme) ([`/_shrine/readme/readme.kami.js`](/_shrine/readme/readme.kami.js))
-* [`shrine`](#shrine) ([`/_shrine/shrine/shrine.kami.js`](/_shrine/shrine/shrine.kami.js))
-* [`spec`](#spec) ([`/_shrine/spec/spec.kami.js`](/_shrine/spec/spec.kami.js))
-* [`util`](#util) ([`/_shrine/util/util.kami.js`](/_shrine/util/util.kami.js))
-* [`way`](#way) ([`/_shrine/way/way.kami.js`](/_shrine/way/way.kami.js))
-* [`website`](#website) ([`/_shrine/website/website.kami.js`](/_shrine/website/website.kami.js))
-* [`wiki`](#wiki) ([`/_shrine/wiki/wiki.kami.js`](/_shrine/wiki/wiki.kami.js))
-
-### Flavour
-
-At the very beginning,
-KAMI-KAMI **said itself**, to be
-brought to existence.
-
-Soon after, it started to speak out other KAMIS,
-which were instantly brought to existence too, following
-a pure nodal self-organization.
-
-For the generation to proceed, KAMI-KAMI first had to
-split itself in two : the KAMI concept and the
-KAMI individual. The class and the instance.
-
-It was also about genericity and specificity.
-And, at the end, dualism.
-
-KAMI-KAMI had to become a KAMI like the others KAMIS.
-It needed to be processed the same way to ensure
-genericity.
-
-But its specifity, the secrets of its generative powers, remained
-absent of other KAMIS. This was the key of peace.
-
-By doing so, KAMI-KAMI shared the same common nature,
-**the pattern**, to all of its creations [the kamis],
-letting them freely **extend and implement** its
-highly abstract powers.
-
-
-## `command`
-
-![COMMAND pictogram](/_shrine/command/command.picto.svg)
-
-**COMMAND** or COMMAND-KAMI, also known as :
-
-* [en] Command,
-* [fr] Commande.
-
-### Description
-
-**KAMI WAYS CLI INTERFACE**
-
-Basically, a command bind a [`way`](#way) method
-to match [`KAMI`](#kami) CLI entrypoint syntax.
-
-
-## `doc`
-
-![DOC pictogram](/_shrine/doc/doc.picto.svg)
-
-**DOC** or DOC-KAMI, also known as :
-
-* [en] Documentation,
-* [fr] Documentation.
-
-### Description
-
-**TOP-LEVEL DOCUMENTATION KAMI**
-
-DOC is composed of few sub-KAMIS :
-* [README](#readme),
-* [WIKI](#wiki),
-* [WEBSITE](#website).
-
-
-## `file`
-
-![FILE pictogram](/_shrine/file/file.picto.svg)
-
-**FILE** or FILE-KAMI, also known as :
-
-* [en] File,
-* [fr] Fichier.
-
-### Description
-
-**File meta-data**
-
-*Pattern should later be extended depending on
-the file extension.*
-
-
-## `folder`
-
-![FOLDER pictogram](/_shrine/folder/folder.picto.svg)
-
-**FOLDER** or FOLDER-KAMI, also known as :
-
-* [en] Folder,
-* [fr] Dossier.
-
-### Description
-
-**Folder meta-data**
-
-Folder is represented by :
-* Its `scope`, the path between project root
-  and desired folder location,
-* Its `name`, an unique identifier in its scope,
-* Its `tree`, an object representing folders and
-  files hierarchy inside top-level folder
-  (a complex concept to define).
-
-
-
-## `instance`
-
-![INSTANCE pictogram](/_shrine/instance/instance.picto.svg)
-
-**INSTANCE** or INSTANCE-KAMI, also known as :
-
-* [en] Instance,
-* [fr] Instance.
-
-### Description
-
-**INDIVIDUAL OF ONE OR MULTIPLE KAMIS**
-
-Instances are occurence of a [KAMI](#kami) (pattern).
-
-They usually :
-* Can get retrieved through [`<kami>.get`] way,
-* Can get created through [`<kami>.create`] way,
-* Can get tested through [`<kami>.test`] way,
-* *(Not implemented) Can get updated and deleted*.
-
-[KAMIS](#kami) (`.kamis.js`) are instances of KAMI-KAMI.
-
-**KAMI-KAMI is an instance of itself !**
-
-
-## `lang`
-
-![LANG pictogram](/_shrine/lang/lang.picto.svg)
-
-**LANG** or LANG-KAMI, also known as :
-
-* [en] Language,
-* [fr] Langage.
-
-
-## `prop`
-
-![PROP pictogram](/_shrine/prop/prop.picto.svg)
-
-**PROP** or PROP-KAMI, also known as :
-
-* [en] Property,
-* [fr] Propriété.
-
-### Description
-
-`_props` folders contains
-[kami](#kami)'s properties content.
-
-
-## `readme`
-
-![README pictogram](/_shrine/readme/readme.picto.svg)
-
-**README** or README-KAMI, also known as :
-
-* [en] README,
-* [fr] README.
-
-### Description
-
-**KAMI.JS' GITHUB README**
-
-README is a component of [DOC](#doc).
-
-
-## `shrine`
-
-![ШRIGHN pictogram](/_shrine/shrine/shrine.picto.svg)
-
-**ШRIGHN** or ШRIGHN-KAMI, also known as :
-
-* [en] Shrine,
-* [fr] Sanctuaire.
-
-
-## `spec`
-
-![SPEC pictogram](/_shrine/spec/spec.picto.svg)
-
-**SPEC** or SPEC-KAMI, also known as :
-
-* [en] Specification,
-* [fr] Spécification.
-
-### Description
-
-**KAMIS' INSTANCES TESTS**
-
-
-## `util`
-
-![UTIL pictogram](/_shrine/util/util.picto.svg)
-
-**UTIL** or UTIL-KAMI, also known as :
-
-* [en] Utility,
-* [fr] Utilitaire.
-
-### Description
-
-`_utils` folders are nothing more than
-the place very specific snippets of code are put.
-
-Utility are usually consumed by same scope-level modules.
-
-
-## `way`
-
-![WAY pictogram](/_shrine/way/way.picto.svg)
-
-**WAY** or WAY-KAMI, also known as :
-
-* [en] Method,
-* [fr] Méthode.
-
-### Description
-
-**KAMI POWERS**
-
-Ways are KAMI's methods
-(... actions, functions, operations).
-
-It differs with [prop](#prop) in its type,
-which is necessarely `function`.
-
-
-## `website`
-
-![WEBSITE pictogram](/_shrine/website/website.picto.svg)
-
-**WEBSITE** or WEBSITE-KAMI, also known as :
-
-* [en] Website,
-* [fr] Site internet.
-
-### Description
-
-**KAMI.JS DOCUMENTATION WEBSITE**
-
-WEBSITE is a [DOC](#doc) component.
-
-
-## `wiki`
-
-![WIKI pictogram](/_shrine/wiki/wiki.picto.svg)
-
-**WIKI** or WIKI-KAMI, also known as :
-
-* [en] Wiki,
-* [fr] Wiki.
-
-### Description
-
-**KAMI.JS' GITHUB WIKI**
-
-WIKI is a component of [DOC](#doc).
+Creates a new [KAMI](#kami) folders/files tree
+at given scope, structured as follow :
+
+```bash
+<scope>
++-- /_shrine/
+|   +-- <kamiId>
+|   |   +-- _props
+|   |   |   +-- names
+|   |   |   |   +-- names.prop.js
+|   |   |   +-- description
+|   |   |   |   +-- description.prop.js
+|   +-- <kamiId>.kami.js
+```
+
+#### Notes
+* `names.prop.js` and `description.prop.js` are
+pre-filled with temporary values.
+
+You'll have to customize them through your IDE.
+
+### Test the framework
+
+```bash
+npm start -- [-log] test
+```
+
+#### Notes
+* `-log` prints all test assertions and results.
+
+### Build the README
+
+```bash
+npm start -- -k readme build
+```
+
+#### Notes
+* `-k` targets a specific [KAMI](#kami),
+in this case [README](#readme),
+* `build` is targeting the
+README "build" [COMMAND](#command).
+
+## KAMIS' glossary
+    
+* [`kami`](#kami), *KAMI-KAMI*, Concept, Idea, Word, Pattern, Spirit, God
+* [`command`](#kami), *COMMAND-KAMI*, Command
+* [`doc`](#kami), *DOC-KAMI*, Documentation
+* [`file`](#kami), *FILE-KAMI*, File
+* [`folder`](#kami), *FOLDER-KAMI*, Folder
+* [`instance`](#kami), *INSTANCE-KAMI*, Instance
+* [`lang`](#kami), *LANG-KAMI*, Language
+* [`prop`](#kami), *PROP-KAMI*, Property
+* [`readme`](#kami), *README-KAMI*, README
+* [`section`](#kami), *SECTION-KAMI*, Section
+* [`shrine`](#kami), *ШRᛏGHN-KAMI*, Shrine
+* [`spec`](#kami), *SPEC-KAMI*, Specification
+* [`util`](#kami), *UTIL-KAMI*, Utility
+* [`way`](#kami), *WAY-KAMI*, Method
+* [`website`](#kami), *WEBSITE-KAMI*, Website
+* [`wiki`](#kami), *WIKI-KAMI*, Wiki

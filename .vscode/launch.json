@@ -14,9 +14,9 @@
       "program": "${workspaceFolder}\\dev-start.js",
       "args": [
         "_temp",
-        "create",
-        "/_shrine/readme",
-        "readme-section"
+        "-k",
+        "readme",
+        "build"
       ]
     }
   ]

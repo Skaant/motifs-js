@@ -1,1 +1,0 @@
-export default `New KAMI !`

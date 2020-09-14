@@ -16,7 +16,11 @@ import fs from 'fs'
 export default (
   scope,
   name,
-  callback
+  callback,
+  {
+    log,
+    force
+  } = {}
 ) =>
 
   new Promise((resolve, reject) => {
@@ -25,8 +29,20 @@ export default (
       + '/' + scope 
       + '/' + name
 
-    fs.writeFile(
+    fs.exists(
       filePath,
-      callback(scope),
-      err => err ? reject(err) : resolve())
+      exists => {
+
+        if (exists && !force) {
+
+          reject(new Error(filePath + ' already exists !'
+            + '\nOperation aborted.'))
+        }
+
+        fs.writeFile(
+          filePath,
+          callback(scope),
+          err => err ? reject(err) : resolve())
+      }
+    )
   })

@@ -1,41 +1,32 @@
-import fs from 'fs'
-import kamiKami from '../../../kami/kami.kami.js'
+import KAMI from '../../../kami/kami.kami.js'
+import introSection from './_sections/1_intro/intro.section.js'
+import what_isSection from './_sections/2_what_is/what_is.section.js'
+import how_toSection from './_sections/3_how_to/how_to.section.js'
+import kamis_glossarySection from './_sections/4_kamis_glossary/kamis_glossary.section.js'
+import SECTION from '../../_shrine/section/section.kami.js'
+import FILE from '../../../file/file.kami.js'
 
 export default () =>
 
-  new Promise((resolve, reject) => {
+  new Promise(resolve =>
+    
+    KAMI.get()
+      .then(kamis =>
 
-    /** 1. README file content is extracted */
-    fs.readFile(
-      './README.md',
-      'utf-8',
-      (err, data) => {
+        SECTION.create([
+          introSection(kamis),
+          what_isSection,
+          how_toSection,
+          kamis_glossarySection(kamis)
+        ])
+          .then(content =>
 
-        if (err) reject(err)
-      
-        /** 2. Create new dynamic content is removed */
-        kamiKami.get()
-          .then(kamis =>
-
-            Promise.all(kamis.map(kami =>
-              
-              kamiKami.readme(kami)))
-              
-              .then(kamisReadme => {
-
-                const newData = data.slice(
-                  0,
-                  /** We keep old data up to `## kami` section,
-                   * the first automatically generated. */
-                  data.search('## `kami`'))
-
-                  + kamisReadme.join('\n\n')
-
-                  /** 3. Write new content in README file */
-                  fs.writeFile(
-                    './README.md',
-                    newData,
-                    err => err ? reject(err) : resolve())
-              }))
-      })
-  })
+            FILE.create(
+              '',
+              'README.md',
+              () => content,
+              {
+                force: true
+              }
+            )
+              .then(resolve))))
