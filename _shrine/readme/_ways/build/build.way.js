@@ -5,6 +5,7 @@ import how_toSection from './_sections/3_how_to/how_to.section.js'
 import kamis_glossarySection from './_sections/4_kamis_glossary/kamis_glossary.section.js'
 import SECTION from '../../_shrine/section/section.kami.js'
 import FILE from '../../../file/file.kami.js'
+import kamiSection from './_sections/5_kami/kami.section.js'
 
 export default () =>
 
@@ -17,7 +18,10 @@ export default () =>
           introSection(kamis),
           what_isSection,
           how_toSection,
-          kamis_glossarySection(kamis)
+          kamis_glossarySection(kamis),
+          ...kamis.map(kami =>
+            
+            kamiSection(kami))
         ])
           .then(content =>
 

@@ -1,12 +1,6 @@
 import langEnum from "../../../../../lang/_enums/lang.enum.js";
 
-export default (kami, specificKamiReadme = false) =>
-
-`## \`${ kami.id }\`
-
-![${ kami.names[langEnum.ABS] } pictogram](/${
-    (kami.path || '_shrine') }/${ kami.id }/${ kami.id
-}.picto.svg)
+export default kami => `## \`${ kami.id }\`
 
 **${ kami.names[langEnum.ABS] }** or ${
   kami.names[langEnum.ABS] }-KAMI, also known as :
@@ -30,8 +24,6 @@ ${
 ${ kami.description }`
 
     : ''
-}${
-  specificKamiReadme || ''
 }${
   kami.flavour
     ? 

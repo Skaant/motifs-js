@@ -1,5 +1,5 @@
 *[16 KAMIS](#kamis-glossary)
-on 9/14/2020, 12:10:23 PM*
+on 9/14/2020, 12:18:12 PM*
 
 # kami.js
 
@@ -151,19 +151,289 @@ README "build" [COMMAND](#command).
 
 ## KAMIS' glossary
     
-* [`kami`](#kami), *KAMI-KAMI*, Concept, Idea, Word, Pattern, Spirit, God
-* [`command`](#kami), *COMMAND-KAMI*, Command
-* [`doc`](#kami), *DOC-KAMI*, Documentation
-* [`file`](#kami), *FILE-KAMI*, File
-* [`folder`](#kami), *FOLDER-KAMI*, Folder
-* [`instance`](#kami), *INSTANCE-KAMI*, Instance
-* [`lang`](#kami), *LANG-KAMI*, Language
-* [`prop`](#kami), *PROP-KAMI*, Property
-* [`readme`](#kami), *README-KAMI*, README
-* [`section`](#kami), *SECTION-KAMI*, Section
-* [`shrine`](#kami), *ШRᛏGHN-KAMI*, Shrine
-* [`spec`](#kami), *SPEC-KAMI*, Specification
-* [`util`](#kami), *UTIL-KAMI*, Utility
-* [`way`](#kami), *WAY-KAMI*, Method
-* [`website`](#kami), *WEBSITE-KAMI*, Website
-* [`wiki`](#kami), *WIKI-KAMI*, Wiki
+* [`kami`](#kami), *(ABS) KAMI*, Concept, Idea, Word, Pattern, Spirit, God
+* [`command`](#kami), *(ABS) COMMAND*, Command
+* [`doc`](#kami), *(ABS) DOC*, Documentation
+* [`file`](#kami), *(ABS) FILE*, File
+* [`folder`](#kami), *(ABS) FOLDER*, Folder
+* [`instance`](#kami), *(ABS) INSTANCE*, Instance
+* [`lang`](#kami), *(ABS) LANG*, Language
+* [`prop`](#kami), *(ABS) PROP*, Property
+* [`readme`](#kami), *(ABS) README*, README
+* [`section`](#kami), *(ABS) SECTION*, Section
+* [`shrine`](#kami), *(ABS) ШRᛏGHN*, Shrine
+* [`spec`](#kami), *(ABS) SPEC*, Specification
+* [`util`](#kami), *(ABS) UTIL*, Utility
+* [`way`](#kami), *(ABS) WAY*, Method
+* [`website`](#kami), *(ABS) WEBSITE*, Website
+* [`wiki`](#kami), *(ABS) WIKI*, Wiki
+
+## `kami`
+
+**KAMI** or KAMI-KAMI, also known as :
+
+* [en] Concept, Idea, Word, Pattern, Spirit, God,
+* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu.
+
+### Description
+
+**The KAMI of KAMIS.**
+
+Kami are "enlived" patterns, making them
+not only **generative** but also **evolutive**
+in a similar way classes and objects are.
+
+### Flavour
+
+At the very beginning,
+KAMI-KAMI **said itself**, to be
+brought to existence.
+
+Soon after, it started to speak out other KAMIS,
+which were instantly brought to existence too, following
+a pure nodal self-organization.
+
+For the generation to proceed, KAMI-KAMI first had to
+split itself in two : the KAMI concept and the
+KAMI individual. The class and the instance.
+
+It was also about genericity and specificity.
+And, at the end, dualism.
+
+KAMI-KAMI had to become a KAMI like the others KAMIS.
+It needed to be processed the same way to ensure
+genericity.
+
+But its specifity, the secrets of its generative powers, remained
+absent of other KAMIS. This was the key of peace.
+
+By doing so, KAMI-KAMI shared the same common nature,
+**the pattern**, to all of its creations [the kamis],
+letting them freely **extend and implement** its
+highly abstract powers.
+
+
+## `command`
+
+**COMMAND** or COMMAND-KAMI, also known as :
+
+* [en] Command,
+* [fr] Commande.
+
+### Description
+
+**KAMI WAYS CLI INTERFACE**
+
+Basically, a command bind a [`way`](#way) method
+to match [`KAMI`](#kami) CLI entrypoint syntax.
+
+
+## `doc`
+
+**DOC** or DOC-KAMI, also known as :
+
+* [en] Documentation,
+* [fr] Documentation.
+
+### Description
+
+**TOP-LEVEL DOCUMENTATION KAMI**
+
+DOC is composed of few sub-KAMIS :
+* [README](#readme),
+* [WIKI](#wiki),
+* [WEBSITE](#website).
+
+
+## `file`
+
+**FILE** or FILE-KAMI, also known as :
+
+* [en] File,
+* [fr] Fichier.
+
+### Description
+
+**File meta-data**
+
+*Pattern should later be extended depending on
+the file extension.*
+
+
+## `folder`
+
+**FOLDER** or FOLDER-KAMI, also known as :
+
+* [en] Folder,
+* [fr] Dossier.
+
+### Description
+
+**Folder meta-data**
+
+Folder is represented by :
+* Its `scope`, the path between project root
+  and desired folder location,
+* Its `name`, an unique identifier in its scope,
+* Its `tree`, an object representing folders and
+  files hierarchy inside top-level folder
+  (a complex concept to define).
+
+
+
+## `instance`
+
+**INSTANCE** or INSTANCE-KAMI, also known as :
+
+* [en] Instance,
+* [fr] Instance.
+
+### Description
+
+**INDIVIDUAL OF ONE OR MULTIPLE KAMIS**
+
+Instances are occurence of a [KAMI](#kami) (pattern).
+
+They usually :
+* Can get retrieved through [`<kami>.get`] way,
+* Can get created through [`<kami>.create`] way,
+* Can get tested through [`<kami>.test`] way,
+* *(Not implemented) Can get updated and deleted*.
+
+[KAMIS](#kami) (`.kamis.js`) are instances of KAMI-KAMI.
+
+**KAMI-KAMI is an instance of itself !**
+
+
+## `lang`
+
+**LANG** or LANG-KAMI, also known as :
+
+* [en] Language,
+* [fr] Langage.
+
+
+## `prop`
+
+**PROP** or PROP-KAMI, also known as :
+
+* [en] Property,
+* [fr] Propriété.
+
+### Description
+
+`_props` folders contains
+[kami](#kami)'s properties content.
+
+
+## `readme`
+
+**README** or README-KAMI, also known as :
+
+* [en] README,
+* [fr] README.
+
+### Description
+
+**KAMI.JS' GITHUB README**
+
+README is a component of [DOC](#doc).
+
+
+## `section`
+
+**SECTION** or SECTION-KAMI, also known as :
+
+* [en] Section,
+* [fr] Section.
+
+### Description
+
+**README SECTION**
+
+SECTIONS are made of :
+* Text content,
+* Imbricated SECTIONS.
+
+In fact, README is the top-level SECTION.
+
+
+## `shrine`
+
+**ШRᛏGHN** or ШRᛏGHN-KAMI, also known as :
+
+* [en] Shrine,
+* [fr] Sanctuaire.
+
+
+## `spec`
+
+**SPEC** or SPEC-KAMI, also known as :
+
+* [en] Specification,
+* [fr] Spécification.
+
+### Description
+
+**KAMIS' INSTANCES TESTS**
+
+
+## `util`
+
+**UTIL** or UTIL-KAMI, also known as :
+
+* [en] Utility,
+* [fr] Utilitaire.
+
+### Description
+
+`_utils` folders are nothing more than
+the place very specific snippets of code are put.
+
+Utility are usually consumed by same scope-level modules.
+
+
+## `way`
+
+**WAY** or WAY-KAMI, also known as :
+
+* [en] Method,
+* [fr] Méthode.
+
+### Description
+
+**KAMI POWERS**
+
+Ways are KAMI's methods
+(... actions, functions, operations).
+
+It differs with [prop](#prop) in its type,
+which is necessarely `function`.
+
+
+## `website`
+
+**WEBSITE** or WEBSITE-KAMI, also known as :
+
+* [en] Website,
+* [fr] Site internet.
+
+### Description
+
+**KAMI.JS DOCUMENTATION WEBSITE**
+
+WEBSITE is a [DOC](#doc) component.
+
+
+## `wiki`
+
+**WIKI** or WIKI-KAMI, also known as :
+
+* [en] Wiki,
+* [fr] Wiki.
+
+### Description
+
+**KAMI.JS' GITHUB WIKI**
+
+WIKI is a component of [DOC](#doc).

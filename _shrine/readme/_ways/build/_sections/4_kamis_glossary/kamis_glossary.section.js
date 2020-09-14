@@ -10,9 +10,9 @@ export default kamis =>
 ${
   kamis.map(kami =>
     
-    `* [\`${ kami.id }\`](#kami), *${
+    `* [\`${ kami.id }\`](#kami), *(ABS) ${
       kami.names[langEnum.ABS]
-    }-KAMI*, ${
+    }*, ${
       typeof kami.names[langEnum.EN] === 'string'
         ? kami.names[langEnum.EN]
         : kami.names[langEnum.EN].join(', ')
