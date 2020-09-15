@@ -50,7 +50,13 @@ it with a relation property.
 
 ### List of features
 
-1. Glossary
+#### 0. Development utilities
+
+KAMIS abstract a lot of developement patterns
+and can be used to manipulate occurences
+of the concept they describe.
+
+#### 1. Glossary
 
 By retrieving the formalized concepts
 of your projects, ie. built-in and
@@ -61,19 +67,19 @@ README, wiki, website.
 
 *[Jump to README KAMIS' glossary section](#kamis-glossary).*
 
-2. Documentation
+#### 2. Documentation
 
 After retrieving, you can conditionaly shape
 and render concepts that your project manipulate
 in order to create relevant views for different
 users and uses.
 
-3. Test
+#### 3. Test
 
 Check KAMIS instances and logics against
 their specifications.
 
-4. Continuous deployment
+#### 4. Continuous deployment
 
 Plug framework's features to CI/CD pipelines
 through CLI commands.`
