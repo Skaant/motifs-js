@@ -1,5 +1,5 @@
 *[17 KAMIS](#kamis-glossary)
-on 9/15/2020, 10:49:44 AM*
+on 9/15/2020, 10:59:52 AM*
 
 # kami.js
 
@@ -74,7 +74,13 @@ it with a relation property.
 
 ### List of features
 
-1. Glossary
+#### 0. Development utilities
+
+KAMIS abstract a lot of developement patterns
+and can be used to manipulate occurences
+of the concept they describe.
+
+#### 1. Glossary
 
 By retrieving the formalized concepts
 of your projects, ie. built-in and
@@ -85,19 +91,19 @@ README, wiki, website.
 
 *[Jump to README KAMIS' glossary section](#kamis-glossary).*
 
-2. Documentation
+#### 2. Documentation
 
 After retrieving, you can conditionaly shape
 and render concepts that your project manipulate
 in order to create relevant views for different
 users and uses.
 
-3. Test
+#### 3. Test
 
 Check KAMIS instances and logics against
 their specifications.
 
-4. Continuous deployment
+#### 4. Continuous deployment
 
 Plug framework's features to CI/CD pipelines
 through CLI commands.
@@ -189,6 +195,7 @@ to match [`KAMI`](#kami) CLI entrypoint syntax.
 ## Occurences
 
 Matching regular expression :
+
 `/(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/`.
 
 * [`/_shrine/kami/_props/_commands/create/create.command.js`](/_shrine/kami/_props/_commands/create/create.command.js)
@@ -279,6 +286,7 @@ a regular expression is used for matching.
 ## Occurences
 
 Matching regular expression :
+
 `/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
 
 * [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
@@ -327,6 +335,7 @@ in a similar way classes and objects are.
 ## Occurences
 
 Matching regular expression :
+
 `/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
 
 * [`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js)
@@ -440,6 +449,7 @@ In fact, README is the top-level SECTION.
 ## Occurences
 
 Matching regular expression :
+
 `/(.*)\/_shrine$/`.
 
 * [`/_shrine`](/_shrine)
@@ -460,6 +470,7 @@ Matching regular expression :
 ## Occurences
 
 Matching regular expression :
+
 `/(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/`.
 
 * [`/_shrine/kami/_props/_specs/props/props.spec.js`](/_shrine/kami/_props/_specs/props/props.spec.js)
