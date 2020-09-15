@@ -1,5 +1,5 @@
 *[17 KAMIS](#kamis-glossary)
-on 9/15/2020, 4:50:52 AM*
+on 9/15/2020, 10:46:33 AM*
 
 # kami.js
 
@@ -186,6 +186,14 @@ README "build" [COMMAND](#command).
 Basically, a command bind a [`way`](#way) method
 to match [`KAMI`](#kami) CLI entrypoint syntax.
 
+## Occurences
+
+Matching RegExp : `/(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/`.
+
+* [`/_shrine/kami/_props/_commands/create/create.command.js`](/_shrine/kami/_props/_commands/create/create.command.js)
+* [`/_shrine/kami/_props/_commands/test/test.command.js`](/_shrine/kami/_props/_commands/test/test.command.js)
+* [`/_shrine/readme/_props/_commands/build/build.command.js`](/_shrine/readme/_props/_commands/build/build.command.js)
+
 
 ## `doc`
 
@@ -267,6 +275,13 @@ In the case of folders and files,
 a regular expression is used for matching.
 
 
+## Occurences
+
+Matching RegExp : `/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
+
+* [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
+* [`/_shrine/kami/_ways/get/get.way.js`](/_shrine/kami/_ways/get/get.way.js)
+
 
 ## `instance`
 
@@ -306,6 +321,28 @@ They usually :
 Kami are "enlived" patterns, making them
 not only **generative** but also **evolutive**
 in a similar way classes and objects are.
+
+## Occurences
+
+Matching RegExp : `/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
+
+* [`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js)
+* [`/_shrine/doc/doc.kami.js`](/_shrine/doc/doc.kami.js)
+* [`/_shrine/file/file.kami.js`](/_shrine/file/file.kami.js)
+* [`/_shrine/folder/folder.kami.js`](/_shrine/folder/folder.kami.js)
+* [`/_shrine/get/get.kami.js`](/_shrine/get/get.kami.js)
+* [`/_shrine/instance/instance.kami.js`](/_shrine/instance/instance.kami.js)
+* [`/_shrine/kami/kami.kami.js`](/_shrine/kami/kami.kami.js)
+* [`/_shrine/lang/lang.kami.js`](/_shrine/lang/lang.kami.js)
+* [`/_shrine/prop/prop.kami.js`](/_shrine/prop/prop.kami.js)
+* [`/_shrine/readme/readme.kami.js`](/_shrine/readme/readme.kami.js)
+* [`/_shrine/readme/_shrine/section/section.kami.js`](/_shrine/readme/_shrine/section/section.kami.js)
+* [`/_shrine/shrine/shrine.kami.js`](/_shrine/shrine/shrine.kami.js)
+* [`/_shrine/spec/spec.kami.js`](/_shrine/spec/spec.kami.js)
+* [`/_shrine/util/util.kami.js`](/_shrine/util/util.kami.js)
+* [`/_shrine/way/way.kami.js`](/_shrine/way/way.kami.js)
+* [`/_shrine/website/website.kami.js`](/_shrine/website/website.kami.js)
+* [`/_shrine/wiki/wiki.kami.js`](/_shrine/wiki/wiki.kami.js)
 
 ### Flavour
 
@@ -397,6 +434,13 @@ In fact, README is the top-level SECTION.
 * [en] Shrine,
 * [fr] Sanctuaire.
 
+## Occurences
+
+Matching RegExp : `/(.*)\/_shrine$/`.
+
+* [`/_shrine`](/_shrine)
+* [`/_shrine/readme/_shrine`](/_shrine/readme/_shrine)
+
 
 ## `spec`
 
@@ -408,6 +452,12 @@ In fact, README is the top-level SECTION.
 ### Description
 
 **KAMIS' INSTANCES TESTS**
+
+## Occurences
+
+Matching RegExp : `/(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/`.
+
+* [`/_shrine/kami/_props/_specs/props/props.spec.js`](/_shrine/kami/_props/_specs/props/props.spec.js)
 
 
 ## `util`

@@ -7,9 +7,13 @@ import SECTION from '../../_shrine/section/section.kami.js'
 import FILE from '../../../file/file.kami.js'
 import kamiSection from './_sections/5_kami/kami.section.js'
 
-export default () =>
+export default ({
+  log
+} = {}) =>
 
-  new Promise(resolve =>
+  new Promise(resolve => {
+
+    let timestamp = Date.now()
     
     KAMI.get()
       .then(kamis =>
@@ -33,4 +37,12 @@ export default () =>
                 force: true
               }
             )
-              .then(resolve))))
+              .then(() => {
+
+                log && console.log(
+                  'The README build has been completed in '
+                    + (Date.now() - timestamp) + ' milliseconds.')
+                
+                resolve()
+              })))
+  })

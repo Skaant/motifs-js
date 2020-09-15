@@ -4,5 +4,6 @@ import descriptionProp from './_props/description/description.prop.js'
 export default {
   id: 'get',
   names: namesProp,
-  description: descriptionProp
+  description: descriptionProp,
+  regExp: /(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/,
 }

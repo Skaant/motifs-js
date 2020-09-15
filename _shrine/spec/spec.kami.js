@@ -4,5 +4,6 @@ import descriptionProp from './_props/description/description.prop.js'
 export default {
   id: 'spec',
   names: namesProp,
-  description: descriptionProp
+  description: descriptionProp,
+  regExp: /(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/,
 }

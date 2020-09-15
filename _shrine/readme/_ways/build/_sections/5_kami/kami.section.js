@@ -1,6 +1,18 @@
 import langEnum from "../../../../../lang/_enums/lang.enum.js";
+import FILE from "../../../../../file/file.kami.js";
+import formatEnum from "../../../../../file/_ways/get/_enums/format/format.enum.js";
 
-export default kami => `## \`${ kami.id }\`
+export default kami => 
+
+  new Promise(resolve => {
+
+    FILE.get(kami.regExp, {
+      format: formatEnum.FILE_PATH
+    })
+      .then(occurences =>
+
+        resolve(
+`## \`${ kami.id }\`
 
 **${ kami.names[langEnum.ABS] }** or ${
   kami.names[langEnum.ABS] }-KAMI, also known as :
@@ -25,6 +37,23 @@ ${ kami.description }`
 
     : ''
 }${
+
+  kami.regExp
+    ?
+`
+
+## Occurences
+
+Matching RegExp : \`${ kami.regExp.toString() }\`.
+
+${ occurences.map(filePath =>
+  
+  `* [\`${ filePath }\`](${ filePath })`)
+  .join('\n')
+}`
+
+    : ''
+}${
   kami.flavour
     ? 
 `
@@ -36,3 +65,5 @@ ${ kami.flavour }`
     : ''
 }
 `
+        ))
+  })

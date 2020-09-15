@@ -16,6 +16,8 @@ export default (regExp, options) =>
 
         resolve(filesPath)
 
+        break
+
       case formatEnum.UTF_8:
 
         Promise.all(filesPath.map(filePath =>
