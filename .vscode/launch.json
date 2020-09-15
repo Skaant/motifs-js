@@ -13,10 +13,8 @@
       ],
       "program": "${workspaceFolder}\\dev-start.js",
       "args": [
-        "_temp",
-        "-k",
-        "readme",
-        "build"
+        "--",
+        "test"
       ]
     }
   ]

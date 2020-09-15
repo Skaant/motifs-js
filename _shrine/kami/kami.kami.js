@@ -14,6 +14,7 @@ export default {
   id: 'kami',
   names: namesProp,
   description: descriptionProp,
+  regExp: /(.*)\/_shrine\/(.*)\/(.*).kami.js/,
   flavour: flavourProp,
   _commands,
   create: createWay,

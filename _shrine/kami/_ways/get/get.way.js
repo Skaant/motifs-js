@@ -1,3 +1,7 @@
+import FILE from "../../../file/file.kami.js";
+import KAMI from "../../kami.kami.js";
+import formatEnum from "../../../file/_ways/get/_enums/format/format.enum.js";
+
 let cache = {
   globalFiles: false,
   kamis: false
@@ -8,64 +12,40 @@ let cache = {
  * Retrieve all project kamis,
  *  and order them by dependency ranks.
  */
-export default (id = false) =>
+export default (id = false, options) =>
 
   new Promise((resolve, reject) => {
 
     if (cache.globalFiles === global.FILES
         && cache.kamis)
+        
       resolve(cache.kamis)
 
     cache.globalFiles = global.FILES
 
-    Promise.all(global.FILES.reduce(
-      (kamiPromises, file) => {
-  
-        const protoKami = file
-          .match(/(.*)\/_shrine\/(.*)\/(.*).kami.js/)
-  
-        if (file && protoKami) {
-
-          return [
-            ...kamiPromises,
-            import('file:///'
-              + (global.PATH + file).replace(/\//g,'\\'))
-
-              .then(({ default: kami }) => ({
-                  ...kami,
-                  parents: protoKami[1]
-                    ? protoKami[1]
-                      .replace(/_shrine\//g, '')
-                      .split('/')
-                      .slice(1)
-                    : false,
-                  scope: protoKami[1],
-                  folder: protoKami[2],
-                  file: protoKami[3] + '.kami.js'
-                }))
-          ]
-  
-        } else {
-  
-          return kamiPromises
-        }
-      },
-      []
-    ))
-      .then(kamis => {
+    FILE.get(KAMI.regExp, { format: formatEnum.ESM })
+      .then(files => {
         
-        const kamiKamiIndex = kamis.findIndex(kami =>
+        const kamis = files.map(({ path, ...content }) => {
+
+          const protoKami = path.match(KAMI.regExp)
           
-          kami.id === 'kami')
-        
+          return {
+            ...content,
+            parents: protoKami[1]
+              ? protoKami[1]
+                .replace(/_shrine\//g, '')
+                .split('/')
+                .slice(1)
+              : false,
+            scope: protoKami[1],
+            folder: protoKami[2],
+            file: protoKami[3] + '.kami.js'
+          }
+        })
 
-        cache.kamis = [
-          kamis[kamiKamiIndex],
-          ...kamis.slice(0, kamiKamiIndex),
-          ...kamis.slice(kamiKamiIndex + 1)
-        ]
+        cache.kamis = kamis
 
-        resolve(cache.kamis)
+        resolve(kamis)
       })
-      .catch(err => reject(err))
   })

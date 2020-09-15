@@ -1,5 +1,5 @@
-*[16 KAMIS](#kamis-glossary)
-on 9/14/2020, 2:45:26 PM*
+*[17 KAMIS](#kamis-glossary)
+on 9/15/2020, 4:50:52 AM*
 
 # kami.js
 
@@ -154,12 +154,13 @@ README "build" [COMMAND](#command).
 
 ## KAMIS' glossary
     
-* [KAMI](#kami), `kami` : Concept, Idea, Word, Pattern, Spirit, God
 * [COMMAND](#command), `command` : Command
 * [DOC](#doc), `doc` : Documentation
 * [FILE](#file), `file` : File
 * [FOLDER](#folder), `folder` : Folder
+* [GET](#get), `get` : Accesser, Obtain, Hydrater
 * [INSTANCE](#instance), `instance` : Instance
+* [KAMI](#kami), `kami` : Concept, Idea, Word, Pattern, Spirit, God
 * [LANG](#lang), `lang` : Language
 * [PROP](#prop), `prop` : Property, Characteristics, Attribute
 * [README](#readme), `readme` : README
@@ -170,51 +171,6 @@ README "build" [COMMAND](#command).
 * [WAY](#way), `way` : Method, Action, Operation, Function
 * [WEBSITE](#website), `website` : Website
 * [WIKI](#wiki), `wiki` : Wiki
-
-## `kami`
-
-**KAMI** or KAMI-KAMI, also known as :
-
-* [en] Concept, Idea, Word, Pattern, Spirit, God,
-* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu.
-
-### Description
-
-**The KAMI of KAMIS.**
-
-Kami are "enlived" patterns, making them
-not only **generative** but also **evolutive**
-in a similar way classes and objects are.
-
-### Flavour
-
-At the very beginning,
-KAMI-KAMI **said itself**, to be
-brought to existence.
-
-Soon after, it started to speak out other KAMIS,
-which were instantly brought to existence too, following
-a pure nodal self-organization.
-
-For the generation to proceed, KAMI-KAMI first had to
-split itself in two : the KAMI concept and the
-KAMI individual. The class and the instance.
-
-It was also about genericity and specificity.
-And, at the end, dualism.
-
-KAMI-KAMI had to become a KAMI like the others KAMIS.
-It needed to be processed the same way to ensure
-genericity.
-
-But its specifity, the secrets of its generative powers, remained
-absent of other KAMIS. This was the key of peace.
-
-By doing so, KAMI-KAMI shared the same common nature,
-**the pattern**, to all of its creations [the kamis],
-letting them freely **extend and implement** its
-highly abstract powers.
-
 
 ## `command`
 
@@ -284,6 +240,34 @@ Folder is represented by :
 
 
 
+## `get`
+
+**GET** or GET-KAMI, also known as :
+
+* [en] Accesser, Obtain, Hydrater,
+* [fr] Accesseur, Obtenir, Hydrateur.
+
+### Description
+
+**INSTANCE ACCESSERS**
+
+GET is currently an abstract pattern
+which may be implemented on sufficent
+occurence rate and generic logics.
+
+GET can declined on KAMI's occurences purposes :
+* Access and update folders and files content,
+* Import ESM modules,
+* Access and update data from databases.
+
+In any case, an object instance is created to
+represent the actual occurence.
+
+In the case of folders and files,
+a regular expression is used for matching.
+
+
+
 ## `instance`
 
 **INSTANCE** or INSTANCE-KAMI, also known as :
@@ -298,14 +282,59 @@ Folder is represented by :
 Instances are occurence of a [KAMI](#kami) (pattern).
 
 They usually :
-* Can get retrieved through [`<kami>.get`] way,
-* Can get created through [`<kami>.create`] way,
-* Can get tested through [`<kami>.test`] way,
+* Can be retrieved through [`<kami>.get`] way,
+* Can be created through [`<kami>.create`] way,
+* Can be tested through [`<kami>.test`] way,
 * *(Not implemented) Can get updated and deleted*.
 
-[KAMIS](#kami) (`.kamis.js`) are instances of KAMI-KAMI.
+[KAMIS](#kami) (`<...>.kami.js`) are instances of KAMI-KAMI.
 
 **KAMI-KAMI is an instance of itself !**
+
+
+## `kami`
+
+**KAMI** or KAMI-KAMI, also known as :
+
+* [en] Concept, Idea, Word, Pattern, Spirit, God,
+* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu.
+
+### Description
+
+**The KAMI of KAMIS.**
+
+Kami are "enlived" patterns, making them
+not only **generative** but also **evolutive**
+in a similar way classes and objects are.
+
+### Flavour
+
+At the very beginning,
+KAMI-KAMI **said itself**, to be
+brought to existence.
+
+Soon after, it started to speak out other KAMIS,
+which were instantly brought to existence too, following
+a pure nodal self-organization.
+
+For the generation to proceed, KAMI-KAMI first had to
+split itself in two : the KAMI concept and the
+KAMI individual. The class and the instance.
+
+It was also about genericity and specificity.
+And, at the end, dualism.
+
+KAMI-KAMI had to become a KAMI like the others KAMIS.
+It needed to be processed the same way to ensure
+genericity.
+
+But its specifity, the secrets of its generative powers, remained
+absent of other KAMIS. This was the key of peace.
+
+By doing so, KAMI-KAMI shared the same common nature,
+**the pattern**, to all of its creations [the kamis],
+letting them freely **extend and implement** its
+highly abstract powers.
 
 
 ## `lang`
