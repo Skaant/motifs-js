@@ -1,5 +1,5 @@
 *[17 KAMIS](#kamis-glossary)
-on 9/15/2020, 10:46:33 AM*
+on 9/15/2020, 10:49:44 AM*
 
 # kami.js
 
@@ -188,7 +188,8 @@ to match [`KAMI`](#kami) CLI entrypoint syntax.
 
 ## Occurences
 
-Matching RegExp : `/(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/`.
+Matching regular expression :
+`/(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/`.
 
 * [`/_shrine/kami/_props/_commands/create/create.command.js`](/_shrine/kami/_props/_commands/create/create.command.js)
 * [`/_shrine/kami/_props/_commands/test/test.command.js`](/_shrine/kami/_props/_commands/test/test.command.js)
@@ -277,7 +278,8 @@ a regular expression is used for matching.
 
 ## Occurences
 
-Matching RegExp : `/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
+Matching regular expression :
+`/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
 
 * [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
 * [`/_shrine/kami/_ways/get/get.way.js`](/_shrine/kami/_ways/get/get.way.js)
@@ -324,7 +326,8 @@ in a similar way classes and objects are.
 
 ## Occurences
 
-Matching RegExp : `/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
+Matching regular expression :
+`/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
 
 * [`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js)
 * [`/_shrine/doc/doc.kami.js`](/_shrine/doc/doc.kami.js)
@@ -436,7 +439,8 @@ In fact, README is the top-level SECTION.
 
 ## Occurences
 
-Matching RegExp : `/(.*)\/_shrine$/`.
+Matching regular expression :
+`/(.*)\/_shrine$/`.
 
 * [`/_shrine`](/_shrine)
 * [`/_shrine/readme/_shrine`](/_shrine/readme/_shrine)
@@ -455,7 +459,8 @@ Matching RegExp : `/(.*)\/_shrine$/`.
 
 ## Occurences
 
-Matching RegExp : `/(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/`.
+Matching regular expression :
+`/(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/`.
 
 * [`/_shrine/kami/_props/_specs/props/props.spec.js`](/_shrine/kami/_props/_specs/props/props.spec.js)
 

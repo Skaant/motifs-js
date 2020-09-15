@@ -44,7 +44,8 @@ ${ kami.description }`
 
 ## Occurences
 
-Matching RegExp : \`${ kami.regExp.toString() }\`.
+Matching regular expression :
+\`${ kami.regExp.toString() }\`.
 
 ${ occurences.map(filePath =>
   
