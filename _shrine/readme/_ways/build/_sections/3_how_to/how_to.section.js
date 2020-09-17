@@ -1,5 +1,8 @@
 export default `## How to use \`kami.js\` ?
 
+Here are details some [COMMANDS](#command),
+framework's CLI entrypoints.
+
 ### Create a new KAMI
 
 \`\`\`bash

@@ -5,7 +5,7 @@ help managing complexity in projects.
 
 By finding multiple and relevant purposes to code,
 as well as potent ways to interact with it,
-it helps organization to exponentially increase the
+it helps organizations to exponentially increase the
 value of conception and development works.
 
 ### Project's keystone
