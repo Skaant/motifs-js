@@ -69,11 +69,18 @@ export default (args, { log = false }) => {
 
       log && console.log('"' + options.command + '"\n')
 
-      kami._commands[options.command](
-        {
-          log: options.log,
-          doc: options.doc
-        },
-        ...options.params)
+      try {
+
+        kami._commands[options.command](
+          {
+            log: options.log,
+            doc: options.doc
+          },
+          ...options.params)
+
+      } catch (err) {
+
+        console.error(err)
+      }
     })
 }

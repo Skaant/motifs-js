@@ -20,8 +20,18 @@ Let me initialize myself :
   /** 1. global.PATH */
   global.PATH = getPath(url)
 
+  /** Detects if the project is ran as
+   * a standalone, otherwise creates
+   * a `PANTHEON_SCOPE` global holding the
+   * `kamis.js` module scope. */
+  global.PANTHEON_SCOPE = global.PATH.search(/kami\.js$/) > -1
+    ? false
+    : 'kami.js'
+
   log && console.log('* global.PATH : '
-    + global.PATH + ',')
+    + global.PATH + ',\n'
+    + '* global.PANTHEON_SCOPE : '
+    + global.PANTHEON_SCOPE || 'standalone')
 
   /** 2. global.FILES */
   global.FILES = getFiles('')
