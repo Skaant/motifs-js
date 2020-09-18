@@ -1,21 +1,21 @@
 import WEBSITE from "../../../website.kami.js"
+// FOR DEV TEST ONLY
+import defaultWebsite from "../../../../../../_websites/default/default.website.js"
 
-export default (options, scope, title) =>
+export default (options, scope) =>
 
   new Promise(resolve => {
 
     WEBSITE.build(
       scope,
-      [],
-      {
-        ...options,
-        title
-      })
+      defaultWebsite,
+      options
+    )
       .then(() => {
 
         console.log('WEBSITE "'
-          + title + '" created at scope "'
-          + scope + '".')
+          + defaultWebsite.title + '" created at scope "'
+          + scope + '"/_build.')
         
         resolve()
       })

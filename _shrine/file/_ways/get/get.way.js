@@ -1,5 +1,6 @@
 import { promises as fs } from 'fs'
 import formatEnum from "./_enums/format/format.enum.js";
+
 /**
  * @param {{format:'<formatEnum>'}} options
  */

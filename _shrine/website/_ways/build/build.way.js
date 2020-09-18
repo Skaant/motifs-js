@@ -3,22 +3,27 @@ import FILE from "../../../file/file.kami.js";
 
 export default (
   scope = '',
-  mapping,
+  {
+    provision,
+    mapping,
+    ...data
+  },
   options
 ) =>
 
   new Promise(resolve =>
-    
-    FOLDER.create(
-      scope,
-      '_build',
-      folderScope => ([
-        FILE.create(
+
+    provision().then(_data =>
+
+      FOLDER.create(
+        scope,
+        '_build',
+        folderScope => mapping(
           folderScope,
-          'index.html',
-          folderScope => `Hello world !`,
+          {
+            ...data,
+            ..._data
+          },
           options
-        )
-      ])
-    )
-    .then(resolve))
+        ))
+      .then(resolve)))

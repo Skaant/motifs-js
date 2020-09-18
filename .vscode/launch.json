@@ -15,7 +15,8 @@
       "args": [
         "--",
         "-k",
-        "readme",
+        "website",
+        "-force",
         "build"
       ]
     }
