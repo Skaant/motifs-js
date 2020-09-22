@@ -4,7 +4,14 @@ import formatEnum from "./_enums/format/format.enum.js";
 /**
  * @param {{format:'<formatEnum>'}} options
  */
-export default (regExp, options) => 
+export default (
+  {
+    id,
+    regExp,
+    regExpMapping
+  },
+  options
+) => 
 
   new Promise((resolve, reject) => {
 
@@ -29,7 +36,7 @@ export default (regExp, options) =>
           .then(filesContent =>
             
             resolve(filesContent.map((fileContent, index) => ({
-              path: filesPath[index],
+              filePath: filesPath[index],
               content: fileContent
             }))))
 
@@ -44,10 +51,20 @@ export default (regExp, options) =>
           .then(filesContent =>
             
             resolve(filesContent
-              .map(({ default: fileContent }, index) => ({
-                path: filesPath[index],
-                ...fileContent
-              }))))
+              .map(({ default: fileContent }, index) => {
+
+                const filePath = filesPath[index]
+
+                return {
+                  id: fileContent.id
+                    || (regExpMapping
+                      && regExpMapping(filePath).id)
+                    || false,
+                  kami: id,
+                  filePath: filesPath[index],
+                  ...fileContent
+                }
+              })))
 
         break
 

@@ -2,13 +2,13 @@ import WEBSITE from "../../../website.kami.js"
 // FOR DEV TEST ONLY
 import defaultWebsite from "../../../../../../_websites/default/default.website.js"
 
-export default (options, scope) =>
+export default (options, scope, id) =>
 
   new Promise(resolve => {
 
     WEBSITE.build(
       scope,
-      defaultWebsite,
+      id,
       options
     )
       .then(() => {

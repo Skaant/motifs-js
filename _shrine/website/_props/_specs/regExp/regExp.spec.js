@@ -12,7 +12,7 @@ export default kami =>
       [
         !'/temp/_websites/default/default.website.js'
           .match(kami.regExp),
-        'Should not match "/_websites/" not in the root folder.' ],
+        'Should NOT match "/_websites/" outside of root folder.' ],
       [
         '/_websites/default/temp/default.website.js'
           .match(kami.regExp),

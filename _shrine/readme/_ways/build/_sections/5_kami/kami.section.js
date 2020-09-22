@@ -6,9 +6,11 @@ export default kami =>
 
   new Promise(resolve => {
 
-    FILE.get(kami.regExp, {
-      format: formatEnum.FILE_PATH
-    })
+    FILE.get(
+      kami,
+      {
+        format: formatEnum.FILE_PATH
+      })
       .then(occurences =>
 
         resolve(

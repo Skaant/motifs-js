@@ -23,12 +23,16 @@ export default (id = false, options) =>
 
     cache.globalFiles = global.FILES
 
-    FILE.get(KAMI.regExp, { format: formatEnum.ESM })
+    FILE.get(
+      KAMI,
+      {
+        format: formatEnum.ESM
+      })
       .then(files => {
         
-        const kamis = files.map(({ path, ...content }) => {
+        const kamis = files.map(({ filePath, ...content }) => {
 
-          const protoKami = path.match(KAMI.regExp)
+          const protoKami = filePath.match(KAMI.regExp)
           
           return {
             ...content,

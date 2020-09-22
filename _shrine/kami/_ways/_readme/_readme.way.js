@@ -13,7 +13,7 @@ export default () =>
 
 ${ kamis.map(kami => {
 
-  const kamiPath = '/' + (kami.path || '_shrine/')
+  const kamiPath = '/' + (kami.filePath || '_shrine/')
     + kami.folder + '/' + kami.file
 
   return `* [\`${ kami.id }\`](#${ kami.id }) ([\`${
