@@ -14,8 +14,8 @@ export default (options, scope) =>
       .then(() => {
 
         console.log('WEBSITE "'
-          + defaultWebsite.title + '" created at scope "'
-          + scope + '"/_build.')
+          + defaultWebsite.title + '" created at path "'
+          + scope + '/_build".')
         
         resolve()
       })

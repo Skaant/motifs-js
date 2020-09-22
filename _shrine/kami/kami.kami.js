@@ -7,7 +7,7 @@ import _commands from "./_props/_commands/index.js";
 import flavourProp from "./_props/flavour/flavour.prop.js";
 import _readmeWay from "./_ways/_readme/_readme.way.js";
 import testWay from "./_ways/test/test.way.js";
-import _specs from "./_props/_specs/index.js";
+import specs from "./_props/specs/index.js";
 import aveWay from "./_ways/ave/ave.way.js";
 
 export default {
@@ -22,6 +22,6 @@ export default {
   get: getWay,
   cli: cliWay,
   test: testWay,
-  _specs,
+  specs,
   ave: aveWay
 }

@@ -1,6 +1,6 @@
 import KAMI from "../../kami.kami.js"
-import FOLDER from "../../../folder/folder.kami.js"
-import FILE from "../../../file/file.kami.js"
+import testSuiteUtil from "./_utils/testSuite/testSuite.util.js"
+import logSpecsUtil from "./_utils/logSpecs/logSpecs.util.js"
 
 /** **KAMI(S) TEST**
  * 
@@ -14,9 +14,9 @@ export default (
 
   new Promise((resolve, reject) => {
 
-    log && console.log(`YOU, mortal, decided to challenge me.
+    log && console.log(`You, mortal, decided to challenge me.
     
-I'll show you how well I'm performing !`)
+I'll show you how well my KAMIS and me are performing !\n`)
 
     KAMI.get().then(kamis => {
 
@@ -28,71 +28,27 @@ I'll show you how well I'm performing !`)
         if (!kami) reject(new Error(
           'No KAMI "' + id + '"'))
 
-        if (!kami._specs) reject(new Error(
-          'No "_specs" for KAMI "' + id + '"'))
-
-        if (log) console.log('"' + id + '"\'s specifications :')
-
-        Promise.all(kami._specs
-          .map(spec => spec(kami)))
-          .then(assertions => {
-
-            if (log) console.log(assertions
-              .map((result, label) =>
-                `${ label } => ${ result }\n`)
-              .join('\n'))
-
-            resolve()
-          })
+        testSuiteUtil(kami)
+          .then(assertions =>
+            
+            logSpecsUtil(id, assertions))
 
       } else {
 
         Promise.all(kamis
           .map(kami =>
 
-            new Promise(resolve =>
-
-              Promise.all(KAMI._specs
-                .map(spec => spec(kami)))
-                .then(assertions => resolve({
-                  id: kami.id,
-                  assertions: assertions.reduce(
-                    (acc, assertions) =>
-
-                      ([
-                        ...acc,
-                        ...assertions
-                      ]),
-                    []
-                  )
-                })))))
+              testSuiteUtil(kami)))
 
           .then(kamisAssertions => {
 
-            if (log) console.log(kamisAssertions
-              .map(({ id, assertions }) =>
-              
-                '\nKAMI "' + id + '"\'s specifications :\n\n'
-                  + assertions
-                    .map(([ result, label ]) =>
-                      `* ${ result } => ${ label }`)
-                    .join('\n'))
-              .join('\n'))
+            log && kamisAssertions
+              .map((assertions, index) =>
 
-            if (doc) FOLDER.create(
-              '/kami.js.wiki',
-              'tests',
-              folderScope =>
-                kamisAssertions.map(({ id, assertions }) =>
-                  FILE.create(
-                    folderScope,
-                    id + '-KAMI.test.md',
-                    () => '## ' + id + 'TESTS\n\n'
-                      + assertions
-                        .map(([ result, label ]) =>
-                          `* ${ result } => ${ label }`)
-                        .join('\n')
-                  )))
+                logSpecsUtil(
+                  kamis[index].id,
+                  assertions
+                ))
           })
       }
     })
