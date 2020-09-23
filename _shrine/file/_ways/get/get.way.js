@@ -68,7 +68,7 @@ export default (
                     || (regExpMapping
                       && regExpMapping(filePath).id)
                     || filePath,
-                  kami: id,
+                  kamiId: id,
                   filePath: filePath,
                   ...fileContent
                 }
