@@ -5,5 +5,5 @@ export default {
   id: 'spec',
   names: namesProp,
   description: descriptionProp,
-  regExp: /(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/,
+  regExp: /(.*)\/(.*)\/_props\/(_specs|specs)\/(.*)\/(.*).spec.js/,
 }

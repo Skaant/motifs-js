@@ -1,5 +1,5 @@
 *[23 KAMIS](#kamis-glossary)
-on 9/23/2020, 12:29:20 PM*
+on 9/23/2020, 12:32:50 PM*
 
 # kami.js
 
@@ -580,8 +580,9 @@ categories of specifications :
 
 Matching regular expression :
 
-`/(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/`.
+`/(.*)\/(.*)\/_props\/(_specs|specs)\/(.*)\/(.*).spec.js/`.
 
+* [`/_shrine/kami/_props/specs/props/props.spec.js`](/_shrine/kami/_props/specs/props/props.spec.js)
 * [`/_shrine/website/_props/_specs/regExp/regExp.spec.js`](/_shrine/website/_props/_specs/regExp/regExp.spec.js)
 
 
