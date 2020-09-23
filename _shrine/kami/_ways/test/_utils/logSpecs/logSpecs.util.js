@@ -5,9 +5,14 @@ export default (
   [
     kamiSpecs,
     instancesSpecs
-  ]) => {
+  ],
+  {
+    ran,
+    kos
+  }) => {
 
     console.log('\n-----\nKAMI `' + id + '`\n')
+    console.log('Tests ran : ' + ran + '.\n')
 
     kamiSpecs
       ? console.log('Specific SPECS :\n'
@@ -17,7 +22,7 @@ export default (
 
       : console.log('*No specific SPECS.*')
     
-      instancesSpecs
+    instancesSpecs
       ? console.log('Instances SPECS :\n'
         + instancesSpecs.map(({ id, specs }) =>
           
@@ -27,4 +32,7 @@ export default (
           .join('\n'))
 
       : console.log('*No instances SPECS.*')
+
+    console.log('\nFailed tests : ' + kos.length
+      + '/' + ran + '.')
   }

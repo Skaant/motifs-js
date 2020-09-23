@@ -2,7 +2,7 @@ import { promises as fs } from 'fs'
 import formatEnum from "./_enums/format/format.enum.js";
 
 /**
- * @param {{format:'<formatEnum>'}} options
+ * @param {{format:'<formatEnum>',scope:string}} options
  */
 export default (
   {
@@ -15,10 +15,18 @@ export default (
 
   new Promise((resolve, reject) => {
 
-    const filesPath = global.FILES.filter(filePath =>
-      filePath.match(regExp))
+    const {
+      format,
+      scope = ''
+    } = options
 
-    switch (options.format) {
+    const filesPath = global.FILES
+      .filter(filePath =>
+        
+        filePath.match(new RegExp('^' + scope))
+          && filePath.match(regExp))
+
+    switch (format) {
 
       case formatEnum.FILE_PATH:
 
@@ -59,9 +67,9 @@ export default (
                   id: fileContent.id
                     || (regExpMapping
                       && regExpMapping(filePath).id)
-                    || false,
+                    || filePath,
                   kami: id,
-                  filePath: filesPath[index],
+                  filePath: filePath,
                   ...fileContent
                 }
               })))

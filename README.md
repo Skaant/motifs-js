@@ -1,5 +1,5 @@
-*[17 KAMIS](#kamis-glossary)
-on 9/15/2020, 10:59:52 AM*
+*[23 KAMIS](#kamis-glossary)
+on 9/23/2020, 12:29:20 PM*
 
 # kami.js
 
@@ -29,7 +29,7 @@ help managing complexity in projects.
 
 By finding multiple and relevant purposes to code,
 as well as potent ways to interact with it,
-it helps organization to exponentially increase the
+it helps organizations to exponentially increase the
 value of conception and development works.
 
 ### Project's keystone
@@ -110,6 +110,9 @@ through CLI commands.
 
 ## How to use `kami.js` ?
 
+Here are details some [COMMANDS](#command),
+framework's CLI entrypoints.
+
 ### Create a new KAMI
 
 ```bash
@@ -160,6 +163,11 @@ README "build" [COMMAND](#command).
 
 ## KAMIS' glossary
     
+* [BOOK](#book), `book` : Book
+  * [BOOK-EXTRACT](#book-extract), `book-extract` : Extract, Fragment, Atom
+  * [BOOK-IMAGE](#book-image), `book-image` : Image, Picture, Illustration, Scan
+  * [BOOK-PAGE](#book-page), `book-page` : Page
+  * [BOOK-SECTION](#book-section), `book-section` : Section, Chapter, Part
 * [COMMAND](#command), `command` : Command
 * [DOC](#doc), `doc` : Documentation
 * [FILE](#file), `file` : File
@@ -176,7 +184,91 @@ README "build" [COMMAND](#command).
 * [UTIL](#util), `util` : Utility
 * [WAY](#way), `way` : Method, Action, Operation, Function
 * [WEBSITE](#website), `website` : Website
+  * [WEBSITE-PAGE](#website-page), `website-page` : Page, Website page
 * [WIKI](#wiki), `wiki` : Wiki
+
+## `book`
+
+**BOOK** or BOOK-KAMI, also known as :
+
+* [en] Book,
+* [fr] Livre.
+
+### Description
+
+**ORDERED COLLECTION OF WRITINGS**
+
+A BOOK content is made of smaller [KAMIS](#kami)/bricks :
+
+* [BOOK-SECTIONS](#book-section),
+  which split BOOK content in chapters or sub-sections;
+  
+* [BOOK-PAGES](#book-page),
+  actually representing a scanned sheet of paper,
+  but could also hold expected BOOK page outcome;
+  
+* [BOOK-EXTRACTS](#book-extract),
+  which hold an atomic fragment of BOOK content.
+  
+**Note that BOOK is a top-level section
+with just some specific meta-data.**
+
+
+## `extract`
+
+**EXTRACT** or EXTRACT-KAMI, also known as :
+
+* [en] Extract, Fragment, Atom,
+* [fr] Extrait, Fragment, Atome.
+
+### Description
+
+**BOOK EXTRACT**
+
+A FRAGMENT is the smallest unit of [BOOK](#book) content.
+
+It can be included inside a [SECTION](#section),
+a [PAGE](#page) or directly on the BOOK root.
+
+
+## `image`
+
+**IMAGE** or IMAGE-KAMI, also known as :
+
+* [en] Image, Picture, Illustration, Scan,
+* [fr] Image, Illustration, Numérisation.
+
+### Description
+
+**VISUAL CONTENT**
+
+
+## `page`
+
+**PAGE** or PAGE-KAMI, also known as :
+
+* [en] Page,
+* [fr] Page.
+
+### Description
+
+**PHYSICAL CONTENT FRAGMENT**
+
+PAGE can hold [SECTIONS](#section)
+and [EXTRACTS](#extracts).
+
+
+## `section`
+
+**SECTION** or SECTION-KAMI, also known as :
+
+* [en] Section, Chapter, Part,
+* [fr] Section, Chapitre, Partie.
+
+### Description
+
+**BOOK SUB-DIVISION**
+
 
 ## `command`
 
@@ -201,6 +293,7 @@ Matching regular expression :
 * [`/_shrine/kami/_props/_commands/create/create.command.js`](/_shrine/kami/_props/_commands/create/create.command.js)
 * [`/_shrine/kami/_props/_commands/test/test.command.js`](/_shrine/kami/_props/_commands/test/test.command.js)
 * [`/_shrine/readme/_props/_commands/build/build.command.js`](/_shrine/readme/_props/_commands/build/build.command.js)
+* [`/_shrine/website/_props/_commands/build/build.command.js`](/_shrine/website/_props/_commands/build/build.command.js)
 
 
 ## `doc`
@@ -338,6 +431,11 @@ Matching regular expression :
 
 `/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
 
+* [`/_shrine/book/book.kami.js`](/_shrine/book/book.kami.js)
+* [`/_shrine/book/_shrine/extract/extract.kami.js`](/_shrine/book/_shrine/extract/extract.kami.js)
+* [`/_shrine/book/_shrine/image/image.kami.js`](/_shrine/book/_shrine/image/image.kami.js)
+* [`/_shrine/book/_shrine/page/page.kami.js`](/_shrine/book/_shrine/page/page.kami.js)
+* [`/_shrine/book/_shrine/section/section.kami.js`](/_shrine/book/_shrine/section/section.kami.js)
 * [`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js)
 * [`/_shrine/doc/doc.kami.js`](/_shrine/doc/doc.kami.js)
 * [`/_shrine/file/file.kami.js`](/_shrine/file/file.kami.js)
@@ -354,6 +452,7 @@ Matching regular expression :
 * [`/_shrine/util/util.kami.js`](/_shrine/util/util.kami.js)
 * [`/_shrine/way/way.kami.js`](/_shrine/way/way.kami.js)
 * [`/_shrine/website/website.kami.js`](/_shrine/website/website.kami.js)
+* [`/_shrine/website/_shrine/page/page.kami.js`](/_shrine/website/_shrine/page/page.kami.js)
 * [`/_shrine/wiki/wiki.kami.js`](/_shrine/wiki/wiki.kami.js)
 
 ### Flavour
@@ -453,7 +552,9 @@ Matching regular expression :
 `/(.*)\/_shrine$/`.
 
 * [`/_shrine`](/_shrine)
+* [`/_shrine/book/_shrine`](/_shrine/book/_shrine)
 * [`/_shrine/readme/_shrine`](/_shrine/readme/_shrine)
+* [`/_shrine/website/_shrine`](/_shrine/website/_shrine)
 
 
 ## `spec`
@@ -465,7 +566,15 @@ Matching regular expression :
 
 ### Description
 
-**KAMIS' INSTANCES TESTS**
+**KAMIS' TEST MATERIAL**
+
+In `kami.js` we currently distinguish two
+categories of specifications :
+
+* **Instances SPECS**, which target every
+  instances of a KAMI (hold by the KAMI),
+* **Specific SPECS**, which target a single
+  instance of a KAMI (hold by the instance).
 
 ## Occurences
 
@@ -473,7 +582,7 @@ Matching regular expression :
 
 `/(.*)\/(.*)\/_props\/_specs\/(.*)\/(.*).spec.js/`.
 
-* [`/_shrine/kami/_props/_specs/props/props.spec.js`](/_shrine/kami/_props/_specs/props/props.spec.js)
+* [`/_shrine/website/_props/_specs/regExp/regExp.spec.js`](/_shrine/website/_props/_specs/regExp/regExp.spec.js)
 
 
 ## `util`
@@ -521,6 +630,34 @@ which is necessarely `function`.
 **KAMI.JS DOCUMENTATION WEBSITE**
 
 WEBSITE is a [DOC](#doc) component.
+
+## Occurences
+
+Matching regular expression :
+
+`/^\/_websites\/(.*)\/(.*).website.js/`.
+
+
+
+
+## `page`
+
+**PAGE** or PAGE-KAMI, also known as :
+
+* [en] Page, Website page,
+* [fr] Page, Page de site internet.
+
+### Description
+
+TEMPLATE x DATA x URL
+
+A page binds the following three elements :
+* A template which render conditionnaly
+  on specific data,
+* Data to be consumed by the template,
+* An path to be render
+  (which will in time be used as its url).
+
 
 
 ## `wiki`
