@@ -87,7 +87,9 @@ I'll show you how well my KAMIS and me are performing !\n`)
                 kos: []
               })
 
-            log && console.log('\nTotal tests run : '
+            log && console.log('\n')
+
+            console.log('Total tests run : '
               + kamisSummary.ran + '.\nFailed : '
               + kamisSummary.kos.length
                 + (kamisSummary.kos.length > 0

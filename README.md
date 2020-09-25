@@ -1,5 +1,5 @@
 *[23 KAMIS](#kamis-glossary)
-on 9/25/2020, 10:46:05 AM*
+on 9/25/2020, 11:08:48 AM*
 
 # kami.js
 
