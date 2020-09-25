@@ -1,5 +1,11 @@
 import langEnum from "../../../../lang/_enums/lang.enum.js";
 
+const LANG_EMPTY_NAME_PLACEHOLDER = {
+  [langEnum.ABS]: 'ZOMMM',
+  [langEnum.EN]: 'Unknown',
+  [langEnum.FR]: 'Inconnu'
+}
+
 export default kami =>
 
   new Promise(resolve =>
@@ -28,9 +34,20 @@ export default kami =>
         const names = kami.names[lang]
         
         return [
-          !!names,
+          !!names
+            && (typeof names === 'string'
+              ? names !== LANG_EMPTY_NAME_PLACEHOLDER[lang]
+              
+              : true),
           `Prop \`names[${ lang }]\` is required (${
             Array.isArray(names) ? names.join(', ') : names })`
         ]
-      })
+      }),
+
+      /** 3. `description` */
+      [
+        kami.description !== 'New KAMI !'
+          && kami.description !== '',
+        'Prop `description` should be a non-empty string'
+      ]
     ]))

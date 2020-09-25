@@ -1,6 +1,7 @@
 import KAMI from "../../kami.kami.js"
-import FOLDER from "../../../folder/folder.kami.js"
-import FILE from "../../../file/file.kami.js"
+import testSuiteUtil from "./_utils/testSuite/testSuite.util.js"
+import logSpecsUtil from "./_utils/logSpecs/logSpecs.util.js"
+import summarizeSpecsUtil from "./_utils/summarizeSpecs/summarizeSpecs.util.js"
 
 /** **KAMI(S) TEST**
  * 
@@ -14,9 +15,9 @@ export default (
 
   new Promise((resolve, reject) => {
 
-    log && console.log(`YOU, mortal, decided to challenge me.
+    log && console.log(`You, mortal, decided to challenge me.
     
-I'll show you how well I'm performing !`)
+I'll show you how well my KAMIS and me are performing !\n`)
 
     KAMI.get().then(kamis => {
 
@@ -28,19 +29,19 @@ I'll show you how well I'm performing !`)
         if (!kami) reject(new Error(
           'No KAMI "' + id + '"'))
 
-        if (!kami._specs) reject(new Error(
-          'No "_specs" for KAMI "' + id + '"'))
-
-        if (log) console.log('"' + id + '"\'s specifications :')
-
-        Promise.all(kami._specs
-          .map(spec => spec(kami)))
+        testSuiteUtil(kami)
           .then(assertions => {
 
-            if (log) console.log(assertions
-              .map((result, label) =>
-                `${ label } => ${ result }\n`)
-              .join('\n'))
+            const summary = summarizeSpecsUtil(
+              id,
+              assertions)
+            
+            log && logSpecsUtil(id, assertions, summary)
+
+            if (summary.kos.length > 0) {
+
+              reject(new Error(JSON.stringify(summary.kos)))
+            }
 
             resolve()
           })
@@ -50,49 +51,63 @@ I'll show you how well I'm performing !`)
         Promise.all(kamis
           .map(kami =>
 
-            new Promise(resolve =>
-
-              Promise.all(KAMI._specs
-                .map(spec => spec(kami)))
-                .then(assertions => resolve({
-                  id: kami.id,
-                  assertions: assertions.reduce(
-                    (acc, assertions) =>
-
-                      ([
-                        ...acc,
-                        ...assertions
-                      ]),
-                    []
-                  )
-                })))))
+              testSuiteUtil(kami)))
 
           .then(kamisAssertions => {
 
-            if (log) console.log(kamisAssertions
-              .map(({ id, assertions }) =>
-              
-                '\nKAMI "' + id + '"\'s specifications :\n\n'
-                  + assertions
-                    .map(([ result, label ]) =>
-                      `* ${ result } => ${ label }`)
-                    .join('\n'))
-              .join('\n'))
+            const kamisSummary = kamisAssertions
+              .reduce(
+                (acc, assertions, index) => {
 
-            if (doc) FOLDER.create(
-              '/kami.js.wiki',
-              'tests',
-              folderScope =>
-                kamisAssertions.map(({ id, assertions }) =>
-                  FILE.create(
-                    folderScope,
-                    id + '-KAMI.test.md',
-                    () => '## ' + id + 'TESTS\n\n'
-                      + assertions
-                        .map(([ result, label ]) =>
-                          `* ${ result } => ${ label }`)
-                        .join('\n')
-                  )))
+                  const kamiId = kamis[index].id
+
+                  const summary = summarizeSpecsUtil(
+                    kamiId,
+                    assertions)
+
+                  log && logSpecsUtil(
+                    kamis[index].id,
+                    assertions,
+                    summary
+                  )
+
+                  return {
+                    ran: acc.ran + summary.ran,
+                    kos: [
+                      ...acc.kos,
+                      ...summary.kos.map(ko => ({
+                        kamiId,
+                        ...ko
+                      }))
+                    ]
+                  }
+                },
+              {
+                ran: 0,
+                kos: []
+              })
+
+            log && console.log('\n')
+
+            console.log('Total tests run : '
+              + kamisSummary.ran + '.\nFailed : '
+              + kamisSummary.kos.length
+                + (kamisSummary.kos.length > 0
+                  ? ', see below.\n\n'
+                    + kamisSummary.kos.map(ko =>
+                      
+                      `* ${ ko.kamiId.toUpperCase()
+                      } / ${ ko.id
+                      } : ${ ko.label }`).join('\n')
+                    + '\n'
+                  : ''))
+
+            if (kamisSummary.kos.length > 0) {
+
+              reject(new Error(JSON.stringify(kamisSummary.kos)))
+            }
+
+            resolve()
           })
       }
     })

@@ -26,7 +26,8 @@ export default (
   new Promise((resolve, reject) => {
 
     const filePath = global.PATH
-      + '/' + scope 
+      + ( scope[0] === '/' ? '' : '/' )
+      + scope 
       + '/' + name
 
     fs.exists(

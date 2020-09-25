@@ -39,8 +39,12 @@ export default {
                       'names.prop.js',
                       scope =>
 `import langEnum from '${
-  scope.split('/')
-    .slice(2).map(() => '../').join('')
+    scope.split('/')
+      .slice(2).map(() => '../').join('')
+      + (global.PANTHEON_SCOPE
+        ? '../../' + global.PANTHEON_SCOPE
+          + '/_shrine/'
+        : '')
 }lang/_enums/lang.enum.js'
 
 export default {

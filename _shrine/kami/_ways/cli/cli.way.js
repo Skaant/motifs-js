@@ -8,6 +8,7 @@ export default (args, { log = false }) => {
     kami: KAMI.id,
     command: false,
     log: false,
+    force: false,
     params: []
   }
   let _args = [ ...args ]
@@ -33,6 +34,11 @@ export default (args, { log = false }) => {
         case 'doc':
 
           options.doc = true
+          break
+
+        case 'force':
+
+          options.force = true
           break
       }
     } else {
@@ -69,11 +75,15 @@ export default (args, { log = false }) => {
 
       log && console.log('"' + options.command + '"\n')
 
-      kami._commands[options.command](
-        {
-          log: options.log,
-          doc: options.doc
-        },
-        ...options.params)
+      try {
+
+        kami._commands[options.command](
+          options,
+          ...options.params)
+
+      } catch (err) {
+
+        console.error(err)
+      }
     })
 }

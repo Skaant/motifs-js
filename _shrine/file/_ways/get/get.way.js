@@ -1,16 +1,32 @@
 import { promises as fs } from 'fs'
 import formatEnum from "./_enums/format/format.enum.js";
+
 /**
- * @param {{format:'<formatEnum>'}} options
+ * @param {{format:'<formatEnum>',scope:string}} options
  */
-export default (regExp, options) => 
+export default (
+  {
+    id,
+    regExp,
+    regExpMapping
+  },
+  options
+) => 
 
   new Promise((resolve, reject) => {
 
-    const filesPath = global.FILES.filter(filePath =>
-      filePath.match(regExp))
+    const {
+      format,
+      scope = ''
+    } = options
 
-    switch (options.format) {
+    const filesPath = global.FILES
+      .filter(filePath =>
+        
+        filePath.match(new RegExp('^' + scope + '/'))
+          && filePath.match(regExp))
+
+    switch (format) {
 
       case formatEnum.FILE_PATH:
 
@@ -28,7 +44,7 @@ export default (regExp, options) =>
           .then(filesContent =>
             
             resolve(filesContent.map((fileContent, index) => ({
-              path: filesPath[index],
+              filePath: filesPath[index],
               content: fileContent
             }))))
 
@@ -43,10 +59,20 @@ export default (regExp, options) =>
           .then(filesContent =>
             
             resolve(filesContent
-              .map(({ default: fileContent }, index) => ({
-                path: filesPath[index],
-                ...fileContent
-              }))))
+              .map(({ default: fileContent }, index) => {
+
+                const filePath = filesPath[index]
+
+                return {
+                  id: fileContent.id
+                    || (regExpMapping
+                      && regExpMapping(filePath).id)
+                    || filePath,
+                  kamiId: id,
+                  filePath: filePath,
+                  ...fileContent
+                }
+              })))
 
         break
 
