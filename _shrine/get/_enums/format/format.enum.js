@@ -5,6 +5,9 @@ export default {
   /** Retrieve file content as a text. */
   UTF_8: 'utf-8',
 
-  /** Retrieve file content as an ESM module. */
-  ESM: 'esm'
+  /** Retrieve file content as an ESM object. */
+  ESM: 'esm',
+
+  /** Retrieve file content as an ESM function. */
+  FUNCTION: 'function'
 }

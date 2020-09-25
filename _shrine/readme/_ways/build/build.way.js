@@ -1,11 +1,6 @@
-import KAMI from '../../../kami/kami.kami.js'
-import introSection from './_sections/1_intro/intro.section.js'
-import what_isSection from './_sections/2_what_is/what_is.section.js'
-import how_toSection from './_sections/3_how_to/how_to.section.js'
-import kamis_glossarySection from './_sections/4_kamis_glossary/kamis_glossary.section.js'
 import SECTION from '../../_shrine/section/section.kami.js'
 import FILE from '../../../file/file.kami.js'
-import kamiSection from './_sections/5_kami/kami.section.js'
+import README from '../../readme.kami.js'
 
 export default ({
   log
@@ -14,35 +9,30 @@ export default ({
   new Promise(resolve => {
 
     let timestamp = Date.now()
-    
-    KAMI.get()
-      .then(kamis =>
 
-        SECTION.create([
-          introSection(kamis),
-          what_isSection,
-          how_toSection,
-          kamis_glossarySection(kamis),
-          ...kamis.map(kami =>
-            
-            kamiSection(kami))
-        ])
-          .then(content =>
+    README.get()
+      .then(({ provision, mapping }) =>
+      
+        provision()
+          .then(data =>
 
-            FILE.create(
-              '',
-              'README.md',
-              () => content,
-              {
-                force: true
-              }
-            )
-              .then(() => {
+            SECTION.create(mapping(data))
+              .then(content =>
 
-                log && console.log(
-                  'The README build has been completed in '
-                    + (Date.now() - timestamp) + ' milliseconds.')
-                
-                resolve()
-              })))
+                FILE.create(
+                  '',
+                  'README.md',
+                  () => content,
+                  {
+                    force: true
+                  }
+                )
+                  .then(() => {
+
+                    log && console.log(
+                      'The README build has been completed in '
+                        + (Date.now() - timestamp) + ' milliseconds.')
+                    
+                    resolve()
+                  }))))
   })

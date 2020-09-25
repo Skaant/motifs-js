@@ -1,6 +1,6 @@
-import FILE from "../../../file/file.kami.js";
 import KAMI from "../../kami.kami.js";
-import formatEnum from "../../../file/_ways/get/_enums/format/format.enum.js";
+import formatEnum from "../../../get/_enums/format/format.enum.js";
+import INSTANCE from "../../../instance/instance.kami.js";
 
 let cache = {
   globalFiles: false,
@@ -23,7 +23,7 @@ export default (id = false, options) =>
 
     cache.globalFiles = global.FILES
 
-    FILE.get(
+    INSTANCE.get(
       KAMI,
       {
         format: formatEnum.ESM

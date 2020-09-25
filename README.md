@@ -1,5 +1,5 @@
 *[23 KAMIS](#kamis-glossary)
-on 9/25/2020, 11:08:48 AM*
+on 9/25/2020, 3:09:18 PM*
 
 # kami.js
 
@@ -305,11 +305,11 @@ Matching regular expression :
 
 `/\/_sections\/(.*)\/(.*)\.section\.js/`.
 
-* [`/_shrine/readme/_ways/build/_sections/1_intro/intro.section.js`](/_shrine/readme/_ways/build/_sections/1_intro/intro.section.js)
-* [`/_shrine/readme/_ways/build/_sections/2_what_is/what_is.section.js`](/_shrine/readme/_ways/build/_sections/2_what_is/what_is.section.js)
-* [`/_shrine/readme/_ways/build/_sections/3_how_to/how_to.section.js`](/_shrine/readme/_ways/build/_sections/3_how_to/how_to.section.js)
-* [`/_shrine/readme/_ways/build/_sections/4_kamis_glossary/kamis_glossary.section.js`](/_shrine/readme/_ways/build/_sections/4_kamis_glossary/kamis_glossary.section.js)
-* [`/_shrine/readme/_ways/build/_sections/5_kami/kami.section.js`](/_shrine/readme/_ways/build/_sections/5_kami/kami.section.js)
+* [`/_readme/_sections/1_intro/intro.section.js`](/_readme/_sections/1_intro/intro.section.js)
+* [`/_readme/_sections/2_what_is/what_is.section.js`](/_readme/_sections/2_what_is/what_is.section.js)
+* [`/_readme/_sections/3_how_to/how_to.section.js`](/_readme/_sections/3_how_to/how_to.section.js)
+* [`/_readme/_sections/4_kamis_glossary/kamis_glossary.section.js`](/_readme/_sections/4_kamis_glossary/kamis_glossary.section.js)
+* [`/_readme/_sections/5_kami/kami.section.js`](/_readme/_sections/5_kami/kami.section.js)
 
 
 ## `command`
@@ -426,7 +426,9 @@ Matching regular expression :
 
 * [`/_shrine/book/_ways/get/get.way.js`](/_shrine/book/_ways/get/get.way.js)
 * [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
+* [`/_shrine/instance/_ways/get/get.way.js`](/_shrine/instance/_ways/get/get.way.js)
 * [`/_shrine/kami/_ways/get/get.way.js`](/_shrine/kami/_ways/get/get.way.js)
+* [`/_shrine/readme/_ways/get/get.way.js`](/_shrine/readme/_ways/get/get.way.js)
 
 
 ## `instance`

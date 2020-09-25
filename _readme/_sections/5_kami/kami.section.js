@@ -1,12 +1,12 @@
-import langEnum from "../../../../../lang/_enums/lang.enum.js";
-import FILE from "../../../../../file/file.kami.js";
-import formatEnum from "../../../../../file/_ways/get/_enums/format/format.enum.js";
+import langEnum from "../../../_shrine/lang/_enums/lang.enum.js";
+import INSTANCE from "../../../_shrine/instance/instance.kami.js";
+import formatEnum from "../../../_shrine/get/_enums/format/format.enum.js";
 
 export default kami => 
 
   new Promise(resolve => {
 
-    FILE.get(
+    INSTANCE.get(
       kami,
       {
         format: formatEnum.FILE_PATH

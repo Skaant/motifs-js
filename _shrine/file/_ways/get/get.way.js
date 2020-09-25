@@ -1,78 +1,76 @@
 import { promises as fs } from 'fs'
-import formatEnum from "./_enums/format/format.enum.js";
+import formatEnum from '../../../get/_enums/format/format.enum.js'
 
 /**
- * @param {{format:'<formatEnum>',scope:string}} options
+ * Given a **file path**, returns its content in the format
+ *  given in the `options` parameter :
+ * 
+ * * `UTF_8`, returns the content as text,
+ * * `ESM`, returns the module object. * 
+ * 
+ * @param {string} filePath
+ * 
+ * @param {{format:'<formatEnum>'}} options
+ *  Using `format === 'FILE_PATH'` should be avoided
+ *  since it would return its exact `filePath` parameter.
  */
 export default (
-  {
-    id,
-    regExp,
-    regExpMapping
-  },
+  filePath,
   options
 ) => 
 
   new Promise((resolve, reject) => {
 
-    const {
-      format,
-      scope = ''
-    } = options
-
-    const filesPath = global.FILES
-      .filter(filePath =>
-        
-        filePath.match(new RegExp('^' + scope + '/'))
-          && filePath.match(regExp))
+    const { format } = options
 
     switch (format) {
 
       case formatEnum.FILE_PATH:
 
-        resolve(filesPath)
+        resolve(filePath)
 
         break
 
       case formatEnum.UTF_8:
 
-        Promise.all(filesPath.map(filePath =>
+        filePath =>
           
           fs.readFile(
             global.PATH + filePath,
-            'utf-8')))
-          .then(filesContent =>
+            'utf-8')
+
+          .then(content =>
             
-            resolve(filesContent.map((fileContent, index) => ({
-              filePath: filesPath[index],
-              content: fileContent
-            }))))
+            resolve({
+              filePath,
+              content
+            }))
 
         break
       
       case formatEnum.ESM:
 
-        Promise.all(filesPath.map(filePath =>
+        import('file:///'
+          + (global.PATH + filePath).replace(/\//g,'\\'))
           
-          import('file:///'
-            + (global.PATH + filePath).replace(/\//g,'\\'))))
-          .then(filesContent =>
+          .then(({ default: content }) =>
             
-            resolve(filesContent
-              .map(({ default: fileContent }, index) => {
+            resolve({
+              id: content.id,
+              filePath,
+              ...content
+            }))
 
-                const filePath = filesPath[index]
+        break
 
-                return {
-                  id: fileContent.id
-                    || (regExpMapping
-                      && regExpMapping(filePath).id)
-                    || filePath,
-                  kamiId: id,
-                  filePath: filePath,
-                  ...fileContent
-                }
-              })))
+      case formatEnum.FUNCTION:
+
+        import('file:///'
+          + (global.PATH + filePath).replace(/\//g,'\\'))
+          
+          .then(({ default: content }) =>
+            
+            resolve(content))
 
         break
 
