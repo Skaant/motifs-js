@@ -1,5 +1,5 @@
 *[23 KAMIS](#kamis-glossary)
-on 9/23/2020, 12:32:50 PM*
+on 9/25/2020, 10:46:05 AM*
 
 # kami.js
 
@@ -230,6 +230,14 @@ A FRAGMENT is the smallest unit of [BOOK](#book) content.
 It can be included inside a [SECTION](#section),
 a [PAGE](#page) or directly on the BOOK root.
 
+## Occurences
+
+Matching regular expression :
+
+`/\/_extracts\/(.*)\/(.*)\.extract\.js/`.
+
+
+
 
 ## `image`
 
@@ -241,6 +249,20 @@ a [PAGE](#page) or directly on the BOOK root.
 ### Description
 
 **VISUAL CONTENT**
+
+## Occurences
+
+Matching regular expression :
+
+`/\.(png|jpg|svg)$/`.
+
+* [`/logo.svg`](/logo.svg)
+* [`/_shrine/kami/kami.picto.svg`](/_shrine/kami/kami.picto.svg)
+* [`/_shrine/lang/lang.picto.svg`](/_shrine/lang/lang.picto.svg)
+* [`/_shrine/prop/prop.picto.svg`](/_shrine/prop/prop.picto.svg)
+* [`/_shrine/readme/readme.picto.svg`](/_shrine/readme/readme.picto.svg)
+* [`/_shrine/shrine/shrine.picto.svg`](/_shrine/shrine/shrine.picto.svg)
+* [`/_shrine/util/util.picto.svg`](/_shrine/util/util.picto.svg)
 
 
 ## `page`
@@ -257,6 +279,14 @@ a [PAGE](#page) or directly on the BOOK root.
 PAGE can hold [SECTIONS](#section)
 and [EXTRACTS](#extracts).
 
+## Occurences
+
+Matching regular expression :
+
+`/\/_pages\/(.*)\/(.*)\.page\.js/`.
+
+
+
 
 ## `section`
 
@@ -268,6 +298,18 @@ and [EXTRACTS](#extracts).
 ### Description
 
 **BOOK SUB-DIVISION**
+
+## Occurences
+
+Matching regular expression :
+
+`/\/_sections\/(.*)\/(.*)\.section\.js/`.
+
+* [`/_shrine/readme/_ways/build/_sections/1_intro/intro.section.js`](/_shrine/readme/_ways/build/_sections/1_intro/intro.section.js)
+* [`/_shrine/readme/_ways/build/_sections/2_what_is/what_is.section.js`](/_shrine/readme/_ways/build/_sections/2_what_is/what_is.section.js)
+* [`/_shrine/readme/_ways/build/_sections/3_how_to/how_to.section.js`](/_shrine/readme/_ways/build/_sections/3_how_to/how_to.section.js)
+* [`/_shrine/readme/_ways/build/_sections/4_kamis_glossary/kamis_glossary.section.js`](/_shrine/readme/_ways/build/_sections/4_kamis_glossary/kamis_glossary.section.js)
+* [`/_shrine/readme/_ways/build/_sections/5_kami/kami.section.js`](/_shrine/readme/_ways/build/_sections/5_kami/kami.section.js)
 
 
 ## `command`
@@ -382,6 +424,7 @@ Matching regular expression :
 
 `/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
 
+* [`/_shrine/book/_ways/get/get.way.js`](/_shrine/book/_ways/get/get.way.js)
 * [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
 * [`/_shrine/kami/_ways/get/get.way.js`](/_shrine/kami/_ways/get/get.way.js)
 

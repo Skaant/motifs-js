@@ -23,7 +23,7 @@ export default (
     const filesPath = global.FILES
       .filter(filePath =>
         
-        filePath.match(new RegExp('^' + scope))
+        filePath.match(new RegExp('^' + scope + '/'))
           && filePath.match(regExp))
 
     switch (format) {
