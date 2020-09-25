@@ -63,7 +63,9 @@ export default (
                     folderScope,
                     options
                   )
-                    .then(resolve)
+                    .then(() =>
+                        
+                      resolve(website))
 
                   /** meh */
                   return []
