@@ -41,7 +41,16 @@ export default (
       .filter(filePath =>
         
         filePath.match(new RegExp('^' + scope + '/'))
-          && filePath.match(regExp))
+          && (Array.isArray(regExp)
+            ? regExp.reduce(
+              (acc, _regExp) =>
+
+                acc
+                  || !!filePath.match(_regExp),
+              false
+            )
+            
+            : filePath.match(regExp)))
 
     switch (format) {
 
