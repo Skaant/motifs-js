@@ -1,5 +1,5 @@
 *[23 KAMIS](#kamis-glossary)
-on 9/25/2020, 3:09:18 PM*
+on 9/25/2020, 3:24:38 PM*
 
 # kami.js
 
@@ -303,13 +303,9 @@ Matching regular expression :
 
 Matching regular expression :
 
-`/\/_sections\/(.*)\/(.*)\.section\.js/`.
+`/^\/_data\/(.*)\/_sections\/(.*)\/(.*)\.section\.js/`.
 
-* [`/_readme/_sections/1_intro/intro.section.js`](/_readme/_sections/1_intro/intro.section.js)
-* [`/_readme/_sections/2_what_is/what_is.section.js`](/_readme/_sections/2_what_is/what_is.section.js)
-* [`/_readme/_sections/3_how_to/how_to.section.js`](/_readme/_sections/3_how_to/how_to.section.js)
-* [`/_readme/_sections/4_kamis_glossary/kamis_glossary.section.js`](/_readme/_sections/4_kamis_glossary/kamis_glossary.section.js)
-* [`/_readme/_sections/5_kami/kami.section.js`](/_readme/_sections/5_kami/kami.section.js)
+
 
 
 ## `command`
@@ -581,6 +577,18 @@ SECTIONS are made of :
 * Imbricated SECTIONS.
 
 In fact, README is the top-level SECTION.
+
+## Occurences
+
+Matching regular expression :
+
+`/^\/_readme\/_sections\/(.*)\/(.*)\.section.js/`.
+
+* [`/_readme/_sections/1_intro/intro.section.js`](/_readme/_sections/1_intro/intro.section.js)
+* [`/_readme/_sections/2_what_is/what_is.section.js`](/_readme/_sections/2_what_is/what_is.section.js)
+* [`/_readme/_sections/3_how_to/how_to.section.js`](/_readme/_sections/3_how_to/how_to.section.js)
+* [`/_readme/_sections/4_kamis_glossary/kamis_glossary.section.js`](/_readme/_sections/4_kamis_glossary/kamis_glossary.section.js)
+* [`/_readme/_sections/5_kami/kami.section.js`](/_readme/_sections/5_kami/kami.section.js)
 
 
 ## `shrine`
