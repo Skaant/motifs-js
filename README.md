@@ -1,5 +1,5 @@
 *[24 KAMIS](#kamis-glossary)
-on 9/26/2020, 4:07:41 AM*
+on 9/26/2020, 4:29:16 AM*
 
 # kami.js
 
@@ -196,6 +196,8 @@ README "build" [COMMAND](#command).
 
 ## `book`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **BOOK** is a project specific KAMI.
 
 It is known as :
@@ -222,8 +224,20 @@ A BOOK content is made of smaller [KAMIS](#kami)/bricks :
 **Note that BOOK is a top-level section
 with just some specific meta-data.**
 
+### Properties
+
+**Count: 5.**
+
+* `id`
+* `names`
+* `description`
+* `get`
+* `provision`
+
 
 ## `book-extract`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **BOOK-EXTRACT** is a project specific KAMI.
 
@@ -243,6 +257,8 @@ a [PAGE](#page) or directly on the BOOK root.
 
 ### Properties
 
+**Count: 4.**
+
 * `id`
 * `names`
 * `description`
@@ -261,6 +277,8 @@ Matching regular expression :
 
 ## `book-image`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **BOOK-IMAGE** is a project specific KAMI.
 
 It is known as :
@@ -273,6 +291,8 @@ It is known as :
 **VISUAL CONTENT**
 
 ### Properties
+
+**Count: 4.**
 
 * `id`
 * `names`
@@ -298,6 +318,8 @@ Matching regular expression :
 
 ## `book-page`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **BOOK-PAGE** is a project specific KAMI.
 
 It is known as :
@@ -313,6 +335,8 @@ PAGE can hold [SECTIONS](#section)
 and [EXTRACTS](#extracts).
 
 ### Properties
+
+**Count: 4.**
 
 * `id`
 * `names`
@@ -332,6 +356,8 @@ Matching regular expression :
 
 ## `book-section`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **BOOK-SECTION** is a project specific KAMI.
 
 It is known as :
@@ -344,6 +370,8 @@ It is known as :
 **BOOK SUB-DIVISION**
 
 ### Properties
+
+**Count: 4.**
 
 * `id`
 * `names`
@@ -363,6 +391,8 @@ Matching regular expression :
 
 ## `command`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **COMMAND** is a project specific KAMI.
 
 It is known as :
@@ -378,6 +408,8 @@ Basically, a command bind a [`way`](#way) method
 to match [`KAMI`](#kami) CLI entrypoint syntax.
 
 ### Properties
+
+**Count: 4.**
 
 * `id`
 * `names`
@@ -400,6 +432,8 @@ Matching regular expression :
 
 ## `doc`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **DOC** is a project specific KAMI.
 
 It is known as :
@@ -416,8 +450,18 @@ DOC is composed of few sub-KAMIS :
 * [WIKI](#wiki),
 * [WEBSITE](#website).
 
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
+
 
 ## `file`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **FILE** is a project specific KAMI.
 
@@ -433,8 +477,21 @@ It is known as :
 *Pattern should later be extended depending on
 the file extension.*
 
+### Properties
+
+**Count: 6.**
+
+* `id`
+* `names`
+* `description`
+* `create`
+* `get`
+* `copy`
+
 
 ## `folder`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **FOLDER** is a project specific KAMI.
 
@@ -456,8 +513,20 @@ Folder is represented by :
   (a complex concept to define).
 
 
+### Properties
+
+**Count: 5.**
+
+* `id`
+* `names`
+* `description`
+* `create`
+* `copy`
+
 
 ## `get`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **GET** is a project specific KAMI.
 
@@ -488,6 +557,8 @@ a regular expression is used for matching.
 
 ### Properties
 
+**Count: 4.**
+
 * `id`
 * `names`
 * `description`
@@ -509,6 +580,8 @@ Matching regular expression :
 
 
 ## `instance`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **INSTANCE** is a project specific KAMI.
 
@@ -533,8 +606,19 @@ They usually :
 
 **KAMI-KAMI is an instance of itself !**
 
+### Properties
+
+**Count: 4.**
+
+* `id`
+* `names`
+* `description`
+* `get`
+
 
 ## `kami`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **KAMI** is a project specific KAMI.
 
@@ -552,6 +636,8 @@ not only **generative** but also **evolutive**
 in a similar way classes and objects are.
 
 ### Properties
+
+**Count: 12.**
 
 * `id`
 * `names`
@@ -631,6 +717,8 @@ highly abstract powers.
 
 ## `lang`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **LANG** is a project specific KAMI.
 
 It is known as :
@@ -638,8 +726,17 @@ It is known as :
 * [en] Language,
 * [fr] Langage.
 
+### Properties
+
+**Count: 2.**
+
+* `id`
+* `names`
+
 
 ## `pantheon`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **PANTHEON** is a project specific KAMI.
 
@@ -656,6 +753,8 @@ There lies the most abstract and/or transverse [KAMIS](#kami),
 the angels and last steps upon the One.
 
 ### Properties
+
+**Count: 4.**
 
 * `id`
 * `names`
@@ -675,6 +774,8 @@ Matching regular expression :
 
 ## `prop`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **PROP** is a project specific KAMI.
 
 It is known as :
@@ -687,8 +788,18 @@ It is known as :
 `_props` folders contains
 [kami](#kami)'s properties content.
 
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
+
 
 ## `readme`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **README** is a project specific KAMI.
 
@@ -710,8 +821,21 @@ genercis are located in `/kami.js/_shrine/readme/_sections`.
 
 README is a component of [DOC](#-doc).
 
+### Properties
+
+**Count: 6.**
+
+* `id`
+* `names`
+* `description`
+* `get`
+* `build`
+* `_commands`
+
 
 ## `readme-section`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **README-SECTION** is a project specific KAMI.
 
@@ -731,6 +855,8 @@ SECTIONS are made of :
 In fact, README is the top-level SECTION.
 
 ### Properties
+
+**Count: 5.**
 
 * `id`
 * `names`
@@ -756,6 +882,8 @@ Matching regular expression :
 
 ## `shrine`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **ШRᛏGHN** is a project specific KAMI.
 
 It is known as :
@@ -764,6 +892,8 @@ It is known as :
 * [fr] Sanctuaire.
 
 ### Properties
+
+**Count: 4.**
 
 * `id`
 * `names`
@@ -786,6 +916,8 @@ Matching regular expression :
 
 ## `spec`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **SPEC** is a project specific KAMI.
 
 It is known as :
@@ -807,6 +939,8 @@ categories of specifications :
 
 ### Properties
 
+**Count: 4.**
+
 * `id`
 * `names`
 * `description`
@@ -826,6 +960,8 @@ Matching regular expression :
 
 ## `util`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **UTIL** is a project specific KAMI.
 
 It is known as :
@@ -840,8 +976,18 @@ the place very specific snippets of code are put.
 
 Utility are usually consumed by same scope-level modules.
 
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
+
 
 ## `way`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **WAY** is a project specific KAMI.
 
@@ -860,8 +1006,18 @@ Ways are KAMI's methods
 It differs with [prop](#prop) in its type,
 which is necessarely `function`.
 
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
+
 
 ## `website`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **WEBSITE** is a project specific KAMI.
 
@@ -877,6 +1033,8 @@ It is known as :
 WEBSITE is a [DOC](#doc) component.
 
 ### Properties
+
+**Count: 8.**
 
 * `id`
 * `names`
@@ -900,6 +1058,8 @@ Matching regular expression :
 
 ## `website-page`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **WEBSITE-PAGE** is a project specific KAMI.
 
 It is known as :
@@ -919,8 +1079,19 @@ A page binds the following three elements :
   (which will in time be used as its url).
 
 
+### Properties
+
+**Count: 4.**
+
+* `id`
+* `names`
+* `description`
+* `create`
+
 
 ## `wiki`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
 
 **WIKI** is a project specific KAMI.
 
@@ -934,3 +1105,11 @@ It is known as :
 **KAMI.JS' GITHUB WIKI**
 
 WIKI is a component of [DOC](#doc).
+
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`

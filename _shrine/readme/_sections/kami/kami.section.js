@@ -28,6 +28,8 @@ export default (kami, kamis) =>
     
     : '' }${ kami.id }\`
 
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
 **${
   (kami.parents
     ? (kami.parents.map(parentId =>
@@ -70,11 +72,7 @@ ${
 ${ kami.description }`
 
     : ''
-}${
-
-  kami.regExp
-    ?
-`
+}
 
 ### Properties
 
@@ -90,7 +88,11 @@ ${
     
     `* \`${ key }\``)
     .join('\n')
-}
+}${
+
+  kami.regExp
+    ?
+`
 
 ### Occurences
 
