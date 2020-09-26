@@ -1,7 +1,8 @@
 import FOLDER from "../../../folder/folder.kami.js";
 import FILE from "../../../file/file.kami.js";
 import WEBSITE from '../../../website/website.kami.js'
-import formatEnum from "../../../file/_ways/get/_enums/format/format.enum.js";
+import formatEnum from "../../../get/_enums/format/format.enum.js";
+import INSTANCE from "../../../instance/instance.kami.js";
 
 export default (
   scope = '',
@@ -13,7 +14,7 @@ export default (
 
     /** While a KAMI doesn't have a
      *  specific `get` method, we use `FILE.get()`. */
-    FILE.get(
+    INSTANCE.get(
       WEBSITE,
       {
         format: formatEnum.ESM

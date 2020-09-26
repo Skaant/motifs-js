@@ -1,5 +1,5 @@
-*[23 KAMIS](#kamis-glossary)
-on 9/25/2020, 11:08:48 AM*
+*[24 KAMIS](#kamis-glossary)
+on 9/26/2020, 4:07:41 AM*
 
 # kami.js
 
@@ -163,33 +163,42 @@ README "build" [COMMAND](#command).
 
 ## KAMIS' glossary
     
-* [BOOK](#book), `book` : Book
-  * [BOOK-EXTRACT](#book-extract), `book-extract` : Extract, Fragment, Atom
-  * [BOOK-IMAGE](#book-image), `book-image` : Image, Picture, Illustration, Scan
-  * [BOOK-PAGE](#book-page), `book-page` : Page
-  * [BOOK-SECTION](#book-section), `book-section` : Section, Chapter, Part
-* [COMMAND](#command), `command` : Command
-* [DOC](#doc), `doc` : Documentation
-* [FILE](#file), `file` : File
-* [FOLDER](#folder), `folder` : Folder
-* [GET](#get), `get` : Accesser, Obtain, Hydrater
-* [INSTANCE](#instance), `instance` : Instance
-* [KAMI](#kami), `kami` : Concept, Idea, Word, Pattern, Spirit, God
-* [LANG](#lang), `lang` : Language
-* [PROP](#prop), `prop` : Property, Characteristics, Attribute
-* [README](#readme), `readme` : README
-  * [README-SECTION](#readme-section), `readme-section` : Section
-* [ШRᛏGHN](#shrine), `shrine` : Shrine
-* [SPEC](#spec), `spec` : Specification
-* [UTIL](#util), `util` : Utility
-* [WAY](#way), `way` : Method, Action, Operation, Function
-* [WEBSITE](#website), `website` : Website
-  * [WEBSITE-PAGE](#website-page), `website-page` : Page, Website page
-* [WIKI](#wiki), `wiki` : Wiki
+* [BOOK](#book) : Book
+
+  * [BOOK-EXTRACT](#book-extract) : Extract, Fragment, Atom
+
+  * [BOOK-IMAGE](#book-image) : Image, Picture, Illustration, Scan
+
+  * [BOOK-PAGE](#book-page) : Page
+
+  * [BOOK-SECTION](#book-section) : Section, Chapter, Part
+* [COMMAND](#command) : Command
+* [DOC](#doc) : Documentation
+* [FILE](#file) : File
+* [FOLDER](#folder) : Folder
+* [GET](#get) : Accesser, Obtain, Hydrater
+* [INSTANCE](#instance) : Instance
+* [KAMI](#kami) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
+* [LANG](#lang) : Language
+* [PANTHEON](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
+* [PROP](#prop) : Property, Characteristics, Attribute
+* [README](#readme) : README
+
+  * [README-SECTION](#readme-section) : Section
+* [ШRᛏGHN](#shrine) : Shrine
+* [SPEC](#spec) : Specification
+* [UTIL](#util) : Utility
+* [WAY](#way) : Method, Action, Operation, Function
+* [WEBSITE](#website) : Website
+
+  * [WEBSITE-PAGE](#website-page) : Page, Website page
+* [WIKI](#wiki) : Wiki
 
 ## `book`
 
-**BOOK** or BOOK-KAMI, also known as :
+**BOOK** is a project specific KAMI.
+
+It is known as :
 
 * [en] Book,
 * [fr] Livre.
@@ -214,9 +223,11 @@ A BOOK content is made of smaller [KAMIS](#kami)/bricks :
 with just some specific meta-data.**
 
 
-## `extract`
+## `book-extract`
 
-**EXTRACT** or EXTRACT-KAMI, also known as :
+**BOOK-EXTRACT** is a project specific KAMI.
+
+It is known as :
 
 * [en] Extract, Fragment, Atom,
 * [fr] Extrait, Fragment, Atome.
@@ -230,7 +241,16 @@ A FRAGMENT is the smallest unit of [BOOK](#book) content.
 It can be included inside a [SECTION](#section),
 a [PAGE](#page) or directly on the BOOK root.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
@@ -239,9 +259,11 @@ Matching regular expression :
 
 
 
-## `image`
+## `book-image`
 
-**IMAGE** or IMAGE-KAMI, also known as :
+**BOOK-IMAGE** is a project specific KAMI.
+
+It is known as :
 
 * [en] Image, Picture, Illustration, Scan,
 * [fr] Image, Illustration, Numérisation.
@@ -250,7 +272,16 @@ Matching regular expression :
 
 **VISUAL CONTENT**
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 7.**
 
 Matching regular expression :
 
@@ -265,9 +296,11 @@ Matching regular expression :
 * [`/_shrine/util/util.picto.svg`](/_shrine/util/util.picto.svg)
 
 
-## `page`
+## `book-page`
 
-**PAGE** or PAGE-KAMI, also known as :
+**BOOK-PAGE** is a project specific KAMI.
+
+It is known as :
 
 * [en] Page,
 * [fr] Page.
@@ -279,7 +312,16 @@ Matching regular expression :
 PAGE can hold [SECTIONS](#section)
 and [EXTRACTS](#extracts).
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
@@ -288,9 +330,11 @@ Matching regular expression :
 
 
 
-## `section`
+## `book-section`
 
-**SECTION** or SECTION-KAMI, also known as :
+**BOOK-SECTION** is a project specific KAMI.
+
+It is known as :
 
 * [en] Section, Chapter, Part,
 * [fr] Section, Chapitre, Partie.
@@ -299,22 +343,29 @@ Matching regular expression :
 
 **BOOK SUB-DIVISION**
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
-`/\/_sections\/(.*)\/(.*)\.section\.js/`.
+`/^\/_data\/(.*)\/_sections\/(.*)\/(.*)\.section\.js/`.
 
-* [`/_shrine/readme/_ways/build/_sections/1_intro/intro.section.js`](/_shrine/readme/_ways/build/_sections/1_intro/intro.section.js)
-* [`/_shrine/readme/_ways/build/_sections/2_what_is/what_is.section.js`](/_shrine/readme/_ways/build/_sections/2_what_is/what_is.section.js)
-* [`/_shrine/readme/_ways/build/_sections/3_how_to/how_to.section.js`](/_shrine/readme/_ways/build/_sections/3_how_to/how_to.section.js)
-* [`/_shrine/readme/_ways/build/_sections/4_kamis_glossary/kamis_glossary.section.js`](/_shrine/readme/_ways/build/_sections/4_kamis_glossary/kamis_glossary.section.js)
-* [`/_shrine/readme/_ways/build/_sections/5_kami/kami.section.js`](/_shrine/readme/_ways/build/_sections/5_kami/kami.section.js)
+
 
 
 ## `command`
 
-**COMMAND** or COMMAND-KAMI, also known as :
+**COMMAND** is a project specific KAMI.
+
+It is known as :
 
 * [en] Command,
 * [fr] Commande.
@@ -326,7 +377,16 @@ Matching regular expression :
 Basically, a command bind a [`way`](#way) method
 to match [`KAMI`](#kami) CLI entrypoint syntax.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 4.**
 
 Matching regular expression :
 
@@ -340,7 +400,9 @@ Matching regular expression :
 
 ## `doc`
 
-**DOC** or DOC-KAMI, also known as :
+**DOC** is a project specific KAMI.
+
+It is known as :
 
 * [en] Documentation,
 * [fr] Documentation.
@@ -357,7 +419,9 @@ DOC is composed of few sub-KAMIS :
 
 ## `file`
 
-**FILE** or FILE-KAMI, also known as :
+**FILE** is a project specific KAMI.
+
+It is known as :
 
 * [en] File,
 * [fr] Fichier.
@@ -372,7 +436,9 @@ the file extension.*
 
 ## `folder`
 
-**FOLDER** or FOLDER-KAMI, also known as :
+**FOLDER** is a project specific KAMI.
+
+It is known as :
 
 * [en] Folder,
 * [fr] Dossier.
@@ -393,7 +459,9 @@ Folder is represented by :
 
 ## `get`
 
-**GET** or GET-KAMI, also known as :
+**GET** is a project specific KAMI.
+
+It is known as :
 
 * [en] Accesser, Obtain, Hydrater,
 * [fr] Accesseur, Obtenir, Hydrateur.
@@ -418,7 +486,16 @@ In the case of folders and files,
 a regular expression is used for matching.
 
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 5.**
 
 Matching regular expression :
 
@@ -426,12 +503,16 @@ Matching regular expression :
 
 * [`/_shrine/book/_ways/get/get.way.js`](/_shrine/book/_ways/get/get.way.js)
 * [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
+* [`/_shrine/instance/_ways/get/get.way.js`](/_shrine/instance/_ways/get/get.way.js)
 * [`/_shrine/kami/_ways/get/get.way.js`](/_shrine/kami/_ways/get/get.way.js)
+* [`/_shrine/readme/_ways/get/get.way.js`](/_shrine/readme/_ways/get/get.way.js)
 
 
 ## `instance`
 
-**INSTANCE** or INSTANCE-KAMI, also known as :
+**INSTANCE** is a project specific KAMI.
+
+It is known as :
 
 * [en] Instance,
 * [fr] Instance.
@@ -455,10 +536,12 @@ They usually :
 
 ## `kami`
 
-**KAMI** or KAMI-KAMI, also known as :
+**KAMI** is a project specific KAMI.
 
-* [en] Concept, Idea, Word, Pattern, Spirit, God,
-* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu.
+It is known as :
+
+* [en] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
+* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
 
 ### Description
 
@@ -468,7 +551,24 @@ Kami are "enlived" patterns, making them
 not only **generative** but also **evolutive**
 in a similar way classes and objects are.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+* `flavour`
+* `_commands`
+* `create`
+* `get`
+* `cli`
+* `test`
+* `specs`
+* `ave`
+
+### Occurences
+
+**Count : 24.**
 
 Matching regular expression :
 
@@ -487,6 +587,7 @@ Matching regular expression :
 * [`/_shrine/instance/instance.kami.js`](/_shrine/instance/instance.kami.js)
 * [`/_shrine/kami/kami.kami.js`](/_shrine/kami/kami.kami.js)
 * [`/_shrine/lang/lang.kami.js`](/_shrine/lang/lang.kami.js)
+* [`/_shrine/pantheon/pantheon.kami.js`](/_shrine/pantheon/pantheon.kami.js)
 * [`/_shrine/prop/prop.kami.js`](/_shrine/prop/prop.kami.js)
 * [`/_shrine/readme/readme.kami.js`](/_shrine/readme/readme.kami.js)
 * [`/_shrine/readme/_shrine/section/section.kami.js`](/_shrine/readme/_shrine/section/section.kami.js)
@@ -530,15 +631,53 @@ highly abstract powers.
 
 ## `lang`
 
-**LANG** or LANG-KAMI, also known as :
+**LANG** is a project specific KAMI.
+
+It is known as :
 
 * [en] Language,
 * [fr] Langage.
 
 
+## `pantheon`
+
+**PANTHEON** is a project specific KAMI.
+
+It is known as :
+
+* [en] Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven,
+* [fr] Panthéon, Sanctuaire primordial, Valhalla, Mont Olympe, Acropole, Paradis.
+
+### Description
+
+**SHRINE OF PRIMORDIAL KAMIS**
+
+There lies the most abstract and/or transverse [KAMIS](#kami),
+the angels and last steps upon the One.
+
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
+
+Matching regular expression :
+
+`/kami.js\/_shrine$/`.
+
+
+
+
 ## `prop`
 
-**PROP** or PROP-KAMI, also known as :
+**PROP** is a project specific KAMI.
+
+It is known as :
 
 * [en] Property, Characteristics, Attribute,
 * [fr] Propriété, Caractéristque, Attribut.
@@ -551,21 +690,32 @@ highly abstract powers.
 
 ## `readme`
 
-**README** or README-KAMI, also known as :
+**README** is a project specific KAMI.
+
+It is known as :
 
 * [en] README,
 * [fr] README.
 
 ### Description
 
-**KAMI.JS' GITHUB README**
+**GITHUB README**
 
-README is a component of [DOC](#doc).
+README instance occurs once by [PROJECT](#project),
+in the `/_readme folder`.
+
+Specific PROJECT's README [SECTIONS](#sections) are
+located in `/_readme/_sections`,
+genercis are located in `/kami.js/_shrine/readme/_sections`.
+
+README is a component of [DOC](#-doc).
 
 
-## `section`
+## `readme-section`
 
-**SECTION** or SECTION-KAMI, also known as :
+**README-SECTION** is a project specific KAMI.
+
+It is known as :
 
 * [en] Section,
 * [fr] Section.
@@ -580,15 +730,49 @@ SECTIONS are made of :
 
 In fact, README is the top-level SECTION.
 
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+* `create`
+
+### Occurences
+
+**Count : 5.**
+
+Matching regular expression :
+
+* `/^\/_readme\/_sections\/(.*)\/(.*)\.section.js/`,
+* `/\/_shrine\/readme\/_sections\/(.*)\/(.*)\.section.js/`.
+
+* [`/_readme/_sections/1_intro/intro.section.js`](/_readme/_sections/1_intro/intro.section.js)
+* [`/_readme/_sections/2_what_is/what_is.section.js`](/_readme/_sections/2_what_is/what_is.section.js)
+* [`/_readme/_sections/3_how_to/how_to.section.js`](/_readme/_sections/3_how_to/how_to.section.js)
+* [`/_shrine/readme/_sections/kami/kami.section.js`](/_shrine/readme/_sections/kami/kami.section.js)
+* [`/_shrine/readme/_sections/kamis_glossary/kamis_glossary.section.js`](/_shrine/readme/_sections/kamis_glossary/kamis_glossary.section.js)
+
 
 ## `shrine`
 
-**ШRᛏGHN** or ШRᛏGHN-KAMI, also known as :
+**ШRᛏGHN** is a project specific KAMI.
+
+It is known as :
 
 * [en] Shrine,
 * [fr] Sanctuaire.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `create`
+* `regExp`
+
+### Occurences
+
+**Count : 4.**
 
 Matching regular expression :
 
@@ -602,7 +786,9 @@ Matching regular expression :
 
 ## `spec`
 
-**SPEC** or SPEC-KAMI, also known as :
+**SPEC** is a project specific KAMI.
+
+It is known as :
 
 * [en] Specification,
 * [fr] Spécification.
@@ -619,7 +805,16 @@ categories of specifications :
 * **Specific SPECS**, which target a single
   instance of a KAMI (hold by the instance).
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 2.**
 
 Matching regular expression :
 
@@ -631,7 +826,9 @@ Matching regular expression :
 
 ## `util`
 
-**UTIL** or UTIL-KAMI, also known as :
+**UTIL** is a project specific KAMI.
+
+It is known as :
 
 * [en] Utility,
 * [fr] Utilitaire.
@@ -646,7 +843,9 @@ Utility are usually consumed by same scope-level modules.
 
 ## `way`
 
-**WAY** or WAY-KAMI, also known as :
+**WAY** is a project specific KAMI.
+
+It is known as :
 
 * [en] Method, Action, Operation, Function,
 * [fr] Méthode, Action, Opération, Fonction.
@@ -664,7 +863,9 @@ which is necessarely `function`.
 
 ## `website`
 
-**WEBSITE** or WEBSITE-KAMI, also known as :
+**WEBSITE** is a project specific KAMI.
+
+It is known as :
 
 * [en] Website,
 * [fr] Site internet.
@@ -675,7 +876,20 @@ which is necessarely `function`.
 
 WEBSITE is a [DOC](#doc) component.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `regExp`
+* `regExpMapping`
+* `description`
+* `build`
+* `_commands`
+* `_specs`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
@@ -684,9 +898,11 @@ Matching regular expression :
 
 
 
-## `page`
+## `website-page`
 
-**PAGE** or PAGE-KAMI, also known as :
+**WEBSITE-PAGE** is a project specific KAMI.
+
+It is known as :
 
 * [en] Page, Website page,
 * [fr] Page, Page de site internet.
@@ -706,7 +922,9 @@ A page binds the following three elements :
 
 ## `wiki`
 
-**WIKI** or WIKI-KAMI, also known as :
+**WIKI** is a project specific KAMI.
+
+It is known as :
 
 * [en] Wiki,
 * [fr] Wiki.

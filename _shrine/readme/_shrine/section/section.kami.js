@@ -6,5 +6,9 @@ export default {
   id: 'section',
   names: namesProp,
   description: descriptionProp,
+  regExp: [
+    /^\/_readme\/_sections\/(.*)\/(.*)\.section.js/,
+    /\/_shrine\/readme\/_sections\/(.*)\/(.*)\.section.js/
+  ],
   create: createWay
 }

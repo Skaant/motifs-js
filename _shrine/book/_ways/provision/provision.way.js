@@ -1,9 +1,9 @@
-import FILE from '../../../file/file.kami.js'
-import formatEnum from '../../../file/_ways/get/_enums/format/format.enum.js'
 import SECTION from '../../_shrine/section/section.kami.js'
 import PAGE from '../../_shrine/page/page.kami.js'
 import EXTRACT from '../../_shrine/extract/extract.kami.js'
 import IMAGE from '../../_shrine/image/image.kami.js'
+import formatEnum from '../../../get/_enums/format/format.enum.js'
+import INSTANCE from '../../../instance/instance.kami.js'
 
 /**
  * Given a BOOK ESM module,
@@ -28,19 +28,19 @@ export default (book, options) =>
     }
 
     Promise.all([
-      FILE.get(
+      INSTANCE.get(
         SECTION,
         options
       ),
-      FILE.get(
+      INSTANCE.get(
         PAGE,
         options
       ),
-      FILE.get(
+      INSTANCE.get(
         EXTRACT,
         options
       ),
-      FILE.get(
+      INSTANCE.get(
         IMAGE,
         {
           format: formatEnum.FILE_PATH,

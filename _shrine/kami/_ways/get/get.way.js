@@ -1,6 +1,8 @@
-import FILE from "../../../file/file.kami.js";
 import KAMI from "../../kami.kami.js";
-import formatEnum from "../../../file/_ways/get/_enums/format/format.enum.js";
+import formatEnum from "../../../get/_enums/format/format.enum.js";
+import INSTANCE from "../../../instance/instance.kami.js";
+import formatParentsUtil from "./_utils/formatParents/formatParents.util.js";
+import idComposerUtil from "./_utils/idComposer/idComposer.util.js";
 
 let cache = {
   globalFiles: false,
@@ -23,7 +25,7 @@ export default (id = false, options) =>
 
     cache.globalFiles = global.FILES
 
-    FILE.get(
+    INSTANCE.get(
       KAMI,
       {
         format: formatEnum.ESM
@@ -36,17 +38,16 @@ export default (id = false, options) =>
           
           return {
             ...content,
-            parents: protoKami[1]
-              ? protoKami[1]
-                .replace(/_shrine\//g, '')
-                .split('/')
-                .slice(1)
-              : false,
+            parents: formatParentsUtil(protoKami[1]),
             scope: protoKami[1],
             folder: protoKami[2],
             file: protoKami[3] + '.kami.js'
           }
         })
+          .sort((a, b) =>
+          
+            idComposerUtil(a)
+              .localeCompare(idComposerUtil(b)))
 
         cache.kamis = kamis
 

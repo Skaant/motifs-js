@@ -1,6 +1,7 @@
 import FILE from '../../../file/file.kami.js'
-import formatEnum from '../../../file/_ways/get/_enums/format/format.enum.js'
 import BOOK from '../../book.kami.js'
+import formatEnum from '../../../get/_enums/format/format.enum.js'
+import INSTANCE from '../../../instance/instance.kami.js'
 
 /**
  * Retrieve BOOK and its content tree
@@ -14,7 +15,7 @@ export default (
 
   new Promise(resolve => {
 
-    FILE.get(
+    INSTANCE.get(
       kami,
       {
         format: formatEnum.ESM

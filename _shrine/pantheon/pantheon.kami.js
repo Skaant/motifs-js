@@ -1,10 +1,9 @@
 import namesProp from './_props/names/names.prop.js'
 import descriptionProp from './_props/description/description.prop.js'
-import getWay from './_ways/get/get.way.js'
 
 export default {
-  id: 'instance',
+  id: 'pantheon',
   names: namesProp,
   description: descriptionProp,
-  get: getWay
+  regExp: /kami.js\/_shrine$/
 }

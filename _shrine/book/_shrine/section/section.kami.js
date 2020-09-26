@@ -5,5 +5,5 @@ export default {
   id: 'section',
   names: namesProp,
   description: descriptionProp,
-  regExp: /\/_sections\/(.*)\/(.*)\.section\.js/
+  regExp: /^\/_data\/(.*)\/_sections\/(.*)\/(.*)\.section\.js/
 }
