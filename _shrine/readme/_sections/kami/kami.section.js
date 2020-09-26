@@ -42,11 +42,11 @@ export default (kami, kamis) =>
     : '')
 
     + kami.names[langEnum.ABS]
-}** is a ${
+}** ${
   kami.parents[0] === PANTHEON.id
-    ? 'PANTHEON KAMI'
+    ? 'belongs to the PANTHEON of KAMIS'
 
-    : 'project specific KAMI'
+    : 'is a project specific KAMI'
 }.
 
 It is known as :
@@ -76,11 +76,37 @@ ${ kami.description }`
     ?
 `
 
-## Occurences
+### Properties
+
+**Count: ${ Object.keys(kami).length - 5 }.**
+
+${
+  Object.keys(kami).filter(key =>
+    
+    ![ 'kamiId', 'parents', 'scope',
+      'folder', 'file' ]
+      .includes(key))
+    .map(key =>
+    
+    `* \`${ key }\``)
+    .join('\n')
+}
+
+### Occurences
+
+**Count : ${ occurences.length }.**
 
 Matching regular expression :
 
-\`${ kami.regExp.toString() }\`.
+${
+  Array.isArray(kami.regExp)
+    ? kami.regExp.map(_regExp =>
+      
+      `* \`${ _regExp.toString() }\``)
+      .join(',\n')
+
+    : `\`${ kami.regExp.toString() }\``
+}.
 
 ${ occurences.map(filePath =>
   

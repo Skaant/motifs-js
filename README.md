@@ -1,5 +1,5 @@
 *[24 KAMIS](#kamis-glossary)
-on 9/26/2020, 3:48:17 AM*
+on 9/26/2020, 4:07:41 AM*
 
 # kami.js
 
@@ -241,7 +241,16 @@ A FRAGMENT is the smallest unit of [BOOK](#book) content.
 It can be included inside a [SECTION](#section),
 a [PAGE](#page) or directly on the BOOK root.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
@@ -263,7 +272,16 @@ It is known as :
 
 **VISUAL CONTENT**
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 7.**
 
 Matching regular expression :
 
@@ -294,7 +312,16 @@ It is known as :
 PAGE can hold [SECTIONS](#section)
 and [EXTRACTS](#extracts).
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
@@ -316,7 +343,16 @@ It is known as :
 
 **BOOK SUB-DIVISION**
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
@@ -341,7 +377,16 @@ It is known as :
 Basically, a command bind a [`way`](#way) method
 to match [`KAMI`](#kami) CLI entrypoint syntax.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 4.**
 
 Matching regular expression :
 
@@ -441,7 +486,16 @@ In the case of folders and files,
 a regular expression is used for matching.
 
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 5.**
 
 Matching regular expression :
 
@@ -497,7 +551,24 @@ Kami are "enlived" patterns, making them
 not only **generative** but also **evolutive**
 in a similar way classes and objects are.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+* `flavour`
+* `_commands`
+* `create`
+* `get`
+* `cli`
+* `test`
+* `specs`
+* `ave`
+
+### Occurences
+
+**Count : 24.**
 
 Matching regular expression :
 
@@ -584,7 +655,16 @@ It is known as :
 There lies the most abstract and/or transverse [KAMIS](#kami),
 the angels and last steps upon the One.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
@@ -650,11 +730,22 @@ SECTIONS are made of :
 
 In fact, README is the top-level SECTION.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+* `create`
+
+### Occurences
+
+**Count : 5.**
 
 Matching regular expression :
 
-`/^\/_readme\/_sections\/(.*)\/(.*)\.section.js/,/\/_shrine\/readme\/_sections\/(.*)\/(.*)\.section.js/`.
+* `/^\/_readme\/_sections\/(.*)\/(.*)\.section.js/`,
+* `/\/_shrine\/readme\/_sections\/(.*)\/(.*)\.section.js/`.
 
 * [`/_readme/_sections/1_intro/intro.section.js`](/_readme/_sections/1_intro/intro.section.js)
 * [`/_readme/_sections/2_what_is/what_is.section.js`](/_readme/_sections/2_what_is/what_is.section.js)
@@ -672,7 +763,16 @@ It is known as :
 * [en] Shrine,
 * [fr] Sanctuaire.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `create`
+* `regExp`
+
+### Occurences
+
+**Count : 4.**
 
 Matching regular expression :
 
@@ -705,7 +805,16 @@ categories of specifications :
 * **Specific SPECS**, which target a single
   instance of a KAMI (hold by the instance).
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `description`
+* `regExp`
+
+### Occurences
+
+**Count : 2.**
 
 Matching regular expression :
 
@@ -767,7 +876,20 @@ It is known as :
 
 WEBSITE is a [DOC](#doc) component.
 
-## Occurences
+### Properties
+
+* `id`
+* `names`
+* `regExp`
+* `regExpMapping`
+* `description`
+* `build`
+* `_commands`
+* `_specs`
+
+### Occurences
+
+**Count : 0.**
 
 Matching regular expression :
 
