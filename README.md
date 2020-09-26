@@ -1,5 +1,5 @@
 *[24 KAMIS](#kamis-glossary)
-on 9/25/2020, 6:52:41 PM*
+on 9/26/2020, 3:48:17 AM*
 
 # kami.js
 
@@ -178,9 +178,9 @@ README "build" [COMMAND](#command).
 * [FOLDER](#folder) : Folder
 * [GET](#get) : Accesser, Obtain, Hydrater
 * [INSTANCE](#instance) : Instance
-* [KAMI](#kami) : Concept, Idea, Word, Pattern, Spirit, God
+* [KAMI](#kami) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
 * [LANG](#lang) : Language
-* [PANTHEON](#pantheon) : Pantheon, Primordial shrine
+* [PANTHEON](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
 * [PROP](#prop) : Property, Characteristics, Attribute
 * [README](#readme) : README
 
@@ -486,8 +486,8 @@ They usually :
 
 It is known as :
 
-* [en] Concept, Idea, Word, Pattern, Spirit, God,
-* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu.
+* [en] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
+* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
 
 ### Description
 
@@ -574,12 +574,23 @@ It is known as :
 
 It is known as :
 
-* [en] Pantheon, Primordial shrine,
-* [fr] Panthéon, Sanctuaire primordial.
+* [en] Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven,
+* [fr] Panthéon, Sanctuaire primordial, Valhalla, Mont Olympe, Acropole, Paradis.
 
 ### Description
 
 **SHRINE OF PRIMORDIAL KAMIS**
+
+There lies the most abstract and/or transverse [KAMIS](#kami),
+the angels and last steps upon the One.
+
+## Occurences
+
+Matching regular expression :
+
+`/kami.js\/_shrine$/`.
+
+
 
 
 ## `prop`
@@ -608,9 +619,16 @@ It is known as :
 
 ### Description
 
-**KAMI.JS' GITHUB README**
+**GITHUB README**
 
-README is a component of [DOC](#doc).
+README instance occurs once by [PROJECT](#project),
+in the `/_readme folder`.
+
+Specific PROJECT's README [SECTIONS](#sections) are
+located in `/_readme/_sections`,
+genercis are located in `/kami.js/_shrine/readme/_sections`.
+
+README is a component of [DOC](#-doc).
 
 
 ## `readme-section`
