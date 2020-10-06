@@ -23,12 +23,27 @@ export default (
 
       .then(books => {
 
-        Promise.all(books.map(book =>
-          
-          BOOK.provision(book)))
+        if (id) {
 
-          .then(books =>
-        
-            resolve(books))
+          const book = books.find(book =>
+            
+            book.id === id)
+
+          if (!book) throw new Error('No book "'
+            + id + '".')
+
+          BOOK.provision(book)
+            .then(resolve)
+
+        } else {
+
+          Promise.all(books.map(book =>
+            
+            BOOK.provision(book)))
+
+            .then(books =>
+          
+              resolve(books))
+        }
       })
   })

@@ -7,6 +7,7 @@ export default {
   id: 'book',
   names: namesProp,
   description: descriptionProp,
+  regExp: /^\/_data(.*)\/([\w|\-]*)\/([\w|\-]*)\.book\.js/,
   get: getWay,
   provision: provisionWay
 }

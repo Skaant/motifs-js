@@ -1,4 +1,8 @@
-import { promises as fs } from 'fs'
+import {
+  default as fsForSync,
+  promises as fs,
+  constants as fsConstants
+} from 'fs'
 
 const recursiveCopy = (
   src,
@@ -19,18 +23,21 @@ const recursiveCopy = (
       
       .then(dirents =>
         
-        Promise.all(dirents.map(async dirent => {
+        Promise.all(dirents.map(dirent => {
 
           const scopeName = scope
             + '/' + dirent.name
 
-          if (dirent.
-            isDirectory()) {
+          if (dirent.isDirectory()) {
 
-            await fs.mkdir(global.PATH
-              + '/' + src
-              + '/' + scopeName)
-            
+            const dirName = global.PATH
+              + dest + scopeName
+
+            if (!fsForSync.existsSync(dirName)) {
+
+              fsForSync.mkdirSync(dirName)
+            }
+
             return recursiveCopy(
               src,
               scopeName,
@@ -42,11 +49,13 @@ const recursiveCopy = (
 
             return fs.copyFile(
               global.PATH
-                + '/' + src
-                + scopeName,
+                + src + scopeName,
               global.PATH
-                + '/' + dest
-                + scopeName
+                + dest + scopeName,
+              options.force
+                ? fsConstants.COPYFILE_FICLONE
+
+                : fsConstants.COPYFILE_EXCL
             )
           }
         }))
