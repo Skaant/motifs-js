@@ -11,12 +11,6 @@ export default (book, options) =>
 
   new Promise(resolve => {
 
-    const splitFilePath = book.filePath.split('/')
-    const bookScope = splitFilePath.slice(
-      0,
-      splitFilePath.length - 1
-    ).join('/')
-
     SECTION.provision(
       book,
       options
