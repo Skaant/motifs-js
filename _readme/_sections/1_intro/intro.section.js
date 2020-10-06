@@ -22,4 +22,11 @@ you can use to communicate with your collaborators.
 
 * [What is \`kami.js\` ?](#what-is-kamijs-)
 * [How to use \`kami.js\` ?](#how-to-use-kamijs-)
-* [KAMIS glossary](#kamis-glossary)`
+* [KAMIS glossary](#kamis-glossary)
+
+### Browse some websites built on \`kami.js\`
+
+* [imrok.fr](https://imrok.fr),
+* [highbs-bok.art](https://highbs-bok.art),
+* *soon, the \`kami.js\` documentation website*.
+`

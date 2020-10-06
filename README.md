@@ -1,5 +1,5 @@
 *[24 KAMIS](#kamis-glossary)
-on 9/26/2020, 4:29:16 AM*
+on 10/6/2020, 6:47:26 PM*
 
 # kami.js
 
@@ -21,6 +21,13 @@ you can use to communicate with your collaborators.
 * [What is `kami.js` ?](#what-is-kamijs-)
 * [How to use `kami.js` ?](#how-to-use-kamijs-)
 * [KAMIS glossary](#kamis-glossary)
+
+### Browse some websites built on `kami.js`
+
+* [imrok.fr](https://imrok.fr),
+* [highbs-bok.art](https://highbs-bok.art),
+* *soon, the `kami.js` documentation website*.
+
 
 ## What is `kami.js` ?
 
@@ -226,13 +233,24 @@ with just some specific meta-data.**
 
 ### Properties
 
-**Count: 5.**
+**Count: 6.**
 
 * `id`
 * `names`
 * `description`
+* `regExp`
 * `get`
 * `provision`
+
+### Occurences
+
+**Count : 0.**
+
+Matching regular expression :
+
+`/^\/_data(.*)\/([\w|\-]*)\/([\w|\-]*)\.book\.js/`.
+
+
 
 
 ## `book-extract`
@@ -371,12 +389,14 @@ It is known as :
 
 ### Properties
 
-**Count: 4.**
+**Count: 6.**
 
 * `id`
 * `names`
 * `description`
 * `regExp`
+* `get`
+* `provision`
 
 ### Occurences
 
@@ -566,12 +586,13 @@ a regular expression is used for matching.
 
 ### Occurences
 
-**Count : 5.**
+**Count : 6.**
 
 Matching regular expression :
 
 `/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
 
+* [`/_shrine/book/_shrine/section/_ways/get/get.way.js`](/_shrine/book/_shrine/section/_ways/get/get.way.js)
 * [`/_shrine/book/_ways/get/get.way.js`](/_shrine/book/_ways/get/get.way.js)
 * [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
 * [`/_shrine/instance/_ways/get/get.way.js`](/_shrine/instance/_ways/get/get.way.js)
