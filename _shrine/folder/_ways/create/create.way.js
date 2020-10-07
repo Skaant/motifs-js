@@ -18,9 +18,15 @@ import fs from 'fs'
  *  resolve once all `callback`'s promises
  *  did resolve first.
  * 
- * @param {string} scope
- * @param {string} name
+ * @param {string} scope Relative path,
+ *  from project root (`global.PATH`) to target
+ *  destination folder.
+ * @param {string} name The future folder name.
  * @param {(folderScope: string) => Array<Promise>} callback
+ *  The callback expect an array of Promises,
+ *  made of both `FOLDER.create()` and `PAGE.create()`,
+ *  to be returned.
+ *  These will be the content of the newly created folder.
  */
 export default (
   scope,
