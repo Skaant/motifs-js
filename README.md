@@ -1,5 +1,5 @@
 *[24 KAMIS](#kamis-glossary)
-on 10/6/2020, 6:47:26 PM*
+on 10/7/2020, 10:55:29 AM*
 
 # kami.js
 
@@ -535,13 +535,15 @@ Folder is represented by :
 
 ### Properties
 
-**Count: 5.**
+**Count: 7.**
 
 * `id`
 * `names`
 * `description`
 * `create`
 * `copy`
+* `clear`
+* `_specs`
 
 
 ## `get`
@@ -658,7 +660,7 @@ in a similar way classes and objects are.
 
 ### Properties
 
-**Count: 12.**
+**Count: 13.**
 
 * `id`
 * `names`
@@ -671,6 +673,7 @@ in a similar way classes and objects are.
 * `cli`
 * `test`
 * `specs`
+* `_specs`
 * `ave`
 
 ### Occurences
@@ -969,13 +972,14 @@ categories of specifications :
 
 ### Occurences
 
-**Count : 2.**
+**Count : 3.**
 
 Matching regular expression :
 
 `/(.*)\/(.*)\/_props\/(_specs|specs)\/(.*)\/(.*).spec.js/`.
 
 * [`/_shrine/kami/_props/specs/props/props.spec.js`](/_shrine/kami/_props/specs/props/props.spec.js)
+* [`/_shrine/kami/_props/_specs/regExp/regExp.spec.js`](/_shrine/kami/_props/_specs/regExp/regExp.spec.js)
 * [`/_shrine/website/_props/_specs/regExp/regExp.spec.js`](/_shrine/website/_props/_specs/regExp/regExp.spec.js)
 
 
