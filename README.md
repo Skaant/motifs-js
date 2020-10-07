@@ -1,5 +1,5 @@
 *[24 KAMIS](#kamis-glossary)
-on 10/7/2020, 10:55:29 AM*
+on 10/7/2020, 4:47:31 PM*
 
 # kami.js
 
@@ -306,16 +306,24 @@ It is known as :
 
 ### Description
 
-**VISUAL CONTENT**
+**BOOK VISUAL CONTENT**
+
+Usually bound to a [WEBSITE-PAGE](#website-page) page,
+BOOK-IMAGES are given in a [BOOK-SECTION](#book-section),
+a [BOOK-EXTRACT](#book-extract) or in a [BOOK-PAGE](#book-page).
+
+When the BOOK-PAGE, BOOK-EXTRACT or BOOK-SECTION is retrieved,
+scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 ### Properties
 
-**Count: 4.**
+**Count: 5.**
 
 * `id`
 * `names`
 * `description`
 * `regExp`
+* `copy`
 
 ### Occurences
 
@@ -354,12 +362,14 @@ and [EXTRACTS](#extracts).
 
 ### Properties
 
-**Count: 4.**
+**Count: 6.**
 
 * `id`
 * `names`
 * `description`
 * `regExp`
+* `get`
+* `provision`
 
 ### Occurences
 
@@ -588,12 +598,13 @@ a regular expression is used for matching.
 
 ### Occurences
 
-**Count : 6.**
+**Count : 7.**
 
 Matching regular expression :
 
 `/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
 
+* [`/_shrine/book/_shrine/page/_ways/get/get.way.js`](/_shrine/book/_shrine/page/_ways/get/get.way.js)
 * [`/_shrine/book/_shrine/section/_ways/get/get.way.js`](/_shrine/book/_shrine/section/_ways/get/get.way.js)
 * [`/_shrine/book/_ways/get/get.way.js`](/_shrine/book/_ways/get/get.way.js)
 * [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)

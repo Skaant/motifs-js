@@ -30,13 +30,9 @@ export default (section, options) =>
         scope,
         options
       ),
-      INSTANCE.get(
-        PAGE,
-        {
-          ...options,
-          format: formatEnum.ESM,
-          scope: scope + '/_pages'
-        }
+      PAGE.get(
+        scope + '/_pages',
+        options
       ),
       INSTANCE.get(
         EXTRACT,
@@ -51,7 +47,7 @@ export default (section, options) =>
         {
           ...options,
           format: formatEnum.FILE_PATH,
-          scope
+          scope: scope + '/_images'
         }
       )
     ])
@@ -69,6 +65,13 @@ export default (section, options) =>
           sections,
           pages,
           extracts,
-          images
+          images: images.length > 0
+            ? images
+
+            : false
         }))
+
+      .catch(err =>
+        
+        console.error(err))
   })
