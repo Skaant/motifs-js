@@ -1,11 +1,9 @@
 import FOLDER from "../../../folder/folder.kami.js";
-import FILE from "../../../file/file.kami.js";
 import WEBSITE from '../../../website/website.kami.js'
 import formatEnum from "../../../get/_enums/format/format.enum.js";
 import INSTANCE from "../../../instance/instance.kami.js";
 
 export default (
-  scope = '',
   id,
   options
 ) =>
@@ -40,8 +38,8 @@ export default (
           .then(_data =>
 
             FOLDER.create(
-              scope,
-              '_build',
+              '',
+              '_build/' + id,
               folderScope => mapping(
                 folderScope,
                 {
@@ -54,7 +52,7 @@ export default (
             .then(() => {
               
               FOLDER.create(
-                '/_build',
+                '/_build/' + id,
                 'assets',
                 folderScope => {
 

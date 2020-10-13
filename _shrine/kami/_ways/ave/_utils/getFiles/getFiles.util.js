@@ -49,7 +49,8 @@ const recursiveDirReader = (scope, nested = false) => {
         /** Exclusion */
         if (dirent.name === '.git'
           || dirent.name === '.vscode'
-          || dirent.name === 'node_modules') {
+          || dirent.name === 'node_modules'
+          || dirent.name === '_build') {
 
           return tree
         }

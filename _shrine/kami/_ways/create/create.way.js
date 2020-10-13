@@ -1,6 +1,7 @@
 import SHRINE from '../../../shrine/shrine.kami.js'
 import FOLDER from '../../../folder/folder.kami.js'
 import FILE from '../../../file/file.kami.js'
+import getPantheonRelativePathUtil from './_utils/getPantheonRelativePath/getPantheonRelativePath.util.js'
 
 export default (scope, id) =>
 
@@ -33,19 +34,17 @@ export default {
                 FOLDER.create(
                   scope,
                   'names',
-                  scope => ([
+                  folderScope => ([
                     FILE.create(
-                      scope,
+                      folderScope,
                       'names.prop.js',
                       scope =>
 `import langEnum from '${
-    scope.split('/')
-      .slice(2).map(() => '../').join('')
-      + (global.PANTHEON_SCOPE
-        ? '../../' + global.PANTHEON_SCOPE
-          + '/_shrine/'
-        : '')
-}lang/_enums/lang.enum.js'
+  getPantheonRelativePathUtil(
+    global.PANTHEON_SCOPE,
+    folderScope
+  )
+}_shrine/lang/_enums/lang.enum.js'
 
 export default {
   [langEnum.ABS]: '${ id.toUpperCase() }',

@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs'
 import createWay from "./create.way.js"
 
-export default kami =>
+export default () =>
 
   new Promise(resolve =>
 
