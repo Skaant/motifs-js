@@ -1,5 +1,6 @@
-import getPath from './_utils/getPath/getPath.util.js'
-import getFiles from './_utils/getFiles/getFiles.util.js'
+import getPathUtil from './_utils/getPath/getPath.util.js'
+import getFilesUtil from './_utils/getFiles/getFiles.util.js'
+import getPantheonScopeUtil from './_utils/getPantheonScope/getPantheonScope.util.js'
 
 /** **AVE rises THE FIRST KAMI OF ALL.**
  * 
@@ -18,26 +19,25 @@ Let me initialize myself :
     )
 
   /** 1. global.PATH */
-  global.PATH = getPath(url)
-
-  /** Detects if the project is ran as
-   * a standalone, otherwise creates
-   * a `PANTHEON_SCOPE` global holding the
-   * `kamis.js` module scope. */
-  global.PANTHEON_SCOPE = global.PATH.search(/kami\.js$/) > -1
-    ? false
-    : 'kami.js'
-
-  log && console.log('* global.PATH : '
-    + global.PATH + ',\n'
-    + '* global.PANTHEON_SCOPE : '
-    + global.PANTHEON_SCOPE || 'standalone')
+  global.PATH = getPathUtil(url)
+  
+  log && console.log('* global.PATH : ' 
+    + global.PATH)
 
   /** 2. global.FILES */
-  global.FILES = getFiles('')
+  global.FILES = getFilesUtil('')
 
   log && console.log('* global.FILES : '
     + global.FILES.length + ' found.')
+
+  /** 3. global.PANTHEON */
+  global.PANTHEON_SCOPE = getPantheonScopeUtil(
+    global.PATH,
+    global.FILES
+  )
+
+  log && console.log('* global.PANTHEON_SCOPE : '
+    + global.PANTHEON_SCOPE || 'none (standalone)')
 
   return true
 }

@@ -4,7 +4,7 @@ export default (options, scope, id) =>
 
   new Promise(resolve => {
 
-    KAMI.create(scope, id)
+    KAMI.create(scope, id, options)
       .then(() => {
 
         console.log('KAMI "'

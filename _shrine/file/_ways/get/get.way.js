@@ -8,7 +8,7 @@ import formatEnum from '../../../get/_enums/format/format.enum.js'
  * * `UTF_8`, returns the content as text,
  * * `ESM`, returns the module object. * 
  * 
- * @param {string} filePath
+ * @param {string} filePath Starts with "/".
  * 
  * @param {{format:'<formatEnum>'}} options
  *  Using `format === 'FILE_PATH'` should be avoided
@@ -33,11 +33,9 @@ export default (
 
       case formatEnum.UTF_8:
 
-        filePath =>
-          
-          fs.readFile(
-            global.PATH + filePath,
-            'utf-8')
+        fs.readFile(
+          global.PATH + filePath,
+          'utf-8')
 
           .then(content =>
             

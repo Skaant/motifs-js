@@ -1,25 +1,15 @@
 import fs from 'fs'
 
-/** FOLDER CREATE WAY
- * 
- * Given a `scope` and a `name`,
- *  creates a new folder.
+/** Creates a folder with given `name`
+ *  at given a `scope`.
  *  
  * On successful creation,
  *  execute the `callback` method with
- *  newly created folder scope.
+ *  newly created folder path as
+ *  lower elements (folders and files) scope.
  * 
- * `callback` is expected to
- *  send back an array of
- *  folder elements (folders and files)
- *  creation promises.
- * 
- * Main promise is expected to
- *  resolve once all `callback`'s promises
- *  did resolve first.
- * 
- * @param {string} scope Relative path,
- *  from project root (`global.PATH`) to target
+ * @param {string} scope Should start without `"/"`.
+ *  **Relative path** from project root (`global.PATH`) to target
  *  destination folder.
  * @param {string} name The future folder name.
  * @param {(folderScope: string) => Array<Promise>} callback
