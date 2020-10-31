@@ -33,9 +33,12 @@ export default (
           ...data
         } = website
 
-        provision()
+        Promise.all([
+          FOLDER.clear('_build/' + id),
+          provision()
+        ])
         
-          .then(_data =>
+          .then(([ , _data ]) =>
 
             FOLDER.create(
               '',
