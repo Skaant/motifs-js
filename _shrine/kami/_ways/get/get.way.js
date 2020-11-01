@@ -36,7 +36,9 @@ export default (id = false, options) =>
 
           const protoKami = Array.isArray(KAMI.regExp)
             ? KAMI.regExp.reduce(
-              (acc, regExp) => acc || filePath.match(KAMI.regExp))
+              (acc, regExp) => acc || filePath.match(regExp),
+              false
+            )
 
             : filePath.match(KAMI.regExp)
           

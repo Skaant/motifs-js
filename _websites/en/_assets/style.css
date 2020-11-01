@@ -1,0 +1,125 @@
+@font-face {
+  font-family: "Architect's Daughter";
+  src: url("../../assets/ArchitectsDaughter-Regular.ttf"); }
+
+html, body {
+  min-height: 100%; }
+
+body {
+  padding: 20px;
+  font-family: sans-serif;
+  background: #706fd3;
+  color: rgba(255, 255, 255, 0.8); }
+
+.navbar .navbar-brand {
+  text-decoration: none;
+  font-size: 2rem; }
+
+.navbar img {
+  height: 42px; }
+
+p, li:not(.breadcrumb-item) {
+  font-size: 1.4rem;
+  letter-spacing: 0.15rem;
+  line-height: 1.6rem; }
+
+li:not(.breadcrumb-item) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+li.breadcrumb-item > a {
+  color: #222;
+}
+
+li .badge {
+  font-size: 1rem;
+  margin-top: .4rem;
+}
+
+.navbar-brand,
+.subtitle,
+h1, h2, h3, h4,
+.h1, .h2, .h3, .h4 {
+  font-family: "Architect's Daughter";
+  word-break: break-word; }
+
+h1 {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  letter-spacing: .2rem;
+  margin-top: 5rem; }
+
+h2, .h2 {
+  font-size: 2.4rem;
+  font-weight: bolder;
+  letter-spacing: .15rem;
+  text-transform: uppercase;
+  margin-top: 3rem; }
+  h2::before, .h2::before {
+    content: "* ";
+    color: #F6D03A; }
+
+.sub {
+  text-transform: initial !important;
+  margin: 8px 0 40px;
+  font-size: 1.4rem;
+  opacity: .65;
+  line-height: 1.6rem; }
+
+h3, .h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  margin-top: 2rem; }
+
+h4, .h4 {
+  font-size: 1.6rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  letter-spacing: .05rem; }
+
+p.giant {
+  font-size: 2rem;
+  line-height: 2.4rem; }
+
+a, a:visited, a:hover,
+.navbar-brand {
+  color: rgba(255, 255, 255, 0.8); }
+
+a.btn-light,
+a.btn-warning {
+  color: rgba(0, 0, 0, .8)
+}
+
+a {
+  text-decoration: underline;
+}
+
+.subtitle {
+  font-size: 1rem;
+  opacity: .65;
+  line-height: 0; }
+
+pre {
+  overflow: scroll; }
+
+code {
+  color: #F6D03AE6 !important;
+}
+
+.text-golden {
+  color: #F6D03A; }
+
+.container > .storyboard-images > img {
+  height: max-content;
+  margin-bottom: 3rem;
+}
+
+div > p > img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 3rem;
+}
