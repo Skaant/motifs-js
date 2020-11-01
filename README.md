@@ -24,9 +24,10 @@ you can use to communicate with your collaborators.
 
 ### Browse some websites built on `kami.js`
 
-* [imrok.fr](https://imrok.fr),
-* [highbs-bok.art](https://highbs-bok.art),
-* *soon, the `kami.js` documentation website*.
+* My profesional website, [rimarok.com](https://rimarok.com)
+* My creative hub, [imrok.fr](https://imrok.fr),
+* A poetic and estoric art-WIP [highbs-bok.art](https://highbs-bok.art),
+* And soon, the `kami.js` documentation website.
 
 
 ## What is `kami.js` ?
