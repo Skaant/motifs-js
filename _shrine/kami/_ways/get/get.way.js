@@ -34,7 +34,11 @@ export default (id = false, options) =>
         
         const kamis = files.map(({ filePath, ...content }) => {
 
-          const protoKami = filePath.match(KAMI.regExp)
+          const protoKami = Array.isArray(KAMI.regExp)
+            ? KAMI.regExp.reduce(
+              (acc, regExp) => acc || filePath.match(KAMI.regExp))
+
+            : filePath.match(KAMI.regExp)
           
           return {
             ...content,
