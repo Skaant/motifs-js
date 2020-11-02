@@ -14,10 +14,24 @@ export default {
   id: 'kami',
   names: namesProp,
   description: descriptionProp,
-  regExp: [
-    /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
+  occurences: [
+    {
+      regExp: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
+      transform: ([ _, scope, folderName, fileName ]) => ({
+        scope,
+        folderName,
+        fileName
+      })
+    },
     /** @deprecated */
-    /(.*)\/_shrine\/(.*)\/(.*).kami.js/
+    {
+      regExp: /(.*)\/_shrine\/(.*)\/(.*).kami.js/,
+      transform: ([ _, scope, folderName, fileName ]) => ({
+        scope,
+        folderName,
+        fileName
+      })
+    }
   ],
   flavour: flavourProp,
   _commands,

@@ -28,8 +28,9 @@ export default (
     
     const {
       id,
+      /** @deprecated */
       regExp,
-      regExpMapping
+      occurences
     } = kami
 
     const {
@@ -37,57 +38,76 @@ export default (
       scope = ''
     } = options
 
-    const filesPath = regExp
-      ? global.FILES
-        .filter(filePath =>
-          
-          filePath.match(new RegExp('^' + scope + '/'))
-            && (Array.isArray(regExp)
-              ? regExp.reduce(
-                (acc, _regExp) =>
+    /** @var { [ filePath ] | [ fileMeta ] }
+     *  * `filePath` if `format === formatEnum.FILE_PATH`,
+     *  * `fileMeta` (`occurences`'s `transform` result) else.*/
+    const files = (occurences
+      ? occurences.reduce(
+        (acc, { regExp, transform }) => acc.concat(
+          format === formatEnum.FILE_PATH
+            ? global.FILES.filter(filePath =>
+                
+              filePath.match(new RegExp('^' + scope + '/'))
+                && filePath.match(regExp))
+            
+            : global.FILES.reduce(
+              (acc, filePath) => 
+                
+                (filePath.match(new RegExp('^' + scope + '/'))
+                    && filePath.match(regExp))
+                  ? [
+                    ...acc,
+                    {
+                      filePath,
+                      ...transform(filePath.match(regExp))
+                    }
+                  ]
+                  
+                  : acc,
+              [])
+        ),
+        []
+      )
 
-                  acc
-                    || !!filePath.match(_regExp),
-                false
-              )
-              
-              : filePath.match(regExp)))
-        
-      : []
+      : [])
 
     switch (format) {
 
       case formatEnum.FILE_PATH:
+      case formatEnum.TRANSFORM:
 
-        resolve(filesPath)
+        resolve(files)
 
         break
 
       case formatEnum.UTF_8:
 
-        Promise.all(filesPath.map(filePath =>
-          
-          FILE.get(
-            filePath,
-            { format })
+        Promise.all(files.map(fileMeta => FILE.get(
+          fileMeta.filePath,
+          { format })))
 
-            .then(resolve)))
+          .then(contents => resolve(
+            contents.map((content, index) => ({
+              ...files[index],
+              content
+            }))))
 
         break
       
       case formatEnum.ESM:
 
-        Promise.all(filesPath.map(filePath =>
+        Promise.all(files.map(fileMeta =>
           
           FILE.get(
-            filePath,
+            fileMeta.filePath,
             { format })))
 
             .then(instances =>
               
-              resolve(instances.map(instance => ({
-                ...instance,
-                kamiId: id
+              resolve(instances.map((instance, index) => ({
+                motif: id,
+                ...files[index],
+                ...instance
               }))))
 
         break

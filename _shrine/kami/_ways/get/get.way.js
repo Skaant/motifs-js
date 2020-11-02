@@ -32,22 +32,11 @@ export default (id = false, options) =>
       })
       .then(files => {
         
-        const kamis = files.map(({ filePath, ...content }) => {
-
-          const protoKami = Array.isArray(KAMI.regExp)
-            ? KAMI.regExp.reduce(
-              (acc, regExp) => acc || filePath.match(regExp),
-              false
-            )
-
-            : filePath.match(KAMI.regExp)
+        const kamis = files.map(fileMeta => {
           
           return {
-            ...content,
-            parents: formatParentsUtil(protoKami[1]),
-            scope: protoKami[1],
-            folder: protoKami[2],
-            file: protoKami[3] + '.kami.js'
+            ...fileMeta,
+            parents: formatParentsUtil(fileMeta.scope)
           }
         })
           .sort((a, b) =>
