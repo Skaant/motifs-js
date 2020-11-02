@@ -18,6 +18,7 @@ export default {
     {
       regExp: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
       transform: ([ _, scope, folderName, fileName ]) => ({
+        id: (scope ? `(${ scope }) ` : '') + fileName,
         scope,
         folderName,
         fileName
@@ -27,6 +28,7 @@ export default {
     {
       regExp: /(.*)\/_shrine\/(.*)\/(.*).kami.js/,
       transform: ([ _, scope, folderName, fileName ]) => ({
+        id: (scope ? `(${ scope }) ` : '') + fileName + '*',
         scope,
         folderName,
         fileName

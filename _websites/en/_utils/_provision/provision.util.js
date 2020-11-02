@@ -15,7 +15,7 @@ export default () =>
             INSTANCE.get(
               motif,
               {
-                format: formatEnum.FILE_PATH
+                format: formatEnum.TRANSFORM
               })))
         
           .then(motifsInstances =>

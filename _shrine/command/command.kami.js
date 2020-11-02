@@ -5,5 +5,16 @@ export default {
   id: 'command',
   names: namesProp,
   description: descriptionProp,
-  regExp: /(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/,
+  occurences: [
+    {
+      regExp: /(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/,
+      transform: ([ _, scope, motif, folderName, fileName ]) => ({
+        id: `${ motif }-${ fileName }`,
+        scope,
+        motif,
+        folderName,
+        fileName
+      })
+    }
+  ]
 }

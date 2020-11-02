@@ -57,9 +57,9 @@ export default data => {
       </h2>
       <ul>
         ${
-          data.motif._instances.map(instance =>
+          data.motif._instances.map(fileMeta =>
             
-            `<li>${ instance }</li>`)
+            `<li>${ fileMeta.id || fileMeta.filePath }</li>`)
             .join('\n')
         }
       </ul>
