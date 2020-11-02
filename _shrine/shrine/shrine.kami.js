@@ -5,5 +5,6 @@ export default {
   id: 'shrine',
   names: namesProp,
   create: createWay,
-  regExp: /(.*)\/_shrine$/
+  regExp: /(.*)\/_shrine$/,
+  description: 'historical'
 }

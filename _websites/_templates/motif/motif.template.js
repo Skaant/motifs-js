@@ -4,26 +4,70 @@ import fullIdUtil from "../../_utils/fullId/fullId.util.js";
 
 export default data => {
 
-  const fullId = fullIdUtil(data.motif)
+  const motif = data.motif
+  const fullId = fullIdUtil(motif)
   
   return layoutFragment(
     data,
     {
       title: 'MOTIF ' + fullId.toUpperCase()
         + ' | ' + data.title,
-      description: data.motif.description,
+      description: motif.description,
       content: `<div class="container">
-        <h1 class="main">
-          ${ fullId.toUpperCase() }</h1>
+
+  <div class="row my-5">
+    <div class="col-12 text-center">
+      <h1 class="font-epic">
+        MOTIF
+        <span class="text-epic">
+          ${ fullId.toUpperCase() }
+        </span>
+      </h1>
+      <p class="h3 font-weight-light">
         ${
-          (new showdown.Converter({
-            simpleLineBreaks: true
-          }))
-            .makeHtml(data.motif.description)
+          motif.summary
+            ? motif.summary
+          
+            : (motif.description
+              ? motif.description.split('\n')[0]
+
+              : '')
         }
-        <p class="mt-5 text-muted">
-          Back to <a href="/">home</a>.
-        </p>
-      </div>`
-    })
+      </p>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 col-md-8">
+      <h2 class="mb-4">
+        <span class="text-fresh">
+          MOTIF's description</span>
+      </h2>
+      ${
+        (new showdown.Converter({
+          simpleLineBreaks: true
+        }))
+          .makeHtml(data.motif.description)
+      }
+    </div>
+    <div class="col-12 col-md-4">
+      <h2 class="mb-4">
+        <span class="text-fresh">
+          INSTANCES' list</span>
+      </h2>
+      <ul>
+        ${
+          data.motif._instances.map(instance =>
+            
+            `<li>${ instance }</li>`)
+            .join('\n')
+        }
+      </ul>
+    </div>
+  </div>
+  <p class="mt-5 text-muted">
+    Back to <a href="/">home</a>.
+  </p>
+</div>`
+  })
 }

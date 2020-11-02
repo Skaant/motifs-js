@@ -21,7 +21,7 @@ import FILE from '../../../file/file.kami.js'
  */
 export default (
   kami,
-  options
+  options = {}
 ) => 
 
   new Promise((resolve, reject) => {
@@ -33,24 +33,27 @@ export default (
     } = kami
 
     const {
-      format,
+      format = formatEnum.ESM,
       scope = ''
     } = options
 
-    const filesPath = global.FILES
-      .filter(filePath =>
-        
-        filePath.match(new RegExp('^' + scope + '/'))
-          && (Array.isArray(regExp)
-            ? regExp.reduce(
-              (acc, _regExp) =>
+    const filesPath = regExp
+      ? global.FILES
+        .filter(filePath =>
+          
+          filePath.match(new RegExp('^' + scope + '/'))
+            && (Array.isArray(regExp)
+              ? regExp.reduce(
+                (acc, _regExp) =>
 
-                acc
-                  || !!filePath.match(_regExp),
-              false
-            )
-            
-            : filePath.match(regExp)))
+                  acc
+                    || !!filePath.match(_regExp),
+                false
+              )
+              
+              : filePath.match(regExp)))
+        
+      : []
 
     switch (format) {
 
