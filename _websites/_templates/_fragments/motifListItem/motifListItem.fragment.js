@@ -1,16 +1,12 @@
-import langEnum from '../../../../_shrine/lang/_enums/lang.enum.js'
+import fullIdUtil from "../../../_utils/fullId/fullId.util.js"
 
 export default motif => {
 
-  const prefix = (motif.parents
-    ? (motif.parents.join('-')
-      + '-')
-      
-    : '')
+  const fullId = fullIdUtil(motif)
 
   return `<li>
-    <a href="/${ prefix + motif.id }">
-      <b>${ prefix + motif.names[langEnum.ABS] }</b></a>    
+    <a href="/${ fullId }">
+      ${ fullId.toUpperCase() }</a>
     ${
       (motif.tags || []).map(tag => `
       <span class="badge badge-pill badge-info">

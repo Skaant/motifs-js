@@ -22,7 +22,7 @@ export default data => layoutFragment(
           A generative patterns framework</b></p>
       </div>
 
-      <div class="row ">
+      <div class="row flex-row-reverse">
         <div class="col-12 col-md-8">
       
           <h2 class="mb-4">

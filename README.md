@@ -1,11 +1,11 @@
-*[24 KAMIS](#kamis-glossary)
-on 10/7/2020, 4:47:31 PM*
+*[29 KAMIS](#kamis-glossary)
+on 11/2/2020, 7:22:54 AM*
 
 # kami.js
 
 > Work on ideas.
 
-![kami.js project pictogram](/logo.svg)
+![kami.js project pictogram](/_websites/en/_assets/logo.svg)
 
 `kami.js` aims to explore the concepts of
 **patterns and naming**.
@@ -24,10 +24,9 @@ you can use to communicate with your collaborators.
 
 ### Browse some websites built on `kami.js`
 
-* My profesional website, [rimarok.com](https://rimarok.com)
-* My creative hub, [imrok.fr](https://imrok.fr),
-* A poetic and estoric art-WIP [highbs-bok.art](https://highbs-bok.art),
-* And soon, the `kami.js` documentation website.
+* [imrok.fr](https://imrok.fr),
+* [highbs-bok.art](https://highbs-bok.art),
+* *soon, the `kami.js` documentation website*.
 
 
 ## What is `kami.js` ?
@@ -184,10 +183,14 @@ README "build" [COMMAND](#command).
 * [DOC](#doc) : Documentation
 * [FILE](#file) : File
 * [FOLDER](#folder) : Folder
+* [FOLDER-SCOPE](#folder-scope) : Scope, Périmètre
 * [GET](#get) : Accesser, Obtain, Hydrater
+* [ID](#id) : Identifier, instance name
 * [INSTANCE](#instance) : Instance
 * [KAMI](#kami) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
 * [LANG](#lang) : Language
+* [OCCURENCE](#occurence) : Occurence
+* [OCCURENCE](#occurence) : Unknown
 * [PANTHEON](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
 * [PROP](#prop) : Property, Characteristics, Attribute
 * [README](#readme) : README
@@ -197,6 +200,7 @@ README "build" [COMMAND](#command).
 * [SPEC](#spec) : Specification
 * [UTIL](#util) : Utility
 * [WAY](#way) : Method, Action, Operation, Function
+* [WEBAPP](#webapp) : Web application
 * [WEBSITE](#website) : Website
 
   * [WEBSITE-PAGE](#website-page) : Page, Website page
@@ -328,7 +332,7 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 ### Occurences
 
-**Count : 7.**
+**Count : 10.**
 
 Matching regular expression :
 
@@ -341,6 +345,9 @@ Matching regular expression :
 * [`/_shrine/readme/readme.picto.svg`](/_shrine/readme/readme.picto.svg)
 * [`/_shrine/shrine/shrine.picto.svg`](/_shrine/shrine/shrine.picto.svg)
 * [`/_shrine/util/util.picto.svg`](/_shrine/util/util.picto.svg)
+* [`/_websites/en/_assets/favicon.svg`](/_websites/en/_assets/favicon.svg)
+* [`/_websites/en/_assets/logo.svg`](/_websites/en/_assets/logo.svg)
+* [`/_websites/en/_assets/star-logo.svg`](/_websites/en/_assets/star-logo.svg)
 
 
 ## `book-page`
@@ -557,6 +564,33 @@ Folder is represented by :
 * `_specs`
 
 
+## `folder-scope`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
+**FOLDER-SCOPE** is a project specific KAMI.
+
+It is known as :
+
+* [en] Scope, Périmètre,
+* [fr] Portée, Perimeter.
+
+### Description
+
+SUB-FOLDER TREE
+
+In a FS representation, the scope
+is the root folder, or a sub-folder.
+
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
+
+
 ## `get`
 
 [*Return to KAMIS' glossary.*](#kamis-glossary)
@@ -612,6 +646,35 @@ Matching regular expression :
 * [`/_shrine/instance/_ways/get/get.way.js`](/_shrine/instance/_ways/get/get.way.js)
 * [`/_shrine/kami/_ways/get/get.way.js`](/_shrine/kami/_ways/get/get.way.js)
 * [`/_shrine/readme/_ways/get/get.way.js`](/_shrine/readme/_ways/get/get.way.js)
+
+
+## `id`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
+**ID** is a project specific KAMI.
+
+It is known as :
+
+* [en] Identifier, instance name,
+* [fr] Identifieur, nom d'instance.
+
+### Description
+
+INSTANCE NAME
+
+For a given MOTIF and given SCOPE,
+the ID is the unique name of an instance.
+
+It is usually a PROP.
+
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
 
 
 ## `instance`
@@ -690,12 +753,17 @@ in a similar way classes and objects are.
 
 ### Occurences
 
-**Count : 24.**
+**Count : 29.**
 
 Matching regular expression :
 
-`/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
+* `/(.*)\/_motifs\/(.*)\/(.*).motif.js/`,
+* `/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
 
+* [`/_motifs/folder-scope/folder-scope.motif.js`](/_motifs/folder-scope/folder-scope.motif.js)
+* [`/_motifs/id/id.motif.js`](/_motifs/id/id.motif.js)
+* [`/_motifs/occurence/occurence.motif.js`](/_motifs/occurence/occurence.motif.js)
+* [`/_motifs/webapp/webapp.motif.js`](/_motifs/webapp/webapp.motif.js)
 * [`/_shrine/book/book.kami.js`](/_shrine/book/book.kami.js)
 * [`/_shrine/book/_shrine/extract/extract.kami.js`](/_shrine/book/_shrine/extract/extract.kami.js)
 * [`/_shrine/book/_shrine/image/image.kami.js`](/_shrine/book/_shrine/image/image.kami.js)
@@ -709,6 +777,7 @@ Matching regular expression :
 * [`/_shrine/instance/instance.kami.js`](/_shrine/instance/instance.kami.js)
 * [`/_shrine/kami/kami.kami.js`](/_shrine/kami/kami.kami.js)
 * [`/_shrine/lang/lang.kami.js`](/_shrine/lang/lang.kami.js)
+* [`/_shrine/occurence/occurence.kami.js`](/_shrine/occurence/occurence.kami.js)
 * [`/_shrine/pantheon/pantheon.kami.js`](/_shrine/pantheon/pantheon.kami.js)
 * [`/_shrine/prop/prop.kami.js`](/_shrine/prop/prop.kami.js)
 * [`/_shrine/readme/readme.kami.js`](/_shrine/readme/readme.kami.js)
@@ -768,6 +837,59 @@ It is known as :
 
 * `id`
 * `names`
+
+
+## `occurence`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
+**OCCURENCE** is a project specific KAMI.
+
+It is known as :
+
+* [en] Occurence,
+* [fr] Occurence.
+
+### Description
+
+WHERE INSTANCES HAPPEN
+
+Occurence defines the apparition rules
+(matching properties)
+of a MOTIF'S INSTANCE.
+
+
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
+
+
+## `occurence`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
+**OCCURENCE** is a project specific KAMI.
+
+It is known as :
+
+* [en] Unknown,
+* [fr] Inconnu.
+
+### Description
+
+New KAMI !
+
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
 
 
 ## `pantheon`
@@ -1052,6 +1174,33 @@ which is necessarely `function`.
 * `description`
 
 
+## `webapp`
+
+[*Return to KAMIS' glossary.*](#kamis-glossary)
+
+**WEBAPP** is a project specific KAMI.
+
+It is known as :
+
+* [en] Web application,
+* [fr] Application web.
+
+### Description
+
+The dynamic WEBSITE backend
+
+A webapp exposes MOTIFS and their operations
+(customs and generics) as endpoints.
+
+### Properties
+
+**Count: 3.**
+
+* `id`
+* `names`
+* `description`
+
+
 ## `website`
 
 [*Return to KAMIS' glossary.*](#kamis-glossary)
@@ -1084,13 +1233,13 @@ WEBSITE is a [DOC](#doc) component.
 
 ### Occurences
 
-**Count : 0.**
+**Count : 1.**
 
 Matching regular expression :
 
 `/^\/_websites\/(.*)\/(.*).website.js/`.
 
-
+* [`/_websites/en/en.website.js`](/_websites/en/en.website.js)
 
 
 ## `website-page`
