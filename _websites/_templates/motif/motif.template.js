@@ -11,14 +11,20 @@ export default data => layoutFragment(
     description: data.motif.description,
     content: `<div class="container">
       <h1 class="main">
-        ${ data.motif.id }</h1>
+        ${
+          (data.motif.parents
+            ? (data.motif.parents.join('-')
+              + '-')
+              
+            : '')
+        }${ data.motif.id }</h1>
       ${
         (new showdown.Converter({
           simpleLineBreaks: true
         }))
           .makeHtml(data.motif.description)
       }
-      <p>
+      <p class="mt-5 text-muted">
         Back to <a href="/">home</a>.
       </p>
     </div>`

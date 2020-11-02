@@ -7,7 +7,7 @@ on ${ (new Date()).toLocaleString('en') }*
 
 > Work on ideas.
 
-![kami.js project pictogram](/logo.svg)
+![kami.js project pictogram](/_websites/en/_assets/logo.svg)
 
 \`kami.js\` aims to explore the concepts of
 **patterns and naming**.
