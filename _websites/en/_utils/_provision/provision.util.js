@@ -1,6 +1,6 @@
 import formatEnum from "../../../../_shrine/get/_enums/format/format.enum.js";
 import INSTANCE from "../../../../_shrine/instance/instance.kami.js";
-import MOTIF from "../../../../_shrine/kami/kami.kami.js";
+import MOTIF from "../../../../_motifs/motif/motif.motif.js";
 
 export default () =>
 

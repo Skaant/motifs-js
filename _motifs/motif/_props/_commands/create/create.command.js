@@ -1,13 +1,13 @@
-import KAMI from "../../../kami.kami.js"
+import MOTIF from "../../../motif.motif.js"
 
 export default (options, scope, id) =>
 
   new Promise(resolve => {
 
-    KAMI.create(scope, id, options)
+    MOTIF.create(scope, id, options)
       .then(() => {
 
-        console.log('KAMI "'
+        console.log('MOTIF "'
           + id + '" created at scope "'
           + scope + '".')
         

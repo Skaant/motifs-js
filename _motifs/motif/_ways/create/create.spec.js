@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs'
-import FILE from '../../../file/file.kami.js'
+import FILE from '../../../file/file.motif.js'
 import formatEnum from '../../../get/_enums/format/format.enum.js'
 import langEnum from '../../../lang/_enums/lang.enum.js'
 import createWay from "./create.way.js"
@@ -18,48 +18,48 @@ export default () =>
         Promise.all([
           fs.access(
             global.PATH
-              + '/_tests/_shrine'
+              + '/_tests/_motifs'
           ),
           fs.access(
             global.PATH
-              + '/_tests/_shrine/temp'
+              + '/_tests/_motifs/temp'
           ),
           fs.access(
             global.PATH
-              + '/_tests/_shrine/temp/temp.kami.js'
+              + '/_tests/_motifs/motif/motif.motif.js'
           ),
           fs.access(
             global.PATH
-              + '/_tests/_shrine/temp/_props'
+              + '/_tests/_motifs/temp/_props'
           ),
           fs.access(
             global.PATH
-              + '/_tests/_shrine/temp/_props/names'
+              + '/_tests/_motifs/temp/_props/names'
           ),
           fs.access(
             global.PATH
-              + '/_tests/_shrine/temp/_props/names/names.prop.js'
+              + '/_tests/_motifs/temp/_props/names/names.prop.js'
           ),
           FILE.get(
-            '/_tests/_shrine/temp/_props/names/names.prop.js',
+            '/_tests/_motifs/temp/_props/names/names.prop.js',
             {
               format: formatEnum.ESM
             }
           ),
           fs.access(
             global.PATH
-              + '/_tests/_shrine/temp/_props/description'
+              + '/_tests/_motifs/temp/_props/description'
           ),
           fs.access(
             global.PATH
-              + '/_tests/_shrine/temp/_props/description/description.prop.js'
+              + '/_tests/_motifs/temp/_props/description/description.prop.js'
           )
         ])
           
           .then(([
             shrineFolder,
-            kamiFolder,
-            kamiFile,
+            motifFolder,
+            motifFile,
             propsFolder,
             namesFolder,
             namesFile,
@@ -74,14 +74,14 @@ export default () =>
                 shrineFolder,
                 'Should create a SHRINE at scope location, if none.' ],
               [
-                kamiFolder,
-                'Should create a KAMI root folder, with given id.' ],
+                motifFolder,
+                'Should create a MOTIF root folder, with given id.' ],
               [
-                kamiFile,
-                'Should create a ".kami.js" file in KAMI root folder, with given id.' ],
+                motifFile,
+                'Should create a ".motif.js" file in MOTIF root folder, with given id.' ],
               [
                 propsFolder,
-                'Should create a "_props" folder in KAMI root folder.' ],
+                'Should create a "_props" folder in MOTIF root folder.' ],
               [
                 namesFolder,
                 'Should create a "_props/names" folder.' ],

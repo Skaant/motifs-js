@@ -11,7 +11,7 @@ import _specs from "./_props/_specs/index.js";
 import aveWay from "./_ways/ave/ave.way.js";
 
 export default {
-  id: 'kami',
+  id: 'motif',
   names: namesProp,
   description: descriptionProp,
   occurences: [

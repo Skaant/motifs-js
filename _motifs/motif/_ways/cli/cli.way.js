@@ -1,11 +1,11 @@
-import KAMI from "../../kami.kami.js"
+import MOTIF from "../../motif.motif.js"
 
 export default (args, { log = false }) => {
 
   log && console.log('\nYou did send a command to me :')
 
   const options = {
-    kami: KAMI.id,
+    kami: MOTIF.id,
     command: false,
     log: false,
     force: false,
@@ -54,23 +54,23 @@ export default (args, { log = false }) => {
     }
   }
 
-  KAMI.get()
+  MOTIF.get()
     .then(kamis => {
       
       const kami = kamis.find(kami =>
         kami.id === options.kami)
 
       if (!kami)
-        throw new Error('No KAMI "'
+        throw new Error('No MOTIF "'
           + options.kami + '"')
 
       if (!kami._commands)
-        throw new Error('No `_commands` prop for kami "'
+        throw new Error('No `_commands` prop for MOTIF "'
           + options.kami + '"')
 
       if (!kami._commands[options.command])
         throw new Error('No command "'
-          + options.command + '" for kami "'
+          + options.command + '" for MOTIF "'
           + options.kami + '"')
 
       log && console.log('"' + options.command + '"\n')

@@ -1,9 +1,9 @@
-import KAMI from "../../../kami.kami.js"
+import MOTIF from "../../../motif.motif.js"
 
 export default (options, id = false) =>
 
   new Promise(resolve => {
 
-    KAMI.test(id, options.log, options.doc)
+    MOTIF.test(id, options.log, options.doc)
       .then(resolve)
   })

@@ -1,4 +1,4 @@
-import PANTHEON from '../../../../../pantheon/pantheon.kami.js'
+import PANTHEON from '../../../../../../_shrine/pantheon/pantheon.kami.js'
 
 export default path => {
 
@@ -7,14 +7,14 @@ export default path => {
     return false
 
   const parents = path.slice()
-    .replace(/_shrine\//g, '')
+    .replace(/_motifs\//g, '')
     .split('/')
 
   if (!parents[0])
 
     parents.shift()
 
-  if (parents[0] === 'kami.js') {
+  if (parents[0] === 'motifs') {
 
     parents[0] = PANTHEON.id
   }

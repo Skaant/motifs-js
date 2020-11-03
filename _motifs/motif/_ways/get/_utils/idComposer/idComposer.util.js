@@ -1,4 +1,4 @@
-import PANTHEON from "../../../../../pantheon/pantheon.kami.js";
+import PANTHEON from "../../../../../../_shrine/pantheon/pantheon.kami.js";
 
 export default kami =>
 

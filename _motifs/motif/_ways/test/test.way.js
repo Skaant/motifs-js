@@ -1,13 +1,13 @@
-import KAMI from "../../kami.kami.js"
+import MOTIF from "../../motif.motif.js"
+import FOLDER from "../../../../_shrine/folder/folder.kami.js"
 import testSuiteUtil from "./_utils/testSuite/testSuite.util.js"
 import logSpecsUtil from "./_utils/logSpecs/logSpecs.util.js"
 import summarizeSpecsUtil from "./_utils/summarizeSpecs/summarizeSpecs.util.js"
-import FOLDER from "../../../folder/folder.kami.js"
 
-/** **KAMI(S) TEST**
+/** **MOTIF(S) TEST**
  * 
  * If `id` isn't set,
- *  apply test through all KAMIS.
+ *  apply test through all MOTIFS.
  */
 export default (
   id = false,
@@ -18,7 +18,7 @@ export default (
 
     log && console.log(`You, mortal, decided to challenge me.
     
-I'll show you how well my KAMIS and me are performing !\n`)
+I'll show you how well my MOTIFS and me are performing !\n`)
 
     FOLDER.clear('/_tests')
       .then(() =>
@@ -29,7 +29,7 @@ I'll show you how well my KAMIS and me are performing !\n`)
             '_tests',
             () => []
           ),
-          KAMI.get()
+          MOTIF.get()
         ])
         
           .then(([ _, kamis ]) => {
@@ -40,7 +40,7 @@ I'll show you how well my KAMIS and me are performing !\n`)
                 kami.id === id)
 
               if (!kami) reject(new Error(
-                'No KAMI "' + id + '"'))
+                'No MOTIF "' + id + '"'))
 
               testSuiteUtil(kami)
                 .then(assertions => {

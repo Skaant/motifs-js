@@ -1,4 +1,4 @@
-import langEnum from "../../../../lang/_enums/lang.enum.js";
+import langEnum from "../../../../../_shrine/lang/_enums/lang.enum.js";
 
 const LANG_EMPTY_NAME_PLACEHOLDER = {
   [langEnum.ABS]: 'ZOMMM',

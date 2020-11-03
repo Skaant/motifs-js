@@ -1,3 +1,3 @@
-import KAMI from "./_shrine/kami/kami.kami.js";
+import MOTIF from "./_motifs/motif/motif.motif.js";
 
-export default KAMI
+export default MOTIF

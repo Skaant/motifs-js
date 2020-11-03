@@ -1,14 +1,14 @@
-import SHRINE from '../../../shrine/shrine.kami.js'
-import FOLDER from '../../../folder/folder.kami.js'
-import FILE from '../../../file/file.kami.js'
+import FOLDER from '../../../../_shrine/folder/folder.kami.js'
+import FILE from '../../../../_shrine/file/file.kami.js'
 import getPantheonRelativePathUtil from './_utils/getPantheonRelativePath/getPantheonRelativePath.util.js'
 
 export default (scope, id) =>
 
-  new Promise((resolve, reject) => {
+  new Promise(resolve => {
 
-    SHRINE.create(
+    FOLDER.create(
       scope,
+      '_motifs',
       scope => ([
         FOLDER.create(
           scope,
