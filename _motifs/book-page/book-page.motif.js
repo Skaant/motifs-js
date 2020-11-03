@@ -5,7 +5,7 @@ import provisionWay from './_ways/provision/provision.way.js'
 import BOOK from '../book/book.motif.js'
 
 export default {
-  id: 'page',
+  id: 'book-page',
   parents: [ BOOK.id ],
   names: namesProp,
   description: descriptionProp,

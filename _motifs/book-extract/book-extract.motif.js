@@ -3,7 +3,7 @@ import descriptionProp from './_props/description/description.prop.js'
 import BOOK from '../book/book.motif.js'
 
 export default {
-  id: 'extract',
+  id: 'book-extract',
   parents: [ BOOK.id ],
   names: namesProp,
   description: descriptionProp,
