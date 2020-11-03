@@ -1,4 +1,4 @@
-import WEBSITE_PAGE from '../../../../_motifs/website-page/wabsite-page.motif.js'
+import WEBSITE_PAGE from '../../../../_motifs/website-page/website-page.motif.js'
 import FOLDER from '../../../../_shrine/folder/folder.kami.js'
 import homeTemplate from "../../../_templates/home/home.template.js"
 import motifTemplate from '../../../_templates/motif/motif.template.js'
