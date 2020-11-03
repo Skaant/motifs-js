@@ -1,4 +1,4 @@
-import WEBSITE from "../../../website.kami.js"
+import WEBSITE from "../../../website.motif.js"
 
 export default (options, id) =>
 

@@ -1,4 +1,4 @@
-import FILE from '../../../../../file/file.kami.js'
+import FILE from '../../../../_shrine/file/file.kami.js'
 
 export default (template, data, scope, options) =>
 

@@ -1,7 +1,7 @@
-import FOLDER from "../../../folder/folder.kami.js";
-import WEBSITE from '../../../website/website.kami.js'
-import formatEnum from "../../../get/_enums/format/format.enum.js";
-import INSTANCE from "../../../instance/instance.kami.js";
+import FOLDER from "../../../../_shrine/folder/folder.kami.js";
+import WEBSITE from '../../website.motif.js'
+import formatEnum from "../../../../_shrine/get/_enums/format/format.enum.js";
+import INSTANCE from "../../../../_shrine/instance/instance.kami.js";
 
 export default (
   id,

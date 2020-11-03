@@ -1,4 +1,4 @@
-import PAGE from '../../../../_shrine/website/_shrine/page/page.kami.js'
+import WEBSITE_PAGE from '../../../../_motifs/website-page/wabsite-page.motif.js'
 import FOLDER from '../../../../_shrine/folder/folder.kami.js'
 import homeTemplate from "../../../_templates/home/home.template.js"
 import motifTemplate from '../../../_templates/motif/motif.template.js'
@@ -9,7 +9,7 @@ export default (
   options
 ) => ([
   /** / */
-  PAGE.create(
+  WEBSITE_PAGE.create(
     homeTemplate,
     data,
     scope,
@@ -28,7 +28,7 @@ export default (
         + motif.id,
       folderScope => ([
         /** /articles/ */
-        PAGE.create(
+        WEBSITE_PAGE.create(
           motifTemplate,
           {
             ...data,
