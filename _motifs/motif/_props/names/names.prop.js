@@ -1,4 +1,4 @@
-import langEnum from '../../../../_shrine/lang/_enums/lang.enum.js'
+import langEnum from '../../../lang/_enums/lang.enum.js'
 
 export default {
   [langEnum.ABS]: 'MOTIF',
@@ -6,4 +6,5 @@ export default {
     'Concept', 'Idea', 'Word', 'Pattern'
   ],
   [langEnum.FR]: [
-    'Concept', 'Idée', 'Mot', 'Motif' ] }
+    'Concept', 'Idée', 'Mot', 'Motif'
+  ] }
