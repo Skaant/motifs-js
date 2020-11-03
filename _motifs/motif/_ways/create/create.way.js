@@ -1,5 +1,5 @@
 import FOLDER from '../../../../_shrine/folder/folder.kami.js'
-import FILE from '../../../../_shrine/file/file.kami.js'
+import FILE from '../../../file/file.motif.js'
 import getPantheonRelativePathUtil from './_utils/getPantheonRelativePath/getPantheonRelativePath.util.js'
 
 export default (scope, id) =>

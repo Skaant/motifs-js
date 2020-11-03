@@ -1,5 +1,5 @@
 import SECTION from '../../_shrine/section/section.kami.js'
-import FILE from '../../../file/file.kami.js'
+import FILE from '../../../../_motifs/file/file.motif.js'
 import README from '../../readme.kami.js'
 
 export default ({

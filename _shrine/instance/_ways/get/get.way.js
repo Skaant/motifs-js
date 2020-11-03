@@ -1,5 +1,5 @@
 import formatEnum from '../../../get/_enums/format/format.enum.js'
-import FILE from '../../../file/file.kami.js'
+import FILE from '../../../../_motifs/file/file.motif.js'
 
 /**
  * Retrieves all instances of the given KAMI,

@@ -1,6 +1,6 @@
 import formatEnum from '../../../../_shrine/get/_enums/format/format.enum.js'
 import SECTION from '../../book-section.motif.js'
-import FILE from '../../../../_shrine/file/file.kami.js'
+import FILE from '../../../file/file.motif.js'
 
 /**
  * Retrieve SECTION ESM modules,

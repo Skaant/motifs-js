@@ -1,4 +1,4 @@
-import FILE from "../../../file/file.kami.js";
+import FILE from "../../../../_motifs/file/file.motif.js";
 import formatEnum from "../../../get/_enums/format/format.enum.js";
 
 export default () =>
