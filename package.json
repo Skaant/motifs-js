@@ -1,8 +1,8 @@
 {
-  "name": "kami.js",
-  "version": "1.0.0",
+  "name": "motifs",
+  "version": "0.2.0",
   "type": "module",
-  "description": "kami.js aims to explore the concept of naming and patterns. It creates virtual entities, the kamis, to embody project's classes, components and logic.",
+  "description": "MOTIFS aims to explore the concept of naming and patterns. It creates virtual entities, the kamis, to embody project's classes, components and logic.",
   "main": "index.js",
   "scripts": {
     "start": "node dev-start.js --experimental-modules",
@@ -12,9 +12,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Skaant/kami.js.git"
+    "url": "git+https://github.com/Skaant/motifs.git"
   },
   "keywords": [
+    "generative",
+    "javascript",
     "patterns",
     "OOP",
     "gamification",

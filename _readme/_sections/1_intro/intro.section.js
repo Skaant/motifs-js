@@ -1,6 +1,6 @@
 export default kamis =>
 
-  `*[${ kamis.length } KAMIS](#kamis-glossary)
+  `*[${ kamis.length } MOTIFS](#kamis-glossary)
 on ${ (new Date()).toLocaleString('en') }*
 
 # MOTIFS
@@ -19,18 +19,19 @@ Quickly, it starts to **form a language** that
 you can use to communicate with your collaborators.
 
 *\`motifs\` has been moved from \`kami.js\` project.
-There can remain some references to KAMI,
-that you can easily translate by MOTIF.*
+There can remain some references to "KAMI",
+that you can easily translate by "MOTIF".*
 
 ### Table of content
 
-* [What is \`MOTIFS\` ?](#what-is-kamijs-)
-* [How to use \`MOTIFS\` ?](#how-to-use-kamijs-)
+* [What is \`MOTIFS\` ?](#what-is-motifs-)
+* [How to use \`MOTIFS\` ?](#how-to-use-motifs-)
 * [MOTIFS glossary](#motifs-glossary)
 
 ### Browse some websites built on \`MOTIFS\`
 
-* [imrok.fr](https://imrok.fr),
-* [highbs-bok.art](https://highbs-bok.art),
-* *soon, the \`kami.js\` documentation website*.
+* My profesional website, [rimarok.com](https://rimarok.com),
+* My creative hub, [imrok.fr](https://imrok.fr),
+* A poetic artwork (in progress), [highbs-bok.art](https://highbs-bok.art),
+* And soon, the MOTIFS documentation website.
 `
