@@ -1,5 +1,5 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 7:16:43 AM*
+on 11/4/2020, 7:20:47 AM*
 
 # kami.js
 
@@ -841,8 +841,13 @@ It is known as :
 * [en] Property, Characteristics, Attribute,
 * [fr] Propriété, Caractéristque, Attribut.
 
-`_props` folders contains
-[kami](#kami)'s properties content.
+Properties of an instance
+
+PROPS can be hard-bounded in `.motif.js` file
+or dynamically bound in `MOTIF.get()` method.
+
+*(historical) `_props` folders contains
+[kami](#kami)'s properties content.*
 
 ## Properties
 
