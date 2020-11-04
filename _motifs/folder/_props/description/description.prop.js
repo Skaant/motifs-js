@@ -1,4 +1,4 @@
-export default `**Folder meta-data**
+export default `File explorer node
 
 Folder is represented by :
 * Its \`scope\`, the path between project root

@@ -1,4 +1,4 @@
-import FOLDER from '../../../../_shrine/folder/folder.kami.js'
+import FOLDER from '../../../folder/folder.motif.js'
 import FILE from '../../../file/file.motif.js'
 import getPantheonRelativePathUtil from './_utils/getPantheonRelativePath/getPantheonRelativePath.util.js'
 

@@ -1,4 +1,4 @@
-import FOLDER from "../../../../_shrine/folder/folder.kami.js";
+import FOLDER from "../../../folder/folder.motif.js";
 import WEBSITE from '../../website.motif.js'
 import formatEnum from "../../../../_shrine/get/_enums/format/format.enum.js";
 import INSTANCE from "../../../../_shrine/instance/instance.kami.js";

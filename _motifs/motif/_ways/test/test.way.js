@@ -1,5 +1,5 @@
 import MOTIF from "../../motif.motif.js"
-import FOLDER from "../../../../_shrine/folder/folder.kami.js"
+import FOLDER from "../../../folder/folder.motif.js"
 import testSuiteUtil from "./_utils/testSuite/testSuite.util.js"
 import logSpecsUtil from "./_utils/logSpecs/logSpecs.util.js"
 import summarizeSpecsUtil from "./_utils/summarizeSpecs/summarizeSpecs.util.js"
