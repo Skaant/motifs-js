@@ -1,37 +1,41 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 7:30:05 AM*
+on 11/4/2020, 7:39:53 AM*
 
-# kami.js
+# MOTIFS
 
 > Work on ideas.
 
-![kami.js project pictogram](/_websites/en/_assets/logo.svg)
+![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
-`kami.js` aims to explore the concepts of
+`motifs` aims to explore the concepts of
 **patterns and naming**.
 
-You create virtual entities, [KAMIS](#kami),
+You create virtual entities, [MOTIFS](#motif),
 to embody projects' classes, components and logic.
 
 Quickly, it starts to **form a language** that
 you can use to communicate with your collaborators.
 
+*`motifs` has been moved from `kami.js` project.
+There can remain some references to KAMI,
+that you can easily translate by MOTIF.*
+
 ### Table of content
 
-* [What is `kami.js` ?](#what-is-kamijs-)
-* [How to use `kami.js` ?](#how-to-use-kamijs-)
-* [KAMIS glossary](#kamis-glossary)
+* [What is `MOTIFS` ?](#what-is-kamijs-)
+* [How to use `MOTIFS` ?](#how-to-use-kamijs-)
+* [MOTIFS glossary](#motifs-glossary)
 
-### Browse some websites built on `kami.js`
+### Browse some websites built on `MOTIFS`
 
 * [imrok.fr](https://imrok.fr),
 * [highbs-bok.art](https://highbs-bok.art),
 * *soon, the `kami.js` documentation website*.
 
 
-## What is `kami.js` ?
+## What is `motifs` ?
 
-`kami.js` exposes a set of features which
+`motifs` exposes a set of features which
 help managing complexity in projects.
 
 By finding multiple and relevant purposes to code,
@@ -41,13 +45,13 @@ value of conception and development works.
 
 ### Project's keystone
 
-Everything in `kami.js` is based on **words**.
+Everything in `motifs` is based on **words**.
 
 **Words and their relations.**
 
-[KAMIS](#kami) are words, in a context.
-`kami.js` is a language made of KAMIS that
-you can extend by adding KAMIS
+[MOTIFS](#motif) are words, in a context.
+`motifs` is a language made of MOTIFS that
+you can extend by adding new MOTIFS
 and relations between them.
 
 By connecting them, you create powerful
@@ -115,30 +119,30 @@ their specifications.
 Plug framework's features to CI/CD pipelines
 through CLI commands.
 
-## How to use `kami.js` ?
+## How to use `motifs` ?
 
 Here are details some [COMMANDS](#command),
 framework's CLI entrypoints.
 
-### Create a new KAMI
+### Create a new MOTIF
 
 ```bash
-npm start -- create <scope : '' | ...> <kamiId: string>
+npm start -- create <scope : '' | ...> <motifId: string>
 ```
 
-Creates a new [KAMI](#kami) folders/files tree
+Creates a new [MOTIF](#motif) folders/files tree
 at given scope, structured as follow :
 
 ```bash
 <scope>
 +-- /_shrine/
-|   +-- <kamiId>
+|   +-- <motifId>
 |   |   +-- _props
 |   |   |   +-- names
 |   |   |   |   +-- names.prop.js
 |   |   |   +-- description
 |   |   |   |   +-- description.prop.js
-|   +-- <kamiId>.kami.js
+|   +-- <motifId>.motif.js
 ```
 
 #### Notes
@@ -167,6 +171,13 @@ npm start -- -k readme build
 in this case [README](#readme),
 * `build` is targeting the
 README "build" [COMMAND](#command).
+
+### Build a WEBSITE
+
+```bash
+npm start -- -k website build
+```
+
 
 ## MOTIFS' glossary
     

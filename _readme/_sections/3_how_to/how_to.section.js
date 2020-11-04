@@ -1,27 +1,27 @@
-export default `## How to use \`kami.js\` ?
+export default `## How to use \`motifs\` ?
 
 Here are details some [COMMANDS](#command),
 framework's CLI entrypoints.
 
-### Create a new KAMI
+### Create a new MOTIF
 
 \`\`\`bash
-npm start -- create <scope : '' | ...> <kamiId: string>
+npm start -- create <scope : '' | ...> <motifId: string>
 \`\`\`
 
-Creates a new [KAMI](#kami) folders/files tree
+Creates a new [MOTIF](#motif) folders/files tree
 at given scope, structured as follow :
 
 \`\`\`bash
 <scope>
 +-- /_shrine/
-|   +-- <kamiId>
+|   +-- <motifId>
 |   |   +-- _props
 |   |   |   +-- names
 |   |   |   |   +-- names.prop.js
 |   |   |   +-- description
 |   |   |   |   +-- description.prop.js
-|   +-- <kamiId>.kami.js
+|   +-- <motifId>.motif.js
 \`\`\`
 
 #### Notes
@@ -49,4 +49,11 @@ npm start -- -k readme build
 * \`-k\` targets a specific [KAMI](#kami),
 in this case [README](#readme),
 * \`build\` is targeting the
-README "build" [COMMAND](#command).`
+README "build" [COMMAND](#command).
+
+### Build a WEBSITE
+
+\`\`\`bash
+npm start -- -k website build
+\`\`\`
+`

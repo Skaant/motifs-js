@@ -1,6 +1,6 @@
-export default `## What is \`kami.js\` ?
+export default `## What is \`motifs\` ?
 
-\`kami.js\` exposes a set of features which
+\`motifs\` exposes a set of features which
 help managing complexity in projects.
 
 By finding multiple and relevant purposes to code,
@@ -10,13 +10,13 @@ value of conception and development works.
 
 ### Project's keystone
 
-Everything in \`kami.js\` is based on **words**.
+Everything in \`motifs\` is based on **words**.
 
 **Words and their relations.**
 
-[KAMIS](#kami) are words, in a context.
-\`kami.js\` is a language made of KAMIS that
-you can extend by adding KAMIS
+[MOTIFS](#motif) are words, in a context.
+\`motifs\` is a language made of MOTIFS that
+you can extend by adding new MOTIFS
 and relations between them.
 
 By connecting them, you create powerful
