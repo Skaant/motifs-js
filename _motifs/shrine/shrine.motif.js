@@ -4,5 +4,5 @@ export default {
   id: 'shrine',
   names: namesProp,
   regExp: /(.*)\/_shrine$/,
-  description: 'historical'
+  description: '(historical) A MOTIFS\' node'
 }

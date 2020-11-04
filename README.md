@@ -1,5 +1,5 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 7:20:47 AM*
+on 11/4/2020, 7:23:14 AM*
 
 # kami.js
 
@@ -956,7 +956,7 @@ It is known as :
 * [en] Shrine,
 * [fr] Sanctuaire.
 
-historical
+(historical) A MOTIFS' node
 
 ## Properties
 
