@@ -1,5 +1,5 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 7:23:14 AM*
+on 11/4/2020, 7:30:05 AM*
 
 # kami.js
 
@@ -184,7 +184,7 @@ README "build" [COMMAND](#command).
 * [ID](#id) : Identifier, instance name
 * [INSTANCE](#instance) : Instance
 * [LANG](#lang) : Language
-* [MOTIF](#motif) : Concept, Idea, Word, Pattern
+* [MOTIF](#motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
 * [OCCURENCE](#occurence) : Occurence
 * [PANTHEON](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
 * [PROP](#prop) : Property, Characteristics, Attribute
@@ -685,8 +685,8 @@ It is known as :
 
 It is known as :
 
-* [en] Concept, Idea, Word, Pattern,
-* [fr] Concept, Idée, Mot, Motif.
+* [en] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
+* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
 
 MOTIF of all MOTIFS
 
@@ -801,9 +801,11 @@ It is known as :
 * [en] Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven,
 * [fr] Panthéon, Sanctuaire primordial, Valhalla, Mont Olympe, Acropole, Paradis.
 
-**SHRINE OF PRIMORDIAL KAMIS**
+PRIMORDIAL MOTIFS' PACKAGE
 
-There lies the most abstract and/or transverse [KAMIS](#kami),
+This is a *legendary* concept.
+
+There lies the most abstract and/or transverse [MOTIFS](#motif),
 the angels and last steps upon the One.
 
 ## Properties

@@ -1,7 +1,7 @@
 import langEnum from "../../../lang/_enums/lang.enum.js";
 import INSTANCE from "../../../instance/instance.motif.js";
 import formatEnum from "../../../../_motifs/get/_enums/format/format.enum.js";
-import PANTHEON from "../../../../_shrine/pantheon/pantheon.kami.js";
+import PANTHEON from "../../../pantheon/pantheon.motif.js";
 
 export default (kami, kamis) => 
 

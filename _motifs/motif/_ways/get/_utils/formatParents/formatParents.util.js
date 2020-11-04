@@ -1,4 +1,4 @@
-import PANTHEON from '../../../../../../_shrine/pantheon/pantheon.kami.js'
+import PANTHEON from '../../../../../pantheon/pantheon.motif.js'
 
 export default path => {
 
