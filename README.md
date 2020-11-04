@@ -1,5 +1,5 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 7:03:12 AM*
+on 11/4/2020, 7:08:00 AM*
 
 # kami.js
 
@@ -988,7 +988,7 @@ It is known as :
 * [en] Specification,
 * [fr] Spécification.
 
-**KAMIS' TEST MATERIAL**
+MOTIFS' TEST MATERIAL
 
 In `kami.js` we currently distinguish two
 categories of specifications :

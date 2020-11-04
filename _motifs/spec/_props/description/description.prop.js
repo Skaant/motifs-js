@@ -1,4 +1,4 @@
-export default `**KAMIS' TEST MATERIAL**
+export default `MOTIFS' TEST MATERIAL
 
 In \`kami.js\` we currently distinguish two
 categories of specifications :
