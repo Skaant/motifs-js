@@ -1,4 +1,4 @@
-import formatEnum from "../../../../_shrine/get/_enums/format/format.enum.js";
+import formatEnum from "../../../../_motifs/get/_enums/format/format.enum.js";
 import INSTANCE from "../../../../_shrine/instance/instance.kami.js";
 import MOTIF from "../../../../_motifs/motif/motif.motif.js";
 

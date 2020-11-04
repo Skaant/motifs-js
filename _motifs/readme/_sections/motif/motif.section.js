@@ -1,6 +1,6 @@
 import langEnum from "../../../lang/_enums/lang.enum.js";
 import INSTANCE from "../../../../_shrine/instance/instance.kami.js";
-import formatEnum from "../../../../_shrine/get/_enums/format/format.enum.js";
+import formatEnum from "../../../../_motifs/get/_enums/format/format.enum.js";
 import PANTHEON from "../../../../_shrine/pantheon/pantheon.kami.js";
 
 export default (kami, kamis) => 

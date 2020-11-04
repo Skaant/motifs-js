@@ -1,4 +1,4 @@
-import IMAGE from '../../../book-image/book-image.motif.js'
+import IMAGE from '../../../book-image/image.kami.js'
 import INSTANCE from '../../../../_shrine/instance/instance.kami.js'
 import formatEnum from '../../../get/_enums/format/format.enum.js'
 

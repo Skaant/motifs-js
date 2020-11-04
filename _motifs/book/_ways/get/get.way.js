@@ -1,5 +1,5 @@
 import BOOK from '../../book.motif.js'
-import formatEnum from '../../../../_shrine/get/_enums/format/format.enum.js'
+import formatEnum from '../../../get/_enums/format/format.enum.js'
 import INSTANCE from '../../../../_shrine/instance/instance.kami.js'
 
 /**

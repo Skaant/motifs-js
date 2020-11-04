@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs'
-import formatEnum from '../../../../_shrine/get/_enums/format/format.enum.js'
+import formatEnum from '../../../get/_enums/format/format.enum.js'
 
 /**
  * Given a **file path**, returns its content in the format

@@ -1,4 +1,4 @@
-import formatEnum from '../../../get/_enums/format/format.enum.js'
+import formatEnum from '../../../../_motifs/get/_enums/format/format.enum.js'
 import FILE from '../../../../_motifs/file/file.motif.js'
 
 /**

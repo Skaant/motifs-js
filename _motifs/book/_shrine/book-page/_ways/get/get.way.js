@@ -1,13 +1,13 @@
-import INSTANCE from '../../../../_shrine/instance/instance.kami.js'
-import PAGE from "../../book-page.motif.js";
-import formatEnum from "../../../get/_enums/format/format.enum.js";
+import INSTANCE from "../../../../../../_shrine/instance/instance.kami.js";
+import BOOK_PAGE from "../../book-page.motif.js";
+import formatEnum from "../../../../../get/_enums/format/format.enum.js";
 
 export default (scope, options) => 
 
   new Promise(resolve =>
 
     INSTANCE.get(
-      PAGE,
+      BOOK_PAGE,
       {
         ...options,
         format: formatEnum.ESM,
@@ -21,7 +21,7 @@ export default (scope, options) =>
         
           ? (Promise.all(pages.map(page =>
           
-            PAGE.provision(page, options)))
+            BOOK_PAGE.provision(page, options)))
 
             .then(resolve))
             

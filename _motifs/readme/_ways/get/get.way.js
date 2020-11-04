@@ -1,5 +1,5 @@
 import FILE from "../../../file/file.motif.js";
-import formatEnum from "../../../../_shrine/get/_enums/format/format.enum.js";
+import formatEnum from "../../../get/_enums/format/format.enum.js";
 
 export default () =>
 

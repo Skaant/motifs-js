@@ -1,6 +1,6 @@
-import MOTIF from "../../motif.motif.js";
+import KAMI from "../../motif.motif.js";
 import formatEnum from "../../../get/_enums/format/format.enum.js";
-import INSTANCE from "../../../../_shrine/instance/instance.kami.js";
+import INSTANCE from "../../../instance/instance.kami.js";
 import formatParentsUtil from "./_utils/formatParents/formatParents.util.js";
 import idComposerUtil from "./_utils/idComposer/idComposer.util.js";
 
@@ -26,7 +26,7 @@ export default (id = false, options) =>
     cache.globalFiles = global.FILES
 
     INSTANCE.get(
-      MOTIF,
+      KAMI,
       {
         format: formatEnum.ESM
       })
