@@ -1,5 +1,5 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 7:08:00 AM*
+on 11/4/2020, 7:12:59 AM*
 
 # kami.js
 
@@ -1062,7 +1062,7 @@ It is known as :
 * [en] Method, Action, Operation, Function,
 * [fr] Méthode, Action, Opération, Fonction.
 
-**KAMI POWERS**
+(historical) MOTIFS' METHOD
 
 Ways are KAMI's methods
 (... actions, functions, operations).

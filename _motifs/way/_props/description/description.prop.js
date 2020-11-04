@@ -1,4 +1,4 @@
-export default `**KAMI POWERS**
+export default `(historical) MOTIFS' METHOD
 
 Ways are KAMI's methods
 (... actions, functions, operations).
