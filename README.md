@@ -1,5 +1,5 @@
-*[29 KAMIS](#kamis-glossary)
-on 11/2/2020, 7:22:54 AM*
+*[28 KAMIS](#kamis-glossary)
+on 11/4/2020, 6:30:35 AM*
 
 # kami.js
 
@@ -168,17 +168,13 @@ in this case [README](#readme),
 * `build` is targeting the
 README "build" [COMMAND](#command).
 
-## KAMIS' glossary
+## MOTIFS' glossary
     
 * [BOOK](#book) : Book
-
-  * [BOOK-EXTRACT](#book-extract) : Extract, Fragment, Atom
-
-  * [BOOK-IMAGE](#book-image) : Image, Picture, Illustration, Scan
-
-  * [BOOK-PAGE](#book-page) : Page
-
-  * [BOOK-SECTION](#book-section) : Section, Chapter, Part
+* [BOOK-EXTRACT](#book-extract) : Extract, Fragment, Atom
+* [IMAGE](#book-image) : Image, Picture, Illustration, Scan
+* [PAGE](#book-page) : Page
+* [SECTION](#book-section) : Section, Chapter, Part
 * [COMMAND](#command) : Command
 * [DOC](#doc) : Documentation
 * [FILE](#file) : File
@@ -187,37 +183,32 @@ README "build" [COMMAND](#command).
 * [GET](#get) : Accesser, Obtain, Hydrater
 * [ID](#id) : Identifier, instance name
 * [INSTANCE](#instance) : Instance
-* [KAMI](#kami) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
 * [LANG](#lang) : Language
+* [MOTIF](#motif) : Concept, Idea, Word, Pattern
 * [OCCURENCE](#occurence) : Occurence
-* [OCCURENCE](#occurence) : Unknown
 * [PANTHEON](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
 * [PROP](#prop) : Property, Characteristics, Attribute
 * [README](#readme) : README
-
-  * [README-SECTION](#readme-section) : Section
+* [SECTION](#section) : Section
 * [ШRᛏGHN](#shrine) : Shrine
 * [SPEC](#spec) : Specification
 * [UTIL](#util) : Utility
 * [WAY](#way) : Method, Action, Operation, Function
 * [WEBAPP](#webapp) : Web application
 * [WEBSITE](#website) : Website
-
-  * [WEBSITE-PAGE](#website-page) : Page, Website page
+* [PAGE](#website-page) : Page, Website page
 * [WIKI](#wiki) : Wiki
 
-## `book`
+# `book`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**BOOK** is a project specific KAMI.
+**BOOK** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Book,
 * [fr] Livre.
-
-### Description
 
 **ORDERED COLLECTION OF WRITINGS**
 
@@ -236,80 +227,64 @@ A BOOK content is made of smaller [KAMIS](#kami)/bricks :
 **Note that BOOK is a top-level section
 with just some specific meta-data.**
 
-### Properties
+## Properties
 
-**Count: 6.**
+**Count: 7.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
-* `regExp`
+* `occurences`
 * `get`
 * `provision`
 
-### Occurences
 
-**Count : 0.**
+# `book-extract`
 
-Matching regular expression :
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-`/^\/_data(.*)\/([\w|\-]*)\/([\w|\-]*)\.book\.js/`.
-
-
-
-
-## `book-extract`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**BOOK-EXTRACT** is a project specific KAMI.
+**BOOK-EXTRACT** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Extract, Fragment, Atom,
 * [fr] Extrait, Fragment, Atome.
 
-### Description
-
-**BOOK EXTRACT**
+A small piece of BOOK
 
 A FRAGMENT is the smallest unit of [BOOK](#book) content.
 
 It can be included inside a [SECTION](#section),
 a [PAGE](#page) or directly on the BOOK root.
 
-### Properties
+## Properties
 
-**Count: 4.**
+**Count: 5.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
-* `regExp`
-
-### Occurences
-
-**Count : 0.**
-
-Matching regular expression :
-
-`/\/_extracts\/(.*)\/(.*)\.extract\.js/`.
+* `occurences`
 
 
+# `book-image`
 
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-## `book-image`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**BOOK-IMAGE** is a project specific KAMI.
+**IMAGE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Image, Picture, Illustration, Scan,
 * [fr] Image, Illustration, Numérisation.
-
-### Description
 
 **BOOK VISUAL CONTENT**
 
@@ -320,206 +295,167 @@ a [BOOK-EXTRACT](#book-extract) or in a [BOOK-PAGE](#book-page).
 When the BOOK-PAGE, BOOK-EXTRACT or BOOK-SECTION is retrieved,
 scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
-### Properties
+## Properties
 
-**Count: 5.**
+**Count: 6.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
-* `regExp`
+* `occurences`
 * `copy`
 
-### Occurences
 
-**Count : 10.**
+# `book-page`
 
-Matching regular expression :
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-`/\.(png|jpg|svg)$/`.
-
-* [`/logo.svg`](/logo.svg)
-* [`/_shrine/kami/kami.picto.svg`](/_shrine/kami/kami.picto.svg)
-* [`/_shrine/lang/lang.picto.svg`](/_shrine/lang/lang.picto.svg)
-* [`/_shrine/prop/prop.picto.svg`](/_shrine/prop/prop.picto.svg)
-* [`/_shrine/readme/readme.picto.svg`](/_shrine/readme/readme.picto.svg)
-* [`/_shrine/shrine/shrine.picto.svg`](/_shrine/shrine/shrine.picto.svg)
-* [`/_shrine/util/util.picto.svg`](/_shrine/util/util.picto.svg)
-* [`/_websites/en/_assets/favicon.svg`](/_websites/en/_assets/favicon.svg)
-* [`/_websites/en/_assets/logo.svg`](/_websites/en/_assets/logo.svg)
-* [`/_websites/en/_assets/star-logo.svg`](/_websites/en/_assets/star-logo.svg)
-
-
-## `book-page`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**BOOK-PAGE** is a project specific KAMI.
+**PAGE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Page,
 * [fr] Page.
 
-### Description
-
 **PHYSICAL CONTENT FRAGMENT**
 
 PAGE can hold [SECTIONS](#section)
 and [EXTRACTS](#extracts).
 
-### Properties
+## Properties
 
-**Count: 6.**
+**Count: 7.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
-* `regExp`
+* `occurences`
 * `get`
 * `provision`
 
-### Occurences
 
-**Count : 0.**
+# `book-section`
 
-Matching regular expression :
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-`/\/_pages\/(.*)\/(.*)\.page\.js/`.
-
-
-
-
-## `book-section`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**BOOK-SECTION** is a project specific KAMI.
+**SECTION** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Section, Chapter, Part,
 * [fr] Section, Chapitre, Partie.
 
-### Description
-
 **BOOK SUB-DIVISION**
 
-### Properties
+## Properties
 
-**Count: 6.**
+**Count: 7.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
-* `regExp`
+* `occurences`
 * `get`
 * `provision`
 
-### Occurences
 
-**Count : 0.**
+# `command`
 
-Matching regular expression :
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-`/^\/_data\/(.*)\/_sections\/(.*)\/(.*)\.section\.js/`.
-
-
-
-
-## `command`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**COMMAND** is a project specific KAMI.
+**COMMAND** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Command,
 * [fr] Commande.
 
-### Description
+MOTIF CLI interface
 
-**KAMI WAYS CLI INTERFACE**
+Basically, a command bind a method to match a MOTIF entrypoint syntax.
 
-Basically, a command bind a [`way`](#way) method
-to match [`KAMI`](#kami) CLI entrypoint syntax.
+## Properties
 
-### Properties
+**Count: 5.**
 
-**Count: 4.**
-
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
-* `regExp`
-
-### Occurences
-
-**Count : 4.**
-
-Matching regular expression :
-
-`/(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/`.
-
-* [`/_shrine/kami/_props/_commands/create/create.command.js`](/_shrine/kami/_props/_commands/create/create.command.js)
-* [`/_shrine/kami/_props/_commands/test/test.command.js`](/_shrine/kami/_props/_commands/test/test.command.js)
-* [`/_shrine/readme/_props/_commands/build/build.command.js`](/_shrine/readme/_props/_commands/build/build.command.js)
-* [`/_shrine/website/_props/_commands/build/build.command.js`](/_shrine/website/_props/_commands/build/build.command.js)
+* `occurences`
 
 
-## `doc`
+# `doc`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**DOC** is a project specific KAMI.
+**DOC** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Documentation,
 * [fr] Documentation.
 
-### Description
+General documentation ressources
 
-**TOP-LEVEL DOCUMENTATION KAMI**
-
-DOC is composed of few sub-KAMIS :
+DOC is composed of few sub-[MOTIFS](#motif) :
 * [README](#readme),
 * [WIKI](#wiki),
 * [WEBSITE](#website).
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `file`
+# `file`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**FILE** is a project specific KAMI.
+**FILE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] File,
 * [fr] Fichier.
 
-### Description
-
-**File meta-data**
+File meta-data
 
 *Pattern should later be extended depending on
 the file extension.*
 
-### Properties
+## Properties
 
-**Count: 6.**
+**Count: 7.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `create`
@@ -527,20 +463,18 @@ the file extension.*
 * `copy`
 
 
-## `folder`
+# `folder`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**FOLDER** is a project specific KAMI.
+**FOLDER** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Folder,
 * [fr] Dossier.
 
-### Description
-
-**Folder meta-data**
+File explorer node
 
 Folder is represented by :
 * Its `scope`, the path between project root
@@ -551,11 +485,15 @@ Folder is represented by :
   (a complex concept to define).
 
 
-### Properties
+## Properties
 
-**Count: 7.**
+**Count: 8.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `create`
@@ -564,45 +502,45 @@ Folder is represented by :
 * `_specs`
 
 
-## `folder-scope`
+# `folder-scope`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**FOLDER-SCOPE** is a project specific KAMI.
+**FOLDER-SCOPE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Scope, Périmètre,
 * [fr] Portée, Perimeter.
 
-### Description
-
 SUB-FOLDER TREE
 
 In a FS representation, the scope
 is the root folder, or a sub-folder.
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `get`
+# `get`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**GET** is a project specific KAMI.
+**GET** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Accesser, Obtain, Hydrater,
 * [fr] Accesseur, Obtenir, Hydrateur.
-
-### Description
 
 **INSTANCE ACCESSERS**
 
@@ -622,44 +560,40 @@ In the case of folders and files,
 a regular expression is used for matching.
 
 
-### Properties
+## Properties
 
-**Count: 4.**
+**Count: 5.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `regExp`
 
-### Occurences
+## Occurences
 
-**Count : 7.**
+**Count : 0.**
 
 Matching regular expression :
 
 `/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
 
-* [`/_shrine/book/_shrine/page/_ways/get/get.way.js`](/_shrine/book/_shrine/page/_ways/get/get.way.js)
-* [`/_shrine/book/_shrine/section/_ways/get/get.way.js`](/_shrine/book/_shrine/section/_ways/get/get.way.js)
-* [`/_shrine/book/_ways/get/get.way.js`](/_shrine/book/_ways/get/get.way.js)
-* [`/_shrine/file/_ways/get/get.way.js`](/_shrine/file/_ways/get/get.way.js)
-* [`/_shrine/instance/_ways/get/get.way.js`](/_shrine/instance/_ways/get/get.way.js)
-* [`/_shrine/kami/_ways/get/get.way.js`](/_shrine/kami/_ways/get/get.way.js)
-* [`/_shrine/readme/_ways/get/get.way.js`](/_shrine/readme/_ways/get/get.way.js)
 
 
-## `id`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+# `id`
 
-**ID** is a project specific KAMI.
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**ID** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Identifier, instance name,
 * [fr] Identifieur, nom d'instance.
-
-### Description
 
 INSTANCE NAME
 
@@ -668,27 +602,29 @@ the ID is the unique name of an instance.
 
 It is usually a PROP.
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `instance`
+# `instance`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**INSTANCE** is a project specific KAMI.
+**INSTANCE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Instance,
 * [fr] Instance.
-
-### Description
 
 **INDIVIDUAL OF ONE OR MULTIPLE KAMIS**
 
@@ -704,43 +640,71 @@ They usually :
 
 **KAMI-KAMI is an instance of itself !**
 
-### Properties
+## Properties
 
-**Count: 4.**
+**Count: 5.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `get`
 
 
-## `kami`
+# `lang`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**KAMI** is a project specific KAMI.
+**LANG** is a project specific MOTIF.
 
 It is known as :
 
-* [en] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
-* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
+* [en] Language,
+* [fr] Langage.
 
-### Description
+## Properties
 
-**The KAMI of KAMIS.**
+**Count: 3.**
 
-Kami are "enlived" patterns, making them
-not only **generative** but also **evolutive**
-in a similar way classes and objects are.
-
-### Properties
-
-**Count: 13.**
-
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
+* `names`
+
+
+# `motif`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**MOTIF** is a project specific MOTIF.
+
+It is known as :
+
+* [en] Concept, Idea, Word, Pattern,
+* [fr] Concept, Idée, Mot, Motif.
+
+MOTIF of all MOTIFS
+
+MOTIFS are "enlived" patterns, making them
+not only **descriptive** but also **generative**.
+
+## Properties
+
+**Count: 14.**
+
+* `motif`
+* `filePath`
+* `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
-* `regExp`
+* `occurences`
 * `flavour`
 * `_commands`
 * `create`
@@ -751,46 +715,7 @@ in a similar way classes and objects are.
 * `_specs`
 * `ave`
 
-### Occurences
-
-**Count : 29.**
-
-Matching regular expression :
-
-* `/(.*)\/_motifs\/(.*)\/(.*).motif.js/`,
-* `/(.*)\/_shrine\/(.*)\/(.*).kami.js/`.
-
-* [`/_motifs/folder-scope/folder-scope.motif.js`](/_motifs/folder-scope/folder-scope.motif.js)
-* [`/_motifs/id/id.motif.js`](/_motifs/id/id.motif.js)
-* [`/_motifs/occurence/occurence.motif.js`](/_motifs/occurence/occurence.motif.js)
-* [`/_motifs/webapp/webapp.motif.js`](/_motifs/webapp/webapp.motif.js)
-* [`/_shrine/book/book.kami.js`](/_shrine/book/book.kami.js)
-* [`/_shrine/book/_shrine/extract/extract.kami.js`](/_shrine/book/_shrine/extract/extract.kami.js)
-* [`/_shrine/book/_shrine/image/image.kami.js`](/_shrine/book/_shrine/image/image.kami.js)
-* [`/_shrine/book/_shrine/page/page.kami.js`](/_shrine/book/_shrine/page/page.kami.js)
-* [`/_shrine/book/_shrine/section/section.kami.js`](/_shrine/book/_shrine/section/section.kami.js)
-* [`/_shrine/command/command.kami.js`](/_shrine/command/command.kami.js)
-* [`/_shrine/doc/doc.kami.js`](/_shrine/doc/doc.kami.js)
-* [`/_shrine/file/file.kami.js`](/_shrine/file/file.kami.js)
-* [`/_shrine/folder/folder.kami.js`](/_shrine/folder/folder.kami.js)
-* [`/_shrine/get/get.kami.js`](/_shrine/get/get.kami.js)
-* [`/_shrine/instance/instance.kami.js`](/_shrine/instance/instance.kami.js)
-* [`/_shrine/kami/kami.kami.js`](/_shrine/kami/kami.kami.js)
-* [`/_shrine/lang/lang.kami.js`](/_shrine/lang/lang.kami.js)
-* [`/_shrine/occurence/occurence.kami.js`](/_shrine/occurence/occurence.kami.js)
-* [`/_shrine/pantheon/pantheon.kami.js`](/_shrine/pantheon/pantheon.kami.js)
-* [`/_shrine/prop/prop.kami.js`](/_shrine/prop/prop.kami.js)
-* [`/_shrine/readme/readme.kami.js`](/_shrine/readme/readme.kami.js)
-* [`/_shrine/readme/_shrine/section/section.kami.js`](/_shrine/readme/_shrine/section/section.kami.js)
-* [`/_shrine/shrine/shrine.kami.js`](/_shrine/shrine/shrine.kami.js)
-* [`/_shrine/spec/spec.kami.js`](/_shrine/spec/spec.kami.js)
-* [`/_shrine/util/util.kami.js`](/_shrine/util/util.kami.js)
-* [`/_shrine/way/way.kami.js`](/_shrine/way/way.kami.js)
-* [`/_shrine/website/website.kami.js`](/_shrine/website/website.kami.js)
-* [`/_shrine/website/_shrine/page/page.kami.js`](/_shrine/website/_shrine/page/page.kami.js)
-* [`/_shrine/wiki/wiki.kami.js`](/_shrine/wiki/wiki.kami.js)
-
-### Flavour
+## Flavour
 
 At the very beginning,
 KAMI-KAMI **said itself**, to be
@@ -820,37 +745,16 @@ letting them freely **extend and implement** its
 highly abstract powers.
 
 
-## `lang`
+# `occurence`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**LANG** is a project specific KAMI.
-
-It is known as :
-
-* [en] Language,
-* [fr] Langage.
-
-### Properties
-
-**Count: 2.**
-
-* `id`
-* `names`
-
-
-## `occurence`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**OCCURENCE** is a project specific KAMI.
+**OCCURENCE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Occurence,
 * [fr] Occurence.
-
-### Description
 
 WHERE INSTANCES HAPPEN
 
@@ -858,68 +762,64 @@ Occurence defines the apparition rules
 (matching properties)
 of a MOTIF'S INSTANCE.
 
+Experimental :
+```javascript
+occurences: [
+  {
+    regExp: /(.*)/_motifs/(.*)/(.*).motif.js/,
+    transform: ([ scope, folderName, fileName ]) => ({
+      scope,
+      folderName,
+      fileName
+    })
+  }
+]
+```
 
-### Properties
 
-**Count: 3.**
+## Properties
 
+**Count: 4.**
+
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `occurence`
+# `pantheon`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**OCCURENCE** is a project specific KAMI.
-
-It is known as :
-
-* [en] Unknown,
-* [fr] Inconnu.
-
-### Description
-
-New KAMI !
-
-### Properties
-
-**Count: 3.**
-
-* `id`
-* `names`
-* `description`
-
-
-## `pantheon`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**PANTHEON** is a project specific KAMI.
+**PANTHEON** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven,
 * [fr] Panthéon, Sanctuaire primordial, Valhalla, Mont Olympe, Acropole, Paradis.
 
-### Description
-
 **SHRINE OF PRIMORDIAL KAMIS**
 
 There lies the most abstract and/or transverse [KAMIS](#kami),
 the angels and last steps upon the One.
 
-### Properties
+## Properties
 
-**Count: 4.**
+**Count: 5.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `regExp`
 
-### Occurences
+## Occurences
 
 **Count : 0.**
 
@@ -930,43 +830,43 @@ Matching regular expression :
 
 
 
-## `prop`
+# `prop`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**PROP** is a project specific KAMI.
+**PROP** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Property, Characteristics, Attribute,
 * [fr] Propriété, Caractéristque, Attribut.
 
-### Description
-
 `_props` folders contains
 [kami](#kami)'s properties content.
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `readme`
+# `readme`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**README** is a project specific KAMI.
+**README** is a project specific MOTIF.
 
 It is known as :
 
 * [en] README,
 * [fr] README.
-
-### Description
 
 **GITHUB README**
 
@@ -979,11 +879,15 @@ genercis are located in `/kami.js/_shrine/readme/_sections`.
 
 README is a component of [DOC](#-doc).
 
-### Properties
+## Properties
 
-**Count: 6.**
+**Count: 7.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `get`
@@ -991,18 +895,16 @@ README is a component of [DOC](#-doc).
 * `_commands`
 
 
-## `readme-section`
+# `section`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**README-SECTION** is a project specific KAMI.
+**SECTION** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Section,
 * [fr] Section.
-
-### Description
 
 **README SECTION**
 
@@ -1012,78 +914,79 @@ SECTIONS are made of :
 
 In fact, README is the top-level SECTION.
 
-### Properties
+## Properties
 
-**Count: 5.**
+**Count: 6.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `regExp`
 * `create`
 
-### Occurences
+## Occurences
 
-**Count : 5.**
+**Count : 0.**
 
 Matching regular expression :
 
 * `/^\/_readme\/_sections\/(.*)\/(.*)\.section.js/`,
 * `/\/_shrine\/readme\/_sections\/(.*)\/(.*)\.section.js/`.
 
-* [`/_readme/_sections/1_intro/intro.section.js`](/_readme/_sections/1_intro/intro.section.js)
-* [`/_readme/_sections/2_what_is/what_is.section.js`](/_readme/_sections/2_what_is/what_is.section.js)
-* [`/_readme/_sections/3_how_to/how_to.section.js`](/_readme/_sections/3_how_to/how_to.section.js)
-* [`/_shrine/readme/_sections/kami/kami.section.js`](/_shrine/readme/_sections/kami/kami.section.js)
-* [`/_shrine/readme/_sections/kamis_glossary/kamis_glossary.section.js`](/_shrine/readme/_sections/kamis_glossary/kamis_glossary.section.js)
 
 
-## `shrine`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+# `shrine`
 
-**ШRᛏGHN** is a project specific KAMI.
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**ШRᛏGHN** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Shrine,
 * [fr] Sanctuaire.
 
-### Properties
+historical
 
-**Count: 4.**
+## Properties
 
+**Count: 5.**
+
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
-* `create`
 * `regExp`
+* `description`
 
-### Occurences
+## Occurences
 
-**Count : 4.**
+**Count : 0.**
 
 Matching regular expression :
 
 `/(.*)\/_shrine$/`.
 
-* [`/_shrine`](/_shrine)
-* [`/_shrine/book/_shrine`](/_shrine/book/_shrine)
-* [`/_shrine/readme/_shrine`](/_shrine/readme/_shrine)
-* [`/_shrine/website/_shrine`](/_shrine/website/_shrine)
 
 
-## `spec`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+# `spec`
 
-**SPEC** is a project specific KAMI.
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**SPEC** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Specification,
 * [fr] Spécification.
-
-### Description
 
 **KAMIS' TEST MATERIAL**
 
@@ -1095,67 +998,69 @@ categories of specifications :
 * **Specific SPECS**, which target a single
   instance of a KAMI (hold by the instance).
 
-### Properties
+## Properties
 
-**Count: 4.**
+**Count: 5.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `regExp`
 
-### Occurences
+## Occurences
 
-**Count : 3.**
+**Count : 0.**
 
 Matching regular expression :
 
 `/(.*)\/(.*)\/_props\/(_specs|specs)\/(.*)\/(.*).spec.js/`.
 
-* [`/_shrine/kami/_props/specs/props/props.spec.js`](/_shrine/kami/_props/specs/props/props.spec.js)
-* [`/_shrine/kami/_props/_specs/regExp/regExp.spec.js`](/_shrine/kami/_props/_specs/regExp/regExp.spec.js)
-* [`/_shrine/website/_props/_specs/regExp/regExp.spec.js`](/_shrine/website/_props/_specs/regExp/regExp.spec.js)
 
 
-## `util`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+# `util`
 
-**UTIL** is a project specific KAMI.
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**UTIL** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Utility,
 * [fr] Utilitaire.
 
-### Description
-
 `_utils` folders are nothing more than
 the place very specific snippets of code are put.
 
 Utility are usually consumed by same scope-level modules.
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `way`
+# `way`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WAY** is a project specific KAMI.
+**WAY** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Method, Action, Operation, Function,
 * [fr] Méthode, Action, Opération, Fonction.
-
-### Description
 
 **KAMI POWERS**
 
@@ -1165,95 +1070,90 @@ Ways are KAMI's methods
 It differs with [prop](#prop) in its type,
 which is necessarely `function`.
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `webapp`
+# `webapp`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WEBAPP** is a project specific KAMI.
+**WEBAPP** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Web application,
 * [fr] Application web.
 
-### Description
-
 The dynamic WEBSITE backend
 
 A webapp exposes MOTIFS and their operations
 (customs and generics) as endpoints.
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 
 
-## `website`
+# `website`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WEBSITE** is a project specific KAMI.
+**WEBSITE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Website,
 * [fr] Site internet.
 
-### Description
-
 **KAMI.JS DOCUMENTATION WEBSITE**
 
 WEBSITE is a [DOC](#doc) component.
 
-### Properties
+## Properties
 
 **Count: 8.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
-* `regExp`
-* `regExpMapping`
+* `occurences`
 * `description`
 * `build`
 * `_commands`
 * `_specs`
 
-### Occurences
 
-**Count : 1.**
+# `website-page`
 
-Matching regular expression :
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-`/^\/_websites\/(.*)\/(.*).website.js/`.
-
-* [`/_websites/en/en.website.js`](/_websites/en/en.website.js)
-
-
-## `website-page`
-
-[*Return to KAMIS' glossary.*](#kamis-glossary)
-
-**WEBSITE-PAGE** is a project specific KAMI.
+**PAGE** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Page, Website page,
 * [fr] Page, Page de site internet.
-
-### Description
 
 TEMPLATE x DATA x URL
 
@@ -1265,37 +1165,43 @@ A page binds the following three elements :
   (which will in time be used as its url).
 
 
-### Properties
+## Properties
 
-**Count: 4.**
+**Count: 5.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`
 * `create`
 
 
-## `wiki`
+# `wiki`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WIKI** is a project specific KAMI.
+**WIKI** is a project specific MOTIF.
 
 It is known as :
 
 * [en] Wiki,
 * [fr] Wiki.
 
-### Description
-
 **KAMI.JS' GITHUB WIKI**
 
 WIKI is a component of [DOC](#doc).
 
-### Properties
+## Properties
 
-**Count: 3.**
+**Count: 4.**
 
+* `motif`
+* `filePath`
 * `id`
+* `folderName`
+* `fileName`
 * `names`
 * `description`

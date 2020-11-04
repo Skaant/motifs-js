@@ -1,4 +1,4 @@
-import README from '../../../readme.kami.js'
+import README from '../../../readme.motif.js'
 
 export default options =>
 

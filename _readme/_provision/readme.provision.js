@@ -1,4 +1,4 @@
-import MOTIF from '../../_shrine/motif/motif.motif.js'
+import MOTIF from '../../_motifs/motif/motif.motif.js'
 
 export default () =>
 

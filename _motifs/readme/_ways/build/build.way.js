@@ -1,6 +1,6 @@
-import SECTION from '../../_shrine/section/section.kami.js'
-import FILE from '../../../../_motifs/file/file.motif.js'
-import README from '../../readme.kami.js'
+import README_SECTION from '../../../readme-section/readme-section.motif.js'
+import FILE from '../../../file/file.motif.js'
+import README from '../../readme.motif.js'
 
 export default ({
   log
@@ -16,7 +16,7 @@ export default ({
         provision()
           .then(data =>
 
-            SECTION.create(mapping(data))
+            README_SECTION.create(mapping(data))
               .then(content =>
 
                 FILE.create(

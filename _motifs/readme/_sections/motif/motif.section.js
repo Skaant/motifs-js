@@ -1,7 +1,7 @@
 import langEnum from "../../../lang/_enums/lang.enum.js";
-import INSTANCE from "../../../instance/instance.kami.js";
-import formatEnum from "../../../get/_enums/format/format.enum.js";
-import PANTHEON from "../../../pantheon/pantheon.kami.js";
+import INSTANCE from "../../../../_shrine/instance/instance.kami.js";
+import formatEnum from "../../../../_shrine/get/_enums/format/format.enum.js";
+import PANTHEON from "../../../../_shrine/pantheon/pantheon.kami.js";
 
 export default (kami, kamis) => 
 
@@ -15,7 +15,7 @@ export default (kami, kamis) =>
       .then(occurences =>
 
         resolve(
-`## \`${
+`# \`${
   kami.parents
     ? kami.parents.map(parentId =>
     
@@ -28,7 +28,7 @@ export default (kami, kamis) =>
     
     : '' }${ kami.id }\`
 
-[*Return to KAMIS' glossary.*](#kamis-glossary)
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
 
 **${
   (kami.parents
@@ -46,9 +46,9 @@ export default (kami, kamis) =>
     + kami.names[langEnum.ABS]
 }** ${
   kami.parents[0] === PANTHEON.id
-    ? 'belongs to the PANTHEON of KAMIS'
+    ? 'belongs to the MOTIFS\'s main package'
 
-    : 'is a project specific KAMI'
+    : 'is a project specific MOTIF'
 }.
 
 It is known as :
@@ -67,14 +67,12 @@ ${
     ? 
 `
 
-### Description
-
 ${ kami.description }`
 
     : ''
 }
 
-### Properties
+## Properties
 
 **Count: ${ Object.keys(kami).length - 5 }.**
 
@@ -94,7 +92,7 @@ ${
     ?
 `
 
-### Occurences
+## Occurences
 
 **Count : ${ occurences.length }.**
 
@@ -122,7 +120,7 @@ ${ occurences.map(filePath =>
     ? 
 `
 
-### Flavour
+## Flavour
 
 ${ kami.flavour }`
 

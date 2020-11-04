@@ -1,12 +1,12 @@
 import langEnum from "../../../lang/_enums/lang.enum.js";
-import PANTHEON from "../../../pantheon/pantheon.kami.js";
+import PANTHEON from "../../../../_shrine/pantheon/pantheon.kami.js";
 
 export default kamis => 
 
   new Promise(resolve =>
 
     resolve(
-`## KAMIS' glossary
+`## MOTIFS' glossary
     
 ${
   kamis.map(kami =>
