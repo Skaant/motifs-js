@@ -1,5 +1,5 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 7:12:59 AM*
+on 11/4/2020, 7:16:43 AM*
 
 # kami.js
 
@@ -1033,10 +1033,17 @@ It is known as :
 * [en] Utility,
 * [fr] Utilitaire.
 
+The place to put things
+
 `_utils` folders are nothing more than
 the place very specific snippets of code are put.
 
-Utility are usually consumed by same scope-level modules.
+Utilities are usually consumed by same scope or 
+lower levels modules.
+
+You should avoid repetitions in `_utils` as
+everywhere else in the code.
+
 
 ## Properties
 
