@@ -2,7 +2,7 @@ import BOOK_SECTION from '../../book-section.kami.js'
 import BOOK_PAGE from '../../../book-page/book-page.kami.js'
 import BOOK_EXTRACT from '../../../book-extract/book-extract.motif.js'
 import BOOK_IMAGE from '../../../book-image/book-image.kami.js'
-import INSTANCE from '../../../../../../_shrine/instance/instance.kami.js'
+import INSTANCE from '../../../instance/instance.kami.js'
 import formatEnum from '../../../get/_enums/format/format.enum.js'
 
 /**

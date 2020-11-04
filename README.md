@@ -1,5 +1,5 @@
-*[27 KAMIS](#kamis-glossary)
-on 11/4/2020, 6:41:41 AM*
+*[28 KAMIS](#kamis-glossary)
+on 11/4/2020, 6:53:06 AM*
 
 # kami.js
 
@@ -180,6 +180,7 @@ README "build" [COMMAND](#command).
 * [FILE](#file) : File
 * [FOLDER](#folder) : Folder
 * [FOLDER-SCOPE](#folder-scope) : Scope, Périmètre
+* [GET](#get) : Accesser, Obtain, Hydrater
 * [ID](#id) : Identifier, instance name
 * [INSTANCE](#instance) : Instance
 * [LANG](#lang) : Language
@@ -528,6 +529,59 @@ is the root folder, or a sub-folder.
 * `fileName`
 * `names`
 * `description`
+
+
+# `get`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**GET** is a project specific MOTIF.
+
+It is known as :
+
+* [en] Accesser, Obtain, Hydrater,
+* [fr] Accesseur, Obtenir, Hydrateur.
+
+**INSTANCE ACCESSERS**
+
+GET is currently an abstract pattern
+which may be implemented on sufficent
+occurence rate and generic logics.
+
+GET can declined on KAMI's occurences purposes :
+* Access and update folders and files content,
+* Import ESM modules,
+* Access and update data from databases.
+
+In any case, an object instance is created to
+represent the actual occurence.
+
+In the case of folders and files,
+a regular expression is used for matching.
+
+
+## Properties
+
+**Count: 5.**
+
+* `motif`
+* `filePath`
+* `id`
+* `folderName`
+* `fileName`
+* `names`
+* `description`
+* `regExp`
+
+## Occurences
+
+**Count : 0.**
+
+Matching regular expression :
+
+`/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
+
+
 
 
 # `id`

@@ -1,6 +1,6 @@
 import BOOK from '../../book.motif.js'
 import formatEnum from '../../../get/_enums/format/format.enum.js'
-import INSTANCE from '../../../../_shrine/instance/instance.kami.js'
+import INSTANCE from '../../../instance/instance.motif.js'
 
 /**
  * Retrieve BOOK and its content tree

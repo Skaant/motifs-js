@@ -1,6 +1,6 @@
-import INSTANCE from "../../../../../../_shrine/instance/instance.kami.js";
+import INSTANCE from "../../../../instance/instance.kami.js";
 import BOOK_PAGE from "../../book-page.motif.js";
-import formatEnum from "../../../../../get/_enums/format/format.enum.js";
+import formatEnum from "../../../get/_enums/format/format.enum.js";
 
 export default (scope, options) => 
 

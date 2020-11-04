@@ -1,7 +1,7 @@
 import FOLDER from "../../../folder/folder.motif.js";
 import WEBSITE from '../../website.motif.js'
 import formatEnum from "../../../get/_enums/format/format.enum.js";
-import INSTANCE from "../../../../_shrine/instance/instance.kami.js";
+import INSTANCE from "../../../instance/instance.motif.js";
 
 export default (
   id,
