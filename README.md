@@ -1,5 +1,5 @@
 *[28 KAMIS](#kamis-glossary)
-on 11/4/2020, 6:53:06 AM*
+on 11/4/2020, 7:03:12 AM*
 
 # kami.js
 
@@ -1190,7 +1190,7 @@ It is known as :
 * [en] Wiki,
 * [fr] Wiki.
 
-**KAMI.JS' GITHUB WIKI**
+Wiki documentation
 
 WIKI is a component of [DOC](#doc).
 
