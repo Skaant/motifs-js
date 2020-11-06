@@ -44,6 +44,11 @@ export default (
               content
             }))
 
+          .catch(err => err.code === 'ENOENT'
+            ? resolve(false)
+            
+            : reject(err))
+
         break
       
       case formatEnum.ESM:

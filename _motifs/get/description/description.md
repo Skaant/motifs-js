@@ -1,4 +1,4 @@
-export default `**INSTANCE ACCESSERS**
+### The MOTIF'S INSTANCES accessers
 
 GET is currently an abstract pattern
 which may be implemented on sufficent
@@ -14,4 +14,8 @@ represent the actual occurence.
 
 In the case of folders and files,
 a regular expression is used for matching.
+
+### GET ONE and GET ALL
+
+get(:id) and get()
 `

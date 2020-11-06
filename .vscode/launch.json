@@ -14,7 +14,9 @@
       "program": "${workspaceFolder}\\dev-start.js",
       "args": [
         "--",
-        "test"
+        "-k",
+        "readme",
+        "build"
       ]
     }
   ]

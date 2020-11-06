@@ -1,26 +1,28 @@
-export default kamis =>
+export default motifs =>
 
-  `*[${ kamis.length } MOTIFS](#kamis-glossary)
+  `*[${ motifs.length } MOTIFS](#motifs-glossary)
 on ${ (new Date()).toLocaleString('en') }*
+
+![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
 # MOTIFS
 
 > Work on ideas.
 
-![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
+## A generative design patterns framework
 
-\`motifs\` aims to explore the concepts of
-**patterns and naming**.
+[motifs [GitHub]](https://github.com/Skaant/motifs) aims to
+explore the concepts of **naming as well as [generative design patterns](https://www.researchgate.net/publication/3981737_Generative_design_patterns)**.
 
-You create virtual entities, [MOTIFS](#motif),
-to embody projects' classes, components and logic.
+Framework's **conceptual entities**, [MOTIFS](#motif),
+let you embody projects' classes, components and logic.
 
-Quickly, it starts to **form a language** that
-you can use to communicate with your collaborators.
+Quickly, **they start to form a language** that you can use
+to build your applications and
+to share with your collaborators.
 
-*\`motifs\` has been moved from \`kami.js\` project.
-There can remain some references to "KAMI",
-that you can easily translate by "MOTIF".*
+To get more information about the MOTIF "MOTIF",
+please see [MOTIF > What is a motif ?](#what-is-a-motif-).
 
 ### Table of content
 

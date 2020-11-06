@@ -1,4 +1,4 @@
-import PANTHEON from "../../../../../pantheon/pantheon.motif.js";
+import PANTHEON from "../../../../pantheon/pantheon.motif.js";
 
 export default kami =>
 

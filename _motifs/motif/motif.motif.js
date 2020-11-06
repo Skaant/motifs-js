@@ -1,7 +1,6 @@
 import namesProp from "./_props/names/names.prop.js";
-import descriptionProp from "./_props/description/description.prop.js";
 import createWay from "./_ways/create/create.way.js";
-import getWay from "./_ways/get/get.way.js";
+import get from "./get/get.js";
 import cliWay from "./_ways/cli/cli.way.js";
 import _commands from "./_props/_commands/index.js";
 import flavourProp from "./_props/flavour/flavour.prop.js";
@@ -12,33 +11,23 @@ import aveWay from "./_ways/ave/ave.way.js";
 
 export default {
   id: 'motif',
+  symbol: '⚇',
   names: namesProp,
-  description: descriptionProp,
   occurences: [
     {
       regExp: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
-      transform: ([ _, scope, folderName, fileName ]) => ({
-        id: (scope ? `(${ scope }) ` : '') + fileName,
+      transform: ([ _, scope, folderName, id ]) => ({
+        id,
         scope,
         folderName,
-        fileName
-      })
-    },
-    /** @deprecated */
-    {
-      regExp: /(.*)\/_shrine\/(.*)\/(.*).kami.js/,
-      transform: ([ _, scope, folderName, fileName ]) => ({
-        id: (scope ? `(${ scope }) ` : '') + fileName + '*',
-        scope,
-        folderName,
-        fileName
+        fileName: id + '.motif.js'
       })
     }
   ],
   flavour: flavourProp,
   _commands,
   create: createWay,
-  get: getWay,
+  get,
   cli: cliWay,
   test: testWay,
   specs,

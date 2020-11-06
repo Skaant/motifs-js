@@ -18,20 +18,23 @@ export default data => {
   <div class="row my-5">
     <div class="col-12 text-center">
       <h1 class="font-epic">
-        MOTIF
+        ${
+          motif.symbol
+            ? `<span class="text-epic symbol">${ motif.symbol }</span><br/>`
+            
+            : ''
+        }
+        <span class="small">MOTIF</span>
         <span class="text-epic">
           ${ fullId.toUpperCase() }
         </span>
       </h1>
       <p class="h3 font-weight-light">
         ${
-          motif.summary
-            ? motif.summary
-          
-            : (motif.description
-              ? motif.description.split('\n')[0]
+          motif.description
+            ? motif.description.split('\n')[0]
 
-              : '')
+            : ''
         }
       </p>
     </div>
@@ -44,10 +47,15 @@ export default data => {
           MOTIF's description</span>
       </h2>
       ${
-        (new showdown.Converter({
-          simpleLineBreaks: true
-        }))
-          .makeHtml(data.motif.description)
+        motif.description
+          ? (new showdown.Converter({
+            ghCompatibleHeaderId: true
+          }))
+            .makeHtml(motif.description.slice(
+              motif.description.indexOf('\n')
+            ))
+          
+          : ''
       }
     </div>
     <div class="col-12 col-md-4">

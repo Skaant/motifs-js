@@ -1,12 +1,9 @@
-import fullIdUtil from "../../../_utils/fullId/fullId.util.js"
+export default motif =>
 
-export default motif => {
-
-  const fullId = fullIdUtil(motif)
-
-  return `<li>
-    <a href="/${ fullId }">
-      ${ fullId.toUpperCase() }</a>
+  `<li>
+    <a href="/${ motif.id }">
+      ${ motif.symbol || '' }
+      ${ motif.id.toUpperCase() }</a>
     ${
       (motif.tags || []).map(tag => `
       <span class="badge badge-pill badge-info">
@@ -15,4 +12,3 @@ export default motif => {
         .join('')
     }
   </li>`
-}

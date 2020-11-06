@@ -16,3 +16,31 @@
 .font-epic {
   font-family: "Architect's Daughter";
 }
+
+h1 {
+  font-size: 3.5rem;
+}
+
+h1 > .symbol {
+  font-size: 5rem;
+}
+
+@media (min-width: 768px) {
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  h1 > .symbol {
+    font-size: 7.5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin: 3rem auto 2rem;
+}
+
+h3 {
+  margin: 2rem auto 1rem;
+}

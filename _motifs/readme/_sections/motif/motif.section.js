@@ -30,28 +30,7 @@ export default (kami, kamis) =>
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**${
-  (kami.parents
-    ? (kami.parents.map(parentId =>
-    
-      kamis.find(kami =>
-        
-        kami.id === parentId)
-        .names[langEnum.ABS]
-        + '-')
-      .join(''))
-
-    : '')
-
-    + kami.names[langEnum.ABS]
-}** ${
-  kami.parents[0] === PANTHEON.id
-    ? 'belongs to the MOTIFS\'s main package'
-
-    : 'is a project specific MOTIF'
-}.
-
-It is known as :
+**${ kami.names[langEnum.ABS] }** is also known as :
 ${
   [ langEnum.EN,
     langEnum.FR

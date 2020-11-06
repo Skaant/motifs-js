@@ -1,24 +1,21 @@
-*[28 MOTIFS](#kamis-glossary)
-on 11/4/2020, 7:53:52 AM*
+*[29 MOTIFS](#motifs-glossary)
+on 11/6/2020, 4:20:38 AM*
+
+![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
 # MOTIFS
 
 > Work on ideas.
 
-![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
+## A generative design patterns framework
 
-`motifs` aims to explore the concepts of
-**patterns and naming**.
+[motifs [GitHub]](https://github.com/Skaant/motifs) aims to explore the concepts of **naming as well as [generative design patterns](https://www.researchgate.net/publication/3981737_Generative_design_patterns)**.
 
-You create virtual entities, [MOTIFS](#motif),
-to embody projects' classes, components and logic.
+Framework's **conceptual entities**, [MOTIFS](#motif), let you embody projects' classes, components and logic.
 
-Quickly, it starts to **form a language** that
-you can use to communicate with your collaborators.
+Quickly, **they start to form a language** that you can use to build your applications, and share with your collaborators.
 
-*`motifs` has been moved from `kami.js` project.
-There can remain some references to "KAMI",
-that you can easily translate by "MOTIF".*
+To get more information about the MOTIF "MOTIF", please see [MOTIF > Description > What is a motif ?](#what-is-a-motif-)
 
 ### Table of content
 
@@ -188,6 +185,7 @@ npm start -- -k website build
 * [PAGE](#book-page) : Page
 * [SECTION](#book-section) : Section, Chapter, Part
 * [COMMAND](#command) : Command
+* [DESCRIPTION](#description) : Description
 * [DOC](#doc) : Documentation
 * [FILE](#file) : File
 * [FOLDER](#folder) : Folder
@@ -215,9 +213,7 @@ npm start -- -k website build
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**BOOK** is a project specific MOTIF.
-
-It is known as :
+**BOOK** is also known as :
 
 * [en] Book,
 * [fr] Livre.
@@ -241,7 +237,7 @@ with just some specific meta-data.**
 
 ## Properties
 
-**Count: 7.**
+**Count: 6.**
 
 * `motif`
 * `filePath`
@@ -259,9 +255,7 @@ with just some specific meta-data.**
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**BOOK-EXTRACT** is a project specific MOTIF.
-
-It is known as :
+**BOOK-EXTRACT** is also known as :
 
 * [en] Extract, Fragment, Atom,
 * [fr] Extrait, Fragment, Atome.
@@ -275,7 +269,7 @@ a [PAGE](#page) or directly on the BOOK root.
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -291,9 +285,7 @@ a [PAGE](#page) or directly on the BOOK root.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**IMAGE** is a project specific MOTIF.
-
-It is known as :
+**IMAGE** is also known as :
 
 * [en] Image, Picture, Illustration, Scan,
 * [fr] Image, Illustration, Numérisation.
@@ -309,7 +301,7 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 ## Properties
 
-**Count: 6.**
+**Count: 5.**
 
 * `motif`
 * `filePath`
@@ -326,9 +318,7 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**PAGE** is a project specific MOTIF.
-
-It is known as :
+**PAGE** is also known as :
 
 * [en] Page,
 * [fr] Page.
@@ -340,7 +330,7 @@ and [EXTRACTS](#extracts).
 
 ## Properties
 
-**Count: 7.**
+**Count: 6.**
 
 * `motif`
 * `filePath`
@@ -358,9 +348,7 @@ and [EXTRACTS](#extracts).
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**SECTION** is a project specific MOTIF.
-
-It is known as :
+**SECTION** is also known as :
 
 * [en] Section, Chapter, Part,
 * [fr] Section, Chapitre, Partie.
@@ -369,7 +357,7 @@ It is known as :
 
 ## Properties
 
-**Count: 7.**
+**Count: 6.**
 
 * `motif`
 * `filePath`
@@ -387,9 +375,7 @@ It is known as :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**COMMAND** is a project specific MOTIF.
-
-It is known as :
+**COMMAND** is also known as :
 
 * [en] Command,
 * [fr] Commande.
@@ -400,7 +386,43 @@ Basically, a command bind a method to match a MOTIF entrypoint syntax.
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
+
+* `motif`
+* `filePath`
+* `id`
+* `folderName`
+* `fileName`
+* `names`
+* `description`
+* `occurences`
+
+
+# `description`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**DESCRIPTION** is also known as :
+
+* [en] Description,
+* [fr] Description.
+
+Textual data
+
+Should treat LANG dimension.
+
+Experimental :
+```bash
+<motifId>
++-- description
+|   +-- en.description.js
+|   +-- fr.description.js
++-- <motifId>.motif.js
+```
+
+## Properties
+
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -416,9 +438,7 @@ Basically, a command bind a method to match a MOTIF entrypoint syntax.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**DOC** is a project specific MOTIF.
-
-It is known as :
+**DOC** is also known as :
 
 * [en] Documentation,
 * [fr] Documentation.
@@ -432,7 +452,7 @@ DOC is composed of few sub-[MOTIFS](#motif) :
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -447,9 +467,7 @@ DOC is composed of few sub-[MOTIFS](#motif) :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**FILE** is a project specific MOTIF.
-
-It is known as :
+**FILE** is also known as :
 
 * [en] File,
 * [fr] Fichier.
@@ -461,7 +479,7 @@ the file extension.*
 
 ## Properties
 
-**Count: 7.**
+**Count: 6.**
 
 * `motif`
 * `filePath`
@@ -479,9 +497,7 @@ the file extension.*
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**FOLDER** is a project specific MOTIF.
-
-It is known as :
+**FOLDER** is also known as :
 
 * [en] Folder,
 * [fr] Dossier.
@@ -499,7 +515,7 @@ Folder is represented by :
 
 ## Properties
 
-**Count: 8.**
+**Count: 7.**
 
 * `motif`
 * `filePath`
@@ -518,9 +534,7 @@ Folder is represented by :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**FOLDER-SCOPE** is a project specific MOTIF.
-
-It is known as :
+**FOLDER-SCOPE** is also known as :
 
 * [en] Scope, Périmètre,
 * [fr] Portée, Perimeter.
@@ -532,7 +546,7 @@ is the root folder, or a sub-folder.
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -547,14 +561,12 @@ is the root folder, or a sub-folder.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**GET** is a project specific MOTIF.
-
-It is known as :
+**GET** is also known as :
 
 * [en] Accesser, Obtain, Hydrater,
 * [fr] Accesseur, Obtenir, Hydrateur.
 
-**INSTANCE ACCESSERS**
+The MOTIF'S INSTANCES accessers
 
 GET is currently an abstract pattern
 which may be implemented on sufficent
@@ -571,10 +583,14 @@ represent the actual occurence.
 In the case of folders and files,
 a regular expression is used for matching.
 
+### GET ONE and GET ALL
+
+get(:id) and get()
+
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -600,9 +616,7 @@ Matching regular expression :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**ID** is a project specific MOTIF.
-
-It is known as :
+**ID** is also known as :
 
 * [en] Identifier, instance name,
 * [fr] Identifieur, nom d'instance.
@@ -616,7 +630,7 @@ It is usually a PROP.
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -631,9 +645,7 @@ It is usually a PROP.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**INSTANCE** is a project specific MOTIF.
-
-It is known as :
+**INSTANCE** is also known as :
 
 * [en] Instance,
 * [fr] Instance.
@@ -654,7 +666,7 @@ They usually :
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -670,9 +682,7 @@ They usually :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**LANG** is a project specific MOTIF.
-
-It is known as :
+**LANG** is also known as :
 
 * [en] Language,
 * [fr] Langage.
@@ -687,27 +697,49 @@ It is known as :
 * `folderName`
 * `fileName`
 * `names`
+* `description`
 
 
 # `motif`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**MOTIF** is a project specific MOTIF.
-
-It is known as :
+**MOTIF** is also known as :
 
 * [en] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
 * [fr] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
 
-MOTIF of all MOTIFS
+### What is a MOTIF ?
 
-MOTIFS are "enlived" patterns, making them
-not only **descriptive** but also **generative**.
+Motif, also known as *pattern*,
+is the generic concept that **bind instances together under the same name**.
+In programmation, patterns / motifs aim to
+solve recurring problems with generic / abstract answers.
+
+As stated in the book [*A Pattern Language*](https://en.wikipedia.org/wiki/A_Pattern_Language),
+**motifs also has the property to act as words**, forming sentences (and more) under certains rules.
+But, as now stated in the publication [*Generative Design Patterns*](https://www.researchgate.net/publication/3981737_Generative_design_patterns),
+*design patterns* in computer science also has the counterpart not to be usable directly as operational code.
+
+MOTIFS provides both a library of numerous and differently scaling motifs
+and an implementation that **makes these motifs not only descriptive, but also generative**.
+
+### About naming
+
+Naming is quite simple while there is only
+one **whose** `<id>.*` and only one **what** `*.<motif>.*`.
+
+But since the are some transversal MOTIFS,
+those will potentialy have multiple :
+
+* **whose** : `[ id* ].`,
+* **what** : `.[ motif * ].`.
+
+
 
 ## Properties
 
-**Count: 14.**
+**Count: 13.**
 
 * `motif`
 * `filePath`
@@ -761,9 +793,7 @@ highly abstract powers.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**OCCURENCE** is a project specific MOTIF.
-
-It is known as :
+**OCCURENCE** is also known as :
 
 * [en] Occurence,
 * [fr] Occurence.
@@ -791,7 +821,7 @@ occurences: [
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -806,9 +836,7 @@ occurences: [
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**PANTHEON** is a project specific MOTIF.
-
-It is known as :
+**PANTHEON** is also known as :
 
 * [en] Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven,
 * [fr] Panthéon, Sanctuaire primordial, Valhalla, Mont Olympe, Acropole, Paradis.
@@ -822,7 +850,7 @@ the angels and last steps upon the One.
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -848,9 +876,7 @@ Matching regular expression :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**PROP** is a project specific MOTIF.
-
-It is known as :
+**PROP** is also known as :
 
 * [en] Property, Characteristics, Attribute,
 * [fr] Propriété, Caractéristque, Attribut.
@@ -865,7 +891,7 @@ or dynamically bound in `MOTIF.get()` method.
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -880,9 +906,7 @@ or dynamically bound in `MOTIF.get()` method.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**README** is a project specific MOTIF.
-
-It is known as :
+**README** is also known as :
 
 * [en] README,
 * [fr] README.
@@ -900,7 +924,7 @@ README is a component of [DOC](#-doc).
 
 ## Properties
 
-**Count: 7.**
+**Count: 6.**
 
 * `motif`
 * `filePath`
@@ -918,9 +942,7 @@ README is a component of [DOC](#-doc).
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**SECTION** is a project specific MOTIF.
-
-It is known as :
+**SECTION** is also known as :
 
 * [en] Section,
 * [fr] Section.
@@ -935,7 +957,7 @@ In fact, README is the top-level SECTION.
 
 ## Properties
 
-**Count: 6.**
+**Count: 5.**
 
 * `motif`
 * `filePath`
@@ -963,9 +985,7 @@ Matching regular expression :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**ШRᛏGHN** is a project specific MOTIF.
-
-It is known as :
+**ШRᛏGHN** is also known as :
 
 * [en] Shrine,
 * [fr] Sanctuaire.
@@ -974,7 +994,7 @@ It is known as :
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -1000,9 +1020,7 @@ Matching regular expression :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**SPEC** is a project specific MOTIF.
-
-It is known as :
+**SPEC** is also known as :
 
 * [en] Specification,
 * [fr] Spécification.
@@ -1019,7 +1037,7 @@ categories of specifications :
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -1045,9 +1063,7 @@ Matching regular expression :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**UTIL** is a project specific MOTIF.
-
-It is known as :
+**UTIL** is also known as :
 
 * [en] Utility,
 * [fr] Utilitaire.
@@ -1066,7 +1082,7 @@ everywhere else in the code.
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -1081,9 +1097,7 @@ everywhere else in the code.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WAY** is a project specific MOTIF.
-
-It is known as :
+**WAY** is also known as :
 
 * [en] Method, Action, Operation, Function,
 * [fr] Méthode, Action, Opération, Fonction.
@@ -1098,7 +1112,7 @@ which is necessarely `function`.
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -1113,9 +1127,7 @@ which is necessarely `function`.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WEBAPP** is a project specific MOTIF.
-
-It is known as :
+**WEBAPP** is also known as :
 
 * [en] Web application,
 * [fr] Application web.
@@ -1127,7 +1139,7 @@ A webapp exposes MOTIFS and their operations
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`
@@ -1142,9 +1154,7 @@ A webapp exposes MOTIFS and their operations
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WEBSITE** is a project specific MOTIF.
-
-It is known as :
+**WEBSITE** is also known as :
 
 * [en] Website,
 * [fr] Site internet.
@@ -1155,7 +1165,7 @@ WEBSITE is a [DOC](#doc) component.
 
 ## Properties
 
-**Count: 8.**
+**Count: 7.**
 
 * `motif`
 * `filePath`
@@ -1174,9 +1184,7 @@ WEBSITE is a [DOC](#doc) component.
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**PAGE** is a project specific MOTIF.
-
-It is known as :
+**PAGE** is also known as :
 
 * [en] Page, Website page,
 * [fr] Page, Page de site internet.
@@ -1193,7 +1201,7 @@ A page binds the following three elements :
 
 ## Properties
 
-**Count: 5.**
+**Count: 4.**
 
 * `motif`
 * `filePath`
@@ -1209,9 +1217,7 @@ A page binds the following three elements :
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**WIKI** is a project specific MOTIF.
-
-It is known as :
+**WIKI** is also known as :
 
 * [en] Wiki,
 * [fr] Wiki.
@@ -1222,7 +1228,7 @@ WIKI is a component of [DOC](#doc).
 
 ## Properties
 
-**Count: 4.**
+**Count: 3.**
 
 * `motif`
 * `filePath`

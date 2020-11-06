@@ -2,8 +2,8 @@ import formatEnum from '../../../get/_enums/format/format.enum.js'
 import FILE from '../../../file/file.motif.js'
 
 /**
- * Retrieves all instances of the given KAMI,
- *  based on `kami.regExp`.
+ * Retrieves all instances of the given MOTIF,
+ *  based on `motif.occurences[{ regExp }]`.
  * 
  * Instances are returned on wether `format`
  *  value is given in the `options` parameter in :
@@ -16,11 +16,11 @@ import FILE from '../../../file/file.motif.js'
  *  restrict the occurence search to only a given
  *  repository sub-directory.
  * 
- * @param {KAMI} kami The KAMI to find instances of
+ * @param {MOTIF} motif The MOTIF to find instances of
  * @param {{format:'<formatEnum>',scope:string}} options
  */
 export default (
-  kami,
+  motif,
   options = {}
 ) => 
 
@@ -28,10 +28,8 @@ export default (
     
     const {
       id,
-      /** @deprecated */
-      regExp,
       occurences
-    } = kami
+    } = motif
 
     const {
       format = formatEnum.ESM,

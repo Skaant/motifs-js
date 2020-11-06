@@ -16,7 +16,7 @@ export default (scope, id) =>
           scope => ([
             FILE.create(
               scope,
-              id + '.kami.js',
+              id + '.motif.js',
               () =>
 `import namesProp from './_props/names/names.prop.js'
 import descriptionProp from './_props/description/description.prop.js'
@@ -44,7 +44,7 @@ export default {
     global.PANTHEON_SCOPE,
     folderScope
   )
-}_shrine/lang/_enums/lang.enum.js'
+}_motifs/lang/_enums/lang.enum.js'
 
 export default {
   [langEnum.ABS]: '${ id.toUpperCase() }',
