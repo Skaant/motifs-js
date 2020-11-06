@@ -13,7 +13,7 @@ export default data => {
       title: 'MOTIF ' + fullId.toUpperCase()
         + ' | ' + data.title,
       description: motif.description,
-      content: `<div class="container">
+      content: `<div class="container bg-white shadow p-5 mt-5">
 
   <div class="row my-5">
     <div class="col-12 text-center">

@@ -22,7 +22,7 @@ to build your applications and
 to share with your collaborators.
 
 To get more information about the MOTIF "MOTIF",
-please see [MOTIF > What is a motif ?](#what-is-a-motif-).
+please refer to [MOTIF > What is a motif ?](#what-is-a-motif-).
 
 ### Table of content
 

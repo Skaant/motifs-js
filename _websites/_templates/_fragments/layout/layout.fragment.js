@@ -15,11 +15,10 @@ export default (
     <link href="/assets/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/assets/style.css" rel="stylesheet" type="text/css">
   </head>
-  <body>
+  <body class='bg-fresh'>
     <nav class="navbar d-flex justify-content-between align-items-center">
-      <a class="navbar-brand mr-3 text-epic font-epic" href="/">
-        MOTIFS
-      </a>
+      <a class="navbar-brand mr-3 text-white font-epic bg-fresh" href="/">
+        M◒TIFS</a>
     </nav>
     ${ content }
   </body>
