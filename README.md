@@ -1,5 +1,5 @@
 *[29 MOTIFS](#motifs-glossary)
-on 11/6/2020, 4:20:38 AM*
+on 11/8/2020, 11:09:23 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -9,13 +9,18 @@ on 11/6/2020, 4:20:38 AM*
 
 ## A generative design patterns framework
 
-[motifs [GitHub]](https://github.com/Skaant/motifs) aims to explore the concepts of **naming as well as [generative design patterns](https://www.researchgate.net/publication/3981737_Generative_design_patterns)**.
+[motifs [GitHub]](https://github.com/Skaant/motifs) aims to
+explore the concepts of **naming as well as [generative design patterns](https://www.researchgate.net/publication/3981737_Generative_design_patterns)**.
 
-Framework's **conceptual entities**, [MOTIFS](#motif), let you embody projects' classes, components and logic.
+Framework's **conceptual entities**, [MOTIFS](#motif),
+let you embody projects' classes, components and logic.
 
-Quickly, **they start to form a language** that you can use to build your applications, and share with your collaborators.
+Quickly, **they start to form a language** that you can use
+to build your applications and
+to share with your collaborators.
 
-To get more information about the MOTIF "MOTIF", please see [MOTIF > Description > What is a motif ?](#what-is-a-motif-)
+To get more information about the MOTIF "MOTIF",
+please refer to [MOTIF > What is a motif ?](#what-is-a-motif-).
 
 ### Table of content
 
@@ -422,13 +427,14 @@ Experimental :
 
 ## Properties
 
-**Count: 4.**
+**Count: 5.**
 
 * `motif`
 * `filePath`
 * `id`
 * `folderName`
 * `fileName`
+* `symbol`
 * `names`
 * `description`
 * `occurences`
@@ -566,7 +572,7 @@ is the root folder, or a sub-folder.
 * [en] Accesser, Obtain, Hydrater,
 * [fr] Accesseur, Obtenir, Hydrateur.
 
-The MOTIF'S INSTANCES accessers
+### The MOTIF'S INSTANCES accessers
 
 GET is currently an abstract pattern
 which may be implemented on sufficent
@@ -586,7 +592,7 @@ a regular expression is used for matching.
 ### GET ONE and GET ALL
 
 get(:id) and get()
-
+`
 
 ## Properties
 
@@ -598,8 +604,8 @@ get(:id) and get()
 * `folderName`
 * `fileName`
 * `names`
-* `description`
 * `regExp`
+* `description`
 
 ## Occurences
 
@@ -666,13 +672,14 @@ They usually :
 
 ## Properties
 
-**Count: 4.**
+**Count: 5.**
 
 * `motif`
 * `filePath`
 * `id`
 * `folderName`
 * `fileName`
+* `symbol`
 * `names`
 * `description`
 * `get`
@@ -709,6 +716,8 @@ They usually :
 * [en] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
 * [fr] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
 
+MOTIF of all MOTIFS
+
 ### What is a MOTIF ?
 
 Motif, also known as *pattern*,
@@ -719,35 +728,43 @@ solve recurring problems with generic / abstract answers.
 As stated in the book [*A Pattern Language*](https://en.wikipedia.org/wiki/A_Pattern_Language),
 **motifs also has the property to act as words**, forming sentences (and more) under certains rules.
 But, as now stated in the publication [*Generative Design Patterns*](https://www.researchgate.net/publication/3981737_Generative_design_patterns),
-*design patterns* in computer science also has the counterpart not to be usable directly as operational code.
+*design patterns* in computer science also has the counterpart of being too abstract.
+They do not provide implemention and cannot be used straight as operational code.
 
-MOTIFS provides both a library of numerous and differently scaling motifs
+To address this void, MOTIFS provides both a library of numerous inedite and differently scaling motifs
 and an implementation that **makes these motifs not only descriptive, but also generative**.
 
-### About naming
+### About naming files
 
-Naming is quite simple while there is only
-one **whose** `<id>.*` and only one **what** `*.<motif>.*`.
+MOTIF starts living in a `<motifId>` folder,
+just right with its `<motifId>.motif.js` file.
+
+Every MOTIFS has its own rules for naming.
+
+Naming basically bind a **whose ?** (an `<id>.*`, or a [folder scope](/folder-scope))
+and a **what ?** (the `*.<motif>.*` it implements).
+
+It remains simple while there is only one *whose* and only one *what*.
 
 But since the are some transversal MOTIFS,
-those will potentialy have multiple :
+their INSTANCES will potentialy have multiple :
 
 * **whose** : `[ id* ].`,
-* **what** : `.[ motif * ].`.
+* **what** : `.[ motif* ].`.
 
 
 
 ## Properties
 
-**Count: 13.**
+**Count: 14.**
 
 * `motif`
 * `filePath`
 * `id`
 * `folderName`
 * `fileName`
+* `symbol`
 * `names`
-* `description`
 * `occurences`
 * `flavour`
 * `_commands`
@@ -758,6 +775,7 @@ those will potentialy have multiple :
 * `specs`
 * `_specs`
 * `ave`
+* `description`
 
 ## Flavour
 

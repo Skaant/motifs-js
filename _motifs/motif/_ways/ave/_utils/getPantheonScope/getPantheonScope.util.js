@@ -3,18 +3,18 @@
  * `kamis.js` module scope. */
 export default (globalPath, globalFiles) => {
 
-  if (globalPath.search(/kami\.js$/) > -1)
+  if (globalPath.search(/motifs$/) > -1)
     
     return false
 
   const pantheonFolder = globalFiles.find(filePath =>
         
-    filePath.search(/(?<!\.)kami\.js$/) > -1)
+    filePath.search(/(?<!\.)motifs$/) > -1)
 
   if (!pantheonFolder)
 
     throw new Error('PANTHEON_NOT_FOUND')
 
-  return (pantheonFolder.match(/(.*)kami\.js/)[1]
-    + 'kami.js')
+  return (pantheonFolder.match(/(.*)motifs/)[1]
+    + 'motifs')
 }

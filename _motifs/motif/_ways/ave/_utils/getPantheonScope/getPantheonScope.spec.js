@@ -4,18 +4,21 @@ export default () =>
 
   new Promise(resolve => {
     
-    const standalone = getPantheonScopeUtil('C://dev/kami.js')
+    const standalone = getPantheonScopeUtil(
+      'C://dev/motifs',
+      []
+    )
     
     const integration = getPantheonScopeUtil(
       'C://dev/projet',
-      [ 'kami.js',
-        'kami.js/_shrine/kami/kami.kami.js' ]
+      [ 'motifs',
+        'motifs/_motifs/motif/motif.motif.js' ]
     )
 
     const extreme = getPantheonScopeUtil(
       'C://dev/projet',
-      [ 'exemple/temp/kami.js/_shrine/kami/kami.kami.js',
-        'exemple/temp/kami.js' ])
+      [ 'exemple/temp/motifs/_motifs/motif/motif.motif.js',
+        'exemple/temp/motifs' ])
     
     resolve([
       [
@@ -23,11 +26,11 @@ export default () =>
         "Should return false while being run in a standalone project."
       ],
       [
-        integration === 'kami.js',
+        integration === 'motifs',
         'Should return "" while being run at the root of a consuming project.'
       ],
       [
-        extreme === 'exemple/temp/kami.js',
-        'Should return the path between the root folder and the `kami.js` folder.' ]
+        extreme === 'exemple/temp/motifs',
+        'Should return the path between the root folder and the `motifs` folder.' ]
     ])
   })

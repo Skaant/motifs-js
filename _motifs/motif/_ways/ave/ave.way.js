@@ -2,9 +2,9 @@ import getPathUtil from './_utils/getPath/getPath.util.js'
 import getFilesUtil from './_utils/getFiles/getFiles.util.js'
 import getPantheonScopeUtil from './_utils/getPantheonScope/getPantheonScope.util.js'
 
-/** **AVE rises THE FIRST KAMI OF ALL.**
+/** **AVE rises THE FIRST MOTIF OF ALL.**
  * 
- * It's the `kami.js` framework's
+ * It's the `motifs` framework's
  *  initialization method.
  */
 export default (url, { log }) => {
