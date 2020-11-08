@@ -1,5 +1,5 @@
-*[30 MOTIFS](#motifs-glossary)
-on 11/8/2020, 8:38:08 PM*
+*[32 MOTIFS](#motifs-glossary)
+on 11/8/2020, 10:01:39 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -184,6 +184,8 @@ npm start -- -k website build
 
 ## MOTIFS' glossary
     
+* [`= assertion`](#-assertion) : Assertion
+* [`⩮ assertion-group`](#-assertion-group) : Assertion group
 * [`▥ book`](#-book) : Book
 * [`book-extract`](#book-extract) : Extract, Fragment, Atom
 * [`book-image`](#book-image) : Image, Picture, Illustration, Scan
@@ -214,6 +216,52 @@ npm start -- -k website build
 * [`Ʋ website`](#-website) : Website
 * [`website-page`](#website-page) : Page, Website page
 * [`wiki`](#wiki) : Wiki
+
+# `= assertion`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**ASSERTION** is also known as :
+
+* [en] Assertion,
+* [fr] Assertion.
+
+SPEC unit
+
+## Properties
+
+* `motif` : motif
+* `filePath` : /_motifs/assertion/assertion.motif.js
+* `id` : assertion
+* `scope` : 
+* `folderName` : assertion
+* `fileName` : assertion.motif.js
+* `symbol` : =
+* `names`
+
+
+# `⩮ assertion-group`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**ASSERTION-GROUP** is also known as :
+
+* [en] Assertion group,
+* [fr] Groupe d'assertion.
+
+Same-scope, same-theme, ASSERTIONS lot
+
+## Properties
+
+* `motif` : motif
+* `filePath` : /_motifs/assertion-group/assertion-group.motif.js
+* `id` : assertion-group
+* `scope` : 
+* `folderName` : assertion-group
+* `fileName` : assertion-group.motif.js
+* `symbol` : ⩮
+* `names`
+
 
 # `▥ book`
 

@@ -19,13 +19,22 @@ export default (scope, id) =>
               id + '.motif.js',
               () =>
 `import namesProp from './_props/names/names.prop.js'
-import descriptionProp from './_props/description/description.prop.js'
 
 export default {
   id: '${ id }',
-  names: namesProp,
-  description: descriptionProp
+  names: namesProp
 }`
+            ),
+            FOLDER.create(
+              scope,
+              'description',
+              scope => ([
+                FILE.create(
+                  scope,
+                  'description.md',
+                  scope => 'New KAMI !'
+                )
+              ])
             ),
             FOLDER.create(
               scope,
@@ -44,25 +53,13 @@ export default {
     global.PANTHEON_SCOPE,
     folderScope
   )
-}_motifs/lang/_enums/lang.enum.js'
+}lang/_enums/lang.enum.js'
 
 export default {
   [langEnum.ABS]: '${ id.toUpperCase() }',
   [langEnum.EN]: 'Unknown',
   [langEnum.FR]: 'Inconnu'
 }`
-                    )
-                  ])
-                ),
-                FOLDER.create(
-                  scope,
-                  'description',
-                  scope => ([
-                    FILE.create(
-                      scope,
-                      'description.prop.js',
-                      scope =>
-`export default \`New KAMI !\``
                     )
                   ])
                 )
