@@ -1,19 +1,17 @@
 import layoutFragment from "../_fragments/layout/layout.fragment.js";
 import showdown from 'showdown'
-import fullIdUtil from "../../_utils/fullId/fullId.util.js";
 
 export default data => {
 
   const motif = data.motif
-  const fullId = fullIdUtil(motif)
   
   return layoutFragment(
     data,
     {
-      title: 'MOTIF ' + fullId.toUpperCase()
+      title: 'MOTIF ' + motif.id.toUpperCase()
         + ' | ' + data.title,
       description: motif.description,
-      content: `<div class="container bg-white shadow p-5 mt-5">
+      content: `<div class="container bg-white shadow py-5 px-md-5">
 
   <div class="row my-5">
     <div class="col-12 text-center">
@@ -26,7 +24,7 @@ export default data => {
         }
         <span class="small">MOTIF</span>
         <span class="text-epic">
-          ${ fullId.toUpperCase() }
+          ${ motif.id.toUpperCase() }
         </span>
       </h1>
       <p class="h3 font-weight-light">
@@ -39,10 +37,24 @@ export default data => {
       </p>
     </div>
   </div>
-
+  <div class="row">
+    <div class="col-12">
+      <h2>Quick facts & summary</h2>
+      <ul>
+        <li>
+          <a href="#instances">Instances :</a>
+          ${ motif._instances.length }
+        </li>
+        <li>
+          <a href="#description">Description</a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="row">
     <div class="col-12 col-md-8">
-      <h2 class="mb-4">
+      <h2 id="description"
+          class="mb-4">
         <span class="text-fresh">
           MOTIF's description</span>
       </h2>
@@ -59,7 +71,8 @@ export default data => {
       }
     </div>
     <div class="col-12 col-md-4">
-      <h2 class="mb-4">
+      <h2 id="instances"
+          class="mb-4">
         <span class="text-fresh">
           INSTANCES' list</span>
       </h2>

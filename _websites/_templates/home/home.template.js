@@ -1,5 +1,5 @@
 import layoutFragment from "../_fragments/layout/layout.fragment.js";
-import motifListItemFragment from "../_fragments/motifListItem/motifListItem.fragment.js";
+import motifCardFragment from "../_fragments/motifCard/motifCard.fragment.js";
 import showdown from 'showdown'
 
 export default data => layoutFragment(
@@ -7,22 +7,25 @@ export default data => layoutFragment(
   {
     title: 'MOTIFS, A generative patterns framework | ' + data.title,
     description: 'MOTIFS is a library of generative patterns and an JavaScript implementation.',
-    content: `<div class="container bg-white shadow p-5 mt-5">
-      <div class="row text-center px-2"
+    content: `<div class="container bg-white shadow py-5 px-md-5">
+      <div class="row text-center"
           style="margin-bottom: 5rem">
-        <div class='col-12 col-md-4'>
+        <div class='col-12'>
           <img src="/assets/logo.svg"
               class="mx-auto"
               alt="The MOTIFS' framework logo : a circle and a square intricated. Circle stands for the motif, square for the instance." />
-          <h1 class="col-12 text-epic font-epic mt-5 mb-0"
-              style="text-align: center;">
-            M◒TIFS
-          </h1>
-          <p class="col-12 h3 font-weight-light mb-5">
-            Work on ideas !</p>
         </div>
-        <div class='col-12 col-md-8 px-4 px-md-5 text-left'>
-          <h2 class='mt-2'>
+        <div class='col-12'>
+          <h1 class="text-epic font-epic mt-4 mb-0">
+            MOTIFS
+          </h1>
+          <p class="h3 mb-5">
+              Work on ideas !</p>
+        </div>
+      </div>
+      <div class="row ">
+        <div class='col-12 text-left'>
+          <h2 class='mt-5'>
             <span class="text-fresh">
               A generative patterns framework</span>
           </h2>
@@ -33,13 +36,11 @@ explore the concepts of **naming as well as [generative design patterns](https:/
 
 Framework's **conceptual entities**, [MOTIFS](/motif),
 let you embody projects' classes, components and logic.
-
 Quickly, **they start to form a language** that you can use
 to build your applications and
 to share with your collaborators.
 
-To get more information about the MOTIF "MOTIF",
-please refer to [MOTIF > What is a motif ?](/motif#what-is-a-motif-).`)
+To learn more, you should start with the [MOTIF MOTIF](/motif).`)
           }
         </div>
       </div>
@@ -52,15 +53,15 @@ please refer to [MOTIF > What is a motif ?](/motif#what-is-a-motif-).`)
               MOTIFS' list</span>
           </h2>
 
-          <ul class="mb-4 list-unstyled">
+          <div class="row mb-4">
             ${
               data.motifs
                 .map(motif =>
                 
-                  motifListItemFragment(motif))
+                  motifCardFragment(motif))
                 .join('')
             }
-          </ul>
+          </div>
         </div>
       </div>
     </div>`

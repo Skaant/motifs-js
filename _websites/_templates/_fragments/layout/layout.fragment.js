@@ -16,9 +16,9 @@ export default (
     <link href="/assets/style.css" rel="stylesheet" type="text/css">
   </head>
   <body class='bg-fresh'>
-    <nav class="navbar d-flex justify-content-between align-items-center">
-      <a class="navbar-brand mr-3 text-white font-epic bg-fresh" href="/">
-        M◒TIFS</a>
+    <nav class="navbar position-absolute d-flex justify-content-between align-items-center">
+      <a class="navbar-brand mt-2 mr-3 text-white font-epic bg-fresh px-2" href="/">
+        MOTIFS</a>
     </nav>
     ${ content }
   </body>

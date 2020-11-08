@@ -1,9 +1,17 @@
 @font-face {
-  font-family: "Architect's Daughter";
-  src: url("../../assets/ArchitectsDaughter-Regular.ttf"); }
+  font-family: "Roboto Mono";
+  src: url("../../assets/RobotoMono-VariableFont_wght.ttf"); }
+
+body {
+  font-family: 'Roboto Mono';
+}
 
 a, a:visited, a:hover, a:active, .text-epic {
   color: #5839f8;
+}
+
+a {
+  font-weight: bold;
 }
 
 .text-fresh {
@@ -17,7 +25,7 @@ a, a:visited, a:hover, a:active, .text-epic {
 }
 
 .font-epic {
-  font-family: "Architect's Daughter";
+  font-family: "Roboto Mono";
 }
 
 h1 {
@@ -46,4 +54,12 @@ h2 {
 
 h3 {
   margin: 2rem auto 1rem;
+}
+
+.symbol-md {
+  font-size: 5rem;
+}
+
+.symbol-lg {
+  font-size: 8rem;
 }
