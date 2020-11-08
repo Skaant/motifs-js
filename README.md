@@ -1,5 +1,5 @@
 *[30 MOTIFS](#motifs-glossary)
-on 11/8/2020, 8:08:09 PM*
+on 11/8/2020, 8:38:08 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -207,7 +207,7 @@ npm start -- -k website build
 * [`⬙ readme`](#-readme) : README
 * [`readme-section`](#readme-section) : Section
 * [`shrine`](#shrine) : Shrine
-* [`⛋ spec`](#-spec) : Specification
+* [`Ѭ spec`](#-spec) : Specification
 * [`⬫ util`](#-util) : Utility
 * [`way`](#way) : Method, Action, Operation, Function
 * [`webapp`](#webapp) : Web application
@@ -1094,7 +1094,7 @@ Matching regular expression :
 
 
 
-# `⛋ spec`
+# `Ѭ spec`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -1121,7 +1121,7 @@ categories of specifications :
 * `scope` : 
 * `folderName` : spec
 * `fileName` : spec.motif.js
-* `symbol` : ⛋
+* `symbol` : Ѭ
 * `names`
 * `regExp`
 
