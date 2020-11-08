@@ -6,6 +6,7 @@ import getWay from "./_ways/get/get.way.js";
 
 export default {
   id: 'readme',
+  symbol: '⬙',
   names: namesProp,
   description: descriptionProp,
   get: getWay,

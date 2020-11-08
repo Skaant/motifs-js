@@ -5,6 +5,7 @@ import provisionWay from './_ways/provision/provision.way.js'
 
 export default {
   id: 'book',
+  symbol: '▥',
   names: namesProp,
   description: descriptionProp,
   occurences: [{

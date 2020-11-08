@@ -1,13 +1,14 @@
-export default `**INDIVIDUAL OF ONE OR MULTIPLE KAMIS**
+export default `INDIVIDUAL OF ONE OR MULTIPLE MOTIFS
 
-Instances are occurence of a [KAMI](#kami) (pattern).
+Instances are occurence of a [MOTIF](#motif).
 
-They usually :
-* Can be retrieved through [\`<kami>.get\`] way,
-* Can be created through [\`<kami>.create\`] way,
-* Can be tested through [\`<kami>.test\`] way,
+They should conform to the following specifications :
+
+* Can be retrieved through [\`<motif>.get\`] way,
+* Can be created through [\`<motif>.create\`] way,
+* Can be tested through [\`<motif>.test\`] way,
 * *(Not implemented) Can get updated and deleted*.
 
-[KAMIS](#kami) (\`<...>.kami.js\`) are instances of KAMI-KAMI.
+[MOTIF](#motif) (\`<...>.motif.js\`) are instances of the MOTIF MOTIF.
 
-**KAMI-KAMI is an instance of itself !**`
+Note that **MOTIF MOTIF is an instance of itself !**`

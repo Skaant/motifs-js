@@ -1,5 +1,5 @@
 *[29 MOTIFS](#motifs-glossary)
-on 11/8/2020, 1:15:00 PM*
+on 11/8/2020, 4:00:17 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -184,37 +184,37 @@ npm start -- -k website build
 
 ## MOTIFS' glossary
     
-* [BOOK](#book) : Book
-* [BOOK-EXTRACT](#book-extract) : Extract, Fragment, Atom
-* [IMAGE](#book-image) : Image, Picture, Illustration, Scan
-* [PAGE](#book-page) : Page
-* [SECTION](#book-section) : Section, Chapter, Part
-* [COMMAND](#command) : Command
-* [DESCRIPTION](#description) : Description
-* [DOC](#doc) : Documentation
-* [FILE](#file) : File
-* [FOLDER](#folder) : Folder
-* [FOLDER-SCOPE](#folder-scope) : Scope, Périmètre
-* [GET](#get) : Accesser, Obtain, Hydrater
-* [ID](#id) : Identifier, instance name
-* [INSTANCE](#instance) : Instance
-* [LANG](#lang) : Language
-* [MOTIF](#motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
-* [OCCURENCE](#occurence) : Occurence
-* [PANTHEON](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
-* [PROP](#prop) : Property, Characteristics, Attribute
-* [README](#readme) : README
-* [SECTION](#section) : Section
-* [ШRᛏGHN](#shrine) : Shrine
-* [SPEC](#spec) : Specification
-* [UTIL](#util) : Utility
-* [WAY](#way) : Method, Action, Operation, Function
-* [WEBAPP](#webapp) : Web application
-* [WEBSITE](#website) : Website
-* [PAGE](#website-page) : Page, Website page
-* [WIKI](#wiki) : Wiki
+* [`▥ book`](#-book) : Book
+* [`book-extract`](#book-extract) : Extract, Fragment, Atom
+* [`book-image`](#book-image) : Image, Picture, Illustration, Scan
+* [`book-page`](#book-page) : Page
+* [`book-section`](#book-section) : Section, Chapter, Part
+* [`⌿ command`](#-command) : Command
+* [`▼ description`](#-description) : Description
+* [`⎊ doc`](#-doc) : Documentation
+* [`▤ file`](#-file) : File
+* [`◰ folder`](#-folder) : Folder
+* [`folder-scope`](#folder-scope) : Scope, Perimeter
+* [`⤶ get`](#-get) : Accesser, Obtain, Hydrater
+* [`# id`](#-id) : Identifier, instance name
+* [`⧇ instance`](#-instance) : Instance
+* [`ἀ lang`](#-lang) : Language
+* [`⚇ motif`](#-motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
+* [`occurence`](#occurence) : Occurence
+* [`pantheon`](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
+* [`prop`](#prop) : Property, Characteristics, Attribute
+* [`⬙ readme`](#-readme) : README
+* [`readme-section`](#readme-section) : Section
+* [`shrine`](#shrine) : Shrine
+* [`⛋ spec`](#-spec) : Specification
+* [`util`](#util) : Utility
+* [`way`](#way) : Method, Action, Operation, Function
+* [`webapp`](#webapp) : Web application
+* [`☳ website`](#-website) : Website
+* [`website-page`](#website-page) : Page, Website page
+* [`wiki`](#wiki) : Wiki
 
-# `book`
+# `▥ book`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -242,15 +242,14 @@ with just some specific meta-data.**
 
 ## Properties
 
-**Count: 6.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/book/book.motif.js
+* `id` : book
+* `scope` : 
+* `folderName` : book
+* `fileName` : book.motif.js
+* `symbol` : ▥
 * `names`
-* `description`
 * `occurences`
 * `get`
 * `provision`
@@ -274,15 +273,13 @@ a [PAGE](#page) or directly on the BOOK root.
 
 ## Properties
 
-**Count: 4.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/book-extract/book-extract.motif.js
+* `id` : book-extract
+* `scope` : 
+* `folderName` : book-extract
+* `fileName` : book-extract.motif.js
 * `names`
-* `description`
 * `occurences`
 
 
@@ -306,15 +303,13 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 ## Properties
 
-**Count: 5.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/book-image/book-image.motif.js
+* `id` : book-image
+* `scope` : 
+* `folderName` : book-image
+* `fileName` : book-image.motif.js
 * `names`
-* `description`
 * `occurences`
 * `copy`
 
@@ -335,15 +330,13 @@ and [EXTRACTS](#extracts).
 
 ## Properties
 
-**Count: 6.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/book-page/book-page.motif.js
+* `id` : book-page
+* `scope` : 
+* `folderName` : book-page
+* `fileName` : book-page.motif.js
 * `names`
-* `description`
 * `occurences`
 * `get`
 * `provision`
@@ -362,21 +355,19 @@ and [EXTRACTS](#extracts).
 
 ## Properties
 
-**Count: 6.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/book-section/book-section.motif.js
+* `id` : book-section
+* `scope` : 
+* `folderName` : book-section
+* `fileName` : book-section.motif.js
 * `names`
-* `description`
 * `occurences`
 * `get`
 * `provision`
 
 
-# `command`
+# `⌿ command`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -421,20 +412,18 @@ export default (args: [], options: {}) =>
 
 ## Properties
 
-**Count: 5.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
-* `symbol`
+* `motif` : motif
+* `filePath` : /_motifs/command/command.motif.js
+* `id` : command
+* `scope` : 
+* `folderName` : command
+* `fileName` : command.motif.js
+* `symbol` : ⌿
 * `names`
 * `occurences`
-* `description`
 
 
-# `description`
+# `▼ description`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -458,20 +447,18 @@ Experimental :
 
 ## Properties
 
-**Count: 5.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
-* `symbol`
+* `motif` : motif
+* `filePath` : /_motifs/description/description.motif.js
+* `id` : description
+* `scope` : 
+* `folderName` : description
+* `fileName` : description.motif.js
+* `symbol` : ▼
 * `names`
-* `description`
 * `occurences`
 
 
-# `doc`
+# `⎊ doc`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -489,18 +476,17 @@ DOC is composed of few sub-[MOTIFS](#motif) :
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/doc/doc.motif.js
+* `id` : doc
+* `scope` : 
+* `folderName` : doc
+* `fileName` : doc.motif.js
+* `symbol` : ⎊
 * `names`
-* `description`
 
 
-# `file`
+# `▤ file`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -516,21 +502,20 @@ the file extension.*
 
 ## Properties
 
-**Count: 6.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/file/file.motif.js
+* `id` : file
+* `scope` : 
+* `folderName` : file
+* `fileName` : file.motif.js
+* `symbol` : ▤
 * `names`
-* `description`
 * `create`
 * `get`
 * `copy`
 
 
-# `folder`
+# `◰ folder`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -552,15 +537,14 @@ Folder is represented by :
 
 ## Properties
 
-**Count: 7.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/folder/folder.motif.js
+* `id` : folder
+* `scope` : 
+* `folderName` : folder
+* `fileName` : folder.motif.js
+* `symbol` : ◰
 * `names`
-* `description`
 * `create`
 * `copy`
 * `clear`
@@ -573,8 +557,8 @@ Folder is represented by :
 
 **FOLDER-SCOPE** is also known as :
 
-* [en] Scope, Périmètre,
-* [fr] Portée, Perimeter.
+* [en] Scope, Perimeter,
+* [fr] Portée, Périmètre.
 
 SUB-FOLDER TREE
 
@@ -583,18 +567,16 @@ is the root folder, or a sub-folder.
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/folder-scope/folder-scope.motif.js
+* `id` : folder-scope
+* `scope` : 
+* `folderName` : folder-scope
+* `fileName` : folder-scope.motif.js
 * `names`
-* `description`
 
 
-# `get`
+# `⤶ get`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -627,16 +609,15 @@ get(:id) and get()
 
 ## Properties
 
-**Count: 4.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/get/get.motif.js
+* `id` : get
+* `scope` : 
+* `folderName` : get
+* `fileName` : get.motif.js
+* `symbol` : ⤶
 * `names`
 * `regExp`
-* `description`
 
 ## Occurences
 
@@ -649,7 +630,7 @@ Matching regular expression :
 
 
 
-# `id`
+# `# id`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -667,18 +648,17 @@ It is usually a PROP.
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/id/id.motif.js
+* `id` : id
+* `scope` : 
+* `folderName` : id
+* `fileName` : id.motif.js
+* `symbol` : #
 * `names`
-* `description`
 
 
-# `instance`
+# `⧇ instance`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -687,36 +667,35 @@ It is usually a PROP.
 * [en] Instance,
 * [fr] Instance.
 
-**INDIVIDUAL OF ONE OR MULTIPLE KAMIS**
+INDIVIDUAL OF ONE OR MULTIPLE MOTIFS
 
-Instances are occurence of a [KAMI](#kami) (pattern).
+Instances are occurence of a [MOTIF](#motif).
 
-They usually :
-* Can be retrieved through [`<kami>.get`] way,
-* Can be created through [`<kami>.create`] way,
-* Can be tested through [`<kami>.test`] way,
+They should conform to the following specifications :
+
+* Can be retrieved through [`<motif>.get`] way,
+* Can be created through [`<motif>.create`] way,
+* Can be tested through [`<motif>.test`] way,
 * *(Not implemented) Can get updated and deleted*.
 
-[KAMIS](#kami) (`<...>.kami.js`) are instances of KAMI-KAMI.
+[MOTIF](#motif) (`<...>.motif.js`) are instances of the MOTIF MOTIF.
 
-**KAMI-KAMI is an instance of itself !**
+Note that **MOTIF MOTIF is an instance of itself !**
 
 ## Properties
 
-**Count: 5.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
-* `symbol`
+* `motif` : motif
+* `filePath` : /_motifs/instance/instance.motif.js
+* `id` : instance
+* `scope` : 
+* `folderName` : instance
+* `fileName` : instance.motif.js
+* `symbol` : ⧇
 * `names`
-* `description`
 * `get`
 
 
-# `lang`
+# `ἀ lang`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -727,18 +706,17 @@ They usually :
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/lang/lang.motif.js
+* `id` : lang
+* `scope` : 
+* `folderName` : lang
+* `fileName` : lang.motif.js
+* `symbol` : ἀ
 * `names`
-* `description`
 
 
-# `motif`
+# `⚇ motif`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -787,17 +765,41 @@ their INSTANCES will potentialy have multiple :
 
 ## Properties
 
-**Count: 14.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
-* `symbol`
+* `motif` : motif
+* `filePath` : /_motifs/motif/motif.motif.js
+* `id` : motif
+* `scope` : 
+* `folderName` : motif
+* `fileName` : motif.motif.js
+* `symbol` : ⚇
 * `names`
 * `occurences`
-* `flavour`
+* `flavour` : At the very beginning,
+KAMI-KAMI **said itself**, to be
+brought to existence.
+
+Soon after, it started to speak out other KAMIS,
+which were instantly brought to existence too, following
+a pure nodal self-organization.
+
+For the generation to proceed, KAMI-KAMI first had to
+split itself in two : the KAMI concept and the
+KAMI individual. The class and the instance.
+
+It was also about genericity and specificity.
+And, at the end, dualism.
+
+KAMI-KAMI had to become a KAMI like the others KAMIS.
+It needed to be processed the same way to ensure
+genericity.
+
+But its specifity, the secrets of its generative powers, remained
+absent of other KAMIS. This was the key of peace.
+
+By doing so, KAMI-KAMI shared the same common nature,
+**the pattern**, to all of its creations [the kamis],
+letting them freely **extend and implement** its
+highly abstract powers.
 * `_commands`
 * `create`
 * `get`
@@ -806,7 +808,6 @@ their INSTANCES will potentialy have multiple :
 * `specs`
 * `_specs`
 * `ave`
-* `description`
 
 ## Flavour
 
@@ -870,15 +871,13 @@ occurences: [
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/occurence/occurence.motif.js
+* `id` : occurence
+* `scope` : 
+* `folderName` : occurence
+* `fileName` : occurence.motif.js
 * `names`
-* `description`
 
 
 # `pantheon`
@@ -899,15 +898,13 @@ the angels and last steps upon the One.
 
 ## Properties
 
-**Count: 4.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/pantheon/pantheon.motif.js
+* `id` : pantheon
+* `scope` : 
+* `folderName` : pantheon
+* `fileName` : pantheon.motif.js
 * `names`
-* `description`
 * `regExp`
 
 ## Occurences
@@ -940,18 +937,16 @@ or dynamically bound in `MOTIF.get()` method.
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/prop/prop.motif.js
+* `id` : prop
+* `scope` : 
+* `folderName` : prop
+* `fileName` : prop.motif.js
 * `names`
-* `description`
 
 
-# `readme`
+# `⬙ readme`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -973,21 +968,20 @@ README is a component of [DOC](#-doc).
 
 ## Properties
 
-**Count: 6.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/readme/readme.motif.js
+* `id` : readme
+* `scope` : 
+* `folderName` : readme
+* `fileName` : readme.motif.js
+* `symbol` : ⬙
 * `names`
-* `description`
 * `get`
 * `build`
 * `_commands`
 
 
-# `section`
+# `readme-section`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -1006,15 +1000,13 @@ In fact, README is the top-level SECTION.
 
 ## Properties
 
-**Count: 5.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/readme-section/readme-section.motif.js
+* `id` : readme-section
+* `scope` : 
+* `folderName` : readme-section
+* `fileName` : readme-section.motif.js
 * `names`
-* `description`
 * `regExp`
 * `create`
 
@@ -1043,16 +1035,14 @@ Matching regular expression :
 
 ## Properties
 
-**Count: 4.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/shrine/shrine.motif.js
+* `id` : shrine
+* `scope` : 
+* `folderName` : shrine
+* `fileName` : shrine.motif.js
 * `names`
 * `regExp`
-* `description`
 
 ## Occurences
 
@@ -1065,7 +1055,7 @@ Matching regular expression :
 
 
 
-# `spec`
+# `⛋ spec`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -1086,15 +1076,14 @@ categories of specifications :
 
 ## Properties
 
-**Count: 4.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/spec/spec.motif.js
+* `id` : spec
+* `scope` : 
+* `folderName` : spec
+* `fileName` : spec.motif.js
+* `symbol` : ⛋
 * `names`
-* `description`
 * `regExp`
 
 ## Occurences
@@ -1131,15 +1120,13 @@ everywhere else in the code.
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/util/util.motif.js
+* `id` : util
+* `scope` : 
+* `folderName` : util
+* `fileName` : util.motif.js
 * `names`
-* `description`
 
 
 # `way`
@@ -1161,15 +1148,13 @@ which is necessarely `function`.
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/way/way.motif.js
+* `id` : way
+* `scope` : 
+* `folderName` : way
+* `fileName` : way.motif.js
 * `names`
-* `description`
 
 
 # `webapp`
@@ -1188,18 +1173,16 @@ A webapp exposes MOTIFS and their operations
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/webapp/webapp.motif.js
+* `id` : webapp
+* `scope` : 
+* `folderName` : webapp
+* `fileName` : webapp.motif.js
 * `names`
-* `description`
 
 
-# `website`
+# `☳ website`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -1214,16 +1197,15 @@ WEBSITE is a [DOC](#doc) component.
 
 ## Properties
 
-**Count: 7.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/website/website.motif.js
+* `id` : website
+* `scope` : 
+* `folderName` : website
+* `fileName` : website.motif.js
+* `symbol` : ☳
 * `names`
 * `occurences`
-* `description`
 * `build`
 * `_commands`
 * `_specs`
@@ -1250,15 +1232,13 @@ A page binds the following three elements :
 
 ## Properties
 
-**Count: 4.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/website-page/website-page.motif.js
+* `id` : website-page
+* `scope` : 
+* `folderName` : website-page
+* `fileName` : website-page.motif.js
 * `names`
-* `description`
 * `create`
 
 
@@ -1277,12 +1257,10 @@ WIKI is a component of [DOC](#doc).
 
 ## Properties
 
-**Count: 3.**
-
-* `motif`
-* `filePath`
-* `id`
-* `folderName`
-* `fileName`
+* `motif` : motif
+* `filePath` : /_motifs/wiki/wiki.motif.js
+* `id` : wiki
+* `scope` : 
+* `folderName` : wiki
+* `fileName` : wiki.motif.js
 * `names`
-* `description`

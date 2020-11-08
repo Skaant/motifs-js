@@ -3,6 +3,7 @@ import descriptionProp from './_props/description/description.prop.js'
 
 export default {
   id: 'spec',
+  symbol: '⛋',
   names: namesProp,
   description: descriptionProp,
   regExp: /(.*)\/(.*)\/_props\/(_specs|specs)\/(.*)\/(.*).spec.js/,

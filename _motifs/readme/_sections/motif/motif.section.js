@@ -1,9 +1,8 @@
 import langEnum from "../../../lang/_enums/lang.enum.js";
 import INSTANCE from "../../../instance/instance.motif.js";
 import formatEnum from "../../../../_motifs/get/_enums/format/format.enum.js";
-import PANTHEON from "../../../pantheon/pantheon.motif.js";
 
-export default (kami, kamis) => 
+export default kami => 
 
   new Promise(resolve => {
 
@@ -16,17 +15,11 @@ export default (kami, kamis) =>
 
         resolve(
 `# \`${
-  kami.parents
-    ? kami.parents.map(parentId =>
-    
-      (parentId === PANTHEON.id
-        ? '*'
-        
-        : parentId)
-        + '-')
-      .join('')
-    
-    : '' }${ kami.id }\`
+  kami.symbol
+    ? kami.symbol + ' '
+
+    : ''
+}${ kami.id }\`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -53,17 +46,19 @@ ${ kami.description }`
 
 ## Properties
 
-**Count: ${ Object.keys(kami).length - 5 }.**
-
 ${
-  Object.keys(kami).filter(key =>
+  Object.entries(kami)
+    .filter(([ key ]) =>
     
-    ![ 'kamiId', 'parents', 'scope',
-      'folder', 'file' ]
-      .includes(key))
-    .map(key =>
-    
-    `* \`${ key }\``)
+      ![ 'motifId', 'description' ].includes(key))
+    .map(([ key, value ]) =>
+      
+      `* \`${ key }\`${
+        typeof value === 'string'
+          ? (' : ' + value)
+
+          : ''
+      }`)
     .join('\n')
 }${
 

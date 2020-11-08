@@ -3,7 +3,7 @@ import descriptionProp from './_props/description/description.prop.js'
 import createWay from './_ways/create/create.way.js'
 
 export default {
-  id: 'section',
+  id: 'readme-section',
   names: namesProp,
   description: descriptionProp,
   regExp: [

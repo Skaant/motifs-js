@@ -7,6 +7,7 @@ import clearWay from "./_ways/clear/clear.way.js";
 
 export default {
   id: 'folder',
+  symbol: '◰',
   names: namesProp,
   description: descriptionProp,
   create: createWay,

@@ -1,7 +1,6 @@
 import langEnum from "../../../lang/_enums/lang.enum.js";
-import PANTHEON from "../../../pantheon/pantheon.motif.js";
 
-export default kamis => 
+export default motifs => 
 
   new Promise(resolve =>
 
@@ -9,44 +8,20 @@ export default kamis =>
 `## MOTIFS' glossary
     
 ${
-  kamis.map(kami =>
-    `${
-        kami.parents
-          ? kami.parents.filter(parentId =>
-
-              parentId !== PANTHEON.id)
-            .map(() => '\n  ').join('')
+  motifs.map(motif =>
+    `* [\`${ motif.symbol
+        ? motif.symbol + ' '
+        
+        : ''
+      }${ motif.id }\`](#${
+        motif.symbol
+          ? '-'
+          
           : ''
-    }* [${
-      (kami.parents
-        ? (kami.parents
-            .map(parentId => {
-          
-              const parent = kamis.find(kami =>
-                
-                kami.id === parentId)
-
-              return parent.id === PANTHEON.id
-                ? '\*-'
-                
-                : (parent.names[langEnum.ABS] + '-')
-            }).join(''))
-        : '')
-        + kami.names[langEnum.ABS]
-    }](#${
-      (kami.parents
-        ? (kami.parents.map(parentId =>
-          
-          parentId === PANTHEON.id
-            ? ''
-            
-            : parentId).join('-') + '-')
-        : '')
-        + kami.id
-    }) : ${
-      typeof kami.names[langEnum.EN] === 'string'
-        ? kami.names[langEnum.EN]
-        : kami.names[langEnum.EN].join(', ')
+      }${ motif.id }) : ${
+      typeof motif.names[langEnum.EN] === 'string'
+        ? motif.names[langEnum.EN]
+        : motif.names[langEnum.EN].join(', ')
     }`
   )
     .join('\n')

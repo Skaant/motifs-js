@@ -6,6 +6,7 @@ import _specs from './_props/_specs/index.js'
 
 export default {
   id: 'website',
+  symbol: '☳',
   names: namesProp,
   occurences: [
     {

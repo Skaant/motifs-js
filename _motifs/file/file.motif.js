@@ -6,6 +6,7 @@ import copyWay from "./_ways/copy/copy.way.js";
 
 export default {
   id: 'file',
+  symbol: '▤',
   names: namesProp,
   description: descriptionProp,
   create: createWay,

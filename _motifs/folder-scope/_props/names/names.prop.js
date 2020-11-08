@@ -3,9 +3,9 @@ import langEnum from '../../../lang/_enums/lang.enum.js'
 export default {
   [langEnum.ABS]: 'FOLDER-SCOPE',
   [langEnum.EN]: [
-    'Scope', 'Périmètre'
+    'Scope', 'Perimeter'
   ],
   [langEnum.FR]: [
-    'Portée', 'Perimeter'
+    'Portée', 'Périmètre'
   ]
 }
