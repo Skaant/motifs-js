@@ -1,4 +1,4 @@
-export default `PRIMORDIAL MOTIFS' PACKAGE
+export default `Primordial MOTIFS' package
 
 This is a *legendary* concept.
 

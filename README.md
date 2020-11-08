@@ -1,5 +1,5 @@
-*[29 MOTIFS](#motifs-glossary)
-on 11/8/2020, 4:00:17 PM*
+*[30 MOTIFS](#motifs-glossary)
+on 11/8/2020, 8:08:09 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -200,17 +200,18 @@ npm start -- -k website build
 * [`⧇ instance`](#-instance) : Instance
 * [`ἀ lang`](#-lang) : Language
 * [`⚇ motif`](#-motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
-* [`occurence`](#occurence) : Occurence
-* [`pantheon`](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
-* [`prop`](#prop) : Property, Characteristics, Attribute
+* [`ʯ occurence`](#-occurence) : Occurence
+* [`⛩ pantheon`](#-pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
+* [`Ω project`](#-project) : Project
+* [`⁖ prop`](#-prop) : Property, Characteristics, Attribute
 * [`⬙ readme`](#-readme) : README
 * [`readme-section`](#readme-section) : Section
 * [`shrine`](#shrine) : Shrine
 * [`⛋ spec`](#-spec) : Specification
-* [`util`](#util) : Utility
+* [`⬫ util`](#-util) : Utility
 * [`way`](#way) : Method, Action, Operation, Function
 * [`webapp`](#webapp) : Web application
-* [`☳ website`](#-website) : Website
+* [`Ʋ website`](#-website) : Website
 * [`website-page`](#website-page) : Page, Website page
 * [`wiki`](#wiki) : Wiki
 
@@ -585,7 +586,7 @@ is the root folder, or a sub-folder.
 * [en] Accesser, Obtain, Hydrater,
 * [fr] Accesseur, Obtenir, Hydrateur.
 
-### The MOTIF'S INSTANCES accessers
+The MOTIF'S INSTANCES accessers
 
 GET is currently an abstract pattern
 which may be implemented on sufficent
@@ -839,7 +840,7 @@ letting them freely **extend and implement** its
 highly abstract powers.
 
 
-# `occurence`
+# `ʯ occurence`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -877,10 +878,11 @@ occurences: [
 * `scope` : 
 * `folderName` : occurence
 * `fileName` : occurence.motif.js
+* `symbol` : ʯ
 * `names`
 
 
-# `pantheon`
+# `⛩ pantheon`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -889,7 +891,7 @@ occurences: [
 * [en] Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven,
 * [fr] Panthéon, Sanctuaire primordial, Valhalla, Mont Olympe, Acropole, Paradis.
 
-PRIMORDIAL MOTIFS' PACKAGE
+Primordial MOTIFS' package
 
 This is a *legendary* concept.
 
@@ -904,6 +906,7 @@ the angels and last steps upon the One.
 * `scope` : 
 * `folderName` : pantheon
 * `fileName` : pantheon.motif.js
+* `symbol` : ⛩
 * `names`
 * `regExp`
 
@@ -918,7 +921,42 @@ Matching regular expression :
 
 
 
-# `prop`
+# `Ω project`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**PROJECT** is also known as :
+
+* [en] Project,
+* [fr] Projet.
+
+Hold whole's meta-data and config
+
+PROJECT agregates different concepts and files related to 
+the codebase considered as a whole.
+
+A non-exhaustive list of its components :
+
+* Global DESCRIPTION,
+* ENVIRONMENT variables,
+* The set of project-related files :
+  * `package.json`,
+  * `.gitignore`;
+* And by extension, all folder and files contained in it.
+
+## Properties
+
+* `motif` : motif
+* `filePath` : /_motifs/project/project.motif.js
+* `id` : project
+* `scope` : 
+* `folderName` : project
+* `fileName` : project.motif.js
+* `symbol` : Ω
+* `names`
+
+
+# `⁖ prop`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -943,6 +981,7 @@ or dynamically bound in `MOTIF.get()` method.
 * `scope` : 
 * `folderName` : prop
 * `fileName` : prop.motif.js
+* `symbol` : ⁖
 * `names`
 
 
@@ -1097,7 +1136,7 @@ Matching regular expression :
 
 
 
-# `util`
+# `⬫ util`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -1126,6 +1165,7 @@ everywhere else in the code.
 * `scope` : 
 * `folderName` : util
 * `fileName` : util.motif.js
+* `symbol` : ⬫
 * `names`
 
 
@@ -1182,7 +1222,7 @@ A webapp exposes MOTIFS and their operations
 * `names`
 
 
-# `☳ website`
+# `Ʋ website`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -1203,7 +1243,7 @@ WEBSITE is a [DOC](#doc) component.
 * `scope` : 
 * `folderName` : website
 * `fileName` : website.motif.js
-* `symbol` : ☳
+* `symbol` : Ʋ
 * `names`
 * `occurences`
 * `build`

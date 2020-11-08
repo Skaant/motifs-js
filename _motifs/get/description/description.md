@@ -1,4 +1,4 @@
-### The MOTIF'S INSTANCES accessers
+The MOTIF'S INSTANCES accessers
 
 GET is currently an abstract pattern
 which may be implemented on sufficent

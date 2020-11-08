@@ -12,7 +12,7 @@ export default data => layoutFragment(
           style="margin-bottom: 5rem">
         <div class='col-12'>
           <img src="/assets/logo.svg"
-              class="mx-auto"
+              class="mx-auto mt-5 pt-4"
               alt="The MOTIFS' framework logo : a circle and a square intricated. Circle stands for the motif, square for the instance." />
         </div>
         <div class='col-12'>
