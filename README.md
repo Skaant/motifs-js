@@ -1,5 +1,5 @@
 *[29 MOTIFS](#motifs-glossary)
-on 11/8/2020, 11:09:23 AM*
+on 11/8/2020, 1:15:00 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -385,22 +385,53 @@ and [EXTRACTS](#extracts).
 * [en] Command,
 * [fr] Commande.
 
-MOTIF CLI interface
+MOTIF CLI interface action
 
-Basically, a command bind a method to match a MOTIF entrypoint syntax.
+Basically, a command **binds a method to match a MOTIF [entrypoint syntax](#entrypoint-syntax)**.
+
+At the moment, CLI is only accessible as a single line command prompt;
+but we'd like to present it as a interactive, staying alive, dialog.
+
+### Entrypoint syntax
+
+In the `./dev-start` file you can find the following call :
+
+```javascript
+KAMI.cli(
+  process.argv.slice(3),
+  {
+    log: true
+  })
+```
+
+**From the CLI side**, when you write a command, note that **the three first words are ignored**.
+Use the following syntax to call a COMMAND.
+
+```bash
+node dev-start.js -- <args>
+npm start -- <args>
+```
+
+**In the code side**, the signature for a COMMAND function is
+quite similar to the top-level `KAMI.cli()` method :
+
+```javascript
+export default (args: [], options: {}) =>
+```
 
 ## Properties
 
-**Count: 4.**
+**Count: 5.**
 
 * `motif`
 * `filePath`
 * `id`
 * `folderName`
 * `fileName`
+* `symbol`
 * `names`
-* `description`
 * `occurences`
+* `description`
 
 
 # `description`
