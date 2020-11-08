@@ -1,6 +1,6 @@
 import README from '../../../readme.motif.js'
 
-export default options =>
+export default (_, options) =>
 
   new Promise(resolve =>
     

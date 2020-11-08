@@ -1,6 +1,6 @@
 import MOTIF from "../../../motif.motif.js"
 
-export default (options, id = false) =>
+export default ([ id = false ], options) =>
 
   new Promise(resolve => {
 

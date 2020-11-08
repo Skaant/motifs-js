@@ -1,10 +1,9 @@
 import namesProp from './_props/names/names.prop.js'
-import descriptionProp from './_props/description/description.prop.js'
 
 export default {
   id: 'command',
+  symbol: '⌿',
   names: namesProp,
-  description: descriptionProp,
   occurences: [
     {
       regExp: /(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/,

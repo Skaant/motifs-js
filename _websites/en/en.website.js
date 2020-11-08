@@ -4,7 +4,7 @@ import mappingUtil from "./_utils/_mapping/mapping.util.js"
 
 export default {
   id: 'en',
-  title: 'MOTIFS, a generative patterns framework',
+  title: 'MOTIFS, a generative design patterns framework',
   lang: langEnum.EN,
   provision: provisionUtil,
   mapping: mappingUtil

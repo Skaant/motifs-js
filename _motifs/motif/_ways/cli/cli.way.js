@@ -11,6 +11,7 @@ export default (args, { log = false }) => {
     force: false,
     params: []
   }
+  const params = []
   let _args = [ ...args ]
 
   while (_args[0] !== undefined) {
@@ -49,7 +50,7 @@ export default (args, { log = false }) => {
       
       } else {
 
-        options.params.push(arg)
+        params.push(arg)
       }
     }
   }
@@ -78,8 +79,9 @@ export default (args, { log = false }) => {
       try {
 
         kami._commands[options.command](
-          options,
-          ...options.params)
+          params,
+          options
+        )
 
       } catch (err) {
 

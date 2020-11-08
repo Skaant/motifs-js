@@ -15,8 +15,9 @@
       "args": [
         "--",
         "-k",
-        "readme",
-        "build"
+        "website",
+        "build",
+        "en"
       ]
     }
   ]

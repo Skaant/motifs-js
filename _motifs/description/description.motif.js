@@ -3,7 +3,7 @@ import descriptionProp from './_props/description/description.prop.js'
 
 export default {
   id: 'description',
-  symbol: '⎊',
+  symbol: '▼',
   names: namesProp,
   description: descriptionProp,
   occurences: [{

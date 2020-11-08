@@ -1,6 +1,6 @@
 import WEBSITE from "../../../website.motif.js"
 
-export default (options, id) =>
+export default ([ id ], options) =>
 
   new Promise(resolve => {
 

@@ -15,18 +15,18 @@ export default data => {
 
   <div class="row my-5">
     <div class="col-12 text-center">
-      <h1 class="font-epic">
-        ${
-          motif.symbol
-            ? `<span class="text-epic symbol">${ motif.symbol }</span><br/>`
-            
-            : ''
-        }
-        <span class="small">MOTIF</span>
-        <span class="text-epic">
-          ${ motif.id.toUpperCase() }
-        </span>
+      ${
+        motif.symbol
+          ? `<span class="position-block text-epic symbol-lg">${ motif.symbol }</span><br/>`
+          
+          : ''
+      }
+      <span class="position-block h2">MOTIF</span>
+      <h1 class="font-epic text-epic">
+        ${ motif.id.toUpperCase() }
       </h1>
+    </div>
+    <div class="col-12 text-center">
       <p class="h3 font-weight-light">
         ${
           motif.description
