@@ -4,6 +4,7 @@ import createWay from './_ways/create/create.way.js'
 
 export default {
   id: 'readme-section',
+  symbol: '⬥',
   names: namesProp,
   description: descriptionProp,
   regExp: [

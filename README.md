@@ -1,5 +1,5 @@
 *[32 MOTIFS](#motifs-glossary)
-on 11/8/2020, 10:01:39 PM*
+on 11/15/2020, 4:08:22 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -185,7 +185,6 @@ npm start -- -k website build
 ## MOTIFS' glossary
     
 * [`= assertion`](#-assertion) : Assertion
-* [`⩮ assertion-group`](#-assertion-group) : Assertion group
 * [`▥ book`](#-book) : Book
 * [`book-extract`](#book-extract) : Extract, Fragment, Atom
 * [`book-image`](#book-image) : Image, Picture, Illustration, Scan
@@ -207,9 +206,10 @@ npm start -- -k website build
 * [`Ω project`](#-project) : Project
 * [`⁖ prop`](#-prop) : Property, Characteristics, Attribute
 * [`⬙ readme`](#-readme) : README
-* [`readme-section`](#readme-section) : Section
+* [`⬥ readme-section`](#-readme-section) : Section
 * [`shrine`](#shrine) : Shrine
 * [`Ѭ spec`](#-spec) : Specification
+* [`Ѫ spec-section`](#-spec-section) : Specification section
 * [`⬫ util`](#-util) : Utility
 * [`way`](#way) : Method, Action, Operation, Function
 * [`webapp`](#webapp) : Web application
@@ -228,6 +228,13 @@ npm start -- -k website build
 
 SPEC unit
 
+```javascript
+{
+  label: 'string',
+  test: 'Promise'
+}
+```
+
 ## Properties
 
 * `motif` : motif
@@ -237,29 +244,6 @@ SPEC unit
 * `folderName` : assertion
 * `fileName` : assertion.motif.js
 * `symbol` : =
-* `names`
-
-
-# `⩮ assertion-group`
-
-[*Return to MOTIFS' glossary.*](#motifs-glossary)
-
-**ASSERTION-GROUP** is also known as :
-
-* [en] Assertion group,
-* [fr] Groupe d'assertion.
-
-Same-scope, same-theme, ASSERTIONS lot
-
-## Properties
-
-* `motif` : motif
-* `filePath` : /_motifs/assertion-group/assertion-group.motif.js
-* `id` : assertion-group
-* `scope` : 
-* `folderName` : assertion-group
-* `fileName` : assertion-group.motif.js
-* `symbol` : ⩮
 * `names`
 
 
@@ -1068,7 +1052,7 @@ README is a component of [DOC](#-doc).
 * `_commands`
 
 
-# `readme-section`
+# `⬥ readme-section`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
@@ -1093,6 +1077,7 @@ In fact, README is the top-level SECTION.
 * `scope` : 
 * `folderName` : readme-section
 * `fileName` : readme-section.motif.js
+* `symbol` : ⬥
 * `names`
 * `regExp`
 * `create`
@@ -1182,6 +1167,36 @@ Matching regular expression :
 `/(.*)\/(.*)\/_props\/(_specs|specs)\/(.*)\/(.*).spec.js/`.
 
 
+
+
+# `Ѫ spec-section`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**SPEC-SECTION** is also known as :
+
+* [en] Specification section,
+* [fr] Section de specification.
+
+ASSERTION nodes in SPEC files
+
+```javascript
+{
+  label: 'string',
+  group: [ 'spec-section' | 'assertion' ]
+}
+```
+
+## Properties
+
+* `motif` : motif
+* `filePath` : /_motifs/spec-section/spec-section.motif.js
+* `id` : spec-section
+* `scope` : 
+* `folderName` : spec-section
+* `fileName` : spec-section.motif.js
+* `symbol` : Ѫ
+* `names`
 
 
 # `⬫ util`
