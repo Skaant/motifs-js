@@ -1,4 +1,5 @@
 import KAMI from './index.js'
+import SPEC from './_motifs/spec/spec.motif.js'
 
 KAMI.ave(
   import.meta.url,
@@ -6,8 +7,11 @@ KAMI.ave(
     log: true
   })
 
-KAMI.cli(
+SPEC.runAll({ log: true })
+
+
+/* KAMI.cli(
   process.argv.slice(3),
   {
     log: true
-  })
+  }) */

@@ -1,5 +1,7 @@
 import formatEnum from '../../../get/_enums/format/format.enum.js'
 import FILE from '../../../file/file.motif.js'
+import OCCURENCE from '../../../occurence/occurence.motif.js'
+import occurenceLevelEnum from '../../../occurence/_enums/level/occurence.level.enum.js'
 
 /**
  * Retrieves all instances of the given MOTIF,
@@ -39,80 +41,62 @@ export default (
     /** @var { [ filePath ] | [ fileMeta ] }
      *  * `filePath` if `format === formatEnum.FILE_PATH`,
      *  * `fileMeta` (`occurences`'s `transform` result) else.*/
-    const files = (occurences
-      ? occurences.reduce(
-        (acc, { regExp, transform }) => acc.concat(
-          format === formatEnum.FILE_PATH
-            ? global.FILES.filter(filePath =>
-                
-              filePath.match(new RegExp('^' + scope + '/'))
-                && filePath.match(regExp))
-            
-            : global.FILES.reduce(
-              (acc, filePath) => 
-                
-                (filePath.match(new RegExp('^' + scope + '/'))
-                    && filePath.match(regExp))
-                  ? [
-                    ...acc,
-                    {
-                      filePath,
-                      ...transform(filePath.match(regExp))
-                    }
-                  ]
-                  
-                  : acc,
-              [])
-        ),
-        []
-      )
+    Promise.all(occurences.map(occurence => OCCURENCE.get(occurence)))
+      .then(result => {
 
-      : [])
+        /** In fact they are `fileTransforms` */
+        const files = result.reduce(
+          (acc, transforms) => acc.concat(transforms), 
+          [])
 
-    switch (format) {
+        switch (format) {
 
-      case formatEnum.FILE_PATH:
-      case formatEnum.TRANSFORM:
+          case formatEnum.FILE_PATH:
 
-        resolve(files)
+            resolve(files.map(file => file.path))
 
-        break
+          case formatEnum.TRANSFORM:
 
-      case formatEnum.UTF_8:
+            resolve(files)
 
-        Promise.all(files.map(fileMeta => FILE.get(
-          fileMeta.filePath,
-          { format })))
+            break
 
-          .then(contents => resolve(
-            contents.map((content, index) => ({
-              ...files[index],
-              content
-            }))))
+          case formatEnum.UTF_8:
 
-        break
-      
-      case formatEnum.ESM:
+            Promise.all(files.map(fileMeta => FILE.get(
+              fileMeta.path,
+              { format })))
 
-        Promise.all(files.map(fileMeta =>
+              .then(contents => resolve(
+                contents.map((content, index) => ({
+                  ...files[index],
+                  content
+                }))))
+
+            break
           
-          FILE.get(
-            fileMeta.filePath,
-            { format })))
+          case formatEnum.ESM:
 
-            .then(instances =>
+            Promise.all(files.map(fileMeta =>
               
-              resolve(instances.map((instance, index) => ({
-                motif: id,
-                ...files[index],
-                ...instance
-              }))))
+              FILE.get(
+                fileMeta.path,
+                { format })))
 
-        break
+                .then(instances =>
+                  
+                  resolve(instances.map((instance, index) => ({
+                    motif: id,
+                    ...files[index],
+                    ...instance
+                  }))))
 
-      default:
+            break
 
-        reject(new Error('No options.mode "'
-          + options.mode + '"'))
-    }
+          default:
+
+            reject(new Error('No options.mode "'
+              + options.mode + '"'))
+        }
+      })
   })

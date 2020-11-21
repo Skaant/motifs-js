@@ -61,7 +61,7 @@ export default (
             resolve({
               id: content.id,
               filePath,
-              ...content
+              ...(typeof content === 'function' ? { content } : content)
             }))
 
         break

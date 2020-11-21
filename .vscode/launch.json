@@ -13,9 +13,7 @@
       ],
       "program": "${workspaceFolder}\\dev-start.js",
       "args": [
-        "--",
-        "create",
-        "project"
+        "--"
       ]
     }
   ]

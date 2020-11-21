@@ -1,5 +1,5 @@
 *[32 MOTIFS](#motifs-glossary)
-on 11/15/2020, 4:08:22 PM*
+on 11/15/2020, 4:57:34 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -1138,13 +1138,13 @@ Matching regular expression :
 
 MOTIFS' TEST MATERIAL
 
-In `kami.js` we currently distinguish two
+In `motifs` we currently distinguish two
 categories of specifications :
 
 * **Instances SPECS**, which target every
-  instances of a KAMI (hold by the KAMI),
+  instances of a MOTIF (hold by the MOTIF),
 * **Specific SPECS**, which target a single
-  instance of a KAMI (hold by the instance).
+  instance of a MOTIF (hold by the instance).`
 
 ## Properties
 
@@ -1156,17 +1156,7 @@ categories of specifications :
 * `fileName` : spec.motif.js
 * `symbol` : Ѭ
 * `names`
-* `regExp`
-
-## Occurences
-
-**Count : 0.**
-
-Matching regular expression :
-
-`/(.*)\/(.*)\/_props\/(_specs|specs)\/(.*)\/(.*).spec.js/`.
-
-
+* `occurences`
 
 
 # `Ѫ spec-section`

@@ -1,0 +1,3 @@
+export default {
+  NOT_AN_OCCURENCE_LEVEL: 'NOT_AN_OCCURENCE_LEVEL'
+}
