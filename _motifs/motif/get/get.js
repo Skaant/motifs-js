@@ -8,12 +8,14 @@ let cache = {
   motifs: false
 };
 
-/** `kami get way`
- * 
+/**
  * Retrieve all MOTIFS,
  *  and order them by dependency ranks.
+ * 
+ * MOTIFS list is cached,
+ *  based on global.FILES update.
  */
-export default (id = false, options) =>
+export default () =>
 
   new Promise((resolve, reject) => {
 

@@ -8,6 +8,7 @@ import testWay from "./_ways/test/test.way.js";
 import specs from "./_props/specs/index.js";
 import _specs from "./_props/_specs/index.js";
 import aveWay from "./_ways/ave/ave.way.js";
+import occurenceLevelEnum from "../occurence/_enums/level/occurence.level.enum.js";
 
 export default {
   id: 'motif',
@@ -15,12 +16,13 @@ export default {
   names: namesProp,
   occurences: [
     {
-      regExp: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
-      transform: ([ _, scope, folderName, id ]) => ({
+      level: occurenceLevelEnum.FILE,
+      fileMatch: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
+      transform: ([ path, scope, folder, id ]) => ({
+        path,
         id,
         scope,
-        folderName,
-        fileName: id + '.motif.js'
+        folder
       })
     }
   ],

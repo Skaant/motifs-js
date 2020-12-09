@@ -1,7 +1,6 @@
 import formatEnum from '../../../get/_enums/format/format.enum.js'
 import FILE from '../../../file/file.motif.js'
 import OCCURENCE from '../../../occurence/occurence.motif.js'
-import occurenceLevelEnum from '../../../occurence/_enums/level/occurence.level.enum.js'
 
 /**
  * Retrieves all instances of the given MOTIF,
@@ -50,7 +49,7 @@ export default (
           [])
 
         switch (format) {
-
+  
           case formatEnum.FILE_PATH:
 
             resolve(files.map(file => file.path))
