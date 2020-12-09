@@ -8,14 +8,14 @@ export default {
   symbol: '▥',
   names: namesProp,
   description: descriptionProp,
-  occurences: [{
+  occurences: [/* {
     regExp: /^\/_data(.*)\/([\w|\-]*)\/([\w|\-]*)\.book\.js/,
     transform: ([ _, dataScope, folderName, fileName ]) => ({
       dataScope,
       folderName,
       fileName
     })
-  }],
+  } */],
   get: getWay,
   provision: provisionWay
 }

@@ -17,9 +17,11 @@ async function exploreSection(section, options) {
   } else if (section.test) {
 
     const ranTest = options.instances
-      ? options.instances.map(instance =>
-        section.test(instance))
+      ? options.instances.map(instance => ({
+        result: section.test(instance)
+      }))
       : section.test()
+      
     if (ranTest.constructor.name === 'Promise') {
 
       const result = await ranTest

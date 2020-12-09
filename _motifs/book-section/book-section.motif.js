@@ -7,7 +7,7 @@ export default {
   id: 'book-section',
   names: namesProp,
   description: descriptionProp,
-  occurences: [{
+  occurences: [/* {
     regExp: /^\/_data\/(.*)\/_sections\/(.*)\/(.*)\.section\.js/,
     transform: ([ _, dataScope, folderName, fileName ]) => ({
       dataScope,
@@ -15,7 +15,7 @@ export default {
       fileName
     }),
 
-  }],
+  } */],
   get: getWay,
   provision: provisionWay
 }

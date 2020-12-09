@@ -1,6 +1,12 @@
 import langEnum from "../../../lang/_enums/lang.enum.js";
 import INSTANCE from "../../../instance/instance.motif.js";
 import formatEnum from "../../../../_motifs/get/_enums/format/format.enum.js";
+import occurenceLevelEnum from "../../../occurence/_enums/level/occurence.level.enum.js";
+
+const occurenceLevelToMatchMechanism = {
+  [occurenceLevelEnum.FILE]: 'fileMatch',
+  [occurenceLevelEnum.FOLDER]: 'folderMatch'
+}
 
 export default kami => 
 
@@ -11,7 +17,7 @@ export default kami =>
       {
         format: formatEnum.FILE_PATH
       })
-      .then(occurences =>
+      .then(instances =>
 
         resolve(
 `# \`${
@@ -62,27 +68,30 @@ ${
     .join('\n')
 }${
 
-  kami.regExp
+  kami.occurences
     ?
 `
 
-## Occurences
+## Instances
 
-**Count : ${ occurences.length }.**
+**Count : ${ instances.length }.**
 
-Matching regular expression :
+### Matching mechanims
 
 ${
-  Array.isArray(kami.regExp)
-    ? kami.regExp.map(_regExp =>
+  Array.isArray(kami.occurences)
+    ? kami.occurences.map(occurence =>
       
-      `* \`${ _regExp.toString() }\``)
+      `* \`${ occurence.level
+        && occurence[occurenceLevelToMatchMechanism[occurence.level]].toString() }\``)
       .join(',\n')
 
     : `\`${ kami.regExp.toString() }\``
 }.
 
-${ occurences.map(filePath =>
+### Instances list
+
+${ instances.map(filePath =>
   
   `* [\`${ filePath }\`](${ filePath })`)
   .join('\n')

@@ -5,11 +5,11 @@ export default {
   id: 'book-extract',
   names: namesProp,
   description: descriptionProp,
-  occurences: [{
+  occurences: [/* {
     regExp: /\/_extracts\/(.*)\/(.*)\.extract\.js/,
     transform: ([ _, folderName, fileName ]) => ({
       folderName,
       fileName
     })
-  }]
+  } */]
 }

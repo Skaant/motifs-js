@@ -6,9 +6,9 @@ export default {
   id: 'book-image',
   names: namesProp,
   description: descriptionProp,
-  occurences: [{
+  occurences: [/* {
     regExp: /_data\/(.*)\.(png|jpg|svg)$/,
     transform: ([ _, scope ]) => ({ scope })
-  }],
+  } */],
   copy: copyWay
 }

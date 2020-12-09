@@ -3,16 +3,12 @@
  * Returns an array of SPEC-SECTION results */
 function recursiveFormatCheck(section) {
   if (section.group) {
-    return {
-      result: section.group.every(_section =>
-        recursiveFormatCheck(_section).result)
-    }
+    return section.group.every(_section =>
+      recursiveFormatCheck(_section))
   } else if (section.test) {
-    return {
-      result: typeof section.test === 'function'
-    }
+    return typeof section.test === 'function'
   } else {
-    return { result: false }
+    return false
   }
 }
 

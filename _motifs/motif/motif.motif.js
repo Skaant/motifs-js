@@ -14,18 +14,16 @@ export default {
   id: 'motif',
   symbol: '⚇',
   names: namesProp,
-  occurences: [
-    {
-      level: occurenceLevelEnum.FILE,
-      fileMatch: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
-      transform: ([ path, scope, folder, id ]) => ({
-        path,
-        id,
-        scope,
-        folder
-      })
-    }
-  ],
+  occurences: [{
+    level: occurenceLevelEnum.FILE,
+    fileMatch: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
+    transform: ([ path, scope, folder, id ]) => ({
+      path,
+      id,
+      scope,
+      folder
+    })
+  }],
   flavour: flavourProp,
   _commands,
   create: createWay,

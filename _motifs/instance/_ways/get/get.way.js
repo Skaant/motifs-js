@@ -29,7 +29,7 @@ export default (
     
     const {
       id,
-      occurences
+      occurences = []
     } = motif
 
     const {

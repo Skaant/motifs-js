@@ -1,5 +1,5 @@
 *[32 MOTIFS](#motifs-glossary)
-on 11/15/2020, 4:57:34 PM*
+on 12/9/2020, 6:39:55 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -238,11 +238,11 @@ SPEC unit
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/assertion/assertion.motif.js
+* `path` : /_motifs/assertion/assertion.motif.js
 * `id` : assertion
 * `scope` : 
-* `folderName` : assertion
-* `fileName` : assertion.motif.js
+* `folder` : assertion
+* `filePath` : /_motifs/assertion/assertion.motif.js
 * `symbol` : =
 * `names`
 
@@ -276,16 +276,26 @@ with just some specific meta-data.**
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/book/book.motif.js
+* `path` : /_motifs/book/book.motif.js
 * `id` : book
 * `scope` : 
-* `folderName` : book
-* `fileName` : book.motif.js
+* `folder` : book
+* `filePath` : /_motifs/book/book.motif.js
 * `symbol` : ▥
 * `names`
 * `occurences`
 * `get`
 * `provision`
+
+## Instances
+
+**Count : 0.**
+
+### Matching mechanims
+
+.
+
+
 
 
 # `book-extract`
@@ -307,13 +317,23 @@ a [PAGE](#page) or directly on the BOOK root.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/book-extract/book-extract.motif.js
+* `path` : /_motifs/book-extract/book-extract.motif.js
 * `id` : book-extract
 * `scope` : 
-* `folderName` : book-extract
-* `fileName` : book-extract.motif.js
+* `folder` : book-extract
+* `filePath` : /_motifs/book-extract/book-extract.motif.js
 * `names`
 * `occurences`
+
+## Instances
+
+**Count : 0.**
+
+### Matching mechanims
+
+.
+
+
 
 
 # `book-image`
@@ -337,14 +357,24 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/book-image/book-image.motif.js
+* `path` : /_motifs/book-image/book-image.motif.js
 * `id` : book-image
 * `scope` : 
-* `folderName` : book-image
-* `fileName` : book-image.motif.js
+* `folder` : book-image
+* `filePath` : /_motifs/book-image/book-image.motif.js
 * `names`
 * `occurences`
 * `copy`
+
+## Instances
+
+**Count : 0.**
+
+### Matching mechanims
+
+.
+
+
 
 
 # `book-page`
@@ -364,15 +394,25 @@ and [EXTRACTS](#extracts).
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/book-page/book-page.motif.js
+* `path` : /_motifs/book-page/book-page.motif.js
 * `id` : book-page
 * `scope` : 
-* `folderName` : book-page
-* `fileName` : book-page.motif.js
+* `folder` : book-page
+* `filePath` : /_motifs/book-page/book-page.motif.js
 * `names`
 * `occurences`
 * `get`
 * `provision`
+
+## Instances
+
+**Count : 0.**
+
+### Matching mechanims
+
+.
+
+
 
 
 # `book-section`
@@ -389,15 +429,25 @@ and [EXTRACTS](#extracts).
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/book-section/book-section.motif.js
+* `path` : /_motifs/book-section/book-section.motif.js
 * `id` : book-section
 * `scope` : 
-* `folderName` : book-section
-* `fileName` : book-section.motif.js
+* `folder` : book-section
+* `filePath` : /_motifs/book-section/book-section.motif.js
 * `names`
 * `occurences`
 * `get`
 * `provision`
+
+## Instances
+
+**Count : 0.**
+
+### Matching mechanims
+
+.
+
+
 
 
 # `⌿ command`
@@ -446,14 +496,24 @@ export default (args: [], options: {}) =>
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/command/command.motif.js
+* `path` : /_motifs/command/command.motif.js
 * `id` : command
 * `scope` : 
-* `folderName` : command
-* `fileName` : command.motif.js
+* `folder` : command
+* `filePath` : /_motifs/command/command.motif.js
 * `symbol` : ⌿
 * `names`
 * `occurences`
+
+## Instances
+
+**Count : 0.**
+
+### Matching mechanims
+
+* `/(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/`.
+
+
 
 
 # `▼ description`
@@ -481,14 +541,31 @@ Experimental :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/description/description.motif.js
+* `path` : /_motifs/description/description.motif.js
 * `id` : description
 * `scope` : 
-* `folderName` : description
-* `fileName` : description.motif.js
+* `folder` : description
+* `filePath` : /_motifs/description/description.motif.js
 * `symbol` : ▼
 * `names`
 * `occurences`
+
+## Instances
+
+**Count : 8.**
+
+### Matching mechanims
+
+* `/(.*)\/([\w|\-]*)\/description\/description\.md$/`.
+
+* [`undefined`](undefined)
+* [`undefined`](undefined)
+* [`undefined`](undefined)
+* [`undefined`](undefined)
+* [`undefined`](undefined)
+* [`undefined`](undefined)
+* [`undefined`](undefined)
+* [`undefined`](undefined)
 
 
 # `⎊ doc`
@@ -510,11 +587,11 @@ DOC is composed of few sub-[MOTIFS](#motif) :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/doc/doc.motif.js
+* `path` : /_motifs/doc/doc.motif.js
 * `id` : doc
 * `scope` : 
-* `folderName` : doc
-* `fileName` : doc.motif.js
+* `folder` : doc
+* `filePath` : /_motifs/doc/doc.motif.js
 * `symbol` : ⎊
 * `names`
 
@@ -536,11 +613,11 @@ the file extension.*
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/file/file.motif.js
+* `path` : /_motifs/file/file.motif.js
 * `id` : file
 * `scope` : 
-* `folderName` : file
-* `fileName` : file.motif.js
+* `folder` : file
+* `filePath` : /_motifs/file/file.motif.js
 * `symbol` : ▤
 * `names`
 * `create`
@@ -571,11 +648,11 @@ Folder is represented by :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/folder/folder.motif.js
+* `path` : /_motifs/folder/folder.motif.js
 * `id` : folder
 * `scope` : 
-* `folderName` : folder
-* `fileName` : folder.motif.js
+* `folder` : folder
+* `filePath` : /_motifs/folder/folder.motif.js
 * `symbol` : ◰
 * `names`
 * `create`
@@ -601,11 +678,11 @@ is the root folder, or a sub-folder.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/folder-scope/folder-scope.motif.js
+* `path` : /_motifs/folder-scope/folder-scope.motif.js
 * `id` : folder-scope
 * `scope` : 
-* `folderName` : folder-scope
-* `fileName` : folder-scope.motif.js
+* `folder` : folder-scope
+* `filePath` : /_motifs/folder-scope/folder-scope.motif.js
 * `names`
 
 
@@ -643,24 +720,14 @@ get(:id) and get()
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/get/get.motif.js
+* `path` : /_motifs/get/get.motif.js
 * `id` : get
 * `scope` : 
-* `folderName` : get
-* `fileName` : get.motif.js
+* `folder` : get
+* `filePath` : /_motifs/get/get.motif.js
 * `symbol` : ⤶
 * `names`
 * `regExp`
-
-## Occurences
-
-**Count : 0.**
-
-Matching regular expression :
-
-`/(.*)\/_shrine\/(.*)\/_ways\/get\/get.way.js/`.
-
-
 
 
 # `# id`
@@ -682,11 +749,11 @@ It is usually a PROP.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/id/id.motif.js
+* `path` : /_motifs/id/id.motif.js
 * `id` : id
 * `scope` : 
-* `folderName` : id
-* `fileName` : id.motif.js
+* `folder` : id
+* `filePath` : /_motifs/id/id.motif.js
 * `symbol` : #
 * `names`
 
@@ -718,11 +785,11 @@ Note that **MOTIF MOTIF is an instance of itself !**
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/instance/instance.motif.js
+* `path` : /_motifs/instance/instance.motif.js
 * `id` : instance
 * `scope` : 
-* `folderName` : instance
-* `fileName` : instance.motif.js
+* `folder` : instance
+* `filePath` : /_motifs/instance/instance.motif.js
 * `symbol` : ⧇
 * `names`
 * `get`
@@ -740,11 +807,11 @@ Note that **MOTIF MOTIF is an instance of itself !**
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/lang/lang.motif.js
+* `path` : /_motifs/lang/lang.motif.js
 * `id` : lang
 * `scope` : 
-* `folderName` : lang
-* `fileName` : lang.motif.js
+* `folder` : lang
+* `filePath` : /_motifs/lang/lang.motif.js
 * `symbol` : ἀ
 * `names`
 
@@ -799,11 +866,11 @@ their INSTANCES will potentialy have multiple :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/motif/motif.motif.js
+* `path` : /_motifs/motif/motif.motif.js
 * `id` : motif
 * `scope` : 
-* `folderName` : motif
-* `fileName` : motif.motif.js
+* `folder` : motif
+* `filePath` : /_motifs/motif/motif.motif.js
 * `symbol` : ⚇
 * `names`
 * `occurences`
@@ -841,6 +908,47 @@ highly abstract powers.
 * `specs`
 * `_specs`
 * `ave`
+
+## Instances
+
+**Count : 32.**
+
+### Matching mechanims
+
+* `/(.*)\/_motifs\/(.*)\/(.*).motif.js/`.
+
+* [`/_motifs/assertion/assertion.motif.js`](/_motifs/assertion/assertion.motif.js)
+* [`/_motifs/book/book.motif.js`](/_motifs/book/book.motif.js)
+* [`/_motifs/book-extract/book-extract.motif.js`](/_motifs/book-extract/book-extract.motif.js)
+* [`/_motifs/book-image/book-image.motif.js`](/_motifs/book-image/book-image.motif.js)
+* [`/_motifs/book-page/book-page.motif.js`](/_motifs/book-page/book-page.motif.js)
+* [`/_motifs/book-section/book-section.motif.js`](/_motifs/book-section/book-section.motif.js)
+* [`/_motifs/command/command.motif.js`](/_motifs/command/command.motif.js)
+* [`/_motifs/description/description.motif.js`](/_motifs/description/description.motif.js)
+* [`/_motifs/doc/doc.motif.js`](/_motifs/doc/doc.motif.js)
+* [`/_motifs/file/file.motif.js`](/_motifs/file/file.motif.js)
+* [`/_motifs/folder/folder.motif.js`](/_motifs/folder/folder.motif.js)
+* [`/_motifs/folder-scope/folder-scope.motif.js`](/_motifs/folder-scope/folder-scope.motif.js)
+* [`/_motifs/get/get.motif.js`](/_motifs/get/get.motif.js)
+* [`/_motifs/id/id.motif.js`](/_motifs/id/id.motif.js)
+* [`/_motifs/instance/instance.motif.js`](/_motifs/instance/instance.motif.js)
+* [`/_motifs/lang/lang.motif.js`](/_motifs/lang/lang.motif.js)
+* [`/_motifs/motif/motif.motif.js`](/_motifs/motif/motif.motif.js)
+* [`/_motifs/occurence/occurence.motif.js`](/_motifs/occurence/occurence.motif.js)
+* [`/_motifs/pantheon/pantheon.motif.js`](/_motifs/pantheon/pantheon.motif.js)
+* [`/_motifs/project/project.motif.js`](/_motifs/project/project.motif.js)
+* [`/_motifs/prop/prop.motif.js`](/_motifs/prop/prop.motif.js)
+* [`/_motifs/readme/readme.motif.js`](/_motifs/readme/readme.motif.js)
+* [`/_motifs/readme-section/readme-section.motif.js`](/_motifs/readme-section/readme-section.motif.js)
+* [`/_motifs/shrine/shrine.motif.js`](/_motifs/shrine/shrine.motif.js)
+* [`/_motifs/spec/spec.motif.js`](/_motifs/spec/spec.motif.js)
+* [`/_motifs/spec-section/spec-section.motif.js`](/_motifs/spec-section/spec-section.motif.js)
+* [`/_motifs/util/util.motif.js`](/_motifs/util/util.motif.js)
+* [`/_motifs/way/way.motif.js`](/_motifs/way/way.motif.js)
+* [`/_motifs/webapp/webapp.motif.js`](/_motifs/webapp/webapp.motif.js)
+* [`/_motifs/website/website.motif.js`](/_motifs/website/website.motif.js)
+* [`/_motifs/website-page/website-page.motif.js`](/_motifs/website-page/website-page.motif.js)
+* [`/_motifs/wiki/wiki.motif.js`](/_motifs/wiki/wiki.motif.js)
 
 ## Flavour
 
@@ -883,15 +991,23 @@ highly abstract powers.
 
 WHERE INSTANCES HAPPEN
 
-Occurence defines the apparition rules
-(matching properties)
-of a MOTIF'S INSTANCE.
+OCCURENCE is made of two aspects :
+
+1. The **matching rule(s)** define(s) the lexical conditions
+   required for a MOTIF'S INSTANCE to appear,
+
+2. The **transformations**, returned by applying the
+   `transform` method to every rules matching results.
 
 Experimental :
 ```javascript
 occurences: [
   {
-    regExp: /(.*)/_motifs/(.*)/(.*).motif.js/,
+    level: //,
+    regExp: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
+    folderMatch: //,
+    fileMatch: //,
+    propMatch: //,
     transform: ([ scope, folderName, fileName ]) => ({
       scope,
       folderName,
@@ -901,17 +1017,17 @@ occurences: [
 ]
 ```
 
-
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/occurence/occurence.motif.js
+* `path` : /_motifs/occurence/occurence.motif.js
 * `id` : occurence
 * `scope` : 
-* `folderName` : occurence
-* `fileName` : occurence.motif.js
+* `folder` : occurence
+* `filePath` : /_motifs/occurence/occurence.motif.js
 * `symbol` : ʯ
 * `names`
+* `get`
 
 
 # `⛩ pantheon`
@@ -933,24 +1049,14 @@ the angels and last steps upon the One.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/pantheon/pantheon.motif.js
+* `path` : /_motifs/pantheon/pantheon.motif.js
 * `id` : pantheon
 * `scope` : 
-* `folderName` : pantheon
-* `fileName` : pantheon.motif.js
+* `folder` : pantheon
+* `filePath` : /_motifs/pantheon/pantheon.motif.js
 * `symbol` : ⛩
 * `names`
 * `regExp`
-
-## Occurences
-
-**Count : 0.**
-
-Matching regular expression :
-
-`/kami.js\/_shrine$/`.
-
-
 
 
 # `Ω project`
@@ -979,11 +1085,11 @@ A non-exhaustive list of its components :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/project/project.motif.js
+* `path` : /_motifs/project/project.motif.js
 * `id` : project
 * `scope` : 
-* `folderName` : project
-* `fileName` : project.motif.js
+* `folder` : project
+* `filePath` : /_motifs/project/project.motif.js
 * `symbol` : Ω
 * `names`
 
@@ -1008,11 +1114,11 @@ or dynamically bound in `MOTIF.get()` method.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/prop/prop.motif.js
+* `path` : /_motifs/prop/prop.motif.js
 * `id` : prop
 * `scope` : 
-* `folderName` : prop
-* `fileName` : prop.motif.js
+* `folder` : prop
+* `filePath` : /_motifs/prop/prop.motif.js
 * `symbol` : ⁖
 * `names`
 
@@ -1040,11 +1146,11 @@ README is a component of [DOC](#-doc).
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/readme/readme.motif.js
+* `path` : /_motifs/readme/readme.motif.js
 * `id` : readme
 * `scope` : 
-* `folderName` : readme
-* `fileName` : readme.motif.js
+* `folder` : readme
+* `filePath` : /_motifs/readme/readme.motif.js
 * `symbol` : ⬙
 * `names`
 * `get`
@@ -1072,26 +1178,15 @@ In fact, README is the top-level SECTION.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/readme-section/readme-section.motif.js
+* `path` : /_motifs/readme-section/readme-section.motif.js
 * `id` : readme-section
 * `scope` : 
-* `folderName` : readme-section
-* `fileName` : readme-section.motif.js
+* `folder` : readme-section
+* `filePath` : /_motifs/readme-section/readme-section.motif.js
 * `symbol` : ⬥
 * `names`
 * `regExp`
 * `create`
-
-## Occurences
-
-**Count : 0.**
-
-Matching regular expression :
-
-* `/^\/_readme\/_sections\/(.*)\/(.*)\.section.js/`,
-* `/\/_shrine\/readme\/_sections\/(.*)\/(.*)\.section.js/`.
-
-
 
 
 # `shrine`
@@ -1108,23 +1203,13 @@ Matching regular expression :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/shrine/shrine.motif.js
+* `path` : /_motifs/shrine/shrine.motif.js
 * `id` : shrine
 * `scope` : 
-* `folderName` : shrine
-* `fileName` : shrine.motif.js
+* `folder` : shrine
+* `filePath` : /_motifs/shrine/shrine.motif.js
 * `names`
 * `regExp`
-
-## Occurences
-
-**Count : 0.**
-
-Matching regular expression :
-
-`/(.*)\/_shrine$/`.
-
-
 
 
 # `Ѭ spec`
@@ -1149,14 +1234,31 @@ categories of specifications :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/spec/spec.motif.js
+* `path` : /_motifs/spec/spec.motif.js
 * `id` : spec
 * `scope` : 
-* `folderName` : spec
-* `fileName` : spec.motif.js
+* `folder` : spec
+* `filePath` : /_motifs/spec/spec.motif.js
 * `symbol` : Ѭ
 * `names`
+* `runOne`
+* `runAll`
 * `occurences`
+
+## Instances
+
+**Count : 5.**
+
+### Matching mechanims
+
+* `/(.*)\/([\w|\-]*)\/([\w|\-]*)\.specxo.js/`,
+* `/(.*)\/_motifs\/([\w|\-]*)\/_specis\/([\w|\-]*)\.speci.js/`.
+
+* [`/_motifs/occurence/get/get.specxo.js`](/_motifs/occurence/get/get.specxo.js)
+* [`/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.specxo.js`](/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.specxo.js)
+* [`/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.specxo.js`](/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.specxo.js)
+* [`/_motifs/motif/_specis/motif.speci.js`](/_motifs/motif/_specis/motif.speci.js)
+* [`/_motifs/spec/_specis/spec.speci.js`](/_motifs/spec/_specis/spec.speci.js)
 
 
 # `Ѫ spec-section`
@@ -1180,11 +1282,11 @@ ASSERTION nodes in SPEC files
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/spec-section/spec-section.motif.js
+* `path` : /_motifs/spec-section/spec-section.motif.js
 * `id` : spec-section
 * `scope` : 
-* `folderName` : spec-section
-* `fileName` : spec-section.motif.js
+* `folder` : spec-section
+* `filePath` : /_motifs/spec-section/spec-section.motif.js
 * `symbol` : Ѫ
 * `names`
 
@@ -1213,11 +1315,11 @@ everywhere else in the code.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/util/util.motif.js
+* `path` : /_motifs/util/util.motif.js
 * `id` : util
 * `scope` : 
-* `folderName` : util
-* `fileName` : util.motif.js
+* `folder` : util
+* `filePath` : /_motifs/util/util.motif.js
 * `symbol` : ⬫
 * `names`
 
@@ -1242,11 +1344,11 @@ which is necessarely `function`.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/way/way.motif.js
+* `path` : /_motifs/way/way.motif.js
 * `id` : way
 * `scope` : 
-* `folderName` : way
-* `fileName` : way.motif.js
+* `folder` : way
+* `filePath` : /_motifs/way/way.motif.js
 * `names`
 
 
@@ -1267,11 +1369,11 @@ A webapp exposes MOTIFS and their operations
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/webapp/webapp.motif.js
+* `path` : /_motifs/webapp/webapp.motif.js
 * `id` : webapp
 * `scope` : 
-* `folderName` : webapp
-* `fileName` : webapp.motif.js
+* `folder` : webapp
+* `filePath` : /_motifs/webapp/webapp.motif.js
 * `names`
 
 
@@ -1291,17 +1393,27 @@ WEBSITE is a [DOC](#doc) component.
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/website/website.motif.js
+* `path` : /_motifs/website/website.motif.js
 * `id` : website
 * `scope` : 
-* `folderName` : website
-* `fileName` : website.motif.js
+* `folder` : website
+* `filePath` : /_motifs/website/website.motif.js
 * `symbol` : Ʋ
 * `names`
 * `occurences`
 * `build`
 * `_commands`
 * `_specs`
+
+## Instances
+
+**Count : 1.**
+
+### Matching mechanims
+
+* `/^\/_websites\/(.*)\/(.*).website.js/`.
+
+* [`undefined`](undefined)
 
 
 # `website-page`
@@ -1326,11 +1438,11 @@ A page binds the following three elements :
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/website-page/website-page.motif.js
+* `path` : /_motifs/website-page/website-page.motif.js
 * `id` : website-page
 * `scope` : 
-* `folderName` : website-page
-* `fileName` : website-page.motif.js
+* `folder` : website-page
+* `filePath` : /_motifs/website-page/website-page.motif.js
 * `names`
 * `create`
 
@@ -1351,9 +1463,9 @@ WIKI is a component of [DOC](#doc).
 ## Properties
 
 * `motif` : motif
-* `filePath` : /_motifs/wiki/wiki.motif.js
+* `path` : /_motifs/wiki/wiki.motif.js
 * `id` : wiki
 * `scope` : 
-* `folderName` : wiki
-* `fileName` : wiki.motif.js
+* `folder` : wiki
+* `filePath` : /_motifs/wiki/wiki.motif.js
 * `names`

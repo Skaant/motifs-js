@@ -7,13 +7,13 @@ export default {
   id: 'book-page',
   names: namesProp,
   description: descriptionProp,
-  occurences: [{
+  occurences: [/* {
     regExp: /\/_pages\/(.*)\/(.*)\.page\.js/,
     transform: ([ _, folderName, fileName ]) => ({
       folderName,
       fileName
     })
-  }],
+  } */],
   get: getWay,
   provision: provisionWay
 }

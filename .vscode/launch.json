@@ -14,8 +14,12 @@
       "program": "${workspaceFolder}\\dev-start.js",
       "args": [
         "--",
+        "-k",
+        "website",
+        "-force",
         "-log",
-        "test"
+        "build",
+        "en"
       ]
     }
   ]
