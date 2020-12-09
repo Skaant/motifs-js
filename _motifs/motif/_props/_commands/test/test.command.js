@@ -4,6 +4,6 @@ export default ([ id = false ], options) =>
 
   new Promise(resolve => {
 
-    MOTIF.test(id, options.log, options.doc)
+    MOTIF.test(options)
       .then(resolve)
   })

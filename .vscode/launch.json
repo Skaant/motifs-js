@@ -13,7 +13,9 @@
       ],
       "program": "${workspaceFolder}\\dev-start.js",
       "args": [
-        "--"
+        "--",
+        "-log",
+        "test"
       ]
     }
   ]
