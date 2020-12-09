@@ -6,9 +6,9 @@ async function exploreSection(section, options) {
 
   if (section.group) {
 
-    const result = Promise.all(
+    const result = await Promise.all(
       section.group.map(item => exploreSection(item, options)))
-    return result
+    return { label: section.label, result }
 
   } else if (section.test) {
 
@@ -17,15 +17,20 @@ async function exploreSection(section, options) {
 
       const result = await ranTest
       options.log && console.log(' => ' + result)
-      return result
-    }
-    options.log && console.log(' => ' + ranTest)
-    return ranTest
+      return { label: section.label, result }
 
+    } else {
+      
+      options.log && console.log(' => ' + ranTest)
+      return { label: section.label, result: ranTest }
+    }
   } else {
 
     throw new Error(runOneErrors.NEITHER_GROUP_OR_TEST)
   }
 }
 
-export default exploreSection
+export default async (spec, options) => {
+  const result = await exploreSection(spec, options)
+  return { path: spec.path, result }
+}

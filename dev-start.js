@@ -8,6 +8,7 @@ KAMI.ave(
   })
 
 SPEC.runAll({ log: true })
+  .then(a => console.log(a))
 
 
 /* KAMI.cli(

@@ -17,7 +17,7 @@ export default {
     {
       type: occurencesEnum.BLIND,
       level: occurenceLevelEnum.FILE,
-      fileMatch: /(.*)\/([\w|\-]*)\/([\w|\-]*)\.speci.js/,
+      fileMatch: /(.*)\/([\w|\-]*)\/([\w|\-]*)\.specxo.js/,
       transform: ([ path, scope, folder, id ]) => ({ path, scope, folder, id }),
       provision: occurence => new Promise(resolve =>
         FILE.get(path, { format: formatEnum.ESM })

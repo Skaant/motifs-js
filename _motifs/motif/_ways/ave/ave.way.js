@@ -36,8 +36,8 @@ Let me initialize myself :
     global.FILES
   )
 
-  log && console.log('* global.PANTHEON_SCOPE : '
-    + global.PANTHEON_SCOPE || 'none (standalone)')
+  log && console.log(('* global.PANTHEON_SCOPE : '
+    + global.PANTHEON_SCOPE || 'none (standalone)') + '\n')
 
   return true
 }
