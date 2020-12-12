@@ -7,19 +7,15 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "test",
       "skipFiles": [
         "<node_internals>/**"
       ],
       "program": "${workspaceFolder}\\dev-start.js",
       "args": [
         "--",
-        "-k",
-        "website",
-        "-force",
-        "-log",
-        "build",
-        "en"
+        "test",
+        "-log"
       ]
     }
   ]

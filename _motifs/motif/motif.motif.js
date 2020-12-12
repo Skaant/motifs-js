@@ -4,9 +4,7 @@ import get from "./get/get.js";
 import cliWay from "./_ways/cli/cli.way.js";
 import _commands from "./_props/_commands/index.js";
 import flavourProp from "./_props/flavour/flavour.prop.js";
-import specs from "./_props/specs/index.js";
-import _specs from "./_props/_specs/index.js";
-import aveWay from "./_ways/ave/ave.way.js";
+import init from "./init/init.js";
 import occurenceLevelEnum from "../occurence/_enums/level/occurence.level.enum.js";
 import SPEC from "../spec/spec.motif.js";
 
@@ -24,13 +22,11 @@ export default {
       folder
     })
   }],
+  init,
   flavour: flavourProp,
   _commands,
   create: createWay,
   get,
   cli: cliWay,
-  test: SPEC.runAll,
-  specs,
-  _specs,
-  ave: aveWay
+  test: SPEC.runAll
 }

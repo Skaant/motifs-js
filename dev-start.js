@@ -1,13 +1,5 @@
-import KAMI from './index.js'
+import motifJs from './index.js'
 
-KAMI.ave(
-  import.meta.url,
-  {
-    log: true
-  })
+const MOTIF = motifJs({ log: true })
 
-KAMI.cli(
-  process.argv.slice(3),
-  {
-    log: true
-  })
+MOTIF.cli(process.argv.slice(3), { log: true })

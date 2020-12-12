@@ -1,3 +1,3 @@
-import propsSpec from "./props/props.spec.js";
+import propsSpec from "./props/props.specold.js";
 
 export default [ propsSpec ]

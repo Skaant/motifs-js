@@ -14,7 +14,7 @@ export default {
     /** Individual "BLIND" tests */
     {
       level: occurenceLevelEnum.FILE,
-      fileMatch: /(.*)\/([\w|\-]*)\/([\w|\-]*)\.specxo.js/,
+      fileMatch: /(.*)\/([\w|\-]*)\/([\w|\-]*)\.spec.js/,
       transform: ([ path, scope, folder, id ]) => ({
         type: specOccurencesEnum.UNIT,
         path,
