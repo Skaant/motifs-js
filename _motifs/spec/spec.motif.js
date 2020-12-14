@@ -11,16 +11,14 @@ export default {
   runOne,
   runAll,
   occurences: [
-    /** Individual "BLIND" tests */
+    /** Individual "UNIT" tests */
     {
       level: occurenceLevelEnum.FILE,
-      fileMatch: /(.*)\/([\w|\-]*)\/([\w|\-]*)\.spec.js/,
-      transform: ([ path, scope, folder, id ]) => ({
+      fileMatch: /(^|.*\/)([\w|\-]*\.spec.js)/,
+      transform: ([ path, fileName ]) => ({
         type: specOccurencesEnum.UNIT,
         path,
-        scope,
-        folder,
-        id
+        fileName
       })
     },
     /** MOTIFS' INSTANCES replicable tests */

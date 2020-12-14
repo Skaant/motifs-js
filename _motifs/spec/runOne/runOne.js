@@ -1,12 +1,15 @@
 import formatEnum from "../../get/_enums/format/format.enum.js"
+import { OPTIONS } from "../../global/_enums/names/global.names.enum.js"
 import INSTANCE from "../../instance/instance.motif.js"
 import MOTIF from "../../motif/motif.motif.js"
+import { MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js"
 import specOccurencesEnum from "../_enums/_occurences/spec.occurences.enum.js"
 import runOneErrors from "./runOne.errors.js"
 
 async function exploreSection(section, options) {
 
-  options.log && console.log(section.label)
+  global[OPTIONS].log && section.type !== MODULE
+    && console.log(section.label)
 
   if (section.group) {
 
@@ -26,6 +29,7 @@ async function exploreSection(section, options) {
 
       const result = await ranTest
       options.log && console.log(' => ' + result)
+
       return { label: section.label, result }
 
     } else {
@@ -34,10 +38,12 @@ async function exploreSection(section, options) {
         typeof ranTest === 'boolean'
           ? ranTest
           : ranTest.map(({ result }) => result).join(', ')))
+
       return { label: section.label, result: ranTest }
     }
   } else {
 
+    if (section.after) await section.after()
     throw new Error(runOneErrors.NEITHER_GROUP_OR_TEST)
   }
 }

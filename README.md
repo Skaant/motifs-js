@@ -1,5 +1,5 @@
-*[32 MOTIFS](#motifs-glossary)
-on 12/9/2020, 6:39:55 PM*
+*[33 MOTIFS](#motifs-glossary)
+on 12/14/2020, 8:03:29 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -197,6 +197,7 @@ npm start -- -k website build
 * [`◰ folder`](#-folder) : Folder
 * [`folder-scope`](#folder-scope) : Scope, Perimeter
 * [`⤶ get`](#-get) : Accesser, Obtain, Hydrater
+* [`⯎ global`](#-global) : Identifier, instance name
 * [`# id`](#-id) : Identifier, instance name
 * [`⧇ instance`](#-instance) : Instance
 * [`ἀ lang`](#-lang) : Language
@@ -295,6 +296,8 @@ with just some specific meta-data.**
 
 .
 
+### Instances list
+
 
 
 
@@ -332,6 +335,8 @@ a [PAGE](#page) or directly on the BOOK root.
 ### Matching mechanims
 
 .
+
+### Instances list
 
 
 
@@ -374,6 +379,8 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 .
 
+### Instances list
+
 
 
 
@@ -412,6 +419,8 @@ and [EXTRACTS](#extracts).
 
 .
 
+### Instances list
+
 
 
 
@@ -446,6 +455,8 @@ and [EXTRACTS](#extracts).
 ### Matching mechanims
 
 .
+
+### Instances list
 
 
 
@@ -513,6 +524,8 @@ export default (args: [], options: {}) =>
 
 * `/(.*)\/_shrine\/(.*)\/_props\/_commands\/(.*)\/(.*).command.js/`.
 
+### Instances list
+
 
 
 
@@ -552,12 +565,15 @@ Experimental :
 
 ## Instances
 
-**Count : 8.**
+**Count : 9.**
 
 ### Matching mechanims
 
 * `/(.*)\/([\w|\-]*)\/description\/description\.md$/`.
 
+### Instances list
+
+* [`undefined`](undefined)
 * [`undefined`](undefined)
 * [`undefined`](undefined)
 * [`undefined`](undefined)
@@ -730,6 +746,29 @@ get(:id) and get()
 * `regExp`
 
 
+# `⯎ global`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**ID** is also known as :
+
+* [en] Identifier, instance name,
+* [fr] Identifieur, nom d'instance.
+
+Global variables to be accessed application-wide
+
+## Properties
+
+* `motif` : motif
+* `path` : /_motifs/global/global.motif.js
+* `id` : global
+* `scope` : 
+* `folder` : global
+* `filePath` : /_motifs/global/global.motif.js
+* `symbol` : ⯎
+* `names`
+
+
 # `# id`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
@@ -874,6 +913,7 @@ their INSTANCES will potentialy have multiple :
 * `symbol` : ⚇
 * `names`
 * `occurences`
+* `init`
 * `flavour` : At the very beginning,
 KAMI-KAMI **said itself**, to be
 brought to existence.
@@ -905,17 +945,16 @@ highly abstract powers.
 * `get`
 * `cli`
 * `test`
-* `specs`
-* `_specs`
-* `ave`
 
 ## Instances
 
-**Count : 32.**
+**Count : 33.**
 
 ### Matching mechanims
 
 * `/(.*)\/_motifs\/(.*)\/(.*).motif.js/`.
+
+### Instances list
 
 * [`/_motifs/assertion/assertion.motif.js`](/_motifs/assertion/assertion.motif.js)
 * [`/_motifs/book/book.motif.js`](/_motifs/book/book.motif.js)
@@ -930,6 +969,7 @@ highly abstract powers.
 * [`/_motifs/folder/folder.motif.js`](/_motifs/folder/folder.motif.js)
 * [`/_motifs/folder-scope/folder-scope.motif.js`](/_motifs/folder-scope/folder-scope.motif.js)
 * [`/_motifs/get/get.motif.js`](/_motifs/get/get.motif.js)
+* [`/_motifs/global/global.motif.js`](/_motifs/global/global.motif.js)
 * [`/_motifs/id/id.motif.js`](/_motifs/id/id.motif.js)
 * [`/_motifs/instance/instance.motif.js`](/_motifs/instance/instance.motif.js)
 * [`/_motifs/lang/lang.motif.js`](/_motifs/lang/lang.motif.js)
@@ -1247,16 +1287,20 @@ categories of specifications :
 
 ## Instances
 
-**Count : 5.**
+**Count : 7.**
 
 ### Matching mechanims
 
-* `/(.*)\/([\w|\-]*)\/([\w|\-]*)\.specxo.js/`,
+* `/(^|.*\/)([\w|\-]*\.spec.js)/`,
 * `/(.*)\/_motifs\/([\w|\-]*)\/_specis\/([\w|\-]*)\.speci.js/`.
 
-* [`/_motifs/occurence/get/get.specxo.js`](/_motifs/occurence/get/get.specxo.js)
-* [`/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.specxo.js`](/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.specxo.js)
-* [`/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.specxo.js`](/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.specxo.js)
+### Instances list
+
+* [`/index.spec.js`](/index.spec.js)
+* [`/_motifs/motif/init/init.spec.js`](/_motifs/motif/init/init.spec.js)
+* [`/_motifs/occurence/get/get.spec.js`](/_motifs/occurence/get/get.spec.js)
+* [`/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js`](/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js)
+* [`/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.spec.js`](/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.spec.js)
 * [`/_motifs/motif/_specis/motif.speci.js`](/_motifs/motif/_specis/motif.speci.js)
 * [`/_motifs/spec/_specis/spec.speci.js`](/_motifs/spec/_specis/spec.speci.js)
 
@@ -1403,7 +1447,6 @@ WEBSITE is a [DOC](#doc) component.
 * `occurences`
 * `build`
 * `_commands`
-* `_specs`
 
 ## Instances
 
@@ -1413,7 +1456,9 @@ WEBSITE is a [DOC](#doc) component.
 
 * `/^\/_websites\/(.*)\/(.*).website.js/`.
 
-* [`undefined`](undefined)
+### Instances list
+
+* [`/_websites/en/en.website.js`](/_websites/en/en.website.js)
 
 
 # `website-page`

@@ -1,43 +1,38 @@
 import getPathUtil from './_utils/getPath/getPath.util.js'
 import getFilesUtil from './_utils/getFiles/getFiles.util.js'
 import getPantheonScopeUtil from './_utils/getPantheonScope/getPantheonScope.util.js'
+import { FILES, FRAMEWORK_PATH, OPTIONS, PATH } from '../../global/_enums/names/global.names.enum.js'
 
-/** **AVE rises THE FIRST MOTIF OF ALL.**
+function logValue(key) {
+  global[OPTIONS].log
+    && console.log(`* \`global.${ key }\` : ${
+      global[key].toString() }`)
+}
+
+/** 
+ * Initializes `global` object properties
+ *  with frameworks (constants &) variables :
  * 
- * It's the `motifs` framework's
- *  initialization method.
+ * * `OPTIONS`, set relevant global options,
+ * * `PATH`, computer path to project's root folder,
+ * * `FILES`, project's files' path (except some, like `node_modules`),
+ * * `FRAMEWORK_PATH`, path to `motifs-js` or `false` if
+ *  you're working in the framework directory.
  */
-export default (url, { log }) => {
+export default (url, options) => {
 
-  log && console.log(`AVE mortal !
+  const { log } = global[OPTIONS] = options
+  logValue(OPTIONS)
 
-You have summoned me from my potential state.
-May you be blessed once again.
+  global[PATH] = getPathUtil(url)
+  logValue(PATH)
 
-Let me initialize myself :
-`
-    )
+  global[FILES] = getFilesUtil('')
+  log && console.log('* `global.FILES` : ' + global.FILES.length + ' found')
 
-  /** 1. global.PATH */
-  global.PATH = getPathUtil(url)
-  
-  log && console.log('* global.PATH : ' 
-    + global.PATH)
-
-  /** 2. global.FILES */
-  global.FILES = getFilesUtil('')
-
-  log && console.log('* global.FILES : '
-    + global.FILES.length + ' found.')
-
-  /** 3. global.PANTHEON */
-  global.PANTHEON_SCOPE = getPantheonScopeUtil(
-    global.PATH,
-    global.FILES
-  )
-
-  log && console.log(('* global.PANTHEON_SCOPE : '
-    + global.PANTHEON_SCOPE || 'none (standalone)') + '\n')
+  // @todo "PantheonScope" to "FrameworkPath"
+  global[FRAMEWORK_PATH] = getPantheonScopeUtil(global[PATH], global[FILES])
+  logValue(FRAMEWORK_PATH)
 
   return true
 }

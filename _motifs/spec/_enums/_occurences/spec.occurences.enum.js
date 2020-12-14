@@ -1,6 +1,6 @@
 export default {
   /** Targets a specific piece of code. */
-  UNIT: 'unit',
+  UNIT: 'UNIT',
   /** Targets a specific MOTIF's INSTANCE. */
-  INSTANCE: 'instance'
+  INSTANCE: 'INSTANCE'
 }
