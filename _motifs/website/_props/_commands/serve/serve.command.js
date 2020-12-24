@@ -1,7 +1,6 @@
 import express from 'express'
-import fs from 'fs'
 
-export default ([ id ], options) => {
+export default ([ id ]) => {
 
   const app = express()
   const port = 3000
