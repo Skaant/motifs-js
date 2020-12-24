@@ -7,7 +7,7 @@ import INSTANCE from '../../../instance/instance.motif.js'
  *  (SECTIONS, PAGES, EXTRACTS and IMAGES).
  */
 export default (
-  kami = BOOK,
+  motif = BOOK,
   id = false,
   options
 ) => 
@@ -15,7 +15,7 @@ export default (
   new Promise(resolve => {
 
     INSTANCE.get(
-      kami,
+      motif,
       {
         format: formatEnum.ESM
       })

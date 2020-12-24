@@ -10,9 +10,5 @@ export default (images, dest, options) =>
     fs.copyFile(
       global.PATH + imagePath,
       global.PATH + dest
-        + '/' + imagePath.split('/').pop(),
-      options.force
-        ? fsConstants.COPYFILE_FICLONE
-
-        : fsConstants.COPYFILE_EXCL
+        + '/' + imagePath.split('/').pop()
     ))

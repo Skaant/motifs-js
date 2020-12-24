@@ -1,5 +1,5 @@
 *[33 MOTIFS](#motifs-glossary)
-on 12/14/2020, 8:03:29 PM*
+on 12/24/2020, 6:50:48 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -294,7 +294,7 @@ with just some specific meta-data.**
 
 ### Matching mechanims
 
-.
+* `/^\/_data(.*)\/([\w|\-]*)\/([\w|\-]*)\.book\.js/`.
 
 ### Instances list
 
@@ -334,7 +334,7 @@ a [PAGE](#page) or directly on the BOOK root.
 
 ### Matching mechanims
 
-.
+* `/(.*)\/_extracts\/([\w|\-]*)\/([\w|\-]*)\.extract\.js/`.
 
 ### Instances list
 
@@ -377,7 +377,7 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 ### Matching mechanims
 
-.
+* `/\/_data\/(.*)\/([\w|\-]*)\.(png|jpg|svg)$/`.
 
 ### Instances list
 
@@ -417,7 +417,7 @@ and [EXTRACTS](#extracts).
 
 ### Matching mechanims
 
-.
+* `/(.*)\/_pages\/([\w|\-]*)\/([\w|\-]*)\.page\.js/`.
 
 ### Instances list
 

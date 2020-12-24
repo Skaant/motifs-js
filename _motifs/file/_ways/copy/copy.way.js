@@ -6,9 +6,5 @@ export default (src, dest, options) =>
 
   fs.copyFile(
     global.PATH + src,
-    global.PATH + dest,
-    /* options && options.force
-      ?  */ fsConstants.COPYFILE_FICLONE_FORCE /*
-
-      : fsConstants.COPYFILE_EXCL */
+    global.PATH + dest
   )

@@ -5,5 +5,5 @@ export default {
   id: 'occurence',
   symbol: 'ʯ',
   names: namesProp,
-  get: get
+  get
 }

@@ -2,7 +2,7 @@ import occurenceLevelEnum from "../_enums/level/occurence.level.enum.js";
 import getErrors from "./get.errors.js";
 import folderMatchFixRegExpEnd from "./_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.js";
 
-export default occurence =>
+export default (occurence, { scope = false }) =>
 
   new Promise((resolve, reject) => {
 
@@ -14,7 +14,8 @@ export default occurence =>
         
         const fixedFolderMatch = folderMatchFixRegExpEnd(occurence.folderMatch)
         resolve(global.FILES.reduce((acc, path) => {
-          const matchResult = path.match(fixedFolderMatch)
+          const matchResult = (!scope || path.startsWith(scope))
+            && path.match(fixedFolderMatch)
           if (matchResult) {
             return [
               ...acc,
@@ -27,7 +28,8 @@ export default occurence =>
       case occurenceLevelEnum.FILE:
 
         resolve(global.FILES.filter(path =>
-            path.match(occurence.fileMatch))
+            (!scope || path.startsWith('/' + scope))
+              && path.match(occurence.fileMatch))
           .map(path => transform(path.match(occurence.fileMatch))))
 
       case occurenceLevelEnum.PROP:

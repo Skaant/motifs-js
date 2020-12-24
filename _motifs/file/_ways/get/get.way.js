@@ -54,7 +54,9 @@ export default (
       case formatEnum.ESM:
 
         import('file:///'
-          + (global.PATH + filePath).replace(/\//g,'\\'))
+          + (global.PATH
+            + (filePath[0] === '/' ? '' : '/')
+            + filePath).replace(/\//g,'\\'))
           
           .then(({ default: content }) =>
             
