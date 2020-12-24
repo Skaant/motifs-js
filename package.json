@@ -8,7 +8,8 @@
     "start": "node dev-start.js --experimental-modules",
     "test": "npm start -- -log -force test",
     "readme": "npm start -- -k readme -log build",
-    "website": "npm start -- -k website -force -log build en"
+    "website": "npm start -- -k website -force -log build en",
+    "serve": "npm start -- -k website -force -log serve en"
   },
   "repository": {
     "type": "git",
@@ -30,6 +31,7 @@
   },
   "homepage": "https://github.com/Skaant/motifs-js#readme",
   "devDependencies": {
+    "express": "^4.17.1",
     "showdown": "^1.9.1"
   }
 }
