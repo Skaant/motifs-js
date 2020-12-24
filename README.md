@@ -1,5 +1,5 @@
 *[33 MOTIFS](#motifs-glossary)
-on 12/24/2020, 7:43:08 AM*
+on 12/24/2020, 7:48:10 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -184,37 +184,37 @@ npm start -- -k website build
 
 ## MOTIFS' glossary
     
-* \= [`assertion`](#assertion) : Assertion
-* \▥ [`book`](#book) : Book
+* = [`assertion`](#assertion) : Assertion
+* ▥ [`book`](#book) : Book
 * [`book-extract`](#book-extract) : Extract, Fragment, Atom
 * [`book-image`](#book-image) : Image, Picture, Illustration, Scan
 * [`book-page`](#book-page) : Page
 * [`book-section`](#book-section) : Section, Chapter, Part
-* \⌿ [`command`](#command) : Command
-* \▼ [`description`](#description) : Description
-* \⎊ [`doc`](#doc) : Documentation
-* \▤ [`file`](#file) : File
-* \◰ [`folder`](#folder) : Folder
+* ⌿ [`command`](#command) : Command
+* ▼ [`description`](#description) : Description
+* ⎊ [`doc`](#doc) : Documentation
+* ▤ [`file`](#file) : File
+* ◰ [`folder`](#folder) : Folder
 * [`folder-scope`](#folder-scope) : Scope, Perimeter
-* \⤶ [`get`](#get) : Accesser, Obtain, Hydrater
-* \⯎ [`global`](#global) : Identifier, instance name
-* \# [`id`](#id) : Identifier, instance name
-* \⧇ [`instance`](#instance) : Instance
-* \ἀ [`lang`](#lang) : Language
-* \⚇ [`motif`](#motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
-* \ʯ [`occurence`](#occurence) : Occurence
+* ⤶ [`get`](#get) : Accesser, Obtain, Hydrater
+* ⯎ [`global`](#global) : Identifier, instance name
+* ⚲ [`id`](#id) : Identifier, instance name
+* ⧇ [`instance`](#instance) : Instance
+* ἀ [`lang`](#lang) : Language
+* ⚇ [`motif`](#motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
+* ʯ [`occurence`](#occurence) : Occurence
 * [`pantheon`](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
-* \Ω [`project`](#project) : Project
-* \⁖ [`prop`](#prop) : Property, Characteristics, Attribute
-* \⬙ [`readme`](#readme) : README
-* \⬥ [`readme-section`](#readme-section) : Section
+* Ω [`project`](#project) : Project
+* ⁖ [`prop`](#prop) : Property, Characteristics, Attribute
+* ⬙ [`readme`](#readme) : README
+* ⬥ [`readme-section`](#readme-section) : Section
 * [`shrine`](#shrine) : Shrine
-* \Ѭ [`spec`](#spec) : Specification
-* \Ѫ [`spec-section`](#spec-section) : Specification section
-* \⬫ [`util`](#util) : Utility
+* Ѭ [`spec`](#spec) : Specification
+* Ѫ [`spec-section`](#spec-section) : Specification section
+* ⬫ [`util`](#util) : Utility
 * [`way`](#way) : Method, Action, Operation, Function
 * [`webapp`](#webapp) : Web application
-* \Ʋ [`website`](#website) : Website
+* Ʋ [`website`](#website) : Website
 * [`website-page`](#website-page) : Page, Website page
 * [`wiki`](#wiki) : Wiki
 
@@ -773,7 +773,7 @@ Global variables to be accessed application-wide
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**# [id] id**, also known as :
+**⚲ [id] id**, also known as :
 
 * [en] Identifier, instance name,
 * [fr] Identifieur, nom d'instance.
@@ -793,7 +793,7 @@ It is usually a PROP.
 * `scope` : 
 * `folder` : id
 * `filePath` : /_motifs/id/id.motif.js
-* `symbol` : #
+* `symbol` : ⚲
 * `names`
 
 
