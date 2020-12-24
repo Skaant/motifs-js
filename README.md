@@ -1,5 +1,5 @@
 *[33 MOTIFS](#motifs-glossary)
-on 12/24/2020, 7:18:50 AM*
+on 12/24/2020, 7:23:23 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -184,37 +184,37 @@ npm start -- -k website build
 
 ## MOTIFS' glossary
     
-* [`assertion`](#-assertion) : Assertion
-* [`book`](#-book) : Book
+* [`assertion`](#assertion) =: Assertion
+* [`book`](#book) ▥: Book
 * [`book-extract`](#book-extract) : Extract, Fragment, Atom
 * [`book-image`](#book-image) : Image, Picture, Illustration, Scan
 * [`book-page`](#book-page) : Page
 * [`book-section`](#book-section) : Section, Chapter, Part
-* [`command`](#-command) : Command
-* [`description`](#-description) : Description
-* [`doc`](#-doc) : Documentation
-* [`file`](#-file) : File
-* [`folder`](#-folder) : Folder
+* [`command`](#command) ⌿: Command
+* [`description`](#description) ▼: Description
+* [`doc`](#doc) ⎊: Documentation
+* [`file`](#file) ▤: File
+* [`folder`](#folder) ◰: Folder
 * [`folder-scope`](#folder-scope) : Scope, Perimeter
-* [`get`](#-get) : Accesser, Obtain, Hydrater
-* [`global`](#-global) : Identifier, instance name
-* [`id`](#-id) : Identifier, instance name
-* [`instance`](#-instance) : Instance
-* [`lang`](#-lang) : Language
-* [`motif`](#-motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
-* [`occurence`](#-occurence) : Occurence
-* [`pantheon`](#-pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
-* [`project`](#-project) : Project
-* [`prop`](#-prop) : Property, Characteristics, Attribute
-* [`readme`](#-readme) : README
-* [`readme-section`](#-readme-section) : Section
+* [`get`](#get) ⤶: Accesser, Obtain, Hydrater
+* [`global`](#global) ⯎: Identifier, instance name
+* [`id`](#id) #: Identifier, instance name
+* [`instance`](#instance) ⧇: Instance
+* [`lang`](#lang) ἀ: Language
+* [`motif`](#motif) ⚇: Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
+* [`occurence`](#occurence) ʯ: Occurence
+* [`pantheon`](#pantheon) ⛩: Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
+* [`project`](#project) Ω: Project
+* [`prop`](#prop) ⁖: Property, Characteristics, Attribute
+* [`readme`](#readme) ⬙: README
+* [`readme-section`](#readme-section) ⬥: Section
 * [`shrine`](#shrine) : Shrine
-* [`spec`](#-spec) : Specification
-* [`spec-section`](#-spec-section) : Specification section
-* [`util`](#-util) : Utility
+* [`spec`](#spec) Ѭ: Specification
+* [`spec-section`](#spec-section) Ѫ: Specification section
+* [`util`](#util) ⬫: Utility
 * [`way`](#way) : Method, Action, Operation, Function
 * [`webapp`](#webapp) : Web application
-* [`website`](#-website) : Website
+* [`website`](#website) Ʋ: Website
 * [`website-page`](#website-page) : Page, Website page
 * [`wiki`](#wiki) : Wiki
 
