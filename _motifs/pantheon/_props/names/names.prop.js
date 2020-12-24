@@ -1,7 +1,6 @@
 import langEnum from '../../../lang/_enums/lang.enum.js'
 
 export default {
-  [langEnum.ABS]: 'PANTHEON',
   [langEnum.EN]: [
     'Pantheon', 'Primordial shrine', 'Valhalla', 'Mount Olympus',
     'Acropolis', 'Heaven' ],
