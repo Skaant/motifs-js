@@ -9,12 +9,7 @@ export default motifs =>
     
 ${
   motifs.map(motif =>
-    `* [\`${ motif.id }\`](#${
-        motif.symbol
-          ? '-'
-          
-          : ''
-      }${ motif.id }) : ${
+    `* [\`${ motif.id }\`](#${ motif.id }) : ${
       typeof motif.names[langEnum.EN] === 'string'
         ? motif.names[langEnum.EN]
         : motif.names[langEnum.EN].join(', ')
