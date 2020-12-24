@@ -56,7 +56,6 @@ export default {
 }lang/_enums/lang.enum.js'
 
 export default {
-  [langEnum.ABS]: '${ id.toUpperCase() }',
   [langEnum.EN]: 'Unknown',
   [langEnum.FR]: 'Inconnu'
 }`

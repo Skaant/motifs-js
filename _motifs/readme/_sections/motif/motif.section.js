@@ -24,7 +24,9 @@ export default motif =>
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**${ motif.names[langEnum.ABS] }** is also known as :
+**${
+  motif.symbol ? motif.symbol + ' ' : ''
+}[id] ${ motif.id }**, also known as :
 ${
   [ langEnum.EN,
     langEnum.FR
@@ -36,11 +38,6 @@ ${
     ? motif.names[lang]
     : motif.names[lang].join(', ') }`)
 }.${
-  motif.symbol
-    ? `**Symbol : **${ motif.symbol }`
-    
-    : ''
-}${
   motif.description
     ? 
 `
