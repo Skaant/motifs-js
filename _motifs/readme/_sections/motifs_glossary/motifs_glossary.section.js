@@ -9,11 +9,7 @@ export default motifs =>
     
 ${
   motifs.map(motif =>
-    `* [\`${ motif.symbol
-        ? motif.symbol + ' '
-        
-        : ''
-      }${ motif.id }\`](#${
+    `* [\`${ motif.id }\`](#${
         motif.symbol
           ? '-'
           
