@@ -1,0 +1,4 @@
+export default function(str) {
+
+  return (str[0] === '/' ? '' : '/') + str
+}

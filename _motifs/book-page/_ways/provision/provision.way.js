@@ -12,6 +12,7 @@ export default (page, options) =>
       0,
       splitFilePath.length - 1
     ).join('/')
+      + '/'
 
     INSTANCE.get(
       IMAGE,

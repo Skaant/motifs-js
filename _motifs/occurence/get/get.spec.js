@@ -16,8 +16,8 @@ export default {
               folderMatch: /_motifs/,
               transform: ([ path ]) => ({ path })
             })
-              .then(results => 
-                resolve(results.length === 1)))
+              .then(results =>
+                resolve(results.length >= 1)))
         }
       ]
     }

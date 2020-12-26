@@ -15,7 +15,11 @@ export default {
     {
       type: FEATURE,
       label: 'Returns MOTIF `MOTIF`',
-      test: () => motifJs({ log: true }) === MOTIF
-    }
+      test: () =>
+        motifJs(
+          'file:///' + global.PATH + '/index.js',
+          { log: true }
+        ) === MOTIF
+      }
   ]
 }

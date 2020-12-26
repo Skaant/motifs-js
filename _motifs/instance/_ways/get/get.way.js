@@ -54,6 +54,8 @@ export default (
 
             resolve(files.map(file => file.path))
 
+            break
+
           case formatEnum.TRANSFORM:
 
             resolve(files)
