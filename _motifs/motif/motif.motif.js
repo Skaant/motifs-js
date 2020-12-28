@@ -14,7 +14,7 @@ export default {
   names: namesProp,
   occurences: [{
     level: occurenceLevelEnum.FILE,
-    fileMatch: /(.*)\/_motifs\/(.*)\/(.*).motif.js/,
+    fileMatch: /(.*)\/_motifs\/([\w|\-]*)\/([\w|\-]*).motif.js/,
     transform: ([ path, scope, folder, id ]) => ({
       path,
       id,
