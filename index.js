@@ -10,8 +10,8 @@ import MOTIF from "./_motifs/motif/motif.motif.js";
  *  
  * Ex: `import motifsJs from 'motifs-js'`.
  */
-export default (options = {}) => {
+export default (url, options = {}) => {
   
-  MOTIF.init(import.meta.url, options)
+  MOTIF.init(url, options)
   return MOTIF
 }

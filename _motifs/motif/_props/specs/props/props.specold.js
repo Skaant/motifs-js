@@ -1,7 +1,6 @@
 import langEnum from "../../../../lang/_enums/lang.enum.js";
 
 const LANG_EMPTY_NAME_PLACEHOLDER = {
-  [langEnum.ABS]: 'ZOMMM',
   [langEnum.EN]: 'Unknown',
   [langEnum.FR]: 'Inconnu'
 }

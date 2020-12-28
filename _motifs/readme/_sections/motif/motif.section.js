@@ -8,28 +8,25 @@ const occurenceLevelToMatchMechanism = {
   [occurenceLevelEnum.FOLDER]: 'folderMatch'
 }
 
-export default kami => 
+export default motif => 
 
   new Promise(resolve => {
 
     INSTANCE.get(
-      kami,
+      motif,
       {
         format: formatEnum.FILE_PATH
       })
       .then(instances =>
 
         resolve(
-`# \`${
-  kami.symbol
-    ? kami.symbol + ' '
-
-    : ''
-}${ kami.id }\`
+`# \`${ motif.id }\`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
-**${ kami.names[langEnum.ABS] }** is also known as :
+**${
+  motif.symbol ? motif.symbol + ' ' : ''
+}[id] ${ motif.id }**, also known as :
 ${
   [ langEnum.EN,
     langEnum.FR
@@ -37,15 +34,15 @@ ${
     
 `
 * [${ lang }] ${
-  typeof kami.names[lang] === 'string'
-    ? kami.names[lang]
-    : kami.names[lang].join(', ') }`)
+  typeof motif.names[lang] === 'string'
+    ? motif.names[lang]
+    : motif.names[lang].join(', ') }`)
 }.${
-  kami.description
+  motif.description
     ? 
 `
 
-${ kami.description }`
+${ motif.description }`
 
     : ''
 }
@@ -53,7 +50,7 @@ ${ kami.description }`
 ## Properties
 
 ${
-  Object.entries(kami)
+  Object.entries(motif)
     .filter(([ key ]) =>
     
       ![ 'motifId', 'description' ].includes(key))
@@ -68,7 +65,7 @@ ${
     .join('\n')
 }${
 
-  kami.occurences
+  motif.occurences
     ?
 `
 
@@ -79,14 +76,14 @@ ${
 ### Matching mechanims
 
 ${
-  Array.isArray(kami.occurences)
-    ? kami.occurences.map(occurence =>
+  Array.isArray(motif.occurences)
+    ? motif.occurences.map(occurence =>
       
       `* \`${ occurence.level
         && occurence[occurenceLevelToMatchMechanism[occurence.level]].toString() }\``)
       .join(',\n')
 
-    : `\`${ kami.regExp.toString() }\``
+    : `\`${ motif.regExp.toString() }\``
 }.
 
 ### Instances list
@@ -99,13 +96,13 @@ ${ instances.map(filePath =>
 
     : ''
 }${
-  kami.flavour
+  motif.flavour
     ? 
 `
 
 ## Flavour
 
-${ kami.flavour }`
+${ motif.flavour }`
 
     : ''
 }

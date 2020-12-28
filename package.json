@@ -1,14 +1,15 @@
 {
-  "name": "motifs",
+  "name": "motifs-js",
   "version": "0.2.0",
   "type": "module",
-  "description": "MOTIFS aims to explore the concept of naming and patterns. It creates virtual entities, the kamis, to embody project's classes, components and logic.",
+  "description": "MOTIFS aims to explore the concept of naming and patterns. It creates virtual entities, the motifs, to embody project's classes, components and logic.",
   "main": "index.js",
   "scripts": {
     "start": "node dev-start.js --experimental-modules",
     "test": "npm start -- -log -force test",
     "readme": "npm start -- -k readme -log build",
-    "website": "npm start -- -k website -force -log build en"
+    "website": "npm start -- -k website -force -log build en",
+    "serve": "npm start -- -k website -force -log serve en"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,11 @@
   "author": "romaric.ruga@gmail.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Skaant/kami.js/issues"
+    "url": "https://github.com/Skaant/motifs-js/issues"
   },
-  "homepage": "https://github.com/Skaant/kami.js#readme",
+  "homepage": "https://github.com/Skaant/motifs-js#readme",
   "devDependencies": {
+    "express": "^4.17.1",
     "showdown": "^1.9.1"
   }
 }

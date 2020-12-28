@@ -39,8 +39,8 @@ export default (
 
     /** @var { [ filePath ] | [ fileMeta ] }
      *  * `filePath` if `format === formatEnum.FILE_PATH`,
-     *  * `fileMeta` (`occurences`'s `transform` result) else.*/
-    Promise.all(occurences.map(occurence => OCCURENCE.get(occurence)))
+     *  * `fileMeta` (`occurences`' `transform` result) else.*/
+    Promise.all(occurences.map(occurence => OCCURENCE.get(occurence, { scope })))
       .then(result => {
 
         /** In fact they are `fileTransforms` */
@@ -53,6 +53,8 @@ export default (
           case formatEnum.FILE_PATH:
 
             resolve(files.map(file => file.path))
+
+            break
 
           case formatEnum.TRANSFORM:
 

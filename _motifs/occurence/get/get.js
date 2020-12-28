@@ -1,12 +1,16 @@
 import occurenceLevelEnum from "../_enums/level/occurence.level.enum.js";
 import getErrors from "./get.errors.js";
 import folderMatchFixRegExpEnd from "./_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.js";
+import fixSlashFirst from './_utils/fixSlashFirst/fixSlashFirst.js'
 
-export default occurence =>
+export default (occurence, options = {}) =>
 
   new Promise((resolve, reject) => {
 
     const { transform } = occurence
+    const {
+      scope = false
+    } = options
     
     switch (occurence.level) {
 
@@ -14,7 +18,8 @@ export default occurence =>
         
         const fixedFolderMatch = folderMatchFixRegExpEnd(occurence.folderMatch)
         resolve(global.FILES.reduce((acc, path) => {
-          const matchResult = path.match(fixedFolderMatch)
+          const matchResult = (!scope || path.startsWith(scope))
+            && path.match(fixedFolderMatch)
           if (matchResult) {
             return [
               ...acc,
@@ -24,11 +29,16 @@ export default occurence =>
           return acc
         }, []))
 
+        break
+
       case occurenceLevelEnum.FILE:
 
         resolve(global.FILES.filter(path =>
-            path.match(occurence.fileMatch))
+            (!scope || fixSlashFirst(path).startsWith(fixSlashFirst(scope)))
+              && path.match(occurence.fileMatch))
           .map(path => transform(path.match(occurence.fileMatch))))
+
+        break
 
       case occurenceLevelEnum.PROP:
 
@@ -36,6 +46,8 @@ export default occurence =>
             path.match(occurence.fileMatch))
           .map(path => transform(path.match(occurence.fileMatch))))
         /** @todo */
+
+        break
 
       default:
         reject(new Error(getErrors.NOT_AN_OCCURENCE_LEVEL))

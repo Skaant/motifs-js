@@ -1,4 +1,4 @@
-import globalNamesEnum from "../../global/_enums/names/global.names.enum.js";
+import globalNamesEnum, { FRAMEWORK_PATH } from "../../global/_enums/names/global.names.enum.js";
 import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 
 export default ({
@@ -17,6 +17,6 @@ export default ({
   group: Object.keys(globalNamesEnum).map(key => ({
     type: FEATURE,
     label: `\`global.\`${ key } should be set.`,
-    test: () => !!global[key]
+    test: () => !!global[key] || key === FRAMEWORK_PATH
   }))
 })

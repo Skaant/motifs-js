@@ -1,5 +1,5 @@
-import IMAGE from '../../../book-image/image.kami.js'
-import INSTANCE from '../../../instance/instance.kami.js'
+import IMAGE from '../../../book-image/image.motif.js'
+import INSTANCE from '../../../instance/instance.motif.js'
 import formatEnum from '../../../get/_enums/format/format.enum.js'
 
 /** */

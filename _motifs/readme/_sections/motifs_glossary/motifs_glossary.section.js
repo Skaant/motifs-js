@@ -8,22 +8,16 @@ export default motifs =>
 `## MOTIFS' glossary
     
 ${
-  motifs.map(motif =>
-    `* [\`${ motif.symbol
-        ? motif.symbol + ' '
-        
-        : ''
-      }${ motif.id }\`](#${
-        motif.symbol
-          ? '-'
-          
-          : ''
-      }${ motif.id }) : ${
-      typeof motif.names[langEnum.EN] === 'string'
-        ? motif.names[langEnum.EN]
-        : motif.names[langEnum.EN].join(', ')
-    }`
-  )
+  motifs.sort((a, b) => a.id.localeCompare(b.id))
+    .map(motif =>
+      `* ${
+        motif.symbol ? motif.symbol + ' ' : ''
+      }[\`${ motif.id }\`](#${ motif.id }) : ${
+        typeof motif.names[langEnum.EN] === 'string'
+          ? motif.names[langEnum.EN]
+          : motif.names[langEnum.EN].join(', ')
+      }`
+    )
     .join('\n')
 }`
     ))

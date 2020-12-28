@@ -89,9 +89,6 @@ export default () =>
                 namesFile,
                 'Should create a "_props/names/names.prop.js" file.' ],
               [
-                openedNamesFile[langEnum.ABS],
-                'Should create a "".' ],
-              [
                 descriptionFolder,
                 'Should create a "_props/description" folder.' ],
               [
