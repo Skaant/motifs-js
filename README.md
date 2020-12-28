@@ -1,5 +1,5 @@
-*[33 MOTIFS](#motifs-glossary)
-on 12/26/2020, 10:39:17 AM*
+*[34 MOTIFS](#motifs-glossary)
+on 12/28/2020, 3:10:57 PM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
 
@@ -184,6 +184,7 @@ npm start -- -k website build
 
 ## MOTIFS' glossary
     
+* [`article`](#article) : Article
 * = [`assertion`](#assertion) : Assertion
 * ▥ [`book`](#book) : Book
 * [`book-extract`](#book-extract) : Extract, Fragment, Atom
@@ -217,6 +218,45 @@ npm start -- -k website build
 * Ʋ [`website`](#website) : Website
 * [`website-page`](#website-page) : Page, Website page
 * [`wiki`](#wiki) : Wiki
+
+# `article`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**[id] article**, also known as :
+
+* [en] Article,
+* [fr] Article.
+
+**WEBSITE ARTICLE**
+
+An article is a titled and dated content,
+with optional tags and meta-data.
+
+## Properties
+
+* `motif` : motif
+* `path` : /_motifs/article/article.motif.js
+* `id` : article
+* `scope` : 
+* `folder` : article
+* `filePath` : /_motifs/article/article.motif.js
+* `names`
+* `occurences`
+* `get`
+
+## Instances
+
+**Count : 0.**
+
+### Matching mechanims
+
+* `/_data\/articles\/(.*)\/(.*).article.js/`.
+
+### Instances list
+
+
+
 
 # `assertion`
 
@@ -948,7 +988,7 @@ highly abstract powers.
 
 ## Instances
 
-**Count : 33.**
+**Count : 34.**
 
 ### Matching mechanims
 
@@ -956,6 +996,7 @@ highly abstract powers.
 
 ### Instances list
 
+* [`/_motifs/article/article.motif.js`](/_motifs/article/article.motif.js)
 * [`/_motifs/assertion/assertion.motif.js`](/_motifs/assertion/assertion.motif.js)
 * [`/_motifs/book/book.motif.js`](/_motifs/book/book.motif.js)
 * [`/_motifs/book-extract/book-extract.motif.js`](/_motifs/book-extract/book-extract.motif.js)
