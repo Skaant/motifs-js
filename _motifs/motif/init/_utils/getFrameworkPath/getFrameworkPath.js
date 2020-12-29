@@ -1,11 +1,11 @@
 import fs from 'fs'
-import { NODE_MODULES, STANDALONE } from '../../../../global/_enums/frameworkPath/frameworkPath.enum.js'
+import { NODE_MODULE, STANDALONE } from '../../../../global/_enums/frameworkPath/frameworkPath.enum.js'
 import { NODE_MODULE_NOT_FOUND } from './getFrameworkPath.errors.js'
 
 /**
  * @param {string} projectPath
  *  Project path from disk
- * @return {STANDALONE|NODE_MODULES}
+ * @return {STANDALONE|NODE_MODULE}
  */
 export default projectPath => {
 
@@ -14,12 +14,12 @@ export default projectPath => {
     
     return STANDALONE
 
-  // NODE_MODULES
+  // NODE_MODULE
   try {
     
     // Check if the framework's module exists or not
     fs.statSync(projectPath + '/node_modules/motifs-js')
-    return NODE_MODULES
+    return NODE_MODULE
   
   } catch (err) {
 

@@ -1,2 +1,2 @@
 export const STANDALONE = 'STANDALONE'
-export const NODE_MODULES = 'NODE_MODULES'
+export const NODE_MODULE = 'NODE_MODULE'
