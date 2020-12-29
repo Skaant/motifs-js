@@ -7,9 +7,7 @@
   "scripts": {
     "start": "node dev-start.js --experimental-modules",
     "test": "npm start -- -log -force test",
-    "readme": "npm start -- -k readme -log build",
-    "website": "npm start -- -k website -force -log build en",
-    "serve": "npm start -- -k website -force -log serve en"
+    "readme": "npm start -- -k readme -log build"
   },
   "repository": {
     "type": "git",
