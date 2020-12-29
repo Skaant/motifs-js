@@ -5,9 +5,7 @@ export default ([ id ], options) => {
 
   const app = express()
   const port = 3000
-  const staticFolder = `${
-      global.FRAMEWORK_PATH ? '.' : '.'
-    }/_build/${ id }`
+  const staticFolder = './_build/' + id
 
   app.use('/', express.static(staticFolder))
 
