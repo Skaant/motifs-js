@@ -15,10 +15,7 @@
       "args": [
         "--",
         "-log",
-        "-k",
-        "website",
-        "serve",
-        "en"
+        "test"
       ]
     }
   ]

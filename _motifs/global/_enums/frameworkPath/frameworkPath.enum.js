@@ -1,0 +1,2 @@
+export const STANDALONE = 'STANDALONE'
+export const NODE_MODULES = 'NODE_MODULES'

@@ -1,7 +1,7 @@
 import getPathUtil from './_utils/getPath/getPath.util.js'
 import getFilesUtil from './_utils/getFiles/getFiles.util.js'
-import getPantheonScopeUtil from './_utils/getPantheonScope/getPantheonScope.util.js'
 import { FILES, FRAMEWORK_PATH, OPTIONS, PATH } from '../../global/_enums/names/global.names.enum.js'
+import getFrameworkPath from './_utils/getFrameworkPath/getFrameworkPath.js'
 
 function logValue(key) {
   global[OPTIONS].log
@@ -30,8 +30,7 @@ export default (url, options) => {
   global[FILES] = getFilesUtil('')
   log && console.log('* `global.FILES` : ' + global.FILES.length + ' found')
 
-  // @todo "PantheonScope" to "FrameworkPath"
-  global[FRAMEWORK_PATH] = getPantheonScopeUtil(global[PATH], global[FILES])
+  global[FRAMEWORK_PATH] = getFrameworkPath(global[PATH])
   logValue(FRAMEWORK_PATH)
 
   return true
