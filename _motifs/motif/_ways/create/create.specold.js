@@ -17,27 +17,27 @@ export default () =>
 
         Promise.all([
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs'
           ),
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs/temp'
           ),
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs/motif/motif.motif.js'
           ),
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs/temp/_props'
           ),
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs/temp/_props/names'
           ),
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs/temp/_props/names/names.prop.js'
           ),
           FILE.get(
@@ -47,11 +47,11 @@ export default () =>
             }
           ),
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs/temp/_props/description'
           ),
           fs.access(
-            global.PATH
+            global.PROJECT_PATH
               + '/_tests/_motifs/temp/_props/description/description.prop.js'
           )
         ])

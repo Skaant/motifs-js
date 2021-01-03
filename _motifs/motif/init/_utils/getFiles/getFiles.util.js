@@ -11,7 +11,7 @@ import fs from 'fs'
 const recursiveDirReader = (scope, nested = false) => {
   
   const dirents = fs.readdirSync(
-    global.PATH + '/' + scope,
+    global.PROJECT_PATH + '/' + scope,
     {
       withFileTypes: true
     }

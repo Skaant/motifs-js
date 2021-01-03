@@ -14,7 +14,7 @@ const recursiveCopy = (
   new Promise(resolve => {
 
     fs.readdir(
-      global.PATH
+      global.PROJECT_PATH
         + '/' + src
         + '/' + scope,
       {
@@ -30,7 +30,7 @@ const recursiveCopy = (
 
           if (dirent.isDirectory()) {
 
-            const dirName = global.PATH
+            const dirName = global.PROJECT_PATH
               + dest + scopeName
 
             if (!fsForSync.existsSync(dirName)) {
@@ -48,9 +48,9 @@ const recursiveCopy = (
           } else {
 
             return fs.copyFile(
-              global.PATH
+              global.PROJECT_PATH
                 + src + scopeName,
-              global.PATH
+              global.PROJECT_PATH
                 + dest + scopeName,
               options.force
                 ? fsConstants.COPYFILE_FICLONE

@@ -5,6 +5,6 @@ import {
 export default (src, dest, options) =>
 
   fs.copyFile(
-    global.PATH + src,
-    global.PATH + dest
+    global.PROJECT_PATH + src,
+    global.PROJECT_PATH + dest
   )

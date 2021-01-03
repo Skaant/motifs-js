@@ -7,7 +7,7 @@ import { promises as fs } from 'fs'
  *  clear its content.
  * 
  * @param {string} path Relative path,
- *  from project root (`global.PATH`) to target folder.
+ *  from project root (`global.PROJECT_PATH`) to target folder.
  */
 export default path =>
 

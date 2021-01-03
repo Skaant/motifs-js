@@ -9,7 +9,7 @@ import fs from 'fs'
  *  lower elements (folders and files) scope.
  * 
  * @param {string} scope Should start without `"/"`.
- *  **Relative path** from project root (`global.PATH`) to target
+ *  **Relative path** from project root (`global.PROJECT_PATH`) to target
  *  destination folder.
  * @param {string} name The future folder name.
  * @param {(folderScope: string) => Array<Promise>} callback
@@ -27,7 +27,7 @@ export default (
   new Promise((resolve, reject) => {
 
     const folderScope = scope + '/' + name
-    const folderPath = global.PATH
+    const folderPath = global.PROJECT_PATH
       + ( folderScope[0] === '/' ? '' : '/' )
       + folderScope
 

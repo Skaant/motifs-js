@@ -34,7 +34,7 @@ export default (
       case formatEnum.UTF_8:
 
         fs.readFile(
-          global.PATH + filePath,
+          global.PROJECT_PATH + filePath,
           'utf-8')
 
           .then(content =>
@@ -54,7 +54,7 @@ export default (
       case formatEnum.ESM:
 
         import('file:///'
-          + (global.PATH
+          + (global.PROJECT_PATH
             + (filePath[0] === '/' ? '' : '/')
             + filePath).replace(/\//g,'\\'))
           
@@ -71,7 +71,7 @@ export default (
       case formatEnum.FUNCTION:
 
         import('file:///'
-          + (global.PATH + filePath).replace(/\//g,'\\'))
+          + (global.PROJECT_PATH + filePath).replace(/\//g,'\\'))
           
           .then(({ default: content }) =>
             

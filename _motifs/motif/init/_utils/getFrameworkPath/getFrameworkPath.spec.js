@@ -32,7 +32,7 @@ export default {
           ]
         )
           .then(() => resolve(NODE_MODULE
-            === getFrameworkPath(global.PATH + '/_tests'))))
+            === getFrameworkPath(global.PROJECT_PATH + '/_tests'))))
     },
     {
       type: FEATURE,

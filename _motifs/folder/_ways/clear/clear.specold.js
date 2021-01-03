@@ -17,7 +17,7 @@ export default kami =>
           .then(() =>
 
             fs.access(
-              global.PATH
+              global.PROJECT_PATH
                 + '/_tests/folder-clear-way'
             )
               

@@ -14,7 +14,7 @@ export default () =>
       .then(() => 
 
         fs.access(
-          global.PATH
+          global.PROJECT_PATH
             + '/_tests/folder-create-way'
         )
           

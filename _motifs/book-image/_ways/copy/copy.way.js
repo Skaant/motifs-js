@@ -8,7 +8,7 @@ export default (images, dest, options) =>
   images.map(imagePath =>
 
     fs.copyFile(
-      global.PATH + imagePath,
-      global.PATH + dest
+      global.PROJECT_PATH + imagePath,
+      global.PROJECT_PATH + dest
         + '/' + imagePath.split('/').pop()
     ))

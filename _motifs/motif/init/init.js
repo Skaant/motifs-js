@@ -1,6 +1,6 @@
-import getPathUtil from './_utils/getPath/getPath.util.js'
+import getProjectPath from './_utils/getProjectPath/getProjectPath.js'
 import getFilesUtil from './_utils/getFiles/getFiles.util.js'
-import { FILES, FRAMEWORK_PATH, OPTIONS, PATH } from '../../global/_enums/names/global.names.enum.js'
+import { FILES, FRAMEWORK_PATH, OPTIONS, PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
 import getFrameworkPath from './_utils/getFrameworkPath/getFrameworkPath.js'
 
 function logValue(key) {
@@ -24,13 +24,13 @@ export default (url, options) => {
   const { log } = global[OPTIONS] = options
   logValue(OPTIONS)
 
-  global[PATH] = getPathUtil(url)
-  logValue(PATH)
+  global[PROJECT_PATH] = getProjectPath(url)
+  logValue(PROJECT_PATH)
 
   global[FILES] = getFilesUtil('')
   log && console.log('* `global.FILES` : ' + global.FILES.length + ' found')
 
-  global[FRAMEWORK_PATH] = getFrameworkPath(global[PATH])
+  global[FRAMEWORK_PATH] = getFrameworkPath(global[PROJECT_PATH])
   logValue(FRAMEWORK_PATH)
 
   return true
