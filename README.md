@@ -1,7 +1,7 @@
 *[34 MOTIFS](#motifs-glossary)
-on 12/28/2020, 3:10:57 PM*
+on 1/3/2021, 1:35:27 PM*
 
-![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
+![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
 # MOTIFS
 
@@ -417,7 +417,7 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 ### Matching mechanims
 
-* `/\/_data\/(.*)\/([\w|\-]*)\.(png|jpg|svg)$/`.
+* `/^\/_data\/(.*)\/([\w|\-]*)\.(png|jpg|svg)$/`.
 
 ### Instances list
 
@@ -992,7 +992,7 @@ highly abstract powers.
 
 ### Matching mechanims
 
-* `/(.*)\/_motifs\/(.*)\/(.*).motif.js/`.
+* `/(.*)\/_motifs\/([\w|\-]*)\/([\w|\-]*).motif.js/`.
 
 ### Instances list
 
@@ -1327,7 +1327,7 @@ categories of specifications :
 
 ## Instances
 
-**Count : 8.**
+**Count : 9.**
 
 ### Matching mechanims
 
@@ -1338,6 +1338,7 @@ categories of specifications :
 
 * [`/index.spec.js`](/index.spec.js)
 * [`/_motifs/motif/init/init.spec.js`](/_motifs/motif/init/init.spec.js)
+* [`/_motifs/motif/init/_utils/getFrameworkPath/getFrameworkPath.spec.js`](/_motifs/motif/init/_utils/getFrameworkPath/getFrameworkPath.spec.js)
 * [`/_motifs/occurence/get/get.spec.js`](/_motifs/occurence/get/get.spec.js)
 * [`/_motifs/occurence/get/_utils/fixSlashFirst/fixSlashFirst.spec.js`](/_motifs/occurence/get/_utils/fixSlashFirst/fixSlashFirst.spec.js)
 * [`/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js`](/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js)
@@ -1491,7 +1492,7 @@ WEBSITE is a [DOC](#doc) component.
 
 ## Instances
 
-**Count : 1.**
+**Count : 0.**
 
 ### Matching mechanims
 
@@ -1499,7 +1500,7 @@ WEBSITE is a [DOC](#doc) component.
 
 ### Instances list
 
-* [`/_websites/en/en.website.js`](/_websites/en/en.website.js)
+
 
 
 # `website-page`
