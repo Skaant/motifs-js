@@ -3,7 +3,7 @@ export default motifs =>
   `*[${ motifs.length } MOTIFS](#motifs-glossary)
 on ${ (new Date()).toLocaleString('en') }*
 
-![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/_websites/en/_assets/logo.svg)
+![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
 # MOTIFS
 
