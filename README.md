@@ -1,5 +1,5 @@
 *[34 MOTIFS](#motifs-glossary)
-on 1/3/2021, 1:35:27 PM*
+on 1/4/2021, 8:36:24 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
@@ -1327,7 +1327,7 @@ categories of specifications :
 
 ## Instances
 
-**Count : 9.**
+**Count : 10.**
 
 ### Matching mechanims
 
@@ -1338,6 +1338,7 @@ categories of specifications :
 
 * [`/index.spec.js`](/index.spec.js)
 * [`/_motifs/motif/init/init.spec.js`](/_motifs/motif/init/init.spec.js)
+* [`/_motifs/motif/init/_utils/getFiles/getFiles.spec.js`](/_motifs/motif/init/_utils/getFiles/getFiles.spec.js)
 * [`/_motifs/motif/init/_utils/getFrameworkPath/getFrameworkPath.spec.js`](/_motifs/motif/init/_utils/getFrameworkPath/getFrameworkPath.spec.js)
 * [`/_motifs/occurence/get/get.spec.js`](/_motifs/occurence/get/get.spec.js)
 * [`/_motifs/occurence/get/_utils/fixSlashFirst/fixSlashFirst.spec.js`](/_motifs/occurence/get/_utils/fixSlashFirst/fixSlashFirst.spec.js)

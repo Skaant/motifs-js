@@ -6,7 +6,7 @@ import exclusionRules from './exclusionRules.js'
 
 function logValue(key) {
   global[OPTIONS].log
-    && console.log(`* \`global.${ key }\` : ${
+    && console.log(`* global.${ key } : ${
       global[key].toString() }`)
 }
 
