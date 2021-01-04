@@ -1,7 +1,8 @@
-import getProjectPath from './_utils/getProjectPath/getProjectPath.js'
-import getFilesUtil from './_utils/getFiles/getFiles.util.js'
 import { FILES, FRAMEWORK_PATH, OPTIONS, PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
+import getProjectPath from './_utils/getProjectPath/getProjectPath.js'
+import getFiles from './_utils/getFiles/getFiles.js'
 import getFrameworkPath from './_utils/getFrameworkPath/getFrameworkPath.js'
+import exclusionRules from './exclusionRules.js'
 
 function logValue(key) {
   global[OPTIONS].log
@@ -27,7 +28,7 @@ export default (url, options) => {
   global[PROJECT_PATH] = getProjectPath(url)
   logValue(PROJECT_PATH)
 
-  global[FILES] = getFilesUtil('')
+  global[FILES] = getFiles('', exclusionRules)
   log && console.log('* `global.FILES` : ' + global.FILES.length + ' found')
 
   global[FRAMEWORK_PATH] = getFrameworkPath(global[PROJECT_PATH])

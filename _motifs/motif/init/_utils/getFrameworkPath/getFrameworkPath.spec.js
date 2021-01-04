@@ -1,6 +1,6 @@
 import folderMotif from "../../../../folder/folder.motif.js";
 import { NODE_MODULE, STANDALONE } from "../../../../global/_enums/frameworkPath/frameworkPath.enum.js";
-import { CASE, FEATURE, MODULE } from "../../../../spec-section/_enums/type/spec-section.type.enum.js";
+import { FEATURE, MODULE } from "../../../../spec-section/_enums/type/spec-section.type.enum.js";
 import { NODE_MODULE_NOT_FOUND } from "./getFrameworkPath.errors.js";
 import getFrameworkPath from "./getFrameworkPath.js";
 

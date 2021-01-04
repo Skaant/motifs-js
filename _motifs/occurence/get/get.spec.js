@@ -10,14 +10,16 @@ export default {
       group: [
         {
           label: 'CASE: Trying to retrive `/_motifs` folder.',
-          test: () => new Promise(resolve =>
-            get({
-              level: occurenceLevelEnum.FOLDER,
-              folderMatch: /_motifs/,
+          test: async () => {
+
+            const results = await get({
+              level: occurenceLevelEnum.FILE,
+              fileMatch: /^\/_motifs\/motif\/motif\.motif\.js/,
               transform: ([ path ]) => ({ path })
             })
-              .then(results =>
-                resolve(results.length >= 1)))
+            
+            return results.length >= 1
+          }
         }
       ]
     }
