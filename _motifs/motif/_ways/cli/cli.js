@@ -5,7 +5,7 @@ export default (args, { log = false }) => {
   log && console.log('\nYou did send a command to me :')
 
   const options = {
-    kami: MOTIF.id,
+    motif: MOTIF.id,
     command: false,
     log: false,
     force: false,
@@ -24,7 +24,7 @@ export default (args, { log = false }) => {
 
         case 'k':
 
-          options.kami = _args.shift()
+          options.motif = _args.shift()
           break
 
         case 'log':
@@ -56,29 +56,29 @@ export default (args, { log = false }) => {
   }
 
   MOTIF.get()
-    .then(kamis => {
+    .then(motifs => {
       
-      const kami = kamis.find(kami =>
-        kami.id === options.kami)
+      const motif = motifs.find(motif =>
+        motif.id === options.motif)
 
-      if (!kami)
+      if (!motif)
         throw new Error('No MOTIF "'
-          + options.kami + '"')
+          + options.motif + '"')
 
-      if (!kami._commands)
+      if (!motif._commands)
         throw new Error('No `_commands` prop for MOTIF "'
-          + options.kami + '"')
+          + options.motif + '"')
 
-      if (!kami._commands[options.command])
+      if (!motif._commands[options.command])
         throw new Error('No command "'
           + options.command + '" for MOTIF "'
-          + options.kami + '"')
+          + options.motif + '"')
 
       log && console.log('"' + options.command + '"\n')
 
       try {
 
-        kami._commands[options.command](
+        motif._commands[options.command](
           params,
           options
         )
