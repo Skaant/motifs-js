@@ -14,7 +14,7 @@ export default {
 
             const results = await get({
               level: occurenceLevelEnum.FILE,
-              fileMatch: /^\/_motifs\/motif\/motif\.motif\.js/,
+              fileMatch: /_motifs\/motif\/motif\.motif\.js/,
               transform: ([ path ]) => ({ path })
             })
             

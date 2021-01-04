@@ -10,15 +10,21 @@ export default (
 
   new Promise(resolve =>
 
-    /** While a KAMI doesn't have a
+    /** While a MOTIF doesn't have a
      *  specific `get` method, we use `FILE.get()`. */
-    INSTANCE.get(
-      WEBSITE,
-      {
-        format: formatEnum.ESM
-      })
+    Promise.all([
+      INSTANCE.get(
+        WEBSITE,
+        {
+          format: formatEnum.ESM
+        }),
+      FOLDER.create(
+        '',
+        '_build',
+        () => [])
+    ])
 
-      .then(websites => {
+      .then(([ websites ]) => {
 
         const website = websites.find(website =>
           

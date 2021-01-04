@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { PROJECT_PATH } from '../../../../global/_enums/names/global.names.enum.js'
 import { EXCLUDE } from './_enums/rules/rules.enum.js'
 
 /** 
@@ -55,7 +56,7 @@ const recursiveFolderRetriever = (
               ...Object.entries(item.subs)
                 .filter(([ key ]) => {
                   try {
-                    fs.statSync(name + '/' + key)
+                    fs.statSync(global[PROJECT_PATH] + '/' + name + '/' + key)
                     return true
                   } catch {
                     return false
@@ -65,7 +66,7 @@ const recursiveFolderRetriever = (
 
                   const direntName = name + '/' + key
 
-                  if (fs.statSync(direntName).isDirectory()) 
+                  if (fs.statSync(global[PROJECT_PATH] + '/' + direntName).isDirectory()) 
 
                     return [
                       direntName,
