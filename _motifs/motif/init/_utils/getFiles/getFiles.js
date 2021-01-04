@@ -61,12 +61,23 @@ const recursiveFolderRetriever = (
                     return false
                   }
                 })
-                .map(([ key, value ]) =>
-                  recursiveFolderRetriever(
-                    name + '/' + key,
-                    // For sub-subs
-                    typeof value === 'object' ? value : false
-                  ))
+                .map(([ key, value ]) => {
+
+                  const direntName = name + '/' + key
+
+                  if (fs.statSync(direntName).isDirectory()) 
+
+                    return [
+                      direntName,
+                      ...recursiveFolderRetriever(
+                        name + '/' + key,
+                        // For sub-subs
+                        typeof value === 'object' ? value : false
+                      )
+                    ]
+
+                  return direntName
+                })
                 .flat()
             ]
           } else {

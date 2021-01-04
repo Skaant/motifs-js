@@ -2,7 +2,7 @@ import folderMotif from "../../../../folder/folder.motif.js";
 import { CASE, FEATURE, MODULE } from "../../../../spec-section/_enums/type/spec-section.type.enum.js";
 import getFiles from "./getFiles.js";
 import fileMotif from '../../../../file/file.motif.js'
-import { EXCLUDE } from "./_enums/rules/rules.enum.js";
+import { EXCLUDE, INCLUDE } from "./_enums/rules/rules.enum.js";
 
 export default {
   type: MODULE,
@@ -46,12 +46,12 @@ export default {
                 fileMotif.create(
                   folderScope,
                   '.gitignore',
-                  fileScope => 'to exclude',
+                  () => 'to exclude',
                 ),
                 fileMotif.create(
                   folderScope,
                   'index.js',
-                  fileScope => 'to include',
+                  () => 'to include',
                 )
               ]
             )
@@ -63,9 +63,9 @@ export default {
               })
 
             return result.findIndex(item =>
-                item.includes('index.js')) === 0
+                item.endsWith('index.js')) === 0
               && result.findIndex(item =>
-                item.includes('.gitignore')) === -1
+                item.endsWith('.gitignore')) === -1
           }
         }
       ]
@@ -73,17 +73,169 @@ export default {
     {
       type: FEATURE,
       label: 'Can exclude some folders',
-      group: []
+      group: [
+        {
+          type: CASE,
+          label: 'Exclude a folder at root',
+          test: async () => {
+            
+            await folderMotif.create(
+              '_tests',
+              'exclude-folder-at-root',
+              folderScope => [
+                fileMotif.create(
+                  folderScope,
+                  'index.js',
+                  () => 'to include',
+                ),
+                folderMotif.create(
+                  folderScope,
+                  'node_modules',
+                  () => [])])
+            
+            const result = getFiles(
+              '_tests/exclude-folder-at-root',
+              {
+                'node_modules': EXCLUDE
+              })
+
+            return result.findIndex(item =>
+                item.endsWith('index.js')) === 0
+              && result.findIndex(item =>
+                item.endsWith('node_modules')) === -1
+          }
+        }
+      ]
     },
     {
       type: FEATURE,
       label: 'Can re-include files from an excluded folder',
-      group: []
+      group: [
+        {
+          type: CASE,
+          label: 'Exclude a folder at root but '
+            + ' include a file inside it.',
+          test: async () => {
+            
+            await folderMotif.create(
+              '_tests',
+              're-include-file-at-root',
+              folderScope => [
+                fileMotif.create(
+                  folderScope,
+                  'index.js',
+                  () => 'to include',
+                ),
+                folderMotif.create(
+                  folderScope,
+                  '_build',
+                  folderScope => [
+                    fileMotif.create(
+                      folderScope,
+                      'meta-data',
+                      () => 'to include'
+                    ),
+                    fileMotif.create(
+                      folderScope,
+                      'index.html',
+                      () => 'to exclude'
+                    )
+                  ])])
+            
+            const results = getFiles(
+              '_tests/re-include-file-at-root',
+              {
+                '_build': {
+                  rule: EXCLUDE,
+                  subs: {
+                    'meta-data': INCLUDE
+                  }
+                }
+              })
+
+            return results.findIndex(item =>
+                item.endsWith('index.js')) >= 0
+              && results.findIndex(item =>
+                item.endsWith('meta-data')) >= 0
+              && results.findIndex(item =>
+                item.endsWith('index.html')) === -1
+          }
+        }
+      ]
     },
     {
       type: FEATURE,
       label: 'Can re-include folders from an excluded one',
-      group: []
+      group: [
+        {
+          type: CASE,
+          label: 'Exclude a folder at root but '
+            + ' include a folder inside it.',
+          test: async () => {
+            
+            await folderMotif.create(
+              '_tests',
+              're-include-folder-at-root',
+              folderScope => [
+                fileMotif.create(
+                  folderScope,
+                  'index.js',
+                  () => 'to include',
+                ),
+                folderMotif.create(
+                  folderScope,
+                  'node_modules',
+                  folderScope => [
+                    folderMotif.create(
+                      folderScope,
+                      'motifs-js',
+                      folderScope => [
+                        fileMotif.create(
+                          folderScope,
+                          'motif.motif.js',
+                          () => 'to include'
+                        )
+                      ]
+                    ),
+                    folderMotif.create(
+                      folderScope,
+                      'showdown',
+                      folderScope => [
+                        fileMotif.create(
+                          folderScope,
+                          'file-1',
+                          () => 'to exclude'
+                        )
+                      ]
+                    )
+                  ])])
+            
+            const results = getFiles(
+              '_tests/re-include-folder-at-root',
+              {
+                'node_modules': {
+                  rule: EXCLUDE,
+                  subs: {
+                    'motifs-js': INCLUDE
+                  }
+                }
+              })
+
+            return results.findIndex(item =>
+                item.endsWith('index.js')) >= 0
+              /* && results.findIndex(item =>
+                item.endsWith('node_modules')) >= 0 */
+              && results.findIndex(item =>
+                item.endsWith('node_modules/motifs-js')) >= 0
+              && results.findIndex(item =>
+                item.endsWith('node_modules/motifs-js/motif.motif.js')) >= 0
+              && results.findIndex(item =>
+                item.endsWith('node_modules/showdown')) === -1
+              && results.findIndex(item =>
+                item.endsWith('node_modules/showdown/file-1')) === -1
+          }
+        }
+      ]
     }
   ],
 }
