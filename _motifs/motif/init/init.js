@@ -23,13 +23,15 @@ function logValue(key) {
 export default (url, options) => {
 
   const { log } = global[OPTIONS] = options
-  logValue(OPTIONS)
+  log && console.log('* global.OPTIONS : \n'
+    + Object.entries(options)
+      .map(([ key, value ]) => ` * ${ key } : ${ value }`))
 
   global[PROJECT_PATH] = getProjectPath(url)
   logValue(PROJECT_PATH)
 
   global[FILES] = getFiles('', exclusionRules)
-  log && console.log('* `global.FILES` : ' + global.FILES.length + ' found')
+  log && console.log('* global.FILES : ' + global.FILES.length + ' found')
 
   global[FRAMEWORK_PATH] = getFrameworkPath(global[PROJECT_PATH])
   logValue(FRAMEWORK_PATH)
