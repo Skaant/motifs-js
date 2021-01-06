@@ -17,7 +17,7 @@ import { EXCLUDE } from './_enums/rules/rules.enum.js'
  *  files name.
  */
 const recursiveFolderRetriever = (
-  folderPath,
+  folderPath = '',
   exclusionRules = false
 ) => {
   

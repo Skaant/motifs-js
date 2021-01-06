@@ -9,7 +9,7 @@ export default {
   description: descriptionProp,
   occurences: [{
     level: occurenceLevelEnum.FILE,
-    fileMatch: /_data\/articles\/(.*)\/(.*).article.js/,
+    fileMatch: /.*_data\/articles\/(\d*)\/(\d*).article.js/,
     transform: ([ path, folder, id ]) => ({ path, id, folder })
   }],
   get

@@ -4,7 +4,7 @@ import formatEnum from "../../get/_enums/format/format.enum.js";
 
 /** Order the results by decreasing
  *  post date. */
-export default options =>
+export default (options = {}) =>
 
   new Promise(resolve =>
     
