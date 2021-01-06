@@ -16,22 +16,29 @@ export default {
 
         await folderMotif.create(
           '_tests',
-          '_data',
+          'article-no-scope-test',
           folderScope => [
-            
+
             folderMotif.create(
               folderScope,
-              'articles',
+              '_data',
               folderScope => [
+            
                 folderMotif.create(
                   folderScope,
-                  '1',
+                  'articles',
                   folderScope => [
-                    fileMotif.create(
+                    folderMotif.create(
                       folderScope,
-                      '1.article.js',
-                      folderScope =>
-                        'export default { id: "article-no-scope-test" }'
+                      '1',
+                      folderScope => [
+                        fileMotif.create(
+                          folderScope,
+                          '1.article.js',
+                          folderScope =>
+                            'export default { id: "article-no-scope-test" }'
+                        )
+                      ]
                     )
                   ]
                 )
@@ -47,6 +54,62 @@ export default {
 
         return articles.findIndex(article =>
           article.id === 'article-no-scope-test'
+        ) > -1
+      }
+    },
+    
+    {
+      type: FEATURE,
+      label: 'Retrieves content from folder `content.md` file, if any.',
+      test: async () => {
+
+        await folderMotif.create(
+          '_tests',
+          'article-content-md',
+          folderScope => [
+
+            folderMotif.create(
+              folderScope,
+              '_data',
+              folderScope => [
+            
+                folderMotif.create(
+                  folderScope,
+                  'articles',
+                  folderScope => [
+                    folderMotif.create(
+                      folderScope,
+                      '1',
+                      folderScope => [
+                        fileMotif.create(
+                          folderScope,
+                          '1.article.js',
+                          () => 'export default { '
+                            + 'id: "article-content-md", '
+                            + 'content: "nope" }'
+                        ),
+                        fileMotif.create(
+                          folderScope,
+                          'content.md',
+                          () => 'ok'
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          ]
+        )
+        
+        global['_' + FILES] = global[FILES]
+        global[FILES] = getFiles()
+        const articles = await get()
+        global[FILES] = global['_' + FILES]
+
+        return articles.findIndex(article =>
+          article.id === 'article-content-md'
+            && article.content === 'ok'
         ) > -1
       }
     }
