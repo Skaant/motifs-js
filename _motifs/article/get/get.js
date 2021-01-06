@@ -1,6 +1,6 @@
-import INSTANCE from "../../../instance/instance.motif.js";
-import ARTICLE from '../../article.motif.js'
-import formatEnum from "../../../get/_enums/format/format.enum.js";
+import INSTANCE from "../../instance/instance.motif.js";
+import ARTICLE from '../article.motif.js'
+import formatEnum from "../../get/_enums/format/format.enum.js";
 
 /** Order the results by decreasing
  *  post date. */
