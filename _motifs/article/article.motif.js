@@ -1,7 +1,8 @@
 import namesProp from './_props/names/names.prop.js'
 import descriptionProp from './_props/description/description.prop.js'
-import getWay from './_ways/get/get.way.js'
+import get from './get/get.js'
 import occurenceLevelEnum from '../occurence/_enums/level/occurence.level.enum.js'
+import create from './create/create.js'
 
 export default {
   id: 'article',
@@ -9,8 +10,11 @@ export default {
   description: descriptionProp,
   occurences: [{
     level: occurenceLevelEnum.FILE,
-    fileMatch: /_data\/articles\/(.*)\/(.*).article.js/,
+    fileMatch: /.*_data\/articles\/(\d*)\/(\d*).article.js/,
     transform: ([ path, folder, id ]) => ({ path, id, folder })
   }],
-  get: getWay
+  get,
+  _commands: {
+    create
+  }
 }

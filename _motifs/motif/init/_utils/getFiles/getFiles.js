@@ -17,7 +17,7 @@ import { EXCLUDE } from './_enums/rules/rules.enum.js'
  *  files name.
  */
 const recursiveFolderRetriever = (
-  folderPath,
+  folderPath = '',
   exclusionRules = false
 ) => {
   
@@ -35,7 +35,7 @@ const recursiveFolderRetriever = (
     ) => {
 
       const name = folderPath + '/' + dirent.name
-
+      
       /** The `dirent` is a folder */
       if (dirent.isDirectory()) {
 
