@@ -37,5 +37,7 @@ export default async options => {
         () => ''
       )
     ]
-  ) 
+  )
+
+  return newId
 }
