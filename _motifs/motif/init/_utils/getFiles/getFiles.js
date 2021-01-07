@@ -35,7 +35,7 @@ const recursiveFolderRetriever = (
     ) => {
 
       const name = folderPath + '/' + dirent.name
-
+      
       /** The `dirent` is a folder */
       if (dirent.isDirectory()) {
 

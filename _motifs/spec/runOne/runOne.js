@@ -13,8 +13,11 @@ async function exploreSection(section, options) {
 
   if (section.group) {
 
-    const result = await Promise.all(
-      section.group.map(item => exploreSection(item, options)))
+    const result = []
+    for (const item of section.group) {
+      const itemResult = await exploreSection(item, options)
+      result.push(itemResult)
+    }
     return { label: section.label, result }
 
   } else if (section.test) {
