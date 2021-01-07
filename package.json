@@ -1,6 +1,6 @@
 {
   "name": "motifs-js",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "type": "module",
   "description": "MOTIFS aims to explore the concept of naming and patterns. It creates virtual entities, the motifs, to embody project's classes, components and logic.",
   "main": "index.js",
