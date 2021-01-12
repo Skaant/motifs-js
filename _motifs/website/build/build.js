@@ -1,7 +1,7 @@
-import FOLDER from "../../../folder/folder.motif.js";
-import WEBSITE from '../../website.motif.js'
-import formatEnum from "../../../get/_enums/format/format.enum.js";
-import INSTANCE from "../../../instance/instance.motif.js";
+import FOLDER from "motifs-js/_motifs/folder/folder.motif";
+import WEBSITE from 'motifs-js/_motifs/website/website.motif'
+import formatEnum from "motifs-js/_motifs/get/_enums/format/format.enum";
+import INSTANCE from "motifs-js/_motifs/instance/instance.motif";
 
 export default (
   id,
