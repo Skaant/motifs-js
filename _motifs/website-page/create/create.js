@@ -1,4 +1,4 @@
-import FILE from '../../../file/file.motif.js'
+import FILE from 'motifs-js/_motifs/file/file.motif.js'
 
 export default (template, data, scope, options) =>
 
@@ -7,7 +7,7 @@ export default (template, data, scope, options) =>
     FILE.create(
       scope,
       'index.html',
-      folderScope => template(data),
+      () => template(data),
       options
     )
       .then(resolve))
