@@ -1,7 +1,9 @@
-import FOLDER from "motifs-js/_motifs/folder/folder.motif";
-import WEBSITE from 'motifs-js/_motifs/website/website.motif'
-import formatEnum from "motifs-js/_motifs/get/_enums/format/format.enum";
-import INSTANCE from "motifs-js/_motifs/instance/instance.motif";
+import FOLDER from "motifs-js/_motifs/folder/folder.motif.js";
+import INSTANCE from "motifs-js/_motifs/instance/instance.motif.js";
+import WEBSITE from 'motifs-js/_motifs/website/website.motif.js'
+import formatEnum from "motifs-js/_motifs/get/_enums/format/format.enum.js";
+import fs from 'fs'
+import { PROJECT_PATH } from "motifs-js/_motifs/global/_enums/names/global.names.enum.js";
 
 export default (
   id,
@@ -58,25 +60,38 @@ export default (
                 options
               ))
 
-            .then(() => {
+            .then(async () => {
               
-              FOLDER.create(
-                '/_build/' + id,
-                'assets',
-                folderScope => {
+              /** If a website got an `_assets` folder,
+               * copy it. Else do nothing */
+              try {
 
-                  FOLDER.copy(
-                    '/_websites/'
-                      + id + '/_assets',
-                    folderScope,
-                    options
-                  )
-                    .then(() =>
-                        
-                      resolve(website))
+                const websiteSplitPath = website.path.split('/')
+                const websiteBuildPath = websiteSplitPath
+                  .slice(1, websiteSplitPath.length - 1)
+                  .join('/')
+                  /** @todo options.scope */
+                  + '/_build'
+                const assetsPath = websiteBuildPath + '/_assets'
 
-                  /** meh */
-                  return []
-                })
+                fs.statSync(global[PROJECT_PATH]
+                  + '/' + assetsPath)
+
+                await FOLDER.create(
+                  /** @todo scope */
+                  '_build/' + id,
+                  '_assets',
+                  folderScope => {
+                    FOLDER.copy(
+                      assetsPath,
+                      folderScope,
+                      options
+                    )
+
+                    return []
+                  })
+              } finally {
+                resolve()
+              }
             }))
       }))

@@ -10,7 +10,7 @@ export default {
   occurences: [
     {
       level: occurenceLevelEnum.FILE,
-      fileMatch: /^\/_websites\/(.*)\/(.*).website.js/,
+      fileMatch: /.*\/([\w\-]*)\/([\w\-]*).website.js/,
       transform: ([ path, folder, id ]) => ({ path, folder, id })
     }
   ],

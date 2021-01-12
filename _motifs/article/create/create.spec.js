@@ -29,7 +29,11 @@ async function createFirstArticle(path, start) {
                   fileMotif.create(
                     folderScope,
                     start + '.article.js',
-                    () => 'export default { id: "' + start + '" }'
+                    () => 'export default {\n'
+                      + '  id: "' + start + '",\n'
+                      + '  provision: async () => {},\n'
+                      + '  mapping: async () => [],\n'
+                      + '}'
                   )
                 ]
               ) 
