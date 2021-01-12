@@ -50,7 +50,7 @@ export default {
       test: async () => {
 
         const path = 'article-create-new'
-        await createFirstArticle(path, 1)
+        await createFirstArticle(path, 704)
 
         global['_' + FILES] = global[FILES]
         global[FILES] = getFiles(
@@ -67,7 +67,7 @@ export default {
           fs.statSync(
             global[PROJECT_PATH]
               + '/_tests/' + path
-              + '/_data/articles/2/2.article.js')
+              + '/_data/articles/705/705.article.js')
           return true
         } catch {
           return false
@@ -80,7 +80,7 @@ export default {
       test: async () => {
 
         const path = 'article-create-new-content-md'
-        await createFirstArticle(path, 3)
+        await createFirstArticle(path, 957)
 
         global['_' + FILES] = global[FILES]
         global[FILES] = getFiles(
@@ -97,7 +97,7 @@ export default {
           fs.statSync(
             global[PROJECT_PATH]
               + '/_tests/' + path
-              + '/_data/articles/4/content.md')
+              + '/_data/articles/958/content.md')
           return true
         } catch {
           return false
@@ -110,7 +110,7 @@ export default {
       test: async () => {
 
         const path = 'article-create-new-increment-id'
-        await createFirstArticle(path, 5)
+        await createFirstArticle(path, 2096)
 
         global['_' + FILES] = global[FILES]
         global[FILES] = getFiles(
@@ -127,7 +127,7 @@ export default {
           fs.statSync(
             global[PROJECT_PATH]
               + '/_tests/' + path
-              + '/_data/articles/6/6.article.js')
+              + '/_data/articles/2097/2097.article.js')
           return true
         } catch {
           return false
