@@ -13,38 +13,12 @@ export default {
       label: 'Without `scope`, retrieves occurences matching '
         + 'ARTICLES in PROJECT as ESM modules.',
       test: async () => {
-
-        await folderMotif.create(
-          '_tests',
-          'article-no-scope-test',
-          folderScope => [
-
-            folderMotif.create(
-              folderScope,
-              '_data',
-              folderScope => [
-            
-                folderMotif.create(
-                  folderScope,
-                  'articles',
-                  folderScope => [
-                    folderMotif.create(
-                      folderScope,
-                      '1',
-                      folderScope => [
-                        fileMotif.create(
-                          folderScope,
-                          '1.article.js',
-                          folderScope =>
-                            'export default { id: "article-no-scope-test" }'
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
+        const folderPath = '_tests/article-no-scope-test/_data/articles/1'
+        await folderMotif.create(folderPath)
+        await fileMotif.create(
+          folderPath,
+          '1.article.js',
+          () => 'export default { id: "article-no-scope-test" }'
         )
         
         global['_' + FILES] = global[FILES]
@@ -62,44 +36,19 @@ export default {
       type: FEATURE,
       label: 'Retrieves content from folder `content.md` file, if any.',
       test: async () => {
-
-        await folderMotif.create(
-          '_tests',
-          'article-content-md',
-          folderScope => [
-
-            folderMotif.create(
-              folderScope,
-              '_data',
-              folderScope => [
-            
-                folderMotif.create(
-                  folderScope,
-                  'articles',
-                  folderScope => [
-                    folderMotif.create(
-                      folderScope,
-                      '1',
-                      folderScope => [
-                        fileMotif.create(
-                          folderScope,
-                          '1.article.js',
-                          () => 'export default { '
-                            + 'id: "article-content-md", '
-                            + 'content: "nope" }'
-                        ),
-                        fileMotif.create(
-                          folderScope,
-                          'content.md',
-                          () => 'ok'
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
+        const folderPath = '_tests/article-content-md/_data/articles/1'
+        await folderMotif.create(folderPath)
+        await fileMotif.create(
+          folderPath,
+          '1.article.js',
+          () => 'export default { '
+            + 'id: "article-content-md", '
+            + 'content: "nope" }'
+        )
+        await fileMotif.create(
+          folderPath,
+          'content.md',
+          () => 'ok'
         )
         
         global['_' + FILES] = global[FILES]

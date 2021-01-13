@@ -9,39 +9,21 @@ import { EXCLUDE, INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/
 import { FILES, PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
 
 async function createFirstArticle(path, start) {
-  
-  await folderMotif.create(
-    '_tests',
-    path,
-    folderScope => [
-      folderMotif.create(
-        folderScope,
-        '_data',
-        folderScope => [
-          folderMotif.create(
-            folderScope,
-            'articles',
-            folderScope => [
-              folderMotif.create(
-                folderScope,
-                start,
-                folderScope => [
-                  fileMotif.create(
-                    folderScope,
-                    start + '.article.js',
-                    () => 'export default {\n'
-                      + '  id: "' + start + '",\n'
-                      + '  provision: async () => {},\n'
-                      + '  mapping: async () => [],\n'
-                      + '}'
-                  )
-                ]
-              ) 
-            ]
-          )
-        ]
-      )
-    ]
+  const folderPath = '_tests/'
+    + path
+    + '/_data/articles/'
+    + start
+
+  await folderMotif.create(folderPath)
+
+  await fileMotif.create(
+    folderPath,
+    start + '.article.js',
+    () => `export default {
+  id: "${ start }",
+  provision: async () => {},
+  mapping: async () => []
+}`
   )
 }
 

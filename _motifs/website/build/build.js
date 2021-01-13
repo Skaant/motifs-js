@@ -1,97 +1,64 @@
 import FOLDER from "motifs-js/_motifs/folder/folder.motif.js";
-import INSTANCE from "motifs-js/_motifs/instance/instance.motif.js";
-import WEBSITE from 'motifs-js/_motifs/website/website.motif.js'
-import formatEnum from "motifs-js/_motifs/get/_enums/format/format.enum.js";
 import fs from 'fs'
 import { PROJECT_PATH } from "motifs-js/_motifs/global/_enums/names/global.names.enum.js";
+import websiteMotif from "motifs-js/_motifs/website/website.motif.js";
+import { WEBSITE_NOT_FOUND } from "motifs-js/_motifs/website/build/_errors/build.errors.js";
 
-export default (
+export default async (
   id,
-  options
-) =>
+  options = {}
+) => {
 
-  new Promise(resolve =>
+  const {
+    scope = '',
+    dist = '_build'
+  } = options
 
-    /** While a MOTIF doesn't have a
-     *  specific `get` method, we use `FILE.get()`. */
-    Promise.all([
-      INSTANCE.get(
-        WEBSITE,
-        {
-          format: formatEnum.ESM
-        }),
-      FOLDER.create(
-        '',
-        '_build',
-        () => [])
-    ])
+  const website = await websiteMotif.get(id, { scope })
+  if (!website) throw new Error(WEBSITE_NOT_FOUND)
 
-      .then(([ websites ]) => {
+  const distFolderPath = dist + '/' + id
+  await FOLDER.create(distFolderPath)
 
-        const website = websites.find(website =>
-          
-          website.id === id)
+  const {
+    provision,
+    mapping,
+    ...data
+  } = website
 
-        if (!website) throw new Error(
-          'No website "' + id + '".')
+  const _data = await provision()
 
-        const {
-          provision,
-          mapping,
-          ...data
-        } = website
+  await mapping(
+    folderScope,
+    {
+      ...data,
+      ..._data
+    },
+    options
+  )
+    
+  /** If a website got an `_assets` folder,
+   * copy it. Else do nothing */
+  try {
 
-        Promise.all([
-          FOLDER.clear('_build/' + id),
-          provision()
-        ])
-        
-          .then(([ , _data ]) =>
+    const websiteSplitPath = website.path.split('/')
+    const websiteBuildPath = websiteSplitPath
+      .slice(1, websiteSplitPath.length - 1)
+      .join('/')
+      /** @todo options.scope */
+      + '/_build'
+    const assetsPath = websiteBuildPath + '/_assets'
 
-            FOLDER.create(
-              '',
-              '_build/' + id,
-              folderScope => mapping(
-                folderScope,
-                {
-                  ...data,
-                  ..._data
-                },
-                options
-              ))
+    fs.statSync(global[PROJECT_PATH]
+      + '/' + assetsPath)
 
-            .then(async () => {
-              
-              /** If a website got an `_assets` folder,
-               * copy it. Else do nothing */
-              try {
-
-                const websiteSplitPath = website.path.split('/')
-                const websiteBuildPath = websiteSplitPath
-                  .slice(1, websiteSplitPath.length - 1)
-                  .join('/')
-                  /** @todo options.scope */
-                  + '/_build'
-                const assetsPath = websiteBuildPath + '/_assets'
-
-                fs.statSync(global[PROJECT_PATH]
-                  + '/' + assetsPath)
-
-                await FOLDER.create(
-                  /** @todo scope */
-                  '_build/' + id,
-                  '_assets',
-                  folderScope => {
-                    FOLDER.copy(
-                      assetsPath,
-                      folderScope,
-                      options
-                    )
-
-                    return []
-                  })
-              } finally {
-                resolve()
-              }
-            }))
-      }))
+    await FOLDER.create(distFolderPath + '/_assets')
+    FOLDER.copy(
+      assetsPath,
+      folderScope,
+      options
+    )
+  } finally {
+    resolve()
+  }
+}

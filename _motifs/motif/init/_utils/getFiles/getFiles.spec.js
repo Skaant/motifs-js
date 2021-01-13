@@ -17,11 +17,7 @@ export default {
             + 'found in given scope.',
           test: async () => {
 
-            await folderMotif.create(
-              '_tests',
-              'empty-folder',
-              () => []
-            )
+            await folderMotif.create('_tests/empty-folder')
             const result = getFiles('_tests/empty-folder')
 
             return Array.isArray(result)
@@ -38,22 +34,17 @@ export default {
           type: CASE,
           label: 'Exclude a file at the root',
           test: async () => {
-
-            await folderMotif.create(
-              '_tests',
-              'exclude-file-at-root',
-              folderScope => [
-                fileMotif.create(
-                  folderScope,
-                  '.gitignore',
-                  () => 'to exclude',
-                ),
-                fileMotif.create(
-                  folderScope,
-                  'index.js',
-                  () => 'to include',
-                )
-              ]
+            const folderPath = '_tests/exclude-file-at-root'
+            await folderMotif.create(folderPath)
+            await fileMotif.create(
+              folderPath,
+              '.gitignore',
+              () => 'to exclude',
+            )
+            await fileMotif.create(
+              folderPath,
+              'index.js',
+              () => 'to include',
             )
             
             const result = getFiles(
@@ -78,20 +69,14 @@ export default {
           type: CASE,
           label: 'Exclude a folder at root',
           test: async () => {
-            
-            await folderMotif.create(
-              '_tests',
-              'exclude-folder-at-root',
-              folderScope => [
-                fileMotif.create(
-                  folderScope,
-                  'index.js',
-                  () => 'to include',
-                ),
-                folderMotif.create(
-                  folderScope,
-                  'node_modules',
-                  () => [])])
+            const folderPath = '_tests/exclude-folder-at-root'
+            await folderMotif.create(folderPath)
+            await fileMotif.create(
+              folderPath,
+              'index.js',
+              () => 'to include',
+            )
+            await folderMotif.create(folderPath + '/node_modules')
             
             const result = getFiles(
               '_tests/exclude-folder-at-root',
@@ -116,31 +101,25 @@ export default {
           label: 'Exclude a folder at root but '
             + ' include a file inside it.',
           test: async () => {
-            
-            await folderMotif.create(
-              '_tests',
-              're-include-file-at-root',
-              folderScope => [
-                fileMotif.create(
-                  folderScope,
-                  'index.js',
-                  () => 'to include',
-                ),
-                folderMotif.create(
-                  folderScope,
-                  '_build',
-                  folderScope => [
-                    fileMotif.create(
-                      folderScope,
-                      'meta-data',
-                      () => 'to include'
-                    ),
-                    fileMotif.create(
-                      folderScope,
-                      'index.html',
-                      () => 'to exclude'
-                    )
-                  ])])
+            const folderPath = '_tests/re-include-file-at-root'
+            await folderMotif.create(folderPath)
+            await fileMotif.create(
+              folderPath,
+              'index.js',
+              () => 'to include',
+            )
+            const nestedFolderPath = folderPath + '/_build'
+            await folderMotif.create(nestedFolderPath)
+            await fileMotif.create(
+              nestedFolderPath,
+              'meta-data',
+              () => 'to include'
+            )
+            await fileMotif.create(
+              nestedFolderPath,
+              'index.html',
+              () => 'to exclude'
+            )
             
             const results = getFiles(
               '_tests/re-include-file-at-root',
@@ -172,43 +151,29 @@ export default {
           label: 'Exclude a folder at root but '
             + ' include a folder inside it.',
           test: async () => {
-            
-            await folderMotif.create(
-              '_tests',
-              're-include-folder-at-root',
-              folderScope => [
-                fileMotif.create(
-                  folderScope,
-                  'index.js',
-                  () => 'to include',
-                ),
-                folderMotif.create(
-                  folderScope,
-                  'node_modules',
-                  folderScope => [
-                    folderMotif.create(
-                      folderScope,
-                      'motifs-js',
-                      folderScope => [
-                        fileMotif.create(
-                          folderScope,
-                          'motif.motif.js',
-                          () => 'to include'
-                        )
-                      ]
-                    ),
-                    folderMotif.create(
-                      folderScope,
-                      'showdown',
-                      folderScope => [
-                        fileMotif.create(
-                          folderScope,
-                          'file-1',
-                          () => 'to exclude'
-                        )
-                      ]
-                    )
-                  ])])
+            const folderPath = '_tests/re-include-folder-at-root'
+            await folderMotif.create(folderPath)
+            await fileMotif.create(
+              folderPath,
+              'index.js',
+              () => 'to include',
+            )
+            const nestedFolderPath = folderPath + '/node_modules'
+            await folderMotif.create(nestedFolderPath)
+            const n2FolderPath1 = nestedFolderPath + '/motifs-js'
+            await folderMotif.create(n2FolderPath1)
+            await fileMotif.create(
+              n2FolderPath1,
+              'motif.motif.js',
+              () => 'to include'
+            )
+            const n2FolderPath2 = nestedFolderPath + '/showdown'
+            await folderMotif.create(n2FolderPath2)
+            await fileMotif.create(
+              n2FolderPath2,
+              'file-1',
+              () => 'to exclude'
+            )
             
             const results = getFiles(
               '_tests/re-include-folder-at-root',

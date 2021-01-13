@@ -19,20 +19,11 @@ export default {
       label: 'If project path points to a something else than `motifs-js` folder, '
         + '**and /node_modules/motifs-js exists**, '
         + 'returns `frameworkPathEnum.NODE_MODULE`.',
-      test: () => new Promise(resolve =>
-        folderMotif.create(
-          '_tests',
-          'node_modules',
-          folderScope => [
-            folderMotif.create(
-              folderScope,
-              'motifs-js',
-              () => []
-            )
-          ]
-        )
-          .then(() => resolve(NODE_MODULE
-            === getFrameworkPath(global.PROJECT_PATH + '/_tests'))))
+      test: async () => {
+        await folderMotif.create('_tests/node_modules/motifs-js')
+        return getFrameworkPath(global.PROJECT_PATH + '/_tests')
+          === NODE_MODULE
+      }
     },
     {
       type: FEATURE,
@@ -49,38 +40,3 @@ export default {
     }
   ]
 }
-
-/* () =>
-
-  new Promise(resolve => {
-    
-    const standalone = getPantheonScopeUtil(
-      'C://dev/motifs',
-      []
-    )
-    
-    const integration = getPantheonScopeUtil(
-      'C://dev/projet',
-      [ 'motifs',
-        'motifs/_motifs/motif/motif.motif.js' ]
-    )
-
-    const extreme = getPantheonScopeUtil(
-      'C://dev/projet',
-      [ 'exemple/temp/motifs/_motifs/motif/motif.motif.js',
-        'exemple/temp/motifs' ])
-    
-    resolve([
-      [
-        standalone === false,
-        "Should return false while being run in a standalone project."
-      ],
-      [
-        integration === 'motifs',
-        'Should return "" while being run at the root of a consuming project.'
-      ],
-      [
-        extreme === 'exemple/temp/motifs',
-        'Should return the path between the root folder and the `motifs` folder.' ]
-    ])
-  }) */
