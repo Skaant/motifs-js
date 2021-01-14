@@ -1,0 +1,3 @@
+/** Element is neither a WEBISTE_FOLDER
+ * nor a WEBSITE_PAGE. */
+export const ELEM_MOTIF_UNRECOGNIZED = 'ELEM_MOTIF_UNRECOGNIZED'

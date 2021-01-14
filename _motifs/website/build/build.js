@@ -23,19 +23,19 @@ export default async (
   const {
     provision,
     mapping,
-    ...data
+    ..._data
   } = website
 
-  const _data = await provision()
+  const data = {
+    ..._data,
+    ...await provision()
+  }
 
-  await mapping(
+  /* await mapping(
     folderScope,
-    {
-      ...data,
-      ..._data
-    },
+    data,
     options
-  )
+  ) */
     
   /** If a website got an `_assets` folder,
    * copy it. Else do nothing */
@@ -59,6 +59,6 @@ export default async (
       options
     )
   } finally {
-    resolve()
+    return
   }
 }

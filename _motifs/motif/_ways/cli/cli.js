@@ -85,7 +85,7 @@ export default (args, { log = false }) => {
 
       } catch (err) {
 
-        console.error(err)
+        process.exit(1)
       }
     })
 }
