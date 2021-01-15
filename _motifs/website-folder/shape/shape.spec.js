@@ -1,5 +1,6 @@
 import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
-import websiteFolderMotif from "../../website-folder/website-folder.motif.js";
+import websiteFolderMotif from "../website-folder.motif.js";
+import shape from './shape.js'
 
 export default {
   type: MODULE,
@@ -11,18 +12,18 @@ export default {
         type: FEATURE,
         label: 'Object has WEBSITE_FOLDER id as `motif` property.',
         test: () =>
-          websiteFolderMotif.describe({}).id
+          shape({}).motif
             === websiteFolderMotif.id
       },
       {
         type: FEATURE,
-        label: 'Object has the same properties than the `content` parameter.',
+        label: 'Object has the same properties as the `content` parameter.',
         test: () => {
           const content = {
             1: 'temp',
             2: 'troiz'
           }
-          const result = websiteFolderMotif.describe(content)
+          const result = shape(content)
           return Object.entries(content)
             .every(([ key, value ]) =>
               result[key] === value)
