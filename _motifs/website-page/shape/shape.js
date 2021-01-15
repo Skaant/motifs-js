@@ -29,6 +29,9 @@ export default (template, data) => {
   const _data = data
   return {
     motif: websitePageMotif.id,
+    data,
+    /** `data` overriding may not be useful :
+     *  no known consumers of this feature right now. */
     template: data => _template({
       ..._data,
       ...data

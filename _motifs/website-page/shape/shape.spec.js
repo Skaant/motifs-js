@@ -19,6 +19,23 @@ export default {
           test: () =>
             shape(() => '', {}).motif
               === websitePageMotif.id
+        },
+        {
+          type: FEATURE,
+          label: 'Object has a `function` as `template` property '
+            + '(see below for `string` `template` parameter cases).',
+          test: () =>
+            typeof shape(() => '', {}).template
+              === 'function'
+        },
+        {
+          type: FEATURE,
+          label: 'Object has the same `data` I/O.',
+          test: () => {
+            const data = { valid: true }
+            return shape(() => '', data).data
+              === data
+          }
         }
       ]
     },
