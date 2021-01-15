@@ -4,6 +4,8 @@ import websitePageMotif from '../website-page.motif.js'
 import { TEMPLATE_FILE_NOT_FOUND, TEMPLATE_IS_NEITHER_STRING_NOR_FUNCTION, TEMPLATE_IS_NOT_A_PUG_FILE } from './_errors/shape.errors.js'
 
 /**
+ * Returns a new object
+ * 
  * @param {Function|string} template
  *  When a `string` is given, expect a
  *  path to a `pug` template.
@@ -24,9 +26,12 @@ export default (template, data) => {
   } else {
     throw new Error(TEMPLATE_IS_NEITHER_STRING_NOR_FUNCTION)
   }
+  const _data = data
   return {
     motif: websitePageMotif.id,
-    template: _template,
-    data
+    template: data => _template({
+      ..._data,
+      ...data
+    })
   }
 }

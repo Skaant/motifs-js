@@ -17,46 +17,81 @@ export default {
           type: FEATURE,
           label: 'Object has WEBSITE_FOLDER id as `motif` property.',
           test: () =>
-            shape(() => '', {}).id
+            shape(() => '', {}).motif
               === websitePageMotif.id
-        },
-        {
-          type: FEATURE,
-          label: 'Object has the same properties than the `data` parameter.',
-          test: () => {
-            const data = {
-              1: 'temp',
-              2: 'troiz'
-            }
-            const result = shape(() => '', data)
-            return Object.entries(data)
-              .every(([ key, value ]) =>
-                result[key] === value)
-          }
         }
       ]
     },
     {
       type: FEATURE,
-      label: 'Take the `template` path (type `string`), '
-        + 'compiles the file to a function and make it '
-        + 'accessible as the `template` property of the new object.',
-      test: async () => {
-        const path = '_tests/website-p-pug-function'
-        await folderMotif.create(path)
-        const templateName = 'temp.pug'
-        await fileMotif.create(
-          path,
-          templateName,
-          () => 'div.row')
-        const shaped = shape(
-          path + '/' + templateName,
-          {}
-        )
-        return shaped.template({})
-          .localeCompare('<div class="row"></div>')
-          === 0
-      }
+      label: 'If `string` `template` (path), returns the '
+        + 'compiled and provisionned (with factory `data`) '
+        + '`.pug` file template function.',
+      group: [
+        {
+          type: FEATURE,
+          label: 'When executed, the `template()` property '
+            + 'returns an `pug` rendered HTML fragment.',
+          test: async () => {
+            const path = '_tests/website-page-shape-path-pug'
+            await folderMotif.create(path)
+            const templateName = 'temp.pug'
+            await fileMotif.create(
+              path,
+              templateName,
+              () => 'div.row')
+            const shaped = shape(
+              path + '/' + templateName,
+              {}
+            )
+            return shaped.template()
+              .localeCompare('<div class="row"></div>')
+              === 0
+          }
+        },
+        {
+          type: FEATURE,
+          label: 'Provisions by default the template data '
+            + 'with factory `data` parameter.',
+          test: async () => {
+            const path = '_tests/website-page-shape-default-data'
+            await folderMotif.create(path)
+            const templateName = 'temp.pug'
+            await fileMotif.create(
+              path,
+              templateName,
+              () => 'p= content')
+            const shaped = shape(
+              path + '/' + templateName,
+              { content: 'ok !' }
+            )
+            return shaped.template()
+              .localeCompare('<p>ok !</p>')
+              === 0
+          }
+        },
+        {
+          type: FEATURE,
+          label: 'Product function can override default '
+            + 'data with its own `data` parameter.',
+          test: async () => {
+            const path = '_tests/website-page-shape-override-data'
+            await folderMotif.create(path)
+            const templateName = 'temp.pug'
+            await fileMotif.create(
+              path,
+              templateName,
+              () => 'p= content')
+            const shaped = shape(
+              path + '/' + templateName,
+              { content: 'one' }
+            )
+            return shaped.template({ content: 'two' })
+              .localeCompare('<p>two</p>')
+              === 0
+          }
+        }
+      ]
     },
     {
       type: FEATURE,
