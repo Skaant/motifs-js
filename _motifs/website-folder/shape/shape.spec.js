@@ -4,31 +4,31 @@ import shape from './shape.js'
 
 export default {
   type: MODULE,
-  group: [{
-    type: FEATURE,
-    label: 'Returns a new object.',
-    group: [
-      {
-        type: FEATURE,
-        label: 'Object has WEBSITE_FOLDER id as `motif` property.',
-        test: () =>
-          shape({}).motif
-            === websiteFolderMotif.id
-      },
-      {
-        type: FEATURE,
-        label: 'Object has the same properties as the `content` parameter.',
-        test: () => {
-          const content = {
-            1: 'temp',
-            2: 'troiz'
+  group: [
+    {
+      type: FEATURE,
+      label: 'Returns a new object.',
+      group: [
+        {
+          type: FEATURE,
+          label: 'Object has WEBSITE_FOLDER id as `motif` property.',
+          test: () =>
+            shape({}).motif
+              === websiteFolderMotif.id
+        },
+        {
+          type: FEATURE,
+          label: 'Object has the same `content` prop than parameter.',
+          test: () => {
+            const content = {
+              1: 'temp',
+              2: 'troiz'
+            }
+            return shape(content).content
+              === content
           }
-          const result = shape(content)
-          return Object.entries(content)
-            .every(([ key, value ]) =>
-              result[key] === value)
         }
-      }
-    ]
-  }]
+      ]
+    }
+  ]
 }

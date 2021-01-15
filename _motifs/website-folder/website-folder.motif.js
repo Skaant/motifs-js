@@ -1,6 +1,6 @@
 import { EN, FR } from '../lang/_enums/lang.enum.js'
 import build from './build/build.js'
-import describe from './describe/describe.js'
+import shape from './shape/shape.js'
 
 export default {
   id: 'website-folder',
@@ -8,6 +8,6 @@ export default {
     [EN]: 'Website folder',
     [FR]: 'Dossier de site'
   },
-  describe,
+  shape,
   build
 }
