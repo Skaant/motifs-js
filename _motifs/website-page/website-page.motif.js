@@ -1,5 +1,5 @@
 import { EN, FR } from 'motifs-js/_motifs/lang/_enums/lang.enum.js'
-import describe from './describe/describe.js'
+import shape from './shape/shape.js'
 import build from './build/build.js'
 import create from './create/create.js'
 
@@ -9,7 +9,7 @@ export default {
     [EN]: 'Page de site',
     [FR]: 'Website page'
   },
-  describe,
+  shape,
   build,
   create
 }

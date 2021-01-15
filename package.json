@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dev-start.js --experimental-modules",
-    "test": "npm start -- -log -force test",
+    "test": "npx jest",
     "readme": "npm start -- -k readme -log build"
   },
   "repository": {
@@ -30,6 +30,7 @@
   "homepage": "https://github.com/Skaant/motifs-js#readme",
   "devDependencies": {
     "express": "^4.17.1",
+    "jest": "^26.6.3",
     "pug": "^3.0.0",
     "showdown": "^1.9.1"
   }

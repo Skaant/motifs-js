@@ -1,7 +1,7 @@
 import pug from 'pug'
 import fs from 'fs'
-import websitePageMotif from 'motifs-js/_motifs/website-page/website-page.motif.js'
-import { TEMPLATE_FILE_NOT_FOUND, TEMPLATE_IS_NEITHER_STRING_NOR_FUNCTION, TEMPLATE_IS_NOT_A_PUG_FILE } from 'motifs-js/_motifs/website-page/describe/_errors/describe.errors.js'
+import websitePageMotif from '../website-page.motif.js'
+import { TEMPLATE_FILE_NOT_FOUND, TEMPLATE_IS_NEITHER_STRING_NOR_FUNCTION, TEMPLATE_IS_NOT_A_PUG_FILE } from './_errors/shape.errors.js'
 
 /**
  * @param {Function|string} template
