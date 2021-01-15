@@ -1,11 +1,11 @@
-import { MODULE, CASE, FEATURE } from "motifs-js/_motifs/spec-section/_enums/type/spec-section.type.enum.js";
-import build from 'motifs-js/_motifs/website/build/build.js'
+import { MODULE, CASE, FEATURE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
+import build from '../../website/build/build.js'
 import fs from 'fs'
-import exclusionRules from "motifs-js/_motifs/motif/init/exclusionRules.js";
-import getFiles from 'motifs-js/_motifs/motif/init/_utils/getFiles/getFiles.js'
-import { FILES, PROJECT_PATH } from "motifs-js/_motifs/global/_enums/names/global.names.enum.js";
-import { INCLUDE } from "motifs-js/_motifs/motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
-import specsCreateWebsiteUtil from "motifs-js/_motifs/website/_utils/specsCreateWebsite/specsCreateWebsite.util.js";
+import exclusionRules from "../../motif/init/exclusionRules.js";
+import getFiles from '../../motif/init/_utils/getFiles/getFiles.js'
+import { FILES, PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
+import { INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
+import specsCreateWebsiteUtil from "../../website/_utils/specsCreateWebsite/specsCreateWebsite.util.js";
 
 export default {
   type: MODULE,

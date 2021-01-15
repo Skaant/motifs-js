@@ -1,4 +1,4 @@
-import fileMotif from "motifs-js/_motifs/file/file.motif.js"
+import fileMotif from "../../file/file.motif.js"
 
 export default async (name, description, scope) => {
   await fileMotif.create(

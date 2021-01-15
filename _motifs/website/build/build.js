@@ -1,8 +1,8 @@
-import FOLDER from "motifs-js/_motifs/folder/folder.motif.js";
+import FOLDER from "../../folder/folder.motif.js";
 import fs from 'fs'
-import { PROJECT_PATH } from "motifs-js/_motifs/global/_enums/names/global.names.enum.js";
-import websiteMotif from "motifs-js/_motifs/website/website.motif.js";
-import { WEBSITE_NOT_FOUND } from "motifs-js/_motifs/website/build/_errors/build.errors.js";
+import { PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
+import websiteMotif from "../../website/website.motif.js";
+import { WEBSITE_NOT_FOUND } from "../../website/build/_errors/build.errors.js";
 
 export default async (
   id,

@@ -1,5 +1,5 @@
 import fs from 'fs/promises'
-import { PROJECT_PATH } from 'motifs-js/_motifs/global/_enums/names/global.names.enum.js'
+import { PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
 
 async function createFolderRecursively(scope, path) {
   const splitPath = path.split('/')

@@ -1,4 +1,4 @@
-import FILE from 'motifs-js/_motifs/file/file.motif.js'
+import FILE from '../../file/file.motif.js'
 
 /** @deprecated since `v0.4` */
 export default (template, data, scope, options) =>

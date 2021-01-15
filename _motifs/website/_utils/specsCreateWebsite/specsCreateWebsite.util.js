@@ -1,5 +1,5 @@
-import fileMotif from "motifs-js/_motifs/file/file.motif.js"
-import folderMotif from "motifs-js/_motifs/folder/folder.motif.js"
+import fileMotif from "../../../file/file.motif.js"
+import folderMotif from "../../../folder/folder.motif.js"
 
 /** Creates an `<id>/<id>.website.js` tree
  * at given scope. */

@@ -1,6 +1,6 @@
-import formatEnum from "motifs-js/_motifs/get/_enums/format/format.enum.js"
-import instanceMotif from "motifs-js/_motifs/instance/instance.motif.js"
-import websiteMotif from "motifs-js/_motifs/website/website.motif.js"
+import formatEnum from "../../get/_enums/format/format.enum.js"
+import instanceMotif from "../../instance/instance.motif.js"
+import websiteMotif from "../../website/website.motif.js"
 
 export default async (id = false, options = {}) => {
 

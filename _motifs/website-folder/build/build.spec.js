@@ -1,4 +1,4 @@
-import { CASE, FEATURE, MODULE } from "motifs-js/_motifs/spec-section/_enums/type/spec-section.type.enum.js";
+import { CASE, FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 
 export default {
   type: MODULE,

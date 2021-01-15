@@ -1,4 +1,4 @@
-import { EN, FR } from 'motifs-js/_motifs/lang/_enums/lang.enum.js'
+import { EN, FR } from '../lang/_enums/lang.enum.js'
 import shape from './shape/shape.js'
 import build from './build/build.js'
 import create from './create/create.js'

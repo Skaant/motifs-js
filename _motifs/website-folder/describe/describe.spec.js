@@ -1,5 +1,5 @@
-import { FEATURE, MODULE } from "motifs-js/_motifs/spec-section/_enums/type/spec-section.type.enum.js";
-import websiteFolderMotif from "motifs-js/_motifs/website-folder/website-folder.motif.js";
+import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
+import websiteFolderMotif from "../../website-folder/website-folder.motif.js";
 
 export default {
   type: MODULE,

@@ -1,8 +1,8 @@
-import fileMotif from "motifs-js/_motifs/file/file.motif.js"
-import folderMotif from "motifs-js/_motifs/folder/folder.motif.js"
+import fileMotif from "../../file/file.motif.js"
+import folderMotif from "../../folder/folder.motif.js"
 import { ELEM_MOTIF_UNRECOGNIZED } from "./_errors/build.errors.js"
-import websiteFolderMotif from "motifs-js/_motifs/website-folder/website-folder.motif.js"
-import websitePageMotif from "motifs-js/_motifs/website-page/website-page.motif.js"
+import websiteFolderMotif from "../../website-folder/website-folder.motif.js"
+import websitePageMotif from "../../website-page/website-page.motif.js"
 
 /** 
  * @param {websiteFolderDescription} description
