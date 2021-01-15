@@ -10,8 +10,8 @@ export default {
   group: [
     {
       type: FEATURE,
-      label: 'Given a name, a description and a `scope`, '
-        + 'build a HTML page at the target path.',
+      label: 'Given a name, a shape and a `scope`, '
+        + 'build an HTML page at the target path.',
       test: async () => {
         const path = '_tests/website-page-build'
         await folderMotif.create(path)
