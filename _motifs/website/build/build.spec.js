@@ -15,7 +15,7 @@ export default {
       label: 'Creates a folder with given id for name, '
         + 'in a `_build` folder at an optionaly given dest.',
       group: [
-        {
+        /* {
           type: FEATURE,
           label: 'Creates a `_build` folder at optionaly given dest.',
           group: [
@@ -74,7 +74,7 @@ export default {
               }
             }
           ]
-        }
+        } */
       ]
     }
   ]

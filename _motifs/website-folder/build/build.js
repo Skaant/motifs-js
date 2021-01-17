@@ -2,6 +2,8 @@ import folderMotif from "../../folder/folder.motif.js"
 import { ELEM_MOTIF_UNRECOGNIZED, NOT_A_WEBSITE_FOLDER_SHAPE, NO_SCOPE_GIVEN } from "./_errors/build.errors.js"
 import websiteFolderMotif from "../../website-folder/website-folder.motif.js"
 import websitePageMotif from "../../website-page/website-page.motif.js"
+import jsontoxml from 'jsontoxml'
+import fileMotif from "../../file/file.motif.js"
 
 /** 
  * @param {websiteFoldershape} shape

@@ -1,7 +1,5 @@
 import { CASE, FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 import build from './build.js'
-import sinon from 'sinon'
-import websitePageBuild from '../../website-page/build/build.js'
 import folderMotif from "../../folder/folder.motif.js";
 import websiteFolderMotif from "../website-folder.motif.js";
 import fs from 'fs'
@@ -100,8 +98,24 @@ export default {
     },
     {
       type: FEATURE,
-      label: 'Returns an object with the `sitemap` property.',
-      group: []
+      label: 'Create a sitemap for the WEBSITE.',
+      group: [
+        {
+          type: 'FEATURE',
+          label: 'Returns an object with the `sitemap` property.',
+          test: async () => {
+            const path = '_tests/website-folder-sitemap'
+            await folderMotif.create(path)
+            const name = 'fr-2021'
+            const result = await build(
+              name,
+              websiteFolderMotif.shape({}),
+              path
+            )
+            return !!result.sitemap
+          }
+        }
+      ]
     },
     {
       type: FEATURE,

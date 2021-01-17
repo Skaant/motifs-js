@@ -3,6 +3,7 @@ import fs from 'fs'
 import { PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
 import websiteMotif from "../../website/website.motif.js";
 import { WEBSITE_NOT_FOUND } from "../../website/build/_errors/build.errors.js";
+import websiteFolderMotif from "../../website-folder/website-folder.motif.js";
 
 export default async (
   id,
@@ -15,30 +16,21 @@ export default async (
   } = options
 
   const website = await websiteMotif.get(id, { scope })
-  if (!website) throw new Error(WEBSITE_NOT_FOUND)
+  if (!website)
+    throw new Error(WEBSITE_NOT_FOUND)
+  
+  const result = await websiteFolderMotif.build(
+    id,
+    website,
+    dist
+  )
 
-  const distFolderPath = dist + '/' + id
-  await FOLDER.create(distFolderPath)
-
-  const {
-    provision,
-    mapping,
-    ..._data
-  } = website
-
-  const data = {
-    ..._data,
-    ...await provision()
-  }
-
-  /* await mapping(
-    folderScope,
-    data,
-    options
-  ) */
-    
-  /** If a website got an `_assets` folder,
-   * copy it. Else do nothing */
+  await fileMotif.create(
+    scope,
+    'sitemap.xml',
+    () => jsontoxml(result.sitemap)
+  )
+  
   try {
 
     const websiteSplitPath = website.path.split('/')
