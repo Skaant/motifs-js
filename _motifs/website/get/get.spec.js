@@ -4,6 +4,7 @@ import specsCreateWebsiteUtil from "../../website/_utils/specsCreateWebsite/spec
 import getFiles from '../../motif/init/_utils/getFiles/getFiles.js'
 import exclusionRules from "../../motif/init/exclusionRules.js";
 import { INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
+import { FILES } from "../../global/_enums/names/global.names.enum.js";
 
 export default {
   type: MODULE,
@@ -22,6 +23,7 @@ export default {
             '_tests': INCLUDE
           })
         const websites = await get()
+        global[FILES] = global['_' + FILES]
         return Array.isArray(websites)
           && !!(websites.find(website => website.id === path))
       }
@@ -29,12 +31,12 @@ export default {
     {
       type: FEATURE,
       label: 'Returns only identified website.',
-      test: () => false
+      group: []
     },
     {
       type: FEATURE,
       label: 'Returns only websites in given scope.',
-      test: () => false
+      group: []
     }
   ]
 }
