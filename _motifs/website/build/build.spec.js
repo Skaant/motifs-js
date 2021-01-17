@@ -13,68 +13,110 @@ export default {
     {
       type: FEATURE,
       label: 'Creates a folder with given id for name, '
-        + 'in a `_build` folder at an optionaly given dest.',
+        + 'in a `_build` folder at an optionaly given dist.',
       group: [
-        /* {
-          type: FEATURE,
-          label: 'Creates a `_build` folder at optionaly given dest.',
-          group: [
-            {
-              type: CASE,
-              label: 'No dest is given : '
-                + '`_build` is created at the folder root.',
-              test: async () => {
-                const id = 'website-build-no-dest'
-                await specsCreateWebsiteUtil('_tests', id)
-                global['_' + FILES] = global[FILES]
-                global[FILES] = getFiles(
-                  '',
-                  {
-                    ...exclusionRules,
-                    '_tests': INCLUDE
-                  })
-                await build(id, {})
-                global[FILES] = global['_' + FILES]
-                try {
-                  fs.statSync(global[PROJECT_PATH] + '/_build/' + path)
-                  fs.rmdirSync(global[PROJECT_PATH] + '/_build/' + path)
-                  return true
-                } catch {
-                  return false
-                }
-              }
-            },
-            {
-              type: CASE,
-              label: 'Dest is given : `_build` is created there.',
-              test:  async () => {
-                const id = 'website-build-dest'
-                await specsCreateWebsiteUtil('_tests', id)
-                global['_' + FILES] = global[FILES]
-                global[FILES] = getFiles(
-                  '',
-                  {
-                    ...exclusionRules,
-                    '_tests': INCLUDE
-                  })
-                await build(
-                  id,
-                  { dest: '_tests/' + id + '/_build' }
-                )
-                global[FILES] = global['_' + FILES]
-                try {
-                  const completeDestPath = global[PROJECT_PATH]
-                    + '/_tests/' + id
-                    + '/_build/' + path
-                  fs.statSync(completeDestPath)
-                  return true
-                } catch {
-                  return false
-                }
-              }
+        {
+          type: CASE,
+          label: 'No dist is given : '
+            + '`_build` is created at the folder root.',
+          test: async () => {
+            const id = 'website-build-no-dist'
+            const buildFullPath = global[PROJECT_PATH] + '/_build/' + id
+            try {
+              /* Removes existing folder if test failed to
+                * delete it on previous run. */
+              fs.rmSync(
+                buildFullPath,
+                { recursive: true }
+              )
+            } catch {}
+            await specsCreateWebsiteUtil('_tests', id)
+            global['_' + FILES] = global[FILES]
+            global[FILES] = getFiles(
+              '',
+              {
+                ...exclusionRules,
+                '_tests': INCLUDE
+              })
+            await build(id, {})
+            global[FILES] = global['_' + FILES]
+            try {
+              fs.statSync(buildFullPath)
+              fs.rmSync(
+                buildFullPath,
+                { recursive: true }
+              )
+              return true
+            } catch {
+              return false
             }
-          ]
-        } */
+          }
+        },
+        {
+          type: CASE,
+          label: 'dist is given : `_build` is created there.',
+          test:  async () => {
+            const id = 'website-build-dist'
+            await specsCreateWebsiteUtil('_tests', id)
+            global['_' + FILES] = global[FILES]
+            global[FILES] = getFiles(
+              '',
+              {
+                ...exclusionRules,
+                '_tests': INCLUDE
+              })
+            const distPath = '_tests/' + id + '/_build'
+            await build(
+              id,
+              { dist: distPath }
+            )
+            global[FILES] = global['_' + FILES]
+            try {
+              fs.statSync(global[PROJECT_PATH]
+                + '/' + distPath)
+              return true
+            } catch {
+              return false
+            }
+          }
+        }
+      ]
+    },
+    {
+      type: FEATURE,
+      label: 'Generates a `sitemap.xml` file at the '
+        + '`dest` folder root.',
+      group: [
+        {
+          type: CASE,
+          label: 'Sitemap has been generated',
+          test: async () => {
+            const id = 'website-build-sitemap'
+            await specsCreateWebsiteUtil('_tests', id)
+            global['_' + FILES] = global[FILES]
+            global[FILES] = getFiles(
+              '',
+              {
+                ...exclusionRules,
+                '_tests': INCLUDE
+              })
+            const distPath = '_tests/' + id + '/_build'
+            await build(
+              id,
+              { dist: distPath }
+            )
+            global[FILES] = global['_' + FILES]
+            try {
+              fs.statSync(global[PROJECT_PATH]
+                + '/' + distPath
+                + '/' + id
+                + '/sitemap.xml')
+              return true
+            } catch {
+              return false
+            }
+          }
+        }
       ]
     }
   ]
