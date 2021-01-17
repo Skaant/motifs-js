@@ -101,7 +101,7 @@ export default {
       label: 'Create a sitemap for the WEBSITE.',
       group: [
         {
-          type: 'FEATURE',
+          type: 'CASE',
           label: 'Returns an object with the `sitemap` property.',
           test: async () => {
             const path = '_tests/website-folder-sitemap'
@@ -113,6 +113,30 @@ export default {
               path
             )
             return !!result.sitemap
+          }
+        },
+        {
+          type: 'CASE',
+          label: 'Sitemap mimics website folder tree.',
+          test: async () => {
+            const path = '_tests/website-folder-sitemap-full'
+            await folderMotif.create(path)
+            const name = 'fr-2021'
+            const result = await build(
+              name,
+              websiteFolderMotif.shape({
+                '': websitePageMotif.shape(() => '', {}),
+                'storyboards': websiteFolderMotif.shape({
+                  '': websitePageMotif.shape(() => '', {}),
+                  'ave-hol-adin': websiteFolderMotif.shape({
+                    1: websitePageMotif.shape(() => '', {}),
+                    2: websitePageMotif.shape(() => '', {})
+                  })
+                })
+              }),
+              path
+            )
+            return result.sitemap.length === 4
           }
         }
       ]

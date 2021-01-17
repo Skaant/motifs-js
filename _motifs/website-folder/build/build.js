@@ -18,7 +18,7 @@ async function recursiveBuilder(name, shape, scope) {
   } = shape
   if (motif !== websiteFolderMotif.id)
     throw new Error(NOT_A_WEBSITE_FOLDER_SHAPE)
-  const acc = { sitemap: {} }
+  const acc = { sitemap: [] }
   const path = scope + '/' + name
   await folderMotif.create(path)
   
@@ -28,11 +28,12 @@ async function recursiveBuilder(name, shape, scope) {
       
       case websiteFolderMotif.id:
         await folderMotif.create(path)
-        acc.sitemap[path] = (await recursiveBuilder(
+        const result = await recursiveBuilder(
           key,
           value,
           path
-        )).sitemap
+        )
+        acc.sitemap.push(...result.sitemap)
         break
 
       case websitePageMotif.id:
@@ -42,7 +43,13 @@ async function recursiveBuilder(name, shape, scope) {
           value,
           path
         )
-        acc.sitemap[scope + '/' + fileName] = value.sitemap
+        acc.sitemap.push({
+          name: 'url',
+          children: {
+            loc: scope + '/' + fileName,
+            ...value.sitemap
+          }
+        })
         break
 
       default:

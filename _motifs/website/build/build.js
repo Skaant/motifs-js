@@ -30,7 +30,11 @@ export default async (
   await fileMotif.create(
     dist + '/' + id,
     'sitemap.xml',
-    () => jsontoxml(result.sitemap)
+    () => jsontoxml(
+      {
+        urlSet: [ ...result.sitemap ]
+      },
+      { xmlHeader: true })
   )
   
   try {
