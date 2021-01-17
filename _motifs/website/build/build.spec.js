@@ -6,7 +6,6 @@ import getFiles from '../../motif/init/_utils/getFiles/getFiles.js'
 import { FILES, PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
 import { INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
 import specsCreateWebsiteUtil from "../../website/_utils/specsCreateWebsite/specsCreateWebsite.util.js";
-import websitePageMotif from "../../website-page/website-page.motif.js";
 import fileMotif from "../../file/file.motif.js";
 import formatEnum from "../../get/_enums/format/format.enum.js";
 

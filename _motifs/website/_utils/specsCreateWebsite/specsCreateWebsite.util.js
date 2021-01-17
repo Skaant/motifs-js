@@ -16,7 +16,10 @@ import websitePageMotif from "../../_motifs/website-page/website-page.motif.js";
 
 export default {
   id: '${ id }',
-  content: ${ content }
+  title: 'SPEC, the motifs-js test framework',
+  url: 'test.lol',
+  provision: async () => ({}),
+  mapping: data => (${ content })
 }`
   )
   return

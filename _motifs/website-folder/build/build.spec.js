@@ -85,9 +85,12 @@ export default {
             try {
               const sitePath = global[PROJECT_PATH] + '/' + path + '/' + name
               fs.statSync(sitePath + '/index.html')
-              fs.statSync(sitePath + '/about.html')
-              fs.statSync(sitePath + '/articles/1.html')
-              fs.statSync(sitePath + '/articles/2.html')
+              fs.statSync(sitePath + '/about')
+              fs.statSync(sitePath + '/about/index.html')
+              fs.statSync(sitePath + '/articles/1')
+              fs.statSync(sitePath + '/articles/1/index.html')
+              fs.statSync(sitePath + '/articles/2')
+              fs.statSync(sitePath + '/articles/2/index.html')
               return true
             } catch {
               return false
