@@ -34,7 +34,11 @@ export default (
       case formatEnum.UTF_8:
 
         fs.readFile(
-          global.PROJECT_PATH + filePath,
+          global.PROJECT_PATH
+            + (filePath.startsWith('/')
+              ? ''
+              : '/')
+            + filePath,
           'utf-8')
 
           .then(content =>

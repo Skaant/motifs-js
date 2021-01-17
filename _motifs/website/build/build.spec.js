@@ -6,6 +6,9 @@ import getFiles from '../../motif/init/_utils/getFiles/getFiles.js'
 import { FILES, PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
 import { INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
 import specsCreateWebsiteUtil from "../../website/_utils/specsCreateWebsite/specsCreateWebsite.util.js";
+import websitePageMotif from "../../website-page/website-page.motif.js";
+import fileMotif from "../../file/file.motif.js";
+import formatEnum from "../../get/_enums/format/format.enum.js";
 
 export default {
   type: MODULE,
@@ -112,6 +115,45 @@ export default {
                 + '/' + id
                 + '/sitemap.xml')
               return true
+            } catch {
+              return false
+            }
+          }
+        },
+        {
+          type: CASE,
+          label: 'Sitemap has been generated',
+          test: async () => {
+            const id = 'website-build-sitemap-content'
+            await specsCreateWebsiteUtil(
+              '_tests',
+              id,
+              `
+  { 
+    '': websitePageMotif.shape(() => '', {})
+  }`
+            )
+            global['_' + FILES] = global[FILES]
+            global[FILES] = getFiles(
+              '',
+              {
+                ...exclusionRules,
+                '_tests': INCLUDE
+              })
+            const distPath = '_tests/' + id + '/_build'
+            await build(
+              id,
+              { dist: distPath }
+            )
+            global[FILES] = global['_' + FILES]
+            try {
+              const { content } = await fileMotif.get(
+                distPath
+                  + '/' + id
+                  + '/sitemap.xml',
+                { format: formatEnum.UTF_8 })
+              return content.startsWith('<')
+                && content.endsWith('>')
             } catch {
               return false
             }
