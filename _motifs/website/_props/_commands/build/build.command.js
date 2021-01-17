@@ -11,8 +11,8 @@ export default ([ id ], options) =>
       .then(website => {
 
         console.log('WEBSITE "'
-          + website.title + '" created at path "'
-          + '/_build/' + website.id + '".')
+          + website.title + '" created at path `/_build/'
+          + id + '`.')
         
         resolve()
       })

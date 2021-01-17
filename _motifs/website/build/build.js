@@ -6,6 +6,7 @@ import { WEBSITE_NOT_FOUND } from "../../website/build/_errors/build.errors.js";
 import websiteFolderMotif from "../../website-folder/website-folder.motif.js";
 import fileMotif from "../../file/file.motif.js";
 import jsontoxml from 'jsontoxml'
+import folderMotif from "../../folder/folder.motif.js";
 
 export default async (
   id,
@@ -20,15 +21,27 @@ export default async (
   const website = await websiteMotif.get(id, { scope })
   if (!website)
     throw new Error(WEBSITE_NOT_FOUND)
-  
+  const websiteBuildPath = dist + '/' + id
+  await folderMotif.clear(websiteBuildPath)
+
+  const {
+    url,
+    provision,
+    mapping
+  } = website
+  const data = await provision()
   const result = await websiteFolderMotif.build(
     id,
-    websiteFolderMotif.shape(website.content),
-    dist
+    websiteFolderMotif.shape(mapping(
+      data,
+      options
+    )),
+    dist,
+    url
   )
 
   await fileMotif.create(
-    dist + '/' + id,
+    websiteBuildPath,
     'sitemap.xml',
     () => jsontoxml(
       {
@@ -40,23 +53,20 @@ export default async (
   try {
 
     const websiteSplitPath = website.path.split('/')
-    const websiteBuildPath = websiteSplitPath
+    const websiteSrcPath = websiteSplitPath
       .slice(1, websiteSplitPath.length - 1)
       .join('/')
-      /** @todo options.scope */
-      + '/_build'
-    const assetsPath = websiteBuildPath + '/_assets'
-
+    const assetsSrcPath = websiteSrcPath + '/_assets'
     fs.statSync(global[PROJECT_PATH]
-      + '/' + assetsPath)
-
-    await FOLDER.create(distFolderPath + '/_assets')
-    FOLDER.copy(
-      assetsPath,
-      folderScope,
+      + '/' + assetsSrcPath)
+    const assetsBuildPath = websiteBuildPath + '/assets'
+    await FOLDER.create(assetsBuildPath)
+    await FOLDER.copy(
+      '/' + assetsSrcPath,
+      '/' + assetsBuildPath,
       options
     )
   } finally {
-    return
+    return website
   }
 }

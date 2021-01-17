@@ -9,7 +9,7 @@ import websitePageMotif from "../../website-page/website-page.motif.js"
  * 
  * @returns An object with the `sitemap` value.
  */
-async function recursiveBuilder(name, shape, scope) {
+async function recursiveBuilder(name, shape, scope, url) {
   if (!scope && scope !== '')
     throw new Error(NO_SCOPE_GIVEN)
   const {
@@ -31,7 +31,8 @@ async function recursiveBuilder(name, shape, scope) {
         const result = await recursiveBuilder(
           key,
           value,
-          path
+          path,
+          url + '/' + key
         )
         acc.sitemap.push(...result.sitemap)
         break
@@ -46,7 +47,8 @@ async function recursiveBuilder(name, shape, scope) {
         acc.sitemap.push({
           name: 'url',
           children: {
-            loc: scope + '/' + fileName,
+            loc: 'https://'
+              + url + '/' + key,
             ...value.sitemap
           }
         })
