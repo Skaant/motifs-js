@@ -6,32 +6,90 @@ import folderMotif from "../../folder/folder.motif.js";
 import websiteFolderMotif from "../website-folder.motif.js";
 import fs from 'fs'
 import { PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
+import { NOT_A_WEBSITE_FOLDER_SHAPE, NO_SCOPE_GIVEN } from "./_errors/build.errors.js";
+import websitePageMotif from "../../website-page/website-page.motif.js";
 
 export default {
   type: MODULE,
   group: [
     {
       type: FEATURE,
-      label: 'Given a WEBSITE_FOLDER SHAPE, '
-        + 'create a folder and sub-folders (see below for '
-        + 'mixed [+ WEBSITE_PAGE] creation content).',
+      label: 'Creates a `name` folder at given `path`.',
+      test: async () => {
+        const path = '_tests/website-folder-build-one'
+        await folderMotif.create(path)
+        const name = 'mirador-78'
+        await build(
+          name,
+          websiteFolderMotif.shape({}),
+          path
+        )
+        try {
+          fs.statSync(global[PROJECT_PATH]
+            + '/' + path
+            + '/' + name)
+          return true
+        } catch {
+          return false
+        }
+      }
+    },
+    {
+      type: FEATURE,
+      label: 'Iterates on `content` property to '
+        + 'render folder\'s children (W_FOLDER & W_PAGE).',
       group: [
         {
-          type: CASE,
-          label: 'One-level SHAPE.',
+          type: FEATURE,
+          label: 'When a page name is `\'\'`, '
+            + 'replace it with `index.html`.',
           test: async () => {
-            const path = '_tests/website-folder-build-one'
+            const path = '_tests/w-f-build-page-empty-name'
             await folderMotif.create(path)
-            const name = 'mirador-78'
+            const name = 'kokoamo-3'
             await build(
               name,
-              websiteFolderMotif.shape({}),
+              websiteFolderMotif.shape({
+                '': websitePageMotif.shape(() => '')
+              }),
               path
             )
             try {
               fs.statSync(global[PROJECT_PATH]
                 + '/' + path
-                + '/' + name)
+                + '/' + name
+                + '/index.html')
+              return true
+            } catch {
+              return false
+            }
+          }
+        },
+        {
+          type: FEATURE,
+          label: 'Build the static website tree according to '
+            + 'the W_PAGE shape given.',
+          test: async () => {
+            const path = '_tests/website-folder-build-page-call'
+            await folderMotif.create(path)
+            const name = 'varimatras'
+            await build(
+              name,
+              websiteFolderMotif.shape({
+                '': websitePageMotif.shape(() => '', {}),
+                'about': websitePageMotif.shape(() => '', {}),
+                'articles': websiteFolderMotif.shape({
+                  1: websitePageMotif.shape(() => '', {}),
+                  2: websitePageMotif.shape(() => '', {}) 
+                })
+              }),
+              path)
+            try {
+              const sitePath = global[PROJECT_PATH] + '/' + path + '/' + name
+              fs.statSync(sitePath + '/index.html')
+              fs.statSync(sitePath + '/about.html')
+              fs.statSync(sitePath + '/articles/1.html')
+              fs.statSync(sitePath + '/articles/2.html')
               return true
             } catch {
               return false
@@ -42,26 +100,46 @@ export default {
     },
     {
       type: FEATURE,
-      label: 'For each WEBISTE_PAGE in content, '
-        + 'the WEBSITE_PAGE `build` should be call once.',
-      test: async () => {
-        /* const spy = sinon.spy(websitePageBuild)
-        await build('', {})
-        const callCount = spy.callCount
-        spy.restore()
-        return callCount === 0 */
-        return false
-      }
-    },
-    {
-      type: FEATURE,
       label: 'Returns an object with the `sitemap` property.',
       group: []
     },
     {
       type: FEATURE,
-      label: 'Given a scope, build the folder at location.',
-      group: []
+      label: 'Controls inputs.',
+      group: [
+        {
+          type: CASE,
+          label: 'Control that a `scope` is given',
+          test: async () => {
+            try {
+              await build(
+                'test',
+                { motif: 'none' })
+              return false
+            } catch (err) {
+              return err.message
+                === NO_SCOPE_GIVEN
+            }
+          }
+        },
+        {
+          type: CASE,
+          label: 'Control that `shape` holds a `motif` '
+            + 'property with `websiteFolderPage.id` value',
+          test: async () => {
+            try {
+              await build(
+                'test',
+                { motif: 'none' },
+                '')
+              return false
+            } catch (err) {
+              return err.message
+                === NOT_A_WEBSITE_FOLDER_SHAPE
+            }
+          }
+        }
+      ]
     }
   ]
 }

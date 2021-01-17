@@ -1,5 +1,5 @@
 import folderMotif from "../../folder/folder.motif.js"
-import { ELEM_MOTIF_UNRECOGNIZED, NOT_A_WEBSITE_FOLDER_SHAPE } from "./_errors/build.errors.js"
+import { ELEM_MOTIF_UNRECOGNIZED, NOT_A_WEBSITE_FOLDER_SHAPE, NO_SCOPE_GIVEN } from "./_errors/build.errors.js"
 import websiteFolderMotif from "../../website-folder/website-folder.motif.js"
 import websitePageMotif from "../../website-page/website-page.motif.js"
 
@@ -10,6 +10,8 @@ import websitePageMotif from "../../website-page/website-page.motif.js"
  * @returns An object with the `sitemap` value.
  */
 async function recursiveBuilder(name, shape, scope) {
+  if (!scope && scope !== '')
+    throw new Error(NO_SCOPE_GIVEN)
   const {
     motif,
     content
@@ -19,15 +21,16 @@ async function recursiveBuilder(name, shape, scope) {
   const acc = { sitemap: {} }
   const path = scope + '/' + name
   await folderMotif.create(path)
+  
   for (const key in content) {
-    const elem = content[key]
-    switch (elem.motif) {
+    const value = content[key]
+    switch (value.motif) {
       
       case websiteFolderMotif.id:
         await folderMotif.create(path)
         acc.sitemap[path] = (await recursiveBuilder(
           key,
-          elem,
+          value,
           path
         )).sitemap
         break
@@ -35,11 +38,11 @@ async function recursiveBuilder(name, shape, scope) {
       case websitePageMotif.id:
         const fileName = key || 'index.html'
         await websitePageMotif.build(
-          key,
-          elem,
+          fileName,
+          value,
           path
         )
-        acc.sitemap[scope + '/' + fileName] = elem.sitemap
+        acc.sitemap[scope + '/' + fileName] = value.sitemap
         break
 
       default:

@@ -1,3 +1,7 @@
+/** Missing `scope` parameter. */
+export const NO_SCOPE_GIVEN =
+  'NO_SCOPE_GIVEN'
+
 /** Given shape doesn't hold a `motif`
  *  property with value === `websiteFolderMotif.id`. */
 export const NOT_A_WEBSITE_FOLDER_SHAPE =
