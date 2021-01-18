@@ -10,7 +10,7 @@ export default async (name, shape, scope) => {
   await fileMotif.create(
     _scope,
     'index.html',
-    () => shape.template()
+    () => shape.template(shape.data)
   )
   /** @todo images */
 }
