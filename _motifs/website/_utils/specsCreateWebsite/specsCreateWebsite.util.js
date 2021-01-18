@@ -1,6 +1,7 @@
+import { NODE_MODULE } from "motifs-js/_motifs/global/_enums/frameworkPath/frameworkPath.enum.js"
+import { FRAMEWORK_PATH } from "motifs-js/_motifs/global/_enums/names/global.names.enum.js"
 import fileMotif from "../../../file/file.motif.js"
 import folderMotif from "../../../folder/folder.motif.js"
-import websiteFolderMotif from "../../../website-folder/website-folder.motif.js"
 
 /** Creates an `<id>/<id>.website.js` tree
  * at given scope. */
@@ -11,8 +12,16 @@ export default async (scope, id, content = '{}') => {
     folderPath,
     id + '.website.js',
     () => `
-import websiteFolderMotif from "../../_motifs/website-folder/website-folder.motif.js";
-import websitePageMotif from "../../_motifs/website-page/website-page.motif.js";
+import websiteFolderMotif from "${
+  global[FRAMEWORK_PATH] === NODE_MODULE
+    ? (scope.split('/').map(() => '../')
+      + '../node_modules/motifs-js')
+    : '../..' }/_motifs/website-folder/website-folder.motif.js";
+import websitePageMotif from "${
+  global[FRAMEWORK_PATH] === NODE_MODULE
+    ? (scope.split('/').map(() => '../')
+      + '../node_modules/motifs-js')
+    : '../..' }/_motifs/website-page/website-page.motif.js";
 
 export default {
   id: '${ id }',
