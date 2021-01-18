@@ -1,5 +1,5 @@
-*[34 MOTIFS](#motifs-glossary)
-on 1/4/2021, 2:55:55 PM*
+*[32 MOTIFS](#motifs-glossary)
+on 1/18/2021, 9:11:36 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
@@ -185,7 +185,6 @@ npm start -- -k website build
 ## MOTIFS' glossary
     
 * [`article`](#article) : Article
-* = [`assertion`](#assertion) : Assertion
 * ▥ [`book`](#book) : Book
 * [`book-extract`](#book-extract) : Extract, Fragment, Atom
 * [`book-image`](#book-image) : Image, Picture, Illustration, Scan
@@ -204,19 +203,18 @@ npm start -- -k website build
 * ἀ [`lang`](#lang) : Language
 * ⚇ [`motif`](#motif) : Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva
 * ʯ [`occurence`](#occurence) : Occurence
-* [`pantheon`](#pantheon) : Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven
 * Ω [`project`](#project) : Project
 * ⁖ [`prop`](#prop) : Property, Characteristics, Attribute
 * ⬙ [`readme`](#readme) : README
 * ⬥ [`readme-section`](#readme-section) : Section
-* [`shrine`](#shrine) : Shrine
 * Ѭ [`spec`](#spec) : Specification
 * Ѫ [`spec-section`](#spec-section) : Specification section
 * ⬫ [`util`](#util) : Utility
 * [`way`](#way) : Method, Action, Operation, Function
 * [`webapp`](#webapp) : Web application
 * Ʋ [`website`](#website) : Website
-* [`website-page`](#website-page) : Page, Website page
+* [`website-folder`](#website-folder) : Website folder
+* [`website-page`](#website-page) : Page de site
 * [`wiki`](#wiki) : Wiki
 
 # `article`
@@ -225,8 +223,8 @@ npm start -- -k website build
 
 **[id] article**, also known as :
 
-* [en] Article,
-* [fr] Article.
+* [EN] Article,
+* [FR] Article.
 
 **WEBSITE ARTICLE**
 
@@ -244,6 +242,7 @@ with optional tags and meta-data.
 * `names`
 * `occurences`
 * `get`
+* `_commands`
 
 ## Instances
 
@@ -251,41 +250,11 @@ with optional tags and meta-data.
 
 ### Matching mechanims
 
-* `/_data\/articles\/(.*)\/(.*).article.js/`.
+* `/.*_data\/articles\/(\d*)\/(\d*).article.js/`.
 
 ### Instances list
 
 
-
-
-# `assertion`
-
-[*Return to MOTIFS' glossary.*](#motifs-glossary)
-
-**= [id] assertion**, also known as :
-
-* [en] Assertion,
-* [fr] Assertion.
-
-SPEC unit
-
-```javascript
-{
-  label: 'string',
-  test: 'Promise'
-}
-```
-
-## Properties
-
-* `motif` : motif
-* `path` : /_motifs/assertion/assertion.motif.js
-* `id` : assertion
-* `scope` : 
-* `folder` : assertion
-* `filePath` : /_motifs/assertion/assertion.motif.js
-* `symbol` : =
-* `names`
 
 
 # `book`
@@ -294,8 +263,8 @@ SPEC unit
 
 **▥ [id] book**, also known as :
 
-* [en] Book,
-* [fr] Livre.
+* [EN] Book,
+* [FR] Livre.
 
 **ORDERED COLLECTION OF WRITINGS**
 
@@ -347,8 +316,8 @@ with just some specific meta-data.**
 
 **[id] book-extract**, also known as :
 
-* [en] Extract, Fragment, Atom,
-* [fr] Extrait, Fragment, Atome.
+* [EN] Extract, Fragment, Atom,
+* [FR] Extrait, Fragment, Atome.
 
 A small piece of BOOK
 
@@ -387,8 +356,8 @@ a [PAGE](#page) or directly on the BOOK root.
 
 **[id] book-image**, also known as :
 
-* [en] Image, Picture, Illustration, Scan,
-* [fr] Image, Illustration, Numérisation.
+* [EN] Image, Picture, Illustration, Scan,
+* [FR] Image, Illustration, Numérisation.
 
 **BOOK VISUAL CONTENT**
 
@@ -430,8 +399,8 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 **[id] book-page**, also known as :
 
-* [en] Page,
-* [fr] Page.
+* [EN] Page,
+* [FR] Page.
 
 **PHYSICAL CONTENT FRAGMENT**
 
@@ -470,8 +439,8 @@ and [EXTRACTS](#extracts).
 
 **[id] book-section**, also known as :
 
-* [en] Section, Chapter, Part,
-* [fr] Section, Chapitre, Partie.
+* [EN] Section, Chapter, Part,
+* [FR] Section, Chapitre, Partie.
 
 **BOOK SUB-DIVISION**
 
@@ -507,8 +476,8 @@ and [EXTRACTS](#extracts).
 
 **⌿ [id] command**, also known as :
 
-* [en] Command,
-* [fr] Commande.
+* [EN] Command,
+* [FR] Commande.
 
 MOTIF CLI interface action
 
@@ -575,8 +544,8 @@ export default (args: [], options: {}) =>
 
 **▼ [id] description**, also known as :
 
-* [en] Description,
-* [fr] Description.
+* [EN] Description,
+* [FR] Description.
 
 Textual data
 
@@ -605,7 +574,7 @@ Experimental :
 
 ## Instances
 
-**Count : 9.**
+**Count : 11.**
 
 ### Matching mechanims
 
@@ -613,6 +582,8 @@ Experimental :
 
 ### Instances list
 
+* [`undefined`](undefined)
+* [`undefined`](undefined)
 * [`undefined`](undefined)
 * [`undefined`](undefined)
 * [`undefined`](undefined)
@@ -630,8 +601,8 @@ Experimental :
 
 **⎊ [id] doc**, also known as :
 
-* [en] Documentation,
-* [fr] Documentation.
+* [EN] Documentation,
+* [FR] Documentation.
 
 General documentation ressources
 
@@ -658,8 +629,8 @@ DOC is composed of few sub-[MOTIFS](#motif) :
 
 **▤ [id] file**, also known as :
 
-* [en] File,
-* [fr] Fichier.
+* [EN] File,
+* [FR] Fichier.
 
 File meta-data
 
@@ -687,8 +658,8 @@ the file extension.*
 
 **◰ [id] folder**, also known as :
 
-* [en] Folder,
-* [fr] Dossier.
+* [EN] Folder,
+* [FR] Dossier.
 
 File explorer node
 
@@ -714,7 +685,6 @@ Folder is represented by :
 * `create`
 * `copy`
 * `clear`
-* `_specs`
 
 
 # `folder-scope`
@@ -723,8 +693,8 @@ Folder is represented by :
 
 **[id] folder-scope**, also known as :
 
-* [en] Scope, Perimeter,
-* [fr] Portée, Périmètre.
+* [EN] Scope, Perimeter,
+* [FR] Portée, Périmètre.
 
 SUB-FOLDER TREE
 
@@ -748,8 +718,8 @@ is the root folder, or a sub-folder.
 
 **⤶ [id] get**, also known as :
 
-* [en] Accesser, Obtain, Hydrater,
-* [fr] Accesseur, Obtenir, Hydrateur.
+* [EN] Accesser, Obtain, Hydrater,
+* [FR] Accesseur, Obtenir, Hydrateur.
 
 The MOTIF'S INSTANCES accessers
 
@@ -792,8 +762,8 @@ get(:id) and get()
 
 **⯎ [id] global**, also known as :
 
-* [en] Identifier, instance name,
-* [fr] Identifieur, nom d'instance.
+* [EN] Identifier, instance name,
+* [FR] Identifieur, nom d'instance.
 
 Global variables to be accessed application-wide
 
@@ -815,8 +785,8 @@ Global variables to be accessed application-wide
 
 **⚲ [id] id**, also known as :
 
-* [en] Identifier, instance name,
-* [fr] Identifieur, nom d'instance.
+* [EN] Identifier, instance name,
+* [FR] Identifieur, nom d'instance.
 
 INSTANCE NAME
 
@@ -843,8 +813,8 @@ It is usually a PROP.
 
 **⧇ [id] instance**, also known as :
 
-* [en] Instance,
-* [fr] Instance.
+* [EN] Instance,
+* [FR] Instance.
 
 INDIVIDUAL OF ONE OR MULTIPLE MOTIFS
 
@@ -880,8 +850,8 @@ Note that **MOTIF MOTIF is an instance of itself !**
 
 **ἀ [id] lang**, also known as :
 
-* [en] Language,
-* [fr] Langage.
+* [EN] Language,
+* [FR] Langage.
 
 ## Properties
 
@@ -901,8 +871,8 @@ Note that **MOTIF MOTIF is an instance of itself !**
 
 **⚇ [id] motif**, also known as :
 
-* [en] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
-* [fr] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
+* [EN] Concept, Idea, Word, Pattern, Spirit, God, Angel, Deva,
+* [FR] Concept, Idée, Mot, Motif, Esprit, Dieu, Ange, Deva.
 
 MOTIF of all MOTIFS
 
@@ -988,7 +958,7 @@ highly abstract powers.
 
 ## Instances
 
-**Count : 34.**
+**Count : 32.**
 
 ### Matching mechanims
 
@@ -997,7 +967,6 @@ highly abstract powers.
 ### Instances list
 
 * [`/_motifs/article/article.motif.js`](/_motifs/article/article.motif.js)
-* [`/_motifs/assertion/assertion.motif.js`](/_motifs/assertion/assertion.motif.js)
 * [`/_motifs/book/book.motif.js`](/_motifs/book/book.motif.js)
 * [`/_motifs/book-extract/book-extract.motif.js`](/_motifs/book-extract/book-extract.motif.js)
 * [`/_motifs/book-image/book-image.motif.js`](/_motifs/book-image/book-image.motif.js)
@@ -1016,18 +985,17 @@ highly abstract powers.
 * [`/_motifs/lang/lang.motif.js`](/_motifs/lang/lang.motif.js)
 * [`/_motifs/motif/motif.motif.js`](/_motifs/motif/motif.motif.js)
 * [`/_motifs/occurence/occurence.motif.js`](/_motifs/occurence/occurence.motif.js)
-* [`/_motifs/pantheon/pantheon.motif.js`](/_motifs/pantheon/pantheon.motif.js)
 * [`/_motifs/project/project.motif.js`](/_motifs/project/project.motif.js)
 * [`/_motifs/prop/prop.motif.js`](/_motifs/prop/prop.motif.js)
 * [`/_motifs/readme/readme.motif.js`](/_motifs/readme/readme.motif.js)
 * [`/_motifs/readme-section/readme-section.motif.js`](/_motifs/readme-section/readme-section.motif.js)
-* [`/_motifs/shrine/shrine.motif.js`](/_motifs/shrine/shrine.motif.js)
 * [`/_motifs/spec/spec.motif.js`](/_motifs/spec/spec.motif.js)
 * [`/_motifs/spec-section/spec-section.motif.js`](/_motifs/spec-section/spec-section.motif.js)
 * [`/_motifs/util/util.motif.js`](/_motifs/util/util.motif.js)
 * [`/_motifs/way/way.motif.js`](/_motifs/way/way.motif.js)
 * [`/_motifs/webapp/webapp.motif.js`](/_motifs/webapp/webapp.motif.js)
 * [`/_motifs/website/website.motif.js`](/_motifs/website/website.motif.js)
+* [`/_motifs/website-folder/website-folder.motif.js`](/_motifs/website-folder/website-folder.motif.js)
 * [`/_motifs/website-page/website-page.motif.js`](/_motifs/website-page/website-page.motif.js)
 * [`/_motifs/wiki/wiki.motif.js`](/_motifs/wiki/wiki.motif.js)
 
@@ -1067,8 +1035,8 @@ highly abstract powers.
 
 **ʯ [id] occurence**, also known as :
 
-* [en] Occurence,
-* [fr] Occurence.
+* [EN] Occurence,
+* [FR] Occurence.
 
 WHERE INSTANCES HAPPEN
 
@@ -1111,42 +1079,14 @@ occurences: [
 * `get`
 
 
-# `pantheon`
-
-[*Return to MOTIFS' glossary.*](#motifs-glossary)
-
-**[id] pantheon**, also known as :
-
-* [en] Pantheon, Primordial shrine, Valhalla, Mount Olympus, Acropolis, Heaven,
-* [fr] Panthéon, Sanctuaire primordial, Valhalla, Mont Olympe, Acropole, Paradis.
-
-Primordial MOTIFS' package
-
-This is a *legendary* concept.
-
-There lies the most abstract and/or transverse [MOTIFS](#motif),
-the angels and last steps upon the One.
-
-## Properties
-
-* `motif` : motif
-* `path` : /_motifs/pantheon/pantheon.motif.js
-* `id` : pantheon
-* `scope` : 
-* `folder` : pantheon
-* `filePath` : /_motifs/pantheon/pantheon.motif.js
-* `names`
-* `regExp`
-
-
 # `project`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
 **Ω [id] project**, also known as :
 
-* [en] Project,
-* [fr] Projet.
+* [EN] Project,
+* [FR] Projet.
 
 Hold whole's meta-data and config
 
@@ -1180,8 +1120,8 @@ A non-exhaustive list of its components :
 
 **⁖ [id] prop**, also known as :
 
-* [en] Property, Characteristics, Attribute,
-* [fr] Propriété, Caractéristque, Attribut.
+* [EN] Property, Characteristics, Attribute,
+* [FR] Propriété, Caractéristque, Attribut.
 
 Properties of an instance
 
@@ -1209,8 +1149,8 @@ or dynamically bound in `MOTIF.get()` method.
 
 **⬙ [id] readme**, also known as :
 
-* [en] README,
-* [fr] README.
+* [EN] README,
+* [FR] README.
 
 **GITHUB README**
 
@@ -1244,8 +1184,8 @@ README is a component of [DOC](#-doc).
 
 **⬥ [id] readme-section**, also known as :
 
-* [en] Section,
-* [fr] Section.
+* [EN] Section,
+* [FR] Section.
 
 **README SECTION**
 
@@ -1269,37 +1209,14 @@ In fact, README is the top-level SECTION.
 * `create`
 
 
-# `shrine`
-
-[*Return to MOTIFS' glossary.*](#motifs-glossary)
-
-**[id] shrine**, also known as :
-
-* [en] Shrine,
-* [fr] Sanctuaire.
-
-(historical) A MOTIFS' node
-
-## Properties
-
-* `motif` : motif
-* `path` : /_motifs/shrine/shrine.motif.js
-* `id` : shrine
-* `scope` : 
-* `folder` : shrine
-* `filePath` : /_motifs/shrine/shrine.motif.js
-* `names`
-* `regExp`
-
-
 # `spec`
 
 [*Return to MOTIFS' glossary.*](#motifs-glossary)
 
 **Ѭ [id] spec**, also known as :
 
-* [en] Specification,
-* [fr] Spécification.
+* [EN] Specification,
+* [FR] Spécification.
 
 MOTIFS' TEST MATERIAL
 
@@ -1327,7 +1244,7 @@ categories of specifications :
 
 ## Instances
 
-**Count : 10.**
+**Count : 19.**
 
 ### Matching mechanims
 
@@ -1337,6 +1254,9 @@ categories of specifications :
 ### Instances list
 
 * [`/index.spec.js`](/index.spec.js)
+* [`/_motifs/article/create/create.spec.js`](/_motifs/article/create/create.spec.js)
+* [`/_motifs/article/get/get.spec.js`](/_motifs/article/get/get.spec.js)
+* [`/_motifs/folder/create/create.spec.js`](/_motifs/folder/create/create.spec.js)
 * [`/_motifs/motif/init/init.spec.js`](/_motifs/motif/init/init.spec.js)
 * [`/_motifs/motif/init/_utils/getFiles/getFiles.spec.js`](/_motifs/motif/init/_utils/getFiles/getFiles.spec.js)
 * [`/_motifs/motif/init/_utils/getFrameworkPath/getFrameworkPath.spec.js`](/_motifs/motif/init/_utils/getFrameworkPath/getFrameworkPath.spec.js)
@@ -1344,6 +1264,12 @@ categories of specifications :
 * [`/_motifs/occurence/get/_utils/fixSlashFirst/fixSlashFirst.spec.js`](/_motifs/occurence/get/_utils/fixSlashFirst/fixSlashFirst.spec.js)
 * [`/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js`](/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js)
 * [`/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.spec.js`](/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.spec.js)
+* [`/_motifs/website/build/build.spec.js`](/_motifs/website/build/build.spec.js)
+* [`/_motifs/website/get/get.spec.js`](/_motifs/website/get/get.spec.js)
+* [`/_motifs/website-folder/build/build.spec.js`](/_motifs/website-folder/build/build.spec.js)
+* [`/_motifs/website-folder/shape/shape.spec.js`](/_motifs/website-folder/shape/shape.spec.js)
+* [`/_motifs/website-page/build/build.spec.js`](/_motifs/website-page/build/build.spec.js)
+* [`/_motifs/website-page/shape/shape.spec.js`](/_motifs/website-page/shape/shape.spec.js)
 * [`/_motifs/motif/_specis/motif.speci.js`](/_motifs/motif/_specis/motif.speci.js)
 * [`/_motifs/spec/_specis/spec.speci.js`](/_motifs/spec/_specis/spec.speci.js)
 
@@ -1354,8 +1280,8 @@ categories of specifications :
 
 **Ѫ [id] spec-section**, also known as :
 
-* [en] Specification section,
-* [fr] Section de specification.
+* [EN] Specification section,
+* [FR] Section de specification.
 
 ASSERTION nodes in SPEC files
 
@@ -1384,8 +1310,8 @@ ASSERTION nodes in SPEC files
 
 **⬫ [id] util**, also known as :
 
-* [en] Utility,
-* [fr] Utilitaire.
+* [EN] Utility,
+* [FR] Utilitaire.
 
 The place to put things
 
@@ -1417,8 +1343,8 @@ everywhere else in the code.
 
 **[id] way**, also known as :
 
-* [en] Method, Action, Operation, Function,
-* [fr] Méthode, Action, Opération, Fonction.
+* [EN] Method, Action, Operation, Function,
+* [FR] Méthode, Action, Opération, Fonction.
 
 (historical) MOTIFS' METHOD
 
@@ -1445,8 +1371,8 @@ which is necessarely `function`.
 
 **[id] webapp**, also known as :
 
-* [en] Web application,
-* [fr] Application web.
+* [EN] Web application,
+* [FR] Application web.
 
 The dynamic WEBSITE backend
 
@@ -1470,12 +1396,13 @@ A webapp exposes MOTIFS and their operations
 
 **Ʋ [id] website**, also known as :
 
-* [en] Website,
-* [fr] Site internet.
+* [EN] Website,
+* [FR] Site internet.
 
-**KAMI.JS DOCUMENTATION WEBSITE**
+Static website
 
-WEBSITE is a [DOC](#doc) component.
+`WEBSITE.build` uses `provision` and `mapping` to
+create static websites.
 
 ## Properties
 
@@ -1489,6 +1416,7 @@ WEBSITE is a [DOC](#doc) component.
 * `names`
 * `occurences`
 * `build`
+* `get`
 * `_commands`
 
 ## Instances
@@ -1497,11 +1425,35 @@ WEBSITE is a [DOC](#doc) component.
 
 ### Matching mechanims
 
-* `/^\/_websites\/(.*)\/(.*).website.js/`.
+* `/.*\/([\w\-]*)\/([\w\-]*).website.js/`.
 
 ### Instances list
 
 
+
+
+# `website-folder`
+
+[*Return to MOTIFS' glossary.*](#motifs-glossary)
+
+**[id] website-folder**, also known as :
+
+* [EN] Website folder,
+* [FR] Dossier de site.
+
+New KAMI !
+
+## Properties
+
+* `motif` : motif
+* `path` : /_motifs/website-folder/website-folder.motif.js
+* `id` : website-folder
+* `scope` : 
+* `folder` : website-folder
+* `filePath` : /_motifs/website-folder/website-folder.motif.js
+* `names`
+* `shape`
+* `build`
 
 
 # `website-page`
@@ -1510,8 +1462,8 @@ WEBSITE is a [DOC](#doc) component.
 
 **[id] website-page**, also known as :
 
-* [en] Page, Website page,
-* [fr] Page, Page de site internet.
+* [EN] Page de site,
+* [FR] Website page.
 
 TEMPLATE x DATA x URL
 
@@ -1522,7 +1474,6 @@ A page binds the following three elements :
 * An path to be render
   (which will in time be used as its url).
 
-
 ## Properties
 
 * `motif` : motif
@@ -1532,6 +1483,8 @@ A page binds the following three elements :
 * `folder` : website-page
 * `filePath` : /_motifs/website-page/website-page.motif.js
 * `names`
+* `shape`
+* `build`
 * `create`
 
 
@@ -1541,8 +1494,8 @@ A page binds the following three elements :
 
 **[id] wiki**, also known as :
 
-* [en] Wiki,
-* [fr] Wiki.
+* [EN] Wiki,
+* [FR] Wiki.
 
 Wiki documentation
 

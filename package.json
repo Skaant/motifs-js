@@ -5,9 +5,9 @@
   "description": "MOTIFS aims to explore the concept of naming and patterns. It creates virtual entities, the motifs, to embody project's classes, components and logic.",
   "main": "index.js",
   "scripts": {
-    "start": "node dev-start.js",
+    "start": "node dev-start.js --",
     "test": "npm start -- -log -force test",
-    "readme": "npm start -- -k readme -log build"
+    "readme": "npm start -- -motif readme -log build"
   },
   "repository": {
     "type": "git",
