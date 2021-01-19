@@ -11,10 +11,10 @@ async function createFolderRecursively(scope, path) {
     await fs.mkdir(completeFolderPath)
   }
   if (splitPath[1])
-  await createFolderRecursively(
-    folderPath,
-    splitPath.slice(1).join('/')
-  )
+    await createFolderRecursively(
+      folderPath,
+      splitPath.slice(1).join('/')
+    )
   return
 }
 
