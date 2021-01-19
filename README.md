@@ -1,5 +1,5 @@
 *[32 MOTIFS](#motifs-glossary)
-on 1/19/2021, 4:35:52 AM*
+on 1/19/2021, 6:06:53 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
@@ -368,6 +368,17 @@ a [BOOK-EXTRACT](#book-extract) or in a [BOOK-PAGE](#book-page).
 When the BOOK-PAGE, BOOK-EXTRACT or BOOK-SECTION is retrieved,
 scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
+## Accepted formats
+
+For now, only the following formats can be retrieved using this MOTIF :
+* `jpg`,
+* `png`,
+* `svg`.
+
+**And, only files in the root `_data` folder.**
+
+See the MOTIF OCCURENCE for details.
+
 ## Properties
 
 * `motif` : motif
@@ -386,7 +397,7 @@ scoped BOOK-IMAGES are copied to the destination WEBSITE-PAGE folder.
 
 ### Matching mechanims
 
-* `/^\/_data\/(.*)\/([\w|\-]*)\.(png|jpg|svg)$/`.
+* `/.*_data\/(.*)\/([\w|\-]*)\.(png|jpg|svg)$/`.
 
 ### Instances list
 
