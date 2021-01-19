@@ -4,6 +4,6 @@ export const OPTIONS = 'OPTIONS'
 export const PROJECT_PATH = 'PROJECT_PATH'
 /** Project's files' path (except some, like `node_modules`) */
 export const FILES = 'FILES'
-/** Path from root folder to `motifs-js` folder,
- *  if appliable, otherwise `false`. */
+/** `motifs-js` can be ran as `STANDALONE`
+ *  or as a `NODE_MODULE`. */
 export const FRAMEWORK_PATH = 'FRAMEWORK_PATH'

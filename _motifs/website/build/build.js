@@ -26,6 +26,8 @@ export default async (
 
   const {
     url,
+    lang,
+    title,
     provision,
     mapping
   } = website
@@ -33,7 +35,11 @@ export default async (
   const result = await websiteFolderMotif.build(
     id,
     websiteFolderMotif.shape(mapping(
-      data,
+      {
+        lang,
+        title,
+        ...data
+      },
       options
     )),
     dist,
