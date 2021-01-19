@@ -1,5 +1,5 @@
 *[32 MOTIFS](#motifs-glossary)
-on 1/18/2021, 9:11:36 AM*
+on 1/19/2021, 4:35:52 AM*
 
 ![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
