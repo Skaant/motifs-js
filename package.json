@@ -28,7 +28,7 @@
     "url": "https://github.com/Skaant/motifs-js/issues"
   },
   "homepage": "https://github.com/Skaant/motifs-js#readme",
-  "devDependencies": {
+  "dependencies": {
     "express": "^4.17.1",
     "jsontoxml": "^1.0.1",
     "pug": "^3.0.0",

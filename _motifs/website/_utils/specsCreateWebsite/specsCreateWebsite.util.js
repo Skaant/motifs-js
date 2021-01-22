@@ -1,5 +1,5 @@
-import { NODE_MODULE } from "motifs-js/_motifs/global/_enums/frameworkPath/frameworkPath.enum.js"
-import { FRAMEWORK_PATH } from "motifs-js/_motifs/global/_enums/names/global.names.enum.js"
+import { NODE_MODULE } from "../../../global/_enums/frameworkPath/frameworkPath.enum.js"
+import { FRAMEWORK_PATH } from "../../../global/_enums/names/global.names.enum.js"
 import fileMotif from "../../../file/file.motif.js"
 import folderMotif from "../../../folder/folder.motif.js"
 

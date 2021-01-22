@@ -1,5 +1,5 @@
-import { STANDALONE } from "motifs-js/_motifs/global/_enums/frameworkPath/frameworkPath.enum.js";
-import { FRAMEWORK_PATH } from "motifs-js/_motifs/global/_enums/names/global.names.enum.js";
+import { STANDALONE } from "../../global/_enums/frameworkPath/frameworkPath.enum.js";
+import { FRAMEWORK_PATH } from "../../global/_enums/names/global.names.enum.js";
 import fileMotif from "../../file/file.motif.js";
 import folderMotif from "../../folder/folder.motif.js";
 import formatEnum from "../../get/_enums/format/format.enum.js";

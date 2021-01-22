@@ -4,9 +4,9 @@ import { FILES, FRAMEWORK_PATH } from "../../global/_enums/names/global.names.en
 import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 import get from "./get.js";
 import getFiles from "../../motif/init/_utils/getFiles/getFiles.js"
-import exclusionRules from "motifs-js/_motifs/motif/init/exclusionRules.js";
-import { INCLUDE } from "motifs-js/_motifs/motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
-import { STANDALONE } from "motifs-js/_motifs/global/_enums/frameworkPath/frameworkPath.enum.js";
+import exclusionRules from "../../motif/init/exclusionRules.js";
+import { INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
+import { STANDALONE } from "../../global/_enums/frameworkPath/frameworkPath.enum.js";
 
 export default {
   type: MODULE,

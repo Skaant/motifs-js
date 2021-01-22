@@ -2,7 +2,7 @@ import INSTANCE from "../../instance/instance.motif.js";
 import ARTICLE from '../article.motif.js'
 import formatEnum from "../../get/_enums/format/format.enum.js";
 import fileMotif from "../../file/file.motif.js";
-import bookImageMotif from "motifs-js/_motifs/book-image/book-image.motif.js";
+import bookImageMotif from "../../book-image/book-image.motif.js";
 import instanceMotif from "../../instance/instance.motif.js";
 
 /** Order the results by decreasing
