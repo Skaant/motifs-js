@@ -1,8 +1,7 @@
-export default {
+/** English language */
+export const EN = 'EN'
 
-  /** English language */
-  EN: 'en',
+/** French language */
+export const FR = 'FR'
 
-  /** French language */
-  FR: 'fr'
-}
+export default { EN, FR }

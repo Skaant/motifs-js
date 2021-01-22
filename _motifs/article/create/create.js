@@ -11,32 +11,32 @@ export default async options => {
       return id > acc ? id : acc
     },
     0
-  )
-    + 1
+  ) + 1
   const date = new Date()
-
-  await folderMotif.create(
-    (options && options.scope || '')
-      + '/_data/articles',
-    newId,
-    folderScope => [
-      fileMotif.create(
-        folderScope,
-        newId + '.article.js',
-        () => `export default {
+  const folderPath = (options && options.scope || '')
+    + '/_data/articles/' + newId
+  
+  await folderMotif.create(folderPath)
+  
+  /** `.article.js` file */
+  await fileMotif.create(
+    folderPath,
+    newId + '.article.js',
+    () => `export default {
   id: '${ newId }',
-  title: '',
-  date: '${ date.getDate() }/${ date.getMonth() + 1 }/${ date.getFullYear() }',
+  title: 'new',
+  date: '${ date.getDate().toString().padStart(2, '0')
+    }/${ (date.getMonth() + 1).toString().padStart(2, '0')
+    }/${ date.getFullYear() }',
   tags: [  ],
   description: false
-}`
-      ),
-      fileMotif.create(
-        folderScope,
-        'content.md',
-        () => ''
-      )
-    ]
+}`)
+  
+  /** `content.md` file */
+  await fileMotif.create(
+    folderPath,
+    'content.md',
+    () => ''
   )
 
   return newId

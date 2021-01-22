@@ -1,9 +1,12 @@
 import fileMotif from "../../file/file.motif.js";
 import folderMotif from "../../folder/folder.motif.js";
-import { FILES } from "../../global/_enums/names/global.names.enum.js";
+import { FILES, FRAMEWORK_PATH } from "../../global/_enums/names/global.names.enum.js";
 import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 import get from "./get.js";
 import getFiles from "../../motif/init/_utils/getFiles/getFiles.js"
+import exclusionRules from "motifs-js/_motifs/motif/init/exclusionRules.js";
+import { INCLUDE } from "motifs-js/_motifs/motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
+import { STANDALONE } from "motifs-js/_motifs/global/_enums/frameworkPath/frameworkPath.enum.js";
 
 export default {
   type: MODULE,
@@ -13,38 +16,12 @@ export default {
       label: 'Without `scope`, retrieves occurences matching '
         + 'ARTICLES in PROJECT as ESM modules.',
       test: async () => {
-
-        await folderMotif.create(
-          '_tests',
-          'article-no-scope-test',
-          folderScope => [
-
-            folderMotif.create(
-              folderScope,
-              '_data',
-              folderScope => [
-            
-                folderMotif.create(
-                  folderScope,
-                  'articles',
-                  folderScope => [
-                    folderMotif.create(
-                      folderScope,
-                      '1',
-                      folderScope => [
-                        fileMotif.create(
-                          folderScope,
-                          '1.article.js',
-                          folderScope =>
-                            'export default { id: "article-no-scope-test" }'
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
+        const folderPath = '_tests/article-no-scope-test/_data/articles/1'
+        await folderMotif.create(folderPath)
+        await fileMotif.create(
+          folderPath,
+          '1.article.js',
+          () => 'export default { id: "article-no-scope-test" }'
         )
         
         global['_' + FILES] = global[FILES]
@@ -57,49 +34,23 @@ export default {
         ) > -1
       }
     },
-    
     {
       type: FEATURE,
       label: 'Retrieves content from folder `content.md` file, if any.',
       test: async () => {
-
-        await folderMotif.create(
-          '_tests',
-          'article-content-md',
-          folderScope => [
-
-            folderMotif.create(
-              folderScope,
-              '_data',
-              folderScope => [
-            
-                folderMotif.create(
-                  folderScope,
-                  'articles',
-                  folderScope => [
-                    folderMotif.create(
-                      folderScope,
-                      '1',
-                      folderScope => [
-                        fileMotif.create(
-                          folderScope,
-                          '1.article.js',
-                          () => 'export default { '
-                            + 'id: "article-content-md", '
-                            + 'content: "nope" }'
-                        ),
-                        fileMotif.create(
-                          folderScope,
-                          'content.md',
-                          () => 'ok'
-                        )
-                      ]
-                    )
-                  ]
-                )
-              ]
-            )
-          ]
+        const folderPath = '_tests/article-content-md/_data/articles/1'
+        await folderMotif.create(folderPath)
+        await fileMotif.create(
+          folderPath,
+          '1.article.js',
+          () => 'export default { '
+            + 'id: "article-content-md", '
+            + 'content: "nope" }'
+        )
+        await fileMotif.create(
+          folderPath,
+          'content.md',
+          () => 'ok'
         )
         
         global['_' + FILES] = global[FILES]
@@ -110,6 +61,48 @@ export default {
         return articles.findIndex(article =>
           article.id === 'article-content-md'
             && article.content === 'ok'
+        ) > -1
+      }
+    },
+    
+    {
+      type: FEATURE,
+      label: 'Retrieves folder images, if any.',
+      test: async () => {
+        const id = 'article-get-images'
+        const folderPath = '_tests/'
+          + id + '/_data/articles/2'
+        await folderMotif.create(folderPath)
+        await fileMotif.create(
+          folderPath,
+          '2.article.js',
+          () => 'export default '
+            + JSON.stringify({
+              id,
+              content: 'still nope'
+            })
+        )
+        await fileMotif.copy(
+          (global[FRAMEWORK_PATH] === STANDALONE
+            ? ''
+            : 'node_modules/motifs-js/')
+            + 'logo.svg',
+          folderPath + '/demo.svg'
+        )
+        
+        global['_' + FILES] = global[FILES]
+        global[FILES] = getFiles('', {
+          ...exclusionRules,
+          '_tests': INCLUDE
+        })
+        const articles = await get()
+        global[FILES] = global['_' + FILES]
+
+        return articles.findIndex(article =>
+          article.id === id
+            && article.images.length === 1
+            && article.images[0]
+              .includes('demo.svg')
         ) > -1
       }
     }

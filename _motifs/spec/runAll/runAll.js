@@ -16,7 +16,7 @@ export default options => new Promise((resolve, reject) =>
     () =>
       Promise.all([
         INSTANCE.get(SPEC, { format: formatEnum.ESM }),
-        folderMotif.create('', '_tests', () => [])
+        folderMotif.create('_tests')
       ])
         .then(async ([ specs ]) => {
           const results = []

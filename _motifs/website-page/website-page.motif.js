@@ -1,10 +1,15 @@
-import namesProp from './_props/names/names.prop.js'
-import descriptionProp from './_props/description/description.prop.js'
-import createWay from './_ways/create/create.way.js'
+import { EN, FR } from '../lang/_enums/lang.enum.js'
+import shape from './shape/shape.js'
+import build from './build/build.js'
+import create from './create/create.js'
 
 export default {
   id: 'website-page',
-  names: namesProp,
-  description: descriptionProp,
-  create: createWay
+  names: {
+    [EN]: 'Page de site',
+    [FR]: 'Website page'
+  },
+  shape,
+  build,
+  create
 }

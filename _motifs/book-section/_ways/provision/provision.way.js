@@ -64,7 +64,17 @@ export default (section, options) =>
           scope,
           sections,
           pages,
-          extracts,
+          extracts: extracts.map(extract => {
+            let splitFilePath = extract.path.split('/')
+            splitFilePath.pop()
+            return {
+              ...extract,
+              images: [
+                splitFilePath.join('/')
+                  + '/original.png'
+              ]
+            }
+          }),
           images: images.length > 0
             ? images
 

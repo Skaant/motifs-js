@@ -8,8 +8,8 @@ import runOneErrors from "./runOne.errors.js"
 
 async function exploreSection(section, options) {
 
-  global[OPTIONS].log && section.type !== MODULE
-    && console.log(section.label)
+  if (options.log && section.type !== MODULE)
+    console.log(section.label)
 
   if (section.group) {
 

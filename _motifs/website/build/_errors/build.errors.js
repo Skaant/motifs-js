@@ -1,0 +1,1 @@
+export const WEBSITE_NOT_FOUND = 'WEBSITE_NOT_FOUND'

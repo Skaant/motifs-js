@@ -7,7 +7,14 @@ export default {
   'node_modules': {
     rule: EXCLUDE,
     subs: {
-      'motifs-js': INCLUDE
+      'motifs-js': {
+        rule: INCLUDE,
+        subs: {
+          '_build': EXCLUDE,
+          '_tests': EXCLUDE,
+          'node_modules': EXCLUDE
+        }
+      }
     }
   },
   'package-lock.json': EXCLUDE,

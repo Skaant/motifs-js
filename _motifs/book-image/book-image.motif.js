@@ -9,7 +9,7 @@ export default {
   description: descriptionProp,
   occurences: [{
     level: occurenceLevelEnum.FILE,
-    fileMatch: /^\/_data\/(.*)\/([\w|\-]*)\.(png|jpg|svg)$/,
+    fileMatch: /.*_data\/(.*)\/([\w|\-]*)\.(png|jpg|svg)$/,
     transform: ([ path, scope, id ]) => ({ path, scope, id })
   }],
   copy: copyWay

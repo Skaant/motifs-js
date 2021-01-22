@@ -23,6 +23,8 @@ export default (args, { log = false }) => {
       switch (arg.slice(1)) {
 
         case 'k':
+        case 'm':
+        case 'motif':
 
           options.motif = _args.shift()
           break
@@ -85,7 +87,7 @@ export default (args, { log = false }) => {
 
       } catch (err) {
 
-        console.error(err)
+        process.exit(1)
       }
     })
 }
