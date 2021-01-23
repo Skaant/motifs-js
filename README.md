@@ -1,5 +1,5 @@
 *[32 MOTIFS](#motifs-glossary)
-on 1/23/2021, 7:02:53 AM*
+on 1/23/2021, 7:18:37 AM*
 
 ![motifs-js project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
@@ -64,12 +64,14 @@ value of conception and development works**.
 (or to be more exact, their unique contextual
 [`id`](#id) property).
 
-Like words define themselves by their relations
+**Like words define themselves by their relations
 with other words, MOTIFS are put together to
-shape a language.
+shape a language.**
 
 This language can be extended in any consumer
 project, by simply adding new local custom MOTIFS.
+
+> See how to [*create a new MOTIF*](#create-a-new-motif).
 
 Connecting them allows your team to create powerful
 softwares, databases and knowledges.
@@ -93,7 +95,7 @@ ESM module and consume its features.
   ```javascript
   import MOTIF from "motifs-js/_motif/motif/motif.motif.js"
 
-  MOTIF.init(url, options)
+  const motifs = await MOTIF.get()
   ```
 
 3. *(not implemented)* MOTIFS' RELATION.
@@ -106,8 +108,8 @@ For now, the main application for the
 `motifs-js` is building [WEBSITES](#website)'
 folders and files tree.
 
-> See [How to use `motifs-js` ?](#how-to-use-motifs-js-)
-for practical instructions.
+> See how to [*build*](#build-a-website) and
+[locally serve a WEBSITE](#serve-a-website).
 
 #### 2. Development utilities
 
@@ -130,6 +132,8 @@ you are able to create glossaries on
 all your documentation platforms :
 [README](#readme), wiki, [WEBSITE](#website).
 
+> See how to [build the README](#build-the-readme).
+
 *[Jump to MOTIFS' glossary section](#motifs-glossary).*
 
 #### 4. Documentation
@@ -145,6 +149,8 @@ Check MOTIFS instances and logics against
 their specification, using the [SPEC](#spec)
 framework.
 
+> See how to [*Test the framework and project*](#test-the-framework-and-project).
+
 #### 6. Continuous deployment
 
 Plug framework's features to CI/CD pipelines
@@ -152,6 +158,15 @@ through CLI [COMMANDS](#command).
 
 
 ## How to use `motifs-js` ?
+
+List of tutorials :
+* [Installation](#installation),
+* [Create a new MOTIF](#create-a-new-motif),
+* [Test the framework and project](#test-the-framework-and-project),
+* [Build the README](#build-the-readme)
+* [Build a WEBSITE](#build-a-website)
+* [Serve the WEBSITE locally](#serve-the-website-locally)
+* [Common `package.json` sripts binding](#common-packagejson-sripts-binding)
 
 ### Installation
 
@@ -307,6 +322,13 @@ Here is the common shape of `package.json`'s
   "website": "npm start -- -m website -log build en",
   "serve": "npm start -- -m website -log serve en"
 }
+```
+
+Now you can run commands like :
+```bash
+npm test
+npm run website
+npm run serve
 ```
 
 
