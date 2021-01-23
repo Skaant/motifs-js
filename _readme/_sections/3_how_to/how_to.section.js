@@ -1,5 +1,14 @@
 export default `## How to use \`motifs-js\` ?
 
+List of tutorials :
+* [Installation](#installation),
+* [Create a new MOTIF](#create-a-new-motif),
+* [Test the framework and project](#test-the-framework-and-project),
+* [Build the README](#build-the-readme)
+* [Build a WEBSITE](#build-a-website)
+* [Serve the WEBSITE locally](#serve-the-website-locally)
+* [Common \`package.json\` sripts binding](#common-packagejson-sripts-binding)
+
 ### Installation
 
 First, install the \`motifs-js\` package in your project :
@@ -154,5 +163,12 @@ Here is the common shape of \`package.json\`'s
   "website": "npm start -- -m website -log build en",
   "serve": "npm start -- -m website -log serve en"
 }
+\`\`\`
+
+Now you can run commands like :
+\`\`\`bash
+npm test
+npm run website
+npm run serve
 \`\`\`
 `
