@@ -21,22 +21,22 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
           
       - name: Setup Node.js environment
         uses: actions/setup-node@v1.4.4
         with:
-          # Version Spec of the version to use.  Examples: 10.x, 10.15.1, >=10.15.0
           node-version: 14.15.0
+
+      - name: Cache node_modules
+        id: node-modules-cache
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node_modules
+
+      - name: Install dependencies
+        if: steps.node-modules-cache.outputs.cache-it != 'true'
+        run: npm i
           
       - name: Run tests
         run: npm start -- -log test
