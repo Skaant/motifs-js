@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node dev-start.js --",
-    "test": "npm start -- -log -force test",
+    "test": "npm start -- -log test",
     "readme": "npm start -- -motif readme -log build"
   },
   "repository": {

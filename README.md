@@ -1,136 +1,200 @@
 *[32 MOTIFS](#motifs-glossary)
-on 1/19/2021, 6:06:53 AM*
+on 1/23/2021, 7:02:53 AM*
 
-![MOTIFS project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
+![motifs-js project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
-# MOTIFS
+# motifs-js
 
 > Work on ideas.
 
+### Table of content
+
+* [A generative design patterns framework](#a-generative-design-patterns-framework)
+* [What is `motifs-js` ?](#what-is-motifs-js-)
+* [How to use `motifs-js` ?](#how-to-use-motifs-js-)
+* [MOTIFS glossary](#motifs-glossary)
+
 ## A generative design patterns framework
 
-[motifs [GitHub]](https://github.com/Skaant/motifs) aims to
-explore the concepts of **naming as well as [generative design patterns](https://www.researchgate.net/publication/3981737_Generative_design_patterns)**.
+[motifs-js [GitHub]](https://github.com/Skaant/motifs-js) aims to
+explore the concepts of **naming as well as[generative design patterns](https://www.researchgate.net/publication/3981737_Generative_design_patterns)**.
+
+**Its current applications are :**
+* Static website building (see [WEBSITE MOTIF](#website)),
+* Documentation building (see [README MOTIF](#readme)),
+* Unit-testing (see [SPEC MOTIF](#spec)).
+
+### MOTIFS (patterns)
 
 Framework's **conceptual entities**, [MOTIFS](#motif),
 let you embody projects' classes, components and logic.
+
+> Learn more about MOTIFS in
+the [*What is `motifs-js` ?* section](#what-is-motifs-js-).
 
 Quickly, **they start to form a language** that you can use
 to build your applications and
 to share with your collaborators.
 
-To get more information about the MOTIF "MOTIF",
-please refer to [MOTIF > What is a motif ?](#what-is-a-motif-).
-
-### Table of content
-
-* [What is `MOTIFS` ?](#what-is-motifs-)
-* [How to use `MOTIFS` ?](#how-to-use-motifs-)
-* [MOTIFS glossary](#motifs-glossary)
+> Learn more about `motifs-js` usage in the
+[*How to use `motifs-js` ?* section](#how-to-use-motifs-js-).
 
 ### Browse some websites built on `MOTIFS`
 
 * My profesional website, [rimarok.com](https://rimarok.com),
 * My creative hub, [imrok.fr](https://imrok.fr),
 * A poetic artwork (in progress), [highbs-bok.art](https://highbs-bok.art),
-* And soon, the MOTIFS documentation website.
+* And even the [`motifs-js` documentation website](https://motifs-js-website.vercel.app) !
 
 
-## What is `motifs` ?
+## What is `motifs-js` ?
 
-`motifs` exposes a set of features which
-help managing complexity in projects.
+`motifs-js` exposes a set of features which
+help managing complexity in projects,
+specifically website development.
 
 By finding multiple and relevant purposes to code,
 as well as potent ways to interact with it,
-it helps organizations to exponentially increase the
-value of conception and development works.
+**it helps organizations to exponentially increase the
+value of conception and development works**.
 
-### Project's keystone
+### Words and their relations
 
-Everything in `motifs` is based on **words**.
+[MOTIFS](#motif) starting point is their name
+(or to be more exact, their unique contextual
+[`id`](#id) property).
 
-**Words and their relations.**
+Like words define themselves by their relations
+with other words, MOTIFS are put together to
+shape a language.
 
-[MOTIFS](#motif) are words, in a context.
-`motifs` is a language made of MOTIFS that
-you can extend by adding new MOTIFS
-and relations between them.
+This language can be extended in any consumer
+project, by simply adding new local custom MOTIFS.
 
-By connecting them, you create powerful
+Connecting them allows your team to create powerful
 softwares, databases and knowledges.
 
-Strongly implementing the DRY principle,
-when you want to describes a property,
-there is a high chance that the words you
-use are already defined in the glossary and
-implemented by the framework's and/or you
-codebase.
+### Different ways of connecting MOTIFS
 
-### Different ways of connecting KAMIS
+1. Statically import a MOTIF as an
+ESM module and consume its features.
 
-1. Import a KAMI as an ESM module and
-consumes its features.
+  Example :
+  ```javascript
+  import MOTIF from "motifs-js/_motif/motif/motif.motif.js"
 
-```javascript
-/** ./dev-start.js */
-import KAMI from './index.js'
+  MOTIF.init(url, options)
+  ```
 
-KAMI.ave(
-  import.meta.url,
-  {
-    log: true
-  })
-```
+2. Dynamically import a MOTIF using the
+`MOTIF.get()` method
 
-2. *(not implemented yet)* Describe
-it with a relation property.
+  Example :
+  ```javascript
+  import MOTIF from "motifs-js/_motif/motif/motif.motif.js"
 
-### List of features
+  MOTIF.init(url, options)
+  ```
 
-#### 0. Development utilities
+3. *(not implemented)* MOTIFS' RELATION.
 
-KAMIS abstract a lot of developement patterns
+### Features
+
+#### 1. Static website builder
+
+For now, the main application for the
+`motifs-js` is building [WEBSITES](#website)'
+folders and files tree.
+
+> See [How to use `motifs-js` ?](#how-to-use-motifs-js-)
+for practical instructions.
+
+#### 2. Development utilities
+
+MOTIFS abstract a lot of developement patterns
 and can be used to manipulate occurences
 of the concept they describe.
 
-#### 1. Glossary
+Some of the most common MOTIFS :
+* [INSTANCE](#instance),
+* [FILE](#file),
+* [FOLDER](#folder),
+* [OCCURENCE](#occurence),
+* [SPEC](#spec).
+
+#### 3. Glossary
 
 By retrieving the formalized concepts
-of your projects, ie. built-in and
-customized [KAMIS](#kamis),
+of your projects (built-in and customized MOTIFS),
 you are able to create glossaries on
 all your documentation platforms :
-README, wiki, website.
+[README](#readme), wiki, [WEBSITE](#website).
 
-*[Jump to README KAMIS' glossary section](#kamis-glossary).*
+*[Jump to MOTIFS' glossary section](#motifs-glossary).*
 
-#### 2. Documentation
+#### 4. Documentation
 
 After retrieving, you can conditionaly shape
-and render concepts that your project manipulate
+and render MOTIFS that your project manipulates
 in order to create relevant views for different
 users and uses.
 
-#### 3. Test
+#### 5. Test
 
-Check KAMIS instances and logics against
-their specifications.
+Check MOTIFS instances and logics against
+their specification, using the [SPEC](#spec)
+framework.
 
-#### 4. Continuous deployment
+#### 6. Continuous deployment
 
 Plug framework's features to CI/CD pipelines
-through CLI commands.
+through CLI [COMMANDS](#command).
 
-## How to use `motifs` ?
 
-Here are details some [COMMANDS](#command),
-framework's CLI entrypoints.
+## How to use `motifs-js` ?
+
+### Installation
+
+First, install the `motifs-js` package in your project :
+
+```bash
+npm i motifs-js
+```
+
+Then, the common use case is to create an `index.js` file
+at the project root.
+Content should be as follow :
+
+```javascript
+import motifJs from 'motifs-js/index.js'
+
+const MOTIF = motifJs(import.meta.url, { log: true })
+
+MOTIF.cli(process.argv.slice(3), { log: true })
+```
+
+On the second line, MOTIF MOTIF is retrieved through
+its "constructor", which in fact
+black-box `init` process.
+
+The third line allows the `motifs-js` CLI
+to be ran using a `package.json` binding :
+
+```json
+"scripts": {
+  "start": "node index.js --"
+}
+```
+
+Resulting in :
+```bash
+npm start -- -log test
+```
 
 ### Create a new MOTIF
 
 ```bash
-npm start -- create <scope : '' | ...> <motifId: string>
+npm start -- create <scope : '' | '...'> <motifId: string>
 ```
 
 Creates a new [MOTIF](#motif) folders/files tree
@@ -138,14 +202,41 @@ at given scope, structured as follow :
 
 ```bash
 <scope>
-+-- /_shrine/
-|   +-- <motifId>
-|   |   +-- _props
-|   |   |   +-- names
-|   |   |   |   +-- names.prop.js
-|   |   |   +-- description
-|   |   |   |   +-- description.prop.js
++-- _motifs/
+|   +-- description
+|   |   description.md
 |   +-- <motifId>.motif.js
+```
+
+Same-scope MOTIFS are put in a `_motifs` folder.
+
+`description` is provisionned in `MOTIF.get()` method
+to be filled.
+
+The `<motifsId>.motifs.js` file holds a `names` property
+to be filled too.
+
+**There will be bound other new MOTIF's property.**
+
+See an example of a `.motifs.js` file
+([`website-folder.motif.js`](https://github.com/Skaant/motifs-js/blob/master/_motifs/website-folder/website-folder.motif.js)) :
+
+```javascript
+import { EN, FR } from '../lang/_enums/lang.enum.js'
+import shape from './shape/shape.js'
+import build from './build/build.js'
+import create from './create/create.js'
+
+export default {
+  id: 'website-page',
+  names: {
+    [EN]: 'Page de site',
+    [FR]: 'Website page'
+  },
+  shape,
+  build,
+  create
+}
 ```
 
 #### Notes
@@ -154,11 +245,14 @@ pre-filled with temporary values.
 
 You'll have to customize them through your IDE.
 
-### Test the framework
+### Test the framework and project
 
 ```bash
 npm start -- [-log] test
 ```
+
+Retrieves all files matching the [SPEC](#spec)
+[OCCURENCES](#occurences), and execute their content.
 
 #### Notes
 * `-log` prints all test assertions and results.
@@ -166,19 +260,53 @@ npm start -- [-log] test
 ### Build the README
 
 ```bash
-npm start -- -k readme build
+npm start -- -motif readme build
 ```
 
 #### Notes
-* `-k` targets a specific [KAMI](#kami),
-in this case [README](#readme),
+* `-motif` ou `-m` targets a specific [MOTIF](#motif)
+(in this case [README](#readme)),
 * `build` is targeting the
 README "build" [COMMAND](#command).
 
 ### Build a WEBSITE
 
 ```bash
-npm start -- -k website build
+npm start -- -m website build <websiteId:string>
+```
+
+Build the [WEBSITE](#website) around
+identified `<websiteId>.website.js` file.
+
+#### Notes
+CLI currently doesn't support `WEBSITE.build()`
+`{ scope, dest }` options configuration.
+
+### Serve the WEBSITE locally
+
+The same way you build your WEBSITE you
+can serve it locally using the following command :
+
+```bash
+npm start -- -m website serve <websiteId:string>
+```
+
+Command starts a mini-Express application
+to delivers static content.
+
+### Common package.json sripts binding
+
+Here is the common shape of `package.json`'s
+`scripts` property :
+
+```json
+"scripts": {
+  "start": "node index.js --",
+  "test": "npm start -- -log test",
+  "readme": "npm start -- -m readme -log build",
+  "website": "npm start -- -m website -log build en",
+  "serve": "npm start -- -m website -log serve en"
+}
 ```
 
 

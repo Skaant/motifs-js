@@ -1,85 +1,103 @@
-export default `## What is \`motifs\` ?
+export default `## What is \`motifs-js\` ?
 
-\`motifs\` exposes a set of features which
-help managing complexity in projects.
+\`motifs-js\` exposes a set of features which
+help managing complexity in projects,
+specifically website development.
 
 By finding multiple and relevant purposes to code,
 as well as potent ways to interact with it,
-it helps organizations to exponentially increase the
-value of conception and development works.
+**it helps organizations to exponentially increase the
+value of conception and development works**.
 
-### Project's keystone
+### Words and their relations
 
-Everything in \`motifs\` is based on **words**.
+[MOTIFS](#motif) starting point is their name
+(or to be more exact, their unique contextual
+[\`id\`](#id) property).
 
-**Words and their relations.**
+Like words define themselves by their relations
+with other words, MOTIFS are put together to
+shape a language.
 
-[MOTIFS](#motif) are words, in a context.
-\`motifs\` is a language made of MOTIFS that
-you can extend by adding new MOTIFS
-and relations between them.
+This language can be extended in any consumer
+project, by simply adding new local custom MOTIFS.
 
-By connecting them, you create powerful
+Connecting them allows your team to create powerful
 softwares, databases and knowledges.
 
-Strongly implementing the DRY principle,
-when you want to describes a property,
-there is a high chance that the words you
-use are already defined in the glossary and
-implemented by the framework's and/or you
-codebase.
+### Different ways of connecting MOTIFS
 
-### Different ways of connecting KAMIS
+1. Statically import a MOTIF as an
+ESM module and consume its features.
 
-1. Import a KAMI as an ESM module and
-consumes its features.
+  Example :
+  \`\`\`javascript
+  import MOTIF from "motifs-js/_motif/motif/motif.motif.js"
 
-\`\`\`javascript
-/** ./dev-start.js */
-import KAMI from './index.js'
+  MOTIF.init(url, options)
+  \`\`\`
 
-KAMI.ave(
-  import.meta.url,
-  {
-    log: true
-  })
-\`\`\`
+2. Dynamically import a MOTIF using the
+\`MOTIF.get()\` method
 
-2. *(not implemented yet)* Describe
-it with a relation property.
+  Example :
+  \`\`\`javascript
+  import MOTIF from "motifs-js/_motif/motif/motif.motif.js"
 
-### List of features
+  MOTIF.init(url, options)
+  \`\`\`
 
-#### 0. Development utilities
+3. *(not implemented)* MOTIFS' RELATION.
 
-KAMIS abstract a lot of developement patterns
+### Features
+
+#### 1. Static website builder
+
+For now, the main application for the
+\`motifs-js\` is building [WEBSITES](#website)'
+folders and files tree.
+
+> See [How to use \`motifs-js\` ?](#how-to-use-motifs-js-)
+for practical instructions.
+
+#### 2. Development utilities
+
+MOTIFS abstract a lot of developement patterns
 and can be used to manipulate occurences
 of the concept they describe.
 
-#### 1. Glossary
+Some of the most common MOTIFS :
+* [INSTANCE](#instance),
+* [FILE](#file),
+* [FOLDER](#folder),
+* [OCCURENCE](#occurence),
+* [SPEC](#spec).
+
+#### 3. Glossary
 
 By retrieving the formalized concepts
-of your projects, ie. built-in and
-customized [KAMIS](#kamis),
+of your projects (built-in and customized MOTIFS),
 you are able to create glossaries on
 all your documentation platforms :
-README, wiki, website.
+[README](#readme), wiki, [WEBSITE](#website).
 
-*[Jump to README KAMIS' glossary section](#kamis-glossary).*
+*[Jump to MOTIFS' glossary section](#motifs-glossary).*
 
-#### 2. Documentation
+#### 4. Documentation
 
 After retrieving, you can conditionaly shape
-and render concepts that your project manipulate
+and render MOTIFS that your project manipulates
 in order to create relevant views for different
 users and uses.
 
-#### 3. Test
+#### 5. Test
 
-Check KAMIS instances and logics against
-their specifications.
+Check MOTIFS instances and logics against
+their specification, using the [SPEC](#spec)
+framework.
 
-#### 4. Continuous deployment
+#### 6. Continuous deployment
 
 Plug framework's features to CI/CD pipelines
-through CLI commands.`
+through CLI [COMMANDS](#command).
+`
