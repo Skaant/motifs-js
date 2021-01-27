@@ -1,4 +1,4 @@
-import fs from 'fs/promises'
+import { promises as fs } from 'fs'
 import { PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
 
 async function createFolderRecursively(scope, path) {
