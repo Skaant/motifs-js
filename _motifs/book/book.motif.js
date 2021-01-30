@@ -12,7 +12,8 @@ export default {
   occurences: [{
     level: occurenceLevelEnum.FILE,
     fileMatch: /^\/_data(.*)\/([\w|\-]*)\/([\w|\-]*)\.book\.js/,
-    transform: ([ _, dataScope, folderName, fileName ]) => ({
+    transform: ([ path, dataScope, folderName, fileName ]) => ({
+      path,
       dataScope,
       folderName,
       fileName
