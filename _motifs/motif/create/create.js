@@ -1,8 +1,9 @@
-import FOLDER from '../../../folder/folder.motif.js'
-import FILE from '../../../file/file.motif.js'
-import getPantheonRelativePathUtil from './_utils/getPantheonRelativePath/getPantheonRelativePath.util.js'
+import FOLDER from '../../folder/folder.motif.js'
+import FILE from '../../file/file.motif.js'
+import { FRAMEWORK_PATH } from '../../global/_enums/names/global.names.enum.js'
+import { NODE_MODULE } from '../../global/_enums/frameworkPath/frameworkPath.enum.js'
 
-export default async (scope, id) => {
+export default async (id, scope) => {
   const folderPath = scope + '/_motifs/' + id
   await FOLDER.create(folderPath)
 
@@ -12,10 +13,9 @@ export default async (scope, id) => {
     id + '.motif.js',
     () =>
 `import { EN, FR } from '${
-  getPantheonRelativePathUtil(
-    global.PANTHEON_SCOPE,
-    folderScope
-  )
+  global[FRAMEWORK_PATH] === NODE_MODULE
+    ? 'motifs-js/_motifs/'
+    : '../'
 }lang/_enums/lang.enum.js'
 
 export default {
@@ -31,7 +31,7 @@ export default {
   const descriptionPath = folderPath + '/description'
   await FOLDER.create(descriptionPath)
   await FILE.create(
-    scope,
+    descriptionPath,
     'description.md',
     scope => 'New KAMI !'
   )

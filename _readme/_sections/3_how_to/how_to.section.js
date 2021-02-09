@@ -50,7 +50,7 @@ npm start -- -log test
 ### Create a new MOTIF
 
 \`\`\`bash
-npm start -- create <scope : '' | '...'> <motifId: string>
+npm start -- create <motifId: string> [<scope: string>]
 \`\`\`
 
 Creates a new [MOTIF](#motif) folders/files tree

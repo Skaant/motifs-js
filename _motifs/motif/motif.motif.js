@@ -1,5 +1,5 @@
 import namesProp from "./_props/names/names.prop.js";
-import createWay from "./_ways/create/create.way.js";
+import create from "./create/create.js";
 import get from "./get/get.js";
 import cli from "./_ways/cli/cli.js";
 import _commands from "./_props/_commands/index.js";
@@ -25,7 +25,7 @@ export default {
   init,
   flavour: flavourProp,
   _commands,
-  create: createWay,
+  create,
   get,
   cli,
   test: SPEC.runAll
