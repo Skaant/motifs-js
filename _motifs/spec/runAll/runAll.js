@@ -2,7 +2,7 @@ import fs from "fs";
 import folderMotif from "../../folder/folder.motif.js";
 import formatEnum from "../../get/_enums/format/format.enum.js";
 import INSTANCE from "../../instance/instance.motif.js";
-import runOne from "../runOne/runOne.js";
+import specSectionMotif from "../../spec-section/spec-section.motif.js";
 import SPEC from "../spec.motif.js";
 import breakLevelsEnum from "../_enums/breakLevels/breakLevels.enum.js";
 import runAllErrors from "./runAll.errors.js";
@@ -22,7 +22,7 @@ export default options => new Promise((resolve, reject) =>
           const results = []
           for (const spec of specs) {
             options.log && console.log('\n' + spec.path + '\n')
-            const { result } = await runOne(spec, options)
+            const { result } = await specSectionMotif.runOne(spec, options)
             results.push(result)
           }
     

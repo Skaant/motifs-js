@@ -1,6 +1,6 @@
 import namesProp from './_props/names/names.prop.js'
 import occurenceLevelEnum from '../occurence/_enums/level/occurence.level.enum.js'
-import runOne from './runOne/runOne.js'
+import runOne from '../spec-section/runOne/runOne.js'
 import runAll from './runAll/runAll.js'
 import specOccurencesEnum from './_enums/_occurences/spec.occurences.enum.js'
 

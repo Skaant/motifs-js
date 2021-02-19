@@ -2,3 +2,4 @@ _build/
 _tests/
 node_modules/
 .vscode
+_temp_**
