@@ -1,15 +1,17 @@
-import namesProp from "./_props/names/names.prop.js";
-import descriptionProp from "./_props/description/description.prop.js";
+
+import { EN, FR } from "../lang/_enums/lang.enum.js";
 import create from "./create/create.js";
-import copyWay from "./_ways/copy/copy.way.js";
-import clearWay from "./_ways/clear/clear.way.js";
+import copy from "./copy/copy.js";
+import clear from "./clear/clear.js";
 
 export default {
   id: 'folder',
   symbol: '◰',
-  names: namesProp,
-  description: descriptionProp,
+  names: {
+    [EN]: 'Folder',
+    [FR]: 'Dossier'
+  },
   create,
-  copy: copyWay,
-  clear: clearWay
+  copy,
+  clear
 }

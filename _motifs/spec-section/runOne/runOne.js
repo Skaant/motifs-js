@@ -4,6 +4,7 @@ import MOTIF from "../../motif/motif.motif.js"
 import { MODULE } from "../_enums/type/spec-section.type.enum.js"
 import specOccurencesEnum from "../../spec/_enums/_occurences/spec.occurences.enum.js"
 import runOneErrors from "./runOne.errors.js"
+import folderMotif from "../../folder/folder.motif.js"
 
 async function exploreSection(section, options) {
 
@@ -20,6 +21,11 @@ async function exploreSection(section, options) {
     return { label: section.label, result }
 
   } else if (section.test) {
+
+    /** `section.clear()`, if present,
+     *  is ran a first time to prevent previous
+     *  crashing test remains. */
+    section.clear && folderMotif.clear(section.clear)
 
     const ranTest = options.instances
       ? options.instances.map(instance => ({
