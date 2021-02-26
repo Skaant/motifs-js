@@ -32,6 +32,7 @@
     "express": "^4.17.1",
     "jsontoxml": "^1.0.1",
     "pug": "^3.0.0",
-    "showdown": "^1.9.1"
+    "showdown": "^1.9.1",
+    "sinon": "^9.2.4"
   }
 }

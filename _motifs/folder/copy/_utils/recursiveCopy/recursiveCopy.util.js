@@ -3,7 +3,7 @@ import {
   promises as fs,
   constants as fsConstants
 } from 'fs'
-import { FILES } from '../../../../global/_enums/names/global.names.enum'
+import { FILES } from '../../../../global/_enums/names/global.names.enum.js'
 
 const recursiveCopy = (
   src,
