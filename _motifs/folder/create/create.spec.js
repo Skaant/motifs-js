@@ -1,7 +1,7 @@
 import create from './create.js'
 import { CASE, FEATURE, MODULE } from '../../spec-section/_enums/type/spec-section.type.enum.js'
 import fs from 'fs/promises'
-import { PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
+import { FILES, PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
 
 export default {
   type: MODULE,
@@ -53,6 +53,16 @@ export default {
           }
         }
       ]
+    },
+    {
+      type: FEATURE,
+      label: 'Add newly created folder path to `global[FILES]`.',
+      test: async () => {
+        const folderPath = '_tests/folder-create-add-global-files'
+        await create(folderPath)
+        return global[FILES].some(path =>
+          path === ('/' + folderPath))
+      }
     }
   ]
 }

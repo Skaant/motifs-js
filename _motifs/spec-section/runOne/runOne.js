@@ -4,12 +4,18 @@ import MOTIF from "../../motif/motif.motif.js"
 import { MODULE } from "../_enums/type/spec-section.type.enum.js"
 import specOccurencesEnum from "../../spec/_enums/_occurences/spec.occurences.enum.js"
 import runOneErrors from "./runOne.errors.js"
-import folderMotif from "../../folder/folder.motif.js"
+import clear from "../clear/clear.js"
 
 async function exploreSection(section, options) {
 
   if (options.log && section.type !== MODULE)
     console.log(section.label)
+
+  /** `section.clear()`, if present,
+   *  is ran a first time to prevent previous
+   *  crashing test remains. */
+  if (section.clear)
+    await clear(section.clear)
 
   if (section.group) {
 
@@ -18,14 +24,14 @@ async function exploreSection(section, options) {
       const itemResult = await exploreSection(item, options)
       result.push(itemResult)
     }
+
+    /** Second clear before returning.  */
+    if (section.clear)
+      await clear(section.clear)
+
     return { label: section.label, result }
 
   } else if (section.test) {
-
-    /** `section.clear()`, if present,
-     *  is ran a first time to prevent previous
-     *  crashing test remains. */
-    section.clear && folderMotif.clear(section.clear)
 
     const ranTest = options.instances
       ? options.instances.map(instance => ({
@@ -38,6 +44,9 @@ async function exploreSection(section, options) {
       const result = await ranTest
       options.log && console.log(' => ' + result)
 
+      /** Second clear before returning.  */
+      if (section.clear)
+        await clear(section.clear)
       return { label: section.label, result }
 
     } else {
@@ -47,11 +56,13 @@ async function exploreSection(section, options) {
           ? ranTest
           : ranTest.map(({ result }) => result).join(', ')))
 
+      /** Second clear before returning.  */
+      if (section.clear)
+        await clear(section.clear)
       return { label: section.label, result: ranTest }
     }
   } else {
 
-    if (section.after) await section.after()
     throw new Error(runOneErrors.NEITHER_GROUP_OR_TEST)
   }
 }
@@ -61,7 +72,7 @@ async function exploreSection(section, options) {
  *  * UNIT SPEC OCCURENCE (`.spec.js`),
  *  * INSTANCE SPEC OCCURENCE (`.speci.js`).
  */
-export default async (spec, options) => {
+export default async (spec, options = {}) => {
   if (spec.type === specOccurencesEnum.INSTANCE) {
     options.motif = (await MOTIF.get())
       .find(motif => motif.id === spec.motif)

@@ -4,9 +4,11 @@ import instanceMotif from '../../instance/instance.motif.js'
 import specSectionMotif from '../../spec-section/spec-section.motif.js'
 import specMotif from '../spec.motif.js'
 
-export default async (path, options) => {
+/** @param {{clearTests:bool}} options */
+export default async (path, options = {}) => {
   
-  await folderMotif.clear('_tests')
+  if (options.clearTests)
+    await folderMotif.clear('_tests')
 
   const [ instances ] = await Promise.all([
     instanceMotif.get(
@@ -18,5 +20,10 @@ export default async (path, options) => {
   const target = instances.find(instance =>
     instance.path === ('/' + path))
 
-  return await specSectionMotif.runOne(target, options)
+  const result = await specSectionMotif.runOne(target, options)
+  
+  if (options.clearTests)
+    await folderMotif.clear('_tests')
+
+  return result
 }

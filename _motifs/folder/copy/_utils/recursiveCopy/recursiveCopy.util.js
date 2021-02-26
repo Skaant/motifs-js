@@ -3,6 +3,7 @@ import {
   promises as fs,
   constants as fsConstants
 } from 'fs'
+import { FILES } from '../../../../global/_enums/names/global.names.enum'
 
 const recursiveCopy = (
   src,
@@ -36,6 +37,7 @@ const recursiveCopy = (
             if (!fsForSync.existsSync(dirName)) {
 
               fsForSync.mkdirSync(dirName)
+              global[FILES].push(dirName)
             }
 
             return recursiveCopy(
@@ -47,6 +49,7 @@ const recursiveCopy = (
 
           } else {
 
+            global[FILES].push(dest + scopeName)
             return fs.copyFile(
               global.PROJECT_PATH
                 + src + scopeName,

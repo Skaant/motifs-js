@@ -3,10 +3,7 @@ import folderMotif from "../../folder/folder.motif.js";
 import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 import create from "./create.js";
 import fs from "fs"
-import getFiles from "../../motif/init/_utils/getFiles/getFiles.js"
-import exclusionRules from "../../motif/init/exclusionRules.js";
-import { EXCLUDE, INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
-import { FILES, PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
+import { PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
 
 async function createFirstArticle(path, start) {
   const folderPath = '_tests/'
@@ -38,16 +35,7 @@ export default {
         const path = 'article-create-new'
         await createFirstArticle(path, 704)
 
-        global['_' + FILES] = global[FILES]
-        global[FILES] = getFiles(
-          '',
-          {
-            ...exclusionRules,
-            '_tests': INCLUDE,
-            '_motifs': EXCLUDE
-          })
         await create({ scope: '_tests/' + path })
-        global[FILES] = global['_' + FILES]
 
         try {
           fs.statSync(
@@ -68,16 +56,7 @@ export default {
         const path = 'article-create-new-content-md'
         await createFirstArticle(path, 957)
 
-        global['_' + FILES] = global[FILES]
-        global[FILES] = getFiles(
-          '',
-          {
-            ...exclusionRules,
-            '_tests': INCLUDE,
-            '_motifs': EXCLUDE
-          })
         await create({ scope: '_tests/' + path })
-        global[FILES] = global['_' + FILES]
 
         try {
           fs.statSync(
@@ -98,16 +77,7 @@ export default {
         const path = 'article-create-new-increment-id'
         await createFirstArticle(path, 2096)
 
-        global['_' + FILES] = global[FILES]
-        global[FILES] = getFiles(
-          '',
-          {
-            ...exclusionRules,
-            '_tests': INCLUDE,
-            '_motifs': EXCLUDE
-          })
         await create({ scope: '_tests/' + path })
-        global[FILES] = global['_' + FILES]
 
         try {
           fs.statSync(

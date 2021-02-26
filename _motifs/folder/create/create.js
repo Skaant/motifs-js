@@ -1,5 +1,5 @@
 import { promises as fs } from 'fs'
-import { PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
+import { FILES, PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
 
 async function createFolderRecursively(scope, path) {
   const splitPath = path.split('/')
@@ -9,6 +9,7 @@ async function createFolderRecursively(scope, path) {
     await fs.stat(completeFolderPath)
   } catch {
     await fs.mkdir(completeFolderPath)
+    global[FILES].push(folderPath)
   }
   if (splitPath[1])
     await createFolderRecursively(

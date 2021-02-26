@@ -1,11 +1,8 @@
 import fileMotif from "../../file/file.motif.js";
 import folderMotif from "../../folder/folder.motif.js";
-import { FILES, FRAMEWORK_PATH } from "../../global/_enums/names/global.names.enum.js";
+import { FRAMEWORK_PATH } from "../../global/_enums/names/global.names.enum.js";
 import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 import get from "./get.js";
-import getFiles from "../../motif/init/_utils/getFiles/getFiles.js"
-import exclusionRules from "../../motif/init/exclusionRules.js";
-import { INCLUDE } from "../../motif/init/_utils/getFiles/_enums/rules/rules.enum.js";
 import { STANDALONE } from "../../global/_enums/frameworkPath/frameworkPath.enum.js";
 
 export default {
@@ -24,10 +21,7 @@ export default {
           () => 'export default { id: "article-no-scope-test" }'
         )
         
-        global['_' + FILES] = global[FILES]
-        global[FILES] = getFiles()
         const articles = await get()
-        global[FILES] = global['_' + FILES]
 
         return articles.findIndex(article =>
           article.id === 'article-no-scope-test'
@@ -53,10 +47,7 @@ export default {
           () => 'ok'
         )
         
-        global['_' + FILES] = global[FILES]
-        global[FILES] = getFiles()
         const articles = await get()
-        global[FILES] = global['_' + FILES]
 
         return articles.findIndex(article =>
           article.id === 'article-content-md'
@@ -90,13 +81,7 @@ export default {
           folderPath + '/demo.svg'
         )
         
-        global['_' + FILES] = global[FILES]
-        global[FILES] = getFiles('', {
-          ...exclusionRules,
-          '_tests': INCLUDE
-        })
         const articles = await get()
-        global[FILES] = global['_' + FILES]
 
         return articles.findIndex(article =>
           article.id === id

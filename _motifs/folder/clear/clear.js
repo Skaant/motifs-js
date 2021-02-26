@@ -1,25 +1,14 @@
-import { promises as fs } from 'fs'
-import { PROJECT_PATH } from '../../global/_enums/names/global.names.enum.js'
 import {
   FOLDER_CLEAR_PATH_TYPE_NOT_RECOGNIZED,
   FOLDER_CLEAR_NESTED_PATH_TYPE_NOT_RECOGNIZED
 } from './clear.errors.js'
+import removeFolder from './_utils/removeFolder/removeFolder.js'
 
-/** Executes an async `rmdir` on
- *  `global[PROJECT_PATH] + '/' + path`. */
-async function removeFolder(path) {
-  return await fs.rmdir(
-    global[PROJECT_PATH] + '/' + path,
-    {
-      recursive: true
-    })
-}
-
-/** FOLDER CLEAR WAY
+/** Given a path (or an array of path),
+ *  removes target folder and its content
+ *  (see `@note` for usage).
  * 
- * Given a path,
- *  removes target folder and
- *  clear its content.
+ * **Also removes their presence in `global[FILES]`.**
  * 
  * @param {string|string[]} path Relative path,
  *  **or relative path array**,

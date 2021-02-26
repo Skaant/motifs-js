@@ -1,4 +1,5 @@
 import fs from 'fs'
+import { FILES } from '../../global/_enums/names/global.names.enum.js'
 
 /** FILE CREATE WAY
  * 
@@ -25,25 +26,31 @@ export default (
 
   new Promise((resolve, reject) => {
 
-    const filePath = global.PROJECT_PATH
-      + ( scope[0] === '/' ? '' : '/' )
-      + scope 
-      + '/' + name
+    const filePath = scope + '/'
+      + name
+    const completeFilePath = global.PROJECT_PATH
+      + (scope[0] === '/' ? '' : '/' )
+      + filePath
 
     fs.exists(
-      filePath,
+      completeFilePath,
       exists => {
 
         if (exists && !force) {
 
-          reject(new Error(filePath + ' already exists !'
+          reject(new Error(completeFilePath + ' already exists !'
             + '\nOperation aborted.'))
         }
 
         fs.writeFile(
-          filePath,
+          completeFilePath,
           callback(scope),
-          err => err ? reject(err) : resolve())
+          err => {
+            err && reject(err)
+            global[FILES].push((filePath[0] === '/' ? '' : '/' )
+              + filePath)
+            resolve()
+          })
       }
     )
   })

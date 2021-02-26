@@ -5,7 +5,7 @@
   "description": "motifs-js aims to break all concepts to their abstract root, to make them reproducible and extendable.",
   "main": "index.js",
   "scripts": {
-    "start": "node dev-start.js --",
+    "start": "node dev-start.js",
     "test": "npm start -- -log test",
     "readme": "npm start -- -motif readme -log build"
   },

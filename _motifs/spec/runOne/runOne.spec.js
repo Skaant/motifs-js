@@ -3,15 +3,16 @@ import folderMotif from "../../folder/folder.motif.js";
 import { FEATURE, MODULE } from "../../spec-section/_enums/type/spec-section.type.enum.js";
 import runOne from "./runOne.js";
 import { promises as fs } from 'fs'
-import { FILES, PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
-import getFiles from '../../motif/init/_utils/getFiles/getFiles.js'
+import { PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
 
 export default {
   type: MODULE,
   group: [
     {
       type: FEATURE,
-      label: 'Removes `/_tests` folder content',
+      label: 'If `options.clearTests` is set to `true`, '
+        + 'removes `/_tests` folder content',
+      clear: '_temp_spec-run-one-removes-tests.spec.js',
       /** To check if `_tests` is removed, we'll :
        *  * Create a file `_tests/temp.txt`,
        *  * Call the `runOne` function we want to test,
@@ -29,7 +30,7 @@ export default {
           '_tests',
           'temp.txt',
           () => 'none')
-        // We check `temp.txt` to exist
+        // We check `temp.txt` exists
         await fs.stat(global[PROJECT_PATH] + '/_tests/temp.txt')
         const specPath = '_temp_spec-run-one-removes-tests.spec.js'
         await fileMotif.create(
@@ -44,9 +45,11 @@ export default {
 }
 `
         )
-        global[FILES] = getFiles()
-        await runOne(specPath, {})
-        global[FILES] = getFiles()
+        await runOne(
+          specPath,
+          {
+            clearTests: true
+          })
         try {
           await fs.stat(global[PROJECT_PATH] + '/_tests/temp.txt')
           return false
