@@ -13,6 +13,8 @@ import formatEnum from '../../../get/_enums/format/format.enum.js'
  * @param {{format:'<formatEnum>'}} options
  *  Using `format === 'FILE_PATH'` should be avoided
  *  since it would return its exact `filePath` parameter.
+ * 
+ * @return {{filePath:string,content:any}}
  */
 export default (
   filePath,

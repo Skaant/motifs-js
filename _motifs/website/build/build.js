@@ -4,9 +4,8 @@ import { PROJECT_PATH } from "../../global/_enums/names/global.names.enum.js";
 import websiteMotif from "../../website/website.motif.js";
 import { WEBSITE_NOT_FOUND } from "../../website/build/_errors/build.errors.js";
 import websiteFolderMotif from "../../website-folder/website-folder.motif.js";
-import fileMotif from "../../file/file.motif.js";
-import jsontoxml from 'jsontoxml'
 import folderMotif from "../../folder/folder.motif.js";
+import createSitemap from "./_utils/createSitemap/createSitemap.js";
 
 export default async (
   id,
@@ -46,15 +45,7 @@ export default async (
     url
   )
 
-  await fileMotif.create(
-    websiteBuildPath,
-    'sitemap.xml',
-    () => jsontoxml(
-      {
-        urlSet: [ ...result.sitemap ]
-      },
-      { xmlHeader: true })
-  )
+  await createSitemap(websiteBuildPath, result.sitemap)
   
   try {
 

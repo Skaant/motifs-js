@@ -1,9 +1,10 @@
-import namesProp from "./_props/names/names.prop.js";
-import descriptionProp from "./_props/description/description.prop.js";
+import { EN, FR } from "../lang/_enums/lang.enum.js";
 
 export default {
   id: 'util',
-  symbol: '⬫',
-  names: namesProp,
-  description: descriptionProp
+  names: {
+    [EN]: 'Utilities',
+    [FR]: 'Utilitaires'
+  },
+  symbol: '⬫'
 }
