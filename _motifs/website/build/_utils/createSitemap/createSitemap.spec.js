@@ -127,6 +127,67 @@ export default {
               }
             }
           ]
+        },
+        {
+          type: FEATURE,
+          label: '`<url>` contains `<loc>` tag with given path string.',
+          test: async () => {
+            const websitePath = '_tests/createSitemap-url-loc'
+            await folderMotif.create(websitePath)
+            const loc = 'https://ultimo.gov.zkk'
+            await createSitemap(
+              websitePath,
+              [
+                {
+                  name: 'url',
+                  children: {
+                    loc
+                  }
+                }
+              ]
+            )
+            const { content } = await fileMotif.get(
+              websitePath + '/sitemap.xml',
+              { format: formatEnum.UTF_8 }
+            )
+            const result = content.match(/\<url\>\<loc\>(https\:\/\/[\w-]*\.[\w\.-]*)\<\/loc\>\<\/url\>/)
+            return result[1]
+              && result[1] === loc
+          }
+        },
+        {
+          type: FEATURE,
+          label: '`<url>` contains any other optional tag given.',
+          group: [
+            {
+              type: FEATURE,
+              label: '`lastmod` is given in object.',
+              test: async () => {
+                const websitePath = '_tests/createSitemap-url-lastmod'
+                await folderMotif.create(websitePath)
+                const lastmod = '2021-03-02'
+                await createSitemap(
+                  websitePath,
+                  [
+                    {
+                      name: 'url',
+                      children: {
+                        loc: 'https://wang.mei',
+                        lastmod
+                      }
+                    }
+                  ]
+                )
+                const { content } = await fileMotif.get(
+                  websitePath + '/sitemap.xml',
+                  { format: formatEnum.UTF_8 }
+                )
+                const result = content.match(/\<url\>.*\<lastmod\>(.*)\<\/lastmod\>\<\/url\>/)
+                return result[1]
+                  && result[1] === lastmod
+              }
+            }
+          ]
         }
       ]
     }
