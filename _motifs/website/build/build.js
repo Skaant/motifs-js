@@ -6,6 +6,7 @@ import { WEBSITE_NOT_FOUND } from "../../website/build/_errors/build.errors.js";
 import websiteFolderMotif from "../../website-folder/website-folder.motif.js";
 import folderMotif from "../../folder/folder.motif.js";
 import createSitemap from "./_utils/createSitemap/createSitemap.js";
+import createRobots from "./_utils/createRobots/createRobots.js";
 
 export default async (
   id,
@@ -28,7 +29,8 @@ export default async (
     lang,
     title,
     provision,
-    mapping
+    mapping,
+    disallows = []
   } = website
   const data = await provision()
   const result = await websiteFolderMotif.build(
@@ -45,7 +47,15 @@ export default async (
     url
   )
 
-  await createSitemap(websiteBuildPath, result.sitemap)
+  await createSitemap(
+    websiteBuildPath,
+    result.sitemap
+  )
+  await createRobots(
+    websiteBuildPath,
+    disallows,
+    url
+  )
   
   try {
 
