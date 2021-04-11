@@ -1,5 +1,5 @@
 *[32 MOTIFS](#motifs-glossary)
-on 1/23/2021, 7:18:37 AM*
+on 4/11/2021, 10:57:32 AM*
 
 ![motifs-js project pictogram : a circle (pattern) crossing a square (instance).](/logo.svg)
 
@@ -359,7 +359,7 @@ npm run serve
 * ⬥ [`readme-section`](#readme-section) : Section
 * Ѭ [`spec`](#spec) : Specification
 * Ѫ [`spec-section`](#spec-section) : Specification section
-* ⬫ [`util`](#util) : Utility
+* ⬫ [`util`](#util) : Utilities
 * [`way`](#way) : Method, Action, Operation, Function
 * [`webapp`](#webapp) : Web application
 * Ʋ [`website`](#website) : Website
@@ -735,7 +735,7 @@ Experimental :
 
 ## Instances
 
-**Count : 11.**
+**Count : 12.**
 
 ### Matching mechanims
 
@@ -743,6 +743,7 @@ Experimental :
 
 ### Instances list
 
+* [`undefined`](undefined)
 * [`undefined`](undefined)
 * [`undefined`](undefined)
 * [`undefined`](undefined)
@@ -1405,7 +1406,7 @@ categories of specifications :
 
 ## Instances
 
-**Count : 19.**
+**Count : 21.**
 
 ### Matching mechanims
 
@@ -1426,6 +1427,8 @@ categories of specifications :
 * [`/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js`](/_motifs/occurence/get/_utils/folderMatchFixRegExpEnd/folderMatchFixRegExpEnd.spec.js)
 * [`/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.spec.js`](/_motifs/spec/runAll/_utils/specSectionResultCounter/specSectionResultCounter.spec.js)
 * [`/_motifs/website/build/build.spec.js`](/_motifs/website/build/build.spec.js)
+* [`/_motifs/website/build/_utils/createRobots/createRobots.spec.js`](/_motifs/website/build/_utils/createRobots/createRobots.spec.js)
+* [`/_motifs/website/build/_utils/createSitemap/createSitemap.spec.js`](/_motifs/website/build/_utils/createSitemap/createSitemap.spec.js)
 * [`/_motifs/website/get/get.spec.js`](/_motifs/website/get/get.spec.js)
 * [`/_motifs/website-folder/build/build.spec.js`](/_motifs/website-folder/build/build.spec.js)
 * [`/_motifs/website-folder/shape/shape.spec.js`](/_motifs/website-folder/shape/shape.spec.js)
@@ -1471,20 +1474,18 @@ ASSERTION nodes in SPEC files
 
 **⬫ [id] util**, also known as :
 
-* [EN] Utility,
-* [FR] Utilitaire.
+* [EN] Utilities,
+* [FR] Utilitaires.
 
-The place to put things
+export default `The place to put things
 
-`_utils` folders are nothing more than
-the place very specific snippets of code are put.
+`_utils` folders are place specific logic are put.
 
 Utilities are usually consumed by same scope or 
-lower levels modules.
+lower levels modules :
 
-You should avoid repetitions in `_utils` as
-everywhere else in the code.
-
+They can be either **pieces** (of a module)
+or **shared** (by lower level modules).
 
 ## Properties
 
@@ -1494,8 +1495,8 @@ everywhere else in the code.
 * `scope` : 
 * `folder` : util
 * `filePath` : /_motifs/util/util.motif.js
-* `symbol` : ⬫
 * `names`
+* `symbol` : ⬫
 
 
 # `way`

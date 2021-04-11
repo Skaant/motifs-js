@@ -7,6 +7,7 @@ import websiteFolderMotif from "../../website-folder/website-folder.motif.js";
 import folderMotif from "../../folder/folder.motif.js";
 import createSitemap from "./_utils/createSitemap/createSitemap.js";
 import createRobots from "./_utils/createRobots/createRobots.js";
+import createHtaccess from "./_utils/createHtaccess/createHtaccess.js";
 
 export default async (
   id,
@@ -30,7 +31,8 @@ export default async (
     title,
     provision,
     mapping,
-    disallows = []
+    disallows = [],
+    redirects
   } = website
   const data = await provision()
   const result = await websiteFolderMotif.build(
@@ -55,6 +57,11 @@ export default async (
     websiteBuildPath,
     disallows,
     url
+  )
+  await createHtaccess(
+    websiteBuildPath,
+    url,
+    redirects
   )
   
   try {
