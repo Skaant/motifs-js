@@ -3,7 +3,7 @@ import fileMotif from "../../../../file/file.motif.js";
 /**
  * @param {string} path 
  * @param {string} url
- * @param {{source:string,target:string}[]} redirects
+ * @param {[source:string,target:string][]} redirects
  */
 export default async (path, url, redirects) =>
   await fileMotif.create(
@@ -16,9 +16,10 @@ RewriteRule ^(.*)$ ${ url }/$1 [R,L]
 
 ${
   redirects
-    && redirects
+    ? redirects
       .map(([ source, target ]) =>
         'redirect 301 ' + source + ' ' + target)
       .join('\n')
+    : ''
 }`
   )
